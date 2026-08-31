@@ -1,0 +1,86 @@
+name: sample
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: fetch-samples
+        shell: python
+        run: |
+          import json, os, urllib.request, datetime
+
+          UA = "Mozilla/5.0 (compatible; tw-sample/1.0)"
+
+          TARGETS = [
+              ("t187ap11_L_dir_holding_listed",
+               "https://openapi.twse.com.tw/v1/opendata/t187ap11_L"),
+              ("t187ap11_O_dir_holding_otc",
+               "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O"),
+              ("t187ap04_L_material_listed",
+               "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"),
+              ("t187ap04_O_material_otc",
+               "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O"),
+              ("t187ap12_L_insider_transfer",
+               "https://openapi.twse.com.tw/v1/opendata/t187ap12_L"),
+          ]
+
+          os.makedirs("docs/samples", exist_ok=True)
+          summary = []
+
+          for name, url in TARGETS:
+              rec = {
+                  "name": name,
+                  "url": url,
+                  "fetched_at_utc": datetime.datetime.now(
+                      datetime.timezone.utc).isoformat(),
+                  "status": None,
+                  "bytes": None,
+                  "count": None,
+                  "keys": None,
+                  "samples": None,
+                  "err": None,
+              }
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": UA})
+                  with urllib.request.urlopen(req, timeout=40) as r:
+                      raw = r.read()
+                      rec["status"] = r.status
+                      rec["bytes"] = len(raw)
+                      data = json.loads(raw.decode("utf-8", errors="replace"))
+                      if isinstance(data, list):
+                          rec["count"] = len(data)
+                          if data and isinstance(data[0], dict):
+                              rec["keys"] = list(data[0].keys())
+                              rec["samples"] = data[:3]
+                      else:
+                          rec["keys"] = list(data.keys())[:30]
+                          rec["err"] = "回傳不是 list"
+              except Exception as e:
+                  rec["err"] = "%s: %s" % (type(e).__name__, e)
+
+              with open("docs/samples/%s.json" % name, "w",
+                        encoding="utf-8") as f:
+                  json.dump(rec, f, ensure_ascii=False, indent=2)
+
+              summary.append("%s status=%s count=%s err=%s"
+                             % (name, rec["status"], rec["count"], rec["err"]))
+              print(summary[-1], flush=True)
+
+          with open("docs/samples/_summary.txt", "w", encoding="utf-8") as f:
+              f.write("\n".join(summary) + "\n")
+
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs/samples
+          git diff --staged --quiet || git commit -m "endpoint samples"
+          git push
