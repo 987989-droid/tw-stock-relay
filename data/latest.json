@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-08-31T16:13:58.183754+08:00",
+  "generated_at_taipei": "2026-08-31T19:06:15.346825+08:00",
   "date": "2026-08-31",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。",
   "files": {
@@ -9,10 +9,22 @@
       "desc": "上市公司每日重大訊息",
       "mode": "daily_keep"
     },
+    "material_otc": {
+      "path": "data/daily/material_otc/2026-08-31.json",
+      "count": 7,
+      "desc": "上櫃公司每日重大訊息",
+      "mode": "daily_keep"
+    },
     "insider_listed": {
       "path": "data/daily/insider_listed/2026-08-31.json",
       "count": 1,
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
+      "mode": "daily_keep"
+    },
+    "insider_otc": {
+      "path": "data/daily/insider_otc/2026-08-31.json",
+      "count": 1,
+      "desc": "上櫃內部人持股轉讓事前申報(轉讓) - 端點未經驗證",
       "mode": "daily_keep"
     },
     "quotes_listed": {
@@ -39,18 +51,26 @@
       "desc": "上市公司每月營業收入彙總表",
       "mode": "monthly"
     },
+    "revenue_otc": {
+      "path": "data/monthly/revenue_otc/11507.json",
+      "count": 890,
+      "desc": "上櫃公司每月營業收入彙總表",
+      "mode": "monthly"
+    },
     "revenue_emerging": {
       "path": "data/monthly/revenue_emerging/11507.json",
       "count": 359,
       "desc": "興櫃公司每月營業收入彙總表",
       "mode": "monthly"
+    },
+    "pledge_listed": {
+      "path": "data/monthly/pledge_listed/11507.json",
+      "count": 27528,
+      "desc": "上市公司董監事持股餘額明細(含設質)",
+      "mode": "monthly"
     }
   },
   "failed": [
-    "material_otc",
-    "insider_otc",
-    "revenue_otc",
-    "pledge_listed",
     "pledge_otc"
   ]
 }
