@@ -1,0 +1,14 @@
+{
+  "name": "t187ap11_O_dir_holding_otc",
+  "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O",
+  "fetched_at_utc": "2026-08-31T07:29:35.851954+00:00",
+  "status": null,
+  "bytes_read": 0,
+  "elapsed_sec": 10.18,
+  "truncated": false,
+  "timed_out": false,
+  "count": null,
+  "keys": null,
+  "samples": null,
+  "err": "HTTPError: HTTP Error 520: <none>"
+}
