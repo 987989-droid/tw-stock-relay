@@ -7,80 +7,130 @@ permissions:
   contents: write
 
 jobs:
-  sample:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - key: t187ap11_L_dir_holding_listed
+            url: https://openapi.twse.com.tw/v1/opendata/t187ap11_L
+          - key: t187ap11_O_dir_holding_otc
+            url: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O
+          - key: t187ap04_L_material_listed
+            url: https://openapi.twse.com.tw/v1/opendata/t187ap04_L
+          - key: t187ap04_O_material_otc
+            url: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O
+          - key: t187ap12_L_insider_transfer
+            url: https://openapi.twse.com.tw/v1/opendata/t187ap12_L
+    steps:
+      - name: fetch-one
+        shell: python
+        env:
+          KEY: ${{ matrix.key }}
+          URL: ${{ matrix.url }}
+        run: |
+          import json, os, time, urllib.request, datetime
+
+          KEY = os.environ["KEY"]
+          URL = os.environ["URL"]
+
+          MAX_SECONDS = 90          # 總時間上限
+          MAX_BYTES = 20 * 1024 * 1024   # 傳輸量上限 20MB
+          CHUNK = 65536
+          UA = "Mozilla/5.0 (compatible; tw-sample/2.0)"
+
+          rec = {
+              "name": KEY,
+              "url": URL,
+              "fetched_at_utc": datetime.datetime.now(
+                  datetime.timezone.utc).isoformat(),
+              "status": None,
+              "bytes_read": 0,
+              "elapsed_sec": None,
+              "truncated": False,
+              "timed_out": False,
+              "count": None,
+              "keys": None,
+              "samples": None,
+              "err": None,
+          }
+
+          t0 = time.time()
+          buf = bytearray()
+          try:
+              req = urllib.request.Request(URL, headers={"User-Agent": UA})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  rec["status"] = r.status
+                  while True:
+                      if time.time() - t0 > MAX_SECONDS:
+                          rec["timed_out"] = True
+                          break
+                      if len(buf) >= MAX_BYTES:
+                          rec["truncated"] = True
+                          break
+                      chunk = r.read(CHUNK)
+                      if not chunk:
+                          break
+                      buf.extend(chunk)
+          except Exception as e:
+              rec["err"] = "%s: %s" % (type(e).__name__, e)
+
+          rec["elapsed_sec"] = round(time.time() - t0, 2)
+          rec["bytes_read"] = len(buf)
+
+          # 只有完整下載才嘗試解析 JSON
+          if buf and not rec["truncated"] and not rec["timed_out"]:
+              try:
+                  data = json.loads(buf.decode("utf-8", errors="replace"))
+                  if isinstance(data, list):
+                      rec["count"] = len(data)
+                      if data and isinstance(data[0], dict):
+                          rec["keys"] = list(data[0].keys())
+                          rec["samples"] = data[:3]
+                  elif isinstance(data, dict):
+                      rec["keys"] = list(data.keys())[:30]
+                      rec["err"] = "回傳不是 list"
+              except json.JSONDecodeError as e:
+                  rec["err"] = "JSON 解析失敗: %s" % e
+          elif buf:
+              # 被截斷時，至少從開頭撈出欄位名稱
+              head = buf[:4000].decode("utf-8", errors="replace")
+              rec["samples"] = head
+
+          os.makedirs("docs/samples", exist_ok=True)
+          with open("docs/samples/%s.json" % KEY, "w", encoding="utf-8") as f:
+              json.dump(rec, f, ensure_ascii=False, indent=2)
+
+          print("%s status=%s bytes=%s sec=%s trunc=%s timeout=%s count=%s err=%s"
+                % (KEY, rec["status"], rec["bytes_read"], rec["elapsed_sec"],
+                   rec["truncated"], rec["timed_out"], rec["count"], rec["err"]))
+
+      - name: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-${{ matrix.key }}
+          path: docs/samples/
+
+  collect:
+    needs: fetch
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: fetch-samples
-        shell: python
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/arts
+
+      - name: merge-and-commit
         run: |
-          import json, os, urllib.request, datetime
-
-          UA = "Mozilla/5.0 (compatible; tw-sample/1.0)"
-
-          TARGETS = [
-              ("t187ap11_L_dir_holding_listed",
-               "https://openapi.twse.com.tw/v1/opendata/t187ap11_L"),
-              ("t187ap11_O_dir_holding_otc",
-               "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O"),
-              ("t187ap04_L_material_listed",
-               "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"),
-              ("t187ap04_O_material_otc",
-               "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O"),
-              ("t187ap12_L_insider_transfer",
-               "https://openapi.twse.com.tw/v1/opendata/t187ap12_L"),
-          ]
-
-          os.makedirs("docs/samples", exist_ok=True)
-          summary = []
-
-          for name, url in TARGETS:
-              rec = {
-                  "name": name,
-                  "url": url,
-                  "fetched_at_utc": datetime.datetime.now(
-                      datetime.timezone.utc).isoformat(),
-                  "status": None,
-                  "bytes": None,
-                  "count": None,
-                  "keys": None,
-                  "samples": None,
-                  "err": None,
-              }
-              try:
-                  req = urllib.request.Request(url, headers={"User-Agent": UA})
-                  with urllib.request.urlopen(req, timeout=40) as r:
-                      raw = r.read()
-                      rec["status"] = r.status
-                      rec["bytes"] = len(raw)
-                      data = json.loads(raw.decode("utf-8", errors="replace"))
-                      if isinstance(data, list):
-                          rec["count"] = len(data)
-                          if data and isinstance(data[0], dict):
-                              rec["keys"] = list(data[0].keys())
-                              rec["samples"] = data[:3]
-                      else:
-                          rec["keys"] = list(data.keys())[:30]
-                          rec["err"] = "回傳不是 list"
-              except Exception as e:
-                  rec["err"] = "%s: %s" % (type(e).__name__, e)
-
-              with open("docs/samples/%s.json" % name, "w",
-                        encoding="utf-8") as f:
-                  json.dump(rec, f, ensure_ascii=False, indent=2)
-
-              summary.append("%s status=%s count=%s err=%s"
-                             % (name, rec["status"], rec["count"], rec["err"]))
-              print(summary[-1], flush=True)
-
-          with open("docs/samples/_summary.txt", "w", encoding="utf-8") as f:
-              f.write("\n".join(summary) + "\n")
-
-      - name: commit
-        run: |
+          mkdir -p docs/samples
+          find /tmp/arts -name '*.json' -exec cp {} docs/samples/ \;
+          ls -la docs/samples/
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add docs/samples
-          git diff --staged --quiet || git commit -m "endpoint samples"
+          git diff --staged --quiet || git commit -m "endpoint samples v2"
           git push
