@@ -1,0 +1,33 @@
+name: daily
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 11:00 UTC = 台北時間 19:00
+    # 註：GitHub 排程在尖峰時段可能延遲數分鐘至數十分鐘，非準時觸發
+    - cron: '0 11 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: fetch
+        run: python scripts/fetch_daily.py
+
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data
+          git diff --staged --quiet || git commit -m "data $(TZ=Asia/Taipei date +%Y-%m-%d)"
+          git push
