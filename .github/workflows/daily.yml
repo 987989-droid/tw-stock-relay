@@ -29,5 +29,12 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data
-          git diff --staged --quiet || git commit -m "data $(TZ=Asia/Taipei date +%Y-%m-%d)"
-          git push
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "data $(TZ=Asia/Taipei date +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "push 第 $i 次失敗，等 5 秒重試"
+            sleep 5
+          done
+          echo "push 三次都失敗"
+          exit 1
