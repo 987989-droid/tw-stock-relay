@@ -24,6 +24,10 @@ jobs:
       - name: fetch
         run: python scripts/fetch_daily.py
 
+      - name: extra
+        continue-on-error: true
+        run: python scripts/fetch_extra.py
+
       - name: commit
         run: |
           git config user.name "github-actions"
