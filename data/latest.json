@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-09-02T11:51:28.147553+08:00",
+  "generated_at_taipei": "2026-09-02T12:47:31.440556+08:00",
   "date": "2026-09-02",
   "expected_period": "11508",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
@@ -70,77 +70,65 @@
       "desc": "上櫃公司董監事持股餘額明細(含設質)",
       "mode": "monthly"
     },
-    "pledge_summary_listed": {
-      "path": "data/latest/pledge_summary_listed.json",
-      "count": 9,
-      "desc": "上市公司董監事質權設定占實際持有股數彙總表",
-      "mode": "latest_only"
-    },
-    "penalty_listed": {
-      "path": "data/latest/penalty_listed.json",
-      "count": 20,
-      "desc": "上市公司金管會證券期貨局裁罰案件",
-      "mode": "latest_only"
-    },
-    "disclosure_violation_listed": {
-      "path": "data/latest/disclosure_violation_listed.json",
-      "count": 32,
-      "desc": "上市公司違反資訊申報、重大訊息及說明記者會規定",
-      "mode": "latest_only"
-    },
-    "shortfall_listed": {
-      "path": "data/latest/shortfall_listed.json",
-      "count": 12,
-      "desc": "上市公司董監持股不足法定成數彙總表",
-      "mode": "latest_only"
-    },
-    "shortfall_3m_listed": {
-      "path": "data/latest/shortfall_3m_listed.json",
-      "count": 2,
-      "desc": "上市公司董監持股不足法定成數連續達3個月以上",
-      "mode": "latest_only"
-    },
-    "control_change_listed": {
-      "path": "data/latest/control_change_listed.json",
-      "count": 16,
-      "desc": "上市公司經營權異動",
-      "mode": "latest_only"
-    },
     "control_suspend_listed": {
-      "path": "data/latest/control_suspend_listed.json",
+      "path": "data/daily/control_suspend_listed/2026-09-02.json",
       "count": 1,
       "desc": "經營權異動且營業範圍重大變更停止買賣",
-      "mode": "latest_only"
+      "mode": "daily"
     },
     "control_altered_listed": {
-      "path": "data/latest/control_altered_listed.json",
+      "path": "data/daily/control_altered_listed/2026-09-02.json",
       "count": 1,
       "desc": "經營權異動且營業範圍重大變更列為變更交易",
-      "mode": "latest_only"
+      "mode": "daily"
+    },
+    "penalty_listed": {
+      "path": "data/daily/penalty_listed/2026-09-02.json",
+      "count": 20,
+      "desc": "上市公司金管會證券期貨局裁罰案件",
+      "mode": "daily"
+    },
+    "disclosure_violation_listed": {
+      "path": "data/daily/disclosure_violation_listed/2026-09-02.json",
+      "count": 32,
+      "desc": "上市公司違反資訊申報、重大訊息及說明記者會規定",
+      "mode": "daily"
+    },
+    "control_change_listed": {
+      "path": "data/daily/control_change_listed/2026-09-02.json",
+      "count": 16,
+      "desc": "上市公司經營權異動",
+      "mode": "daily"
+    },
+    "shortfall_listed": {
+      "path": "data/daily/shortfall_listed/2026-09-02.json",
+      "count": 12,
+      "desc": "上市公司董監持股不足法定成數彙總表",
+      "mode": "daily"
     },
     "major_holder_listed": {
-      "path": "data/latest/major_holder_listed.json",
+      "path": "data/daily/major_holder_listed/2026-09-02.json",
       "count": 11,
       "desc": "上市公司持股逾10%大股東名單",
-      "mode": "latest_only"
+      "mode": "daily"
     },
     "profitability_listed": {
-      "path": "data/latest/profitability_listed.json",
+      "path": "data/quarterly/profitability_listed/115Q2.json",
       "count": 1053,
       "desc": "上市公司營益分析查詢彙總表",
-      "mode": "latest_only"
-    },
-    "balance_listed_ci": {
-      "path": "data/latest/balance_listed_ci.json",
-      "count": 1048,
-      "desc": "上市公司資產負債表(一般業)",
-      "mode": "latest_only"
+      "mode": "period"
     },
     "income_listed_ci": {
-      "path": "data/latest/income_listed_ci.json",
+      "path": "data/quarterly/income_listed_ci/115Q2.json",
       "count": 1048,
       "desc": "上市公司綜合損益表(一般業)",
-      "mode": "latest_only"
+      "mode": "period"
+    },
+    "balance_listed_ci": {
+      "path": "data/quarterly/balance_listed_ci/115Q2.json",
+      "count": 1048,
+      "desc": "上市公司資產負債表(一般業)",
+      "mode": "period"
     }
   },
   "failed": [
