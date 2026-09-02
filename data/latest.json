@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-09-02T12:47:31.440556+08:00",
+  "generated_at_taipei": "2026-09-02T19:11:02.267999+08:00",
   "date": "2026-09-02",
   "expected_period": "11508",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
@@ -12,7 +12,7 @@
     },
     "material_otc": {
       "path": "data/daily/material_otc/2026-09-02.json",
-      "count": 80,
+      "count": 41,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
@@ -36,7 +36,7 @@
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
-      "count": 10770,
+      "count": 10813,
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only"
     },
@@ -62,6 +62,12 @@
       "path": "data/monthly/revenue_emerging/11507.json",
       "count": 359,
       "desc": "興櫃公司每月營業收入彙總表",
+      "mode": "monthly"
+    },
+    "pledge_listed": {
+      "path": "data/monthly/pledge_listed/11507.json",
+      "count": 27528,
+      "desc": "上市公司董監事持股餘額明細(含設質)",
       "mode": "monthly"
     },
     "pledge_otc": {
@@ -131,8 +137,6 @@
       "mode": "period"
     }
   },
-  "failed": [
-    "pledge_listed"
-  ],
+  "failed": [],
   "skipped": []
 }
