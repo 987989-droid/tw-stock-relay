@@ -7,18 +7,23 @@ fetch_extra.py — 補抓 TWSE OpenAPI 上「地雷檢核」與「財報」類�
 - 不動 scripts/fetch_daily.py，獨立執行、獨立失敗。
 - 全市場公開資料，零過濾。本 repo 為公開 repo，
   不得寫入任何持股／追蹤清單資訊；過濾一律由讀取端自行處理。
-- 任一端點失敗只記錄，不中斷其他端點、不讓工作流失敗。
-- 每個端點的實際欄位 keys 會寫進 data/extra_status.json，
-  供下游確認真實欄位名（例如「合約負債」實際叫什麼），不必猜。
+- 自我限時：整步驟有總時間預算，用盡即停並照常寫出報告。
+  （continue-on-error 只擋「步驟失敗」，擋不住「job 逾時」，
+    job 一旦被砍，commit 不會執行、什麼都留不下來。）
+- 端點順序＝重要性順序：小而高訊號的地雷類在前，大的財報類在後；
+  預算用盡時犧牲的是後面的，不是前面的。
+- 每個端點的實際欄位 keys 寫進 data/extra_status.json，供下游確認欄位名。
 """
 import json, os, time, datetime, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TWSE = "https://openapi.twse.com.tw/v1"
-TIMEOUT = 60
+
+TIMEOUT = 25
+BUDGET = 300
+MAX_BYTES = 40 * 1024 * 1024
 
 SOURCES = [
-    # ── 地雷檢核類 ──
     ("pledge_summary_listed",       "/opendata/t187ap09_L",    "上市公司董監事質權設定占實際持有股數彙總表"),
     ("penalty_listed",              "/opendata/t187ap22_L",    "上市公司金管會證券期貨局裁罰案件"),
     ("disclosure_violation_listed", "/opendata/t187ap23_L",    "上市公司違反資訊申報、重大訊息及說明記者會規定"),
@@ -28,25 +33,38 @@ SOURCES = [
     ("control_suspend_listed",      "/opendata/t187ap26_L",    "經營權異動且營業範圍重大變更停止買賣"),
     ("control_altered_listed",      "/opendata/t187ap27_L",    "經營權異動且營業範圍重大變更列為變更交易"),
     ("major_holder_listed",         "/opendata/t187ap02_L",    "上市公司持股逾10%大股東名單"),
-    # ── 財報類（季頻）──
+    ("profitability_listed",        "/opendata/t187ap17_L",    "上市公司營益分析查詢彙總表"),
     ("balance_listed_ci",           "/opendata/t187ap07_L_ci", "上市公司資產負債表(一般業)"),
     ("income_listed_ci",            "/opendata/t187ap06_L_ci", "上市公司綜合損益表(一般業)"),
-    ("profitability_listed",        "/opendata/t187ap17_L",    "上市公司營益分析查詢彙總表"),
 ]
 
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "tw-stock-relay"})
     with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return r.status, r.read()
+        cl = r.headers.get("Content-Length")
+        if cl and int(cl) > MAX_BYTES:
+            raise ValueError("檔案過大 %s bytes，超過上限" % cl)
+        raw = r.read(MAX_BYTES + 1)
+        if len(raw) > MAX_BYTES:
+            raise ValueError("檔案過大，讀取超過上限 %d bytes" % MAX_BYTES)
+        return r.status, raw
 
 
 def main():
+    t_start = time.time()
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
-    status = {"run_at_taipei": now.isoformat(), "sources": {}}
+    status = {"run_at_taipei": now.isoformat(), "budget_sec": BUDGET, "sources": {}}
     index_add = {}
 
     for key, path, desc in SOURCES:
+        elapsed = time.time() - t_start
+        if elapsed > BUDGET:
+            status["sources"][key] = {"ok": False, "skipped": True, "desc": desc,
+                                      "err": "總時間預算 %ds 已用盡（已耗 %ds）" % (BUDGET, int(elapsed))}
+            print(key, "SKIP 預算用盡")
+            continue
+
         url = TWSE + path
         info = {"url": url, "desc": desc}
         try:
@@ -75,10 +93,10 @@ def main():
         print(key, "OK" if info.get("ok") else "FAIL",
               info.get("count", info.get("err", "")))
 
+    status["total_elapsed"] = round(time.time() - t_start, 1)
     with open(os.path.join(ROOT, "data", "extra_status.json"), "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=2)
 
-    # 併入主索引，下游只要讀 data/latest.json 就找得到新資料源
     mpath = os.path.join(ROOT, "data", "latest.json")
     try:
         with open(mpath, encoding="utf-8") as f:
@@ -90,6 +108,8 @@ def main():
             json.dump(manifest, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print("併入索引失敗（非致命）:", e)
+
+    print("total_elapsed", status["total_elapsed"], "sec")
 
 
 if __name__ == "__main__":
