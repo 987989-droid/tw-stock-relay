@@ -1,29 +1,29 @@
 {
-  "generated_at_taipei": "2026-09-03T19:11:06.060964+08:00",
-  "date": "2026-09-03",
+  "generated_at_taipei": "2026-09-04T19:10:54.679614+08:00",
+  "date": "2026-09-04",
   "expected_period": "11508",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
   "files": {
     "material_listed": {
-      "path": "data/daily/material_listed/2026-09-03.json",
-      "count": 86,
+      "path": "data/daily/material_listed/2026-09-04.json",
+      "count": 102,
       "desc": "上市公司每日重大訊息",
       "mode": "daily_keep"
     },
     "material_otc": {
-      "path": "data/daily/material_otc/2026-09-03.json",
-      "count": 55,
+      "path": "data/daily/material_otc/2026-09-04.json",
+      "count": 60,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
     "insider_listed": {
-      "path": "data/daily/insider_listed/2026-09-03.json",
-      "count": 1,
+      "path": "data/daily/insider_listed/2026-09-04.json",
+      "count": 3,
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
     },
     "insider_otc": {
-      "path": "data/daily/insider_otc/2026-09-03.json",
+      "path": "data/daily/insider_otc/2026-09-04.json",
       "count": 1,
       "desc": "上櫃內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
@@ -36,7 +36,7 @@
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
-      "count": 10994,
+      "count": 10963,
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only"
     },
@@ -77,44 +77,44 @@
       "mode": "monthly"
     },
     "control_suspend_listed": {
-      "path": "data/daily/control_suspend_listed/2026-09-03.json",
+      "path": "data/daily/control_suspend_listed/2026-09-04.json",
       "count": 1,
       "desc": "經營權異動且營業範圍重大變更停止買賣",
       "mode": "daily"
     },
     "control_altered_listed": {
-      "path": "data/daily/control_altered_listed/2026-09-03.json",
+      "path": "data/daily/control_altered_listed/2026-09-04.json",
       "count": 1,
       "desc": "經營權異動且營業範圍重大變更列為變更交易",
       "mode": "daily"
     },
     "penalty_listed": {
-      "path": "data/daily/penalty_listed/2026-09-03.json",
+      "path": "data/daily/penalty_listed/2026-09-04.json",
       "count": 20,
       "desc": "上市公司金管會證券期貨局裁罰案件",
       "mode": "daily"
     },
     "disclosure_violation_listed": {
-      "path": "data/daily/disclosure_violation_listed/2026-09-03.json",
+      "path": "data/daily/disclosure_violation_listed/2026-09-04.json",
       "count": 32,
       "desc": "上市公司違反資訊申報、重大訊息及說明記者會規定",
       "mode": "daily"
     },
     "control_change_listed": {
-      "path": "data/daily/control_change_listed/2026-09-03.json",
+      "path": "data/daily/control_change_listed/2026-09-04.json",
       "count": 15,
       "desc": "上市公司經營權異動",
       "mode": "daily"
     },
     "shortfall_listed": {
-      "path": "data/daily/shortfall_listed/2026-09-03.json",
+      "path": "data/daily/shortfall_listed/2026-09-04.json",
       "count": 12,
       "desc": "上市公司董監持股不足法定成數彙總表",
       "mode": "daily"
     },
     "major_holder_listed": {
-      "path": "data/daily/major_holder_listed/2026-09-03.json",
-      "count": 80,
+      "path": "data/daily/major_holder_listed/2026-09-04.json",
+      "count": 244,
       "desc": "上市公司持股逾10%大股東名單",
       "mode": "daily"
     },
