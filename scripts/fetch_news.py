@@ -57,7 +57,7 @@ NS = {
 TAG_RE = re.compile(r"<[^>]+>")
 WS_RE = re.compile(r"\s+")
 # 台股慣用寫法：鉅亨「(2464-TW)」、多數媒體「台積電(2330)」「聯發科（2454）」
-CODE_RE = re.compile(r"[（(]\s*(\d{4,6})\s*(?:-TW)?\s*[）)]")
+CODE_RE = re.compile(r"[（(]\s*(\d{4,6})\s*(?:-TW)?\s*[）)](?![年月日])")
 
 
 def clean(s):
