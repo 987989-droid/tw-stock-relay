@@ -1,0 +1,46 @@
+name: news
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 23:30 UTC = 台北 07:30（趕在每日新聞判讀 08:00 之前）
+    - cron: '30 23 * * *'
+    # 11:30 UTC = 台北 19:30（趕在投資判讀層 20:30 之前）
+    - cron: '30 11 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: relay-commit
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: fetch news
+        continue-on-error: true
+        run: python scripts/fetch_news.py
+
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "news $(TZ=Asia/Taipei date +%Y-%m-%d\ %H:%M)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "push 第 $i 次失敗，等 5 秒重試"
+            sleep 5
+          done
+          echo "push 三次都失敗"
+          exit 1
