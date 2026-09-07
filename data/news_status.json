@@ -1,11 +1,11 @@
 {
-  "generated_at_taipei": "2026-09-07T07:36:03+08:00",
+  "generated_at_taipei": "2026-09-07T10:17:43+08:00",
   "date": "2026-09-07",
   "window_hours": 36,
-  "count": 157,
+  "count": 188,
   "feeds_ok": 8,
   "feeds_total": 10,
-  "coded": 19,
+  "coded": 21,
   "note": "全市場財經新聞標題，未做任何篩選。ts 為 null 表示該來源未提供可解析的發布時間，不得當作今日。c 欄為文中出現的台股代號（由「(2464-TW)」「(2330)」等寫法抽出），讀取端請以代號比對自己的清單；沒有 c 欄不代表與個股無關，仍須看標題。count 供讀取端對帳，確認未被截斷。",
   "feeds": {
     "cnyes_tw_stock": {
@@ -13,22 +13,22 @@
       "desc": "鉅亨網 台股",
       "ok": true,
       "status": 200,
-      "bytes": 18305,
-      "fetched": 8,
-      "kept": 8,
+      "bytes": 30994,
+      "fetched": 14,
+      "kept": 14,
       "undated": 0,
-      "elapsed": 0.43
+      "elapsed": 0.51
     },
     "cnyes_wd_stock": {
       "url": "https://news.cnyes.com/rss/v1/news/category/wd_stock",
       "desc": "鉅亨網 國際股",
       "ok": true,
       "status": 200,
-      "bytes": 64040,
-      "fetched": 28,
-      "kept": 28,
+      "bytes": 84402,
+      "fetched": 37,
+      "kept": 37,
       "undated": 0,
-      "elapsed": 0.54
+      "elapsed": 0.6
     },
     "cnyes_tw_macro": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_macro",
@@ -39,40 +39,40 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.34
+      "elapsed": 0.26
     },
     "technews": {
       "url": "https://technews.tw/feed/",
       "desc": "科技新報",
       "ok": true,
       "status": 200,
-      "bytes": 38808,
+      "bytes": 38910,
       "fetched": 40,
-      "kept": 27,
+      "kept": 40,
       "undated": 0,
-      "elapsed": 0.82
+      "elapsed": 0.38
     },
     "moneydj": {
       "url": "https://www.moneydj.com/kmdj/RssCenter.aspx?svc=NW&fno=1&arg=X0000000",
       "desc": "MoneyDJ 焦點新聞",
       "ok": true,
       "status": 200,
-      "bytes": 13319,
+      "bytes": 12311,
       "fetched": 20,
       "kept": 20,
       "undated": 0,
-      "elapsed": 0.78
+      "elapsed": 0.82
     },
     "cna_finance": {
       "url": "https://feeds.feedburner.com/rsscna/finance",
       "desc": "中央社 財經",
       "ok": true,
       "status": 200,
-      "bytes": 13699,
+      "bytes": 13421,
       "fetched": 20,
-      "kept": 17,
+      "kept": 20,
       "undated": 0,
-      "elapsed": 0.23
+      "elapsed": 0.15
     },
     "ctee": {
       "url": "https://ctee.com.tw/feed",
@@ -85,11 +85,11 @@
       "desc": "經濟日報 股市",
       "ok": true,
       "status": 200,
-      "bytes": 13748,
+      "bytes": 13791,
       "fetched": 20,
       "kept": 17,
       "undated": 0,
-      "elapsed": 0.43
+      "elapsed": 0.26
     },
     "chinatimes_finance": {
       "url": "https://www.chinatimes.com/rss/realtimenews-finance.xml",
@@ -102,11 +102,11 @@
       "desc": "Yahoo 台股",
       "ok": true,
       "status": 200,
-      "bytes": 38102,
+      "bytes": 36902,
       "fetched": 50,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.55
+      "elapsed": 0.97
     }
   }
 }
