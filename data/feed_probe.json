@@ -1,0 +1,210 @@
+{
+  "probed_at_taipei": "2026-09-07T10:51:45+08:00",
+  "note": "RSS 候選來源探測結果。此檔只記錄事實，不代表已納入 FEEDS。looks_rss=true 且 status=200 才可考慮納入。同一網址若 BOT 失敗、BROWSER 成功，代表對方以 User-Agent 阻擋；兩者皆失敗代表是 IP／路徑問題，換 UA 無效。",
+  "ua": {
+    "bot": "Mozilla/5.0 (compatible; tw-stock-relay/1.0)",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+  },
+  "results": {
+    "ctee_feed": {
+      "url": "https://ctee.com.tw/feed",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.06
+      },
+      "bot": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.05
+      }
+    },
+    "ctee_rss": {
+      "url": "https://ctee.com.tw/rss",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.05
+      },
+      "bot": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.04
+      }
+    },
+    "ctee_feed_rss2": {
+      "url": "https://ctee.com.tw/?feed=rss2",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.07
+      },
+      "bot": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.05
+      }
+    },
+    "ctee_tech": {
+      "url": "https://ctee.com.tw/category/news/tech/feed",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.08
+      },
+      "bot": {
+        "ok": false,
+        "err": "HTTPError 403 Forbidden",
+        "elapsed": 0.08
+      }
+    },
+    "ct_realtime_fin": {
+      "url": "https://www.chinatimes.com/rss/realtimenews-finance.xml",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.29
+      },
+      "bot": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.21
+      }
+    },
+    "ct_money": {
+      "url": "https://www.chinatimes.com/rss/money.xml",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.22
+      },
+      "bot": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.23
+      }
+    },
+    "ct_finance": {
+      "url": "https://www.chinatimes.com/rss/finance.xml",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 502 Bad Gateway",
+        "elapsed": 0.19
+      }
+    },
+    "ct_realtimenews": {
+      "url": "https://www.chinatimes.com/rss/realtimenews.xml",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.21
+      }
+    },
+    "ct_chinatimes_xml": {
+      "url": "https://www.chinatimes.com/rss/chinatimes.xml",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.29
+      }
+    },
+    "ct_syndication": {
+      "url": "https://www.chinatimes.com/syndication/rss",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.28
+      }
+    },
+    "wantrich_fin": {
+      "url": "https://wantrich.chinatimes.com/rss/finance.xml",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.36
+      }
+    },
+    "wantrich_feed": {
+      "url": "https://wantrich.chinatimes.com/feed",
+      "browser": {
+        "ok": false,
+        "err": "HTTPError 404 Not Found",
+        "elapsed": 0.21
+      }
+    },
+    "ettoday_finance": {
+      "url": "https://feeds.feedburner.com/ettoday/finance",
+      "browser": {
+        "ok": true,
+        "status": 200,
+        "ctype": "text/xml; charset=utf-8",
+        "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" version=\"2.0\">\n\t<ch",
+        "looks_rss": true,
+        "elapsed": 0.09
+      }
+    },
+    "ltn_business": {
+      "url": "https://news.ltn.com.tw/rss/business.xml",
+      "browser": {
+        "ok": true,
+        "status": 200,
+        "ctype": "application/xml; charset=UTF-8",
+        "head": "﻿<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\"><channel><title><![CDATA[財經新聞 - 自由時報]]></tit",
+        "looks_rss": true,
+        "elapsed": 0.39
+      }
+    },
+    "ltn_ec_business": {
+      "url": "https://ec.ltn.com.tw/rss/business.xml",
+      "browser": {
+        "ok": true,
+        "status": 200,
+        "ctype": "text/html; charset=UTF-8",
+        "head": "<!DOCTYPE html>\n<html lang=\"zh-TW\">\n<head>\n    <script>\n    let cdnDate = '20260907105148';\n    var pvDomain = 'pv.ltn.c",
+        "looks_rss": false,
+        "elapsed": 0.21
+      }
+    },
+    "cnyes_tw_industry": {
+      "url": "https://news.cnyes.com/rss/v1/news/category/tw_industry",
+      "browser": {
+        "ok": true,
+        "status": 200,
+        "ctype": "application/rss+xml; charset=utf-8",
+        "head": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http:",
+        "looks_rss": true,
+        "elapsed": 0.2
+      }
+    },
+    "yahoo_tw_news": {
+      "url": "https://tw.stock.yahoo.com/rss?category=news",
+      "browser": {
+        "ok": true,
+        "status": 200,
+        "ctype": "text/xml; charset=utf-8",
+        "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?xml-stylesheet title=\"XSL_formatting\" type=\"text/xsl\" href=\"/nolsol.xsl\"?><rss v",
+        "looks_rss": true,
+        "elapsed": 0.54
+      }
+    },
+    "udn_stock_sub": {
+      "url": "https://money.udn.com/rssfeed/news/1001/5591/7307?ch=money",
+      "browser": {
+        "ok": true,
+        "status": 200,
+        "ctype": "text/xml;charset=UTF-8",
+        "head": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><rss version=\"2.0\">\n\t<channel>\n\t\t<title><![CDATA[經濟日報：不僅新聞速�",
+        "looks_rss": true,
+        "elapsed": 0.23
+      }
+    }
+  },
+  "usable_with_browser_ua": [
+    "ettoday_finance",
+    "ltn_business",
+    "cnyes_tw_industry",
+    "yahoo_tw_news",
+    "udn_stock_sub"
+  ],
+  "usable_count": 5
+}
