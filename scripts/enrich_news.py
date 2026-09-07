@@ -24,7 +24,7 @@ enrich_news.py — 在 fetch_news.py 之後執行，替當日新聞加上兩個�
 
 設計原則：寧可多標、不可漏標。誤標由讀取端過濾，漏標則永遠救不回來。
 """
-import json, os, glob, sys
+import json, os, glob, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -71,6 +71,25 @@ TOPIC_KW = [
     "內部稽核", "財務主管", "會計主管", "會計師", "財報重編", "保留意見",
     "現金增資", "可轉債", "GDR", "私募", "減資", "庫藏股", "設質", "質押",
 ]
+
+
+# ── 大盤行情快訊偵測（nz 旗標）───────────────────────────────
+# 2026/09/07 實測：當日 263 則中有 35 則是「台股漲幾點、台積電漲幾元」的
+# 指數行情快訊，同一件事被七八家媒體各發一次。這類標題裡的公司名是**報價**，
+# 不是產業事件，對任何論點變數都不構成證據。
+#
+# 設計原則（重要）：**只降級、不刪除**。誤刪永遠救不回來，誤降級只是排序靠後。
+# 因此判準要求「指數詞」與「漲跌點數詞」同時出現，缺一不標，寧可漏標。
+# 已驗證不會誤標的實例：「CPO 題材已漲 242%」「台光電 CCL 供不應求…目標價 6,000 元」
+# 「信驊…優於大盤評等目標價 23,000 元」「費半回檔2成」「輝達收購 Hugging Face」。
+NZ_IDX = re.compile(r"台股|大盤|加權|台指|指數|日經|道瓊|那斯達克|費半|標普|恆生")
+NZ_MOVE = re.compile(r"開盤|收盤|早盤|盤中|尾盤|盤前|漲逾|跌逾|漲\d|跌\d|\d[\d,]*點|"
+                     r"站上|站回|重返|收復|攻克|攻上|大關|\d+K|萬\d")
+
+
+def is_noise(title):
+    """指數行情快訊回 True。僅供讀取端降序處理，不得用於刪除。"""
+    return bool(NZ_IDX.search(title) and NZ_MOVE.search(title))
 
 
 def load_name_map():
@@ -125,7 +144,7 @@ def main():
     print("名稱對照表:", len(name_map), "家")
 
     items = payload.get("items", [])
-    n_cn = n_kwt = 0
+    n_cn = n_kwt = n_nz = 0
     for it in items:
         text = (it.get("t") or "") + " " + (it.get("d") or "")
         if not text.strip():
@@ -149,13 +168,20 @@ def main():
             it["kwt"] = kwt[:12]
             n_kwt += 1
 
+        if is_noise(it.get("t") or ""):
+            it["nz"] = True
+            n_nz += 1
+
     payload["cn_count"] = n_cn
     payload["kwt_count"] = n_kwt
+    payload["nz_count"] = n_nz
     payload["enrich_note"] = (
         "cn＝由公司名稱比對出的代號（中信心，與 c 的數字擷取分開，可能誤命中，"
         "已用 NAME_STOP 排除常用詞與人名）；kwt＝命中的產業主題詞（丙條件機械化，"
         "刻意放寬、寧可多標）。兩者皆為候選標記，非結論；"
         "哪個主題對應哪一檔一律由讀取端自行對照，本 repo 不存任何持股資訊。"
+        "nz=true 表示該則為大盤指數行情快訊（報價，非產業事件），"
+        "**僅供讀取端降序處理，不得據以刪除或略過**。"
     )
 
     with open(news_path, "w", encoding="utf-8") as f:
@@ -165,15 +191,17 @@ def main():
     try:
         manifest["files"]["news"]["cn_count"] = n_cn
         manifest["files"]["news"]["kwt_count"] = n_kwt
+        manifest["files"]["news"]["nz_count"] = n_nz
         with open(idx_path, "w", encoding="utf-8") as f:
             json.dump(manifest, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print("併入索引失敗（非致命）:", repr(e))
 
     total = len(items)
-    print("標記完成：共 %d 則｜cn %d 則（%.1f%%）｜kwt %d 則（%.1f%%）" % (
+    print("標記完成：共 %d 則｜cn %d 則（%.1f%%）｜kwt %d 則（%.1f%%）｜nz %d 則（%.1f%%）" % (
         total, n_cn, (n_cn / total * 100 if total else 0),
-        n_kwt, (n_kwt / total * 100 if total else 0)))
+        n_kwt, (n_kwt / total * 100 if total else 0),
+        n_nz, (n_nz / total * 100 if total else 0)))
 
 
 if __name__ == "__main__":
