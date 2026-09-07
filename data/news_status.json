@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-09-07T10:17:43+08:00",
+  "generated_at_taipei": "2026-09-07T10:18:06+08:00",
   "date": "2026-09-07",
   "window_hours": 36,
   "count": 188,
@@ -17,7 +17,7 @@
       "fetched": 14,
       "kept": 14,
       "undated": 0,
-      "elapsed": 0.51
+      "elapsed": 0.74
     },
     "cnyes_wd_stock": {
       "url": "https://news.cnyes.com/rss/v1/news/category/wd_stock",
@@ -28,7 +28,7 @@
       "fetched": 37,
       "kept": 37,
       "undated": 0,
-      "elapsed": 0.6
+      "elapsed": 0.55
     },
     "cnyes_tw_macro": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_macro",
@@ -39,7 +39,7 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.26
+      "elapsed": 0.36
     },
     "technews": {
       "url": "https://technews.tw/feed/",
@@ -50,14 +50,14 @@
       "fetched": 40,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.38
+      "elapsed": 0.67
     },
     "moneydj": {
       "url": "https://www.moneydj.com/kmdj/RssCenter.aspx?svc=NW&fno=1&arg=X0000000",
       "desc": "MoneyDJ 焦點新聞",
       "ok": true,
       "status": 200,
-      "bytes": 12311,
+      "bytes": 12231,
       "fetched": 20,
       "kept": 20,
       "undated": 0,
@@ -89,7 +89,7 @@
       "fetched": 20,
       "kept": 17,
       "undated": 0,
-      "elapsed": 0.26
+      "elapsed": 0.27
     },
     "chinatimes_finance": {
       "url": "https://www.chinatimes.com/rss/realtimenews-finance.xml",
@@ -106,7 +106,7 @@
       "fetched": 50,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.97
+      "elapsed": 0.1
     }
   }
 }
