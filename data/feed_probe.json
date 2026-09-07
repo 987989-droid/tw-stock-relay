@@ -1,5 +1,5 @@
 {
-  "probed_at_taipei": "2026-09-07T11:41:15+08:00",
+  "probed_at_taipei": "2026-09-07T13:29:11+08:00",
   "note": "RSS 候選來源探測結果。此檔只記錄事實，不代表已納入 FEEDS。looks_rss=true 且 status=200 才可考慮納入。同一網址若 BOT 失敗、BROWSER 成功，代表對方以 User-Agent 阻擋；兩者皆失敗代表是 IP／路徑問題，換 UA 無效。",
   "ua": {
     "bot": "Mozilla/5.0 (compatible; tw-stock-relay/1.0)",
@@ -11,12 +11,12 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.05
+        "elapsed": 0.11
       },
       "bot": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.03
       }
     },
     "ctee_rss": {
@@ -24,12 +24,12 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.04
       },
       "bot": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.03
       }
     },
     "ctee_feed_rss2": {
@@ -37,12 +37,12 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.03
       },
       "bot": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.03
       }
     },
     "ctee_tech": {
@@ -50,12 +50,12 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.03
       },
       "bot": {
         "ok": false,
         "err": "HTTPError 403 Forbidden",
-        "elapsed": 0.02
+        "elapsed": 0.05
       }
     },
     "ct_realtime_fin": {
@@ -63,12 +63,12 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.31
+        "elapsed": 0.27
       },
       "bot": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.32
+        "elapsed": 0.28
       }
     },
     "ct_money": {
@@ -76,12 +76,12 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.31
+        "elapsed": 0.26
       },
       "bot": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.25
+        "elapsed": 0.27
       }
     },
     "ct_finance": {
@@ -89,7 +89,7 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 502 Bad Gateway",
-        "elapsed": 0.27
+        "elapsed": 0.26
       }
     },
     "ct_realtimenews": {
@@ -97,7 +97,7 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.25
+        "elapsed": 0.23
       }
     },
     "ct_chinatimes_xml": {
@@ -105,7 +105,7 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.27
+        "elapsed": 0.28
       }
     },
     "ct_syndication": {
@@ -113,7 +113,7 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.23
+        "elapsed": 0.2
       }
     },
     "wantrich_fin": {
@@ -121,7 +121,7 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.34
+        "elapsed": 0.29
       }
     },
     "wantrich_feed": {
@@ -129,7 +129,7 @@
       "browser": {
         "ok": false,
         "err": "HTTPError 404 Not Found",
-        "elapsed": 0.35
+        "elapsed": 0.23
       }
     },
     "ettoday_finance": {
@@ -140,7 +140,7 @@
         "ctype": "text/xml; charset=utf-8",
         "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" version=\"2.0\">\n\t<ch",
         "looks_rss": true,
-        "elapsed": 0.26
+        "elapsed": 0.34
       }
     },
     "ltn_business": {
@@ -151,7 +151,7 @@
         "ctype": "application/xml; charset=UTF-8",
         "head": "﻿<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\"><channel><title><![CDATA[財經新聞 - 自由時報]]></tit",
         "looks_rss": true,
-        "elapsed": 0.06
+        "elapsed": 0.11
       }
     },
     "ltn_ec_business": {
@@ -160,9 +160,9 @@
         "ok": true,
         "status": 200,
         "ctype": "text/html; charset=UTF-8",
-        "head": "<!DOCTYPE html>\n<html lang=\"zh-TW\">\n<head>\n    <script>\n    let cdnDate = '20260907114118';\n    var pvDomain = 'pv.ltn.c",
+        "head": "<!DOCTYPE html>\n<html lang=\"zh-TW\">\n<head>\n    <script>\n    let cdnDate = '20260907132914';\n    var pvDomain = 'pv.ltn.c",
         "looks_rss": false,
-        "elapsed": 0.25
+        "elapsed": 0.58
       }
     },
     "cnyes_tw_industry": {
@@ -173,7 +173,7 @@
         "ctype": "application/rss+xml; charset=utf-8",
         "head": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http:",
         "looks_rss": true,
-        "elapsed": 0.29
+        "elapsed": 0.23
       }
     },
     "yahoo_tw_news": {
@@ -184,7 +184,7 @@
         "ctype": "text/xml; charset=utf-8",
         "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?><?xml-stylesheet title=\"XSL_formatting\" type=\"text/xsl\" href=\"/nolsol.xsl\"?><rss v",
         "looks_rss": true,
-        "elapsed": 0.32
+        "elapsed": 0.61
       }
     },
     "udn_stock_sub": {
@@ -195,7 +195,7 @@
         "ctype": "text/xml;charset=UTF-8",
         "head": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><rss version=\"2.0\">\n\t<channel>\n\t\t<title><![CDATA[經濟日報：不僅新聞速�",
         "looks_rss": true,
-        "elapsed": 0.23
+        "elapsed": 0.19
       }
     }
   },
