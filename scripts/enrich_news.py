@@ -92,6 +92,35 @@ def is_noise(title):
     return bool(NZ_IDX.search(title) and NZ_MOVE.search(title))
 
 
+# ── 重大事件偵測（ev 旗標，優先於 nz）─────────────────────────
+# 2026/09/07 實測抓到的漏洞：「台股狂飆780點！欣興揮別**洗產地**陰霾上漲逾5%」
+# 被 nz 判為行情快訊而降級，但它講的是洗產地監理案——與同日「欣興案衝擊
+# 兩岸接力生產恐洗牌」是同一件事，直接觸及 PCB／載板持股的產地結構。
+# 教訓：**一則新聞可以同時是行情快訊與實質事件**，只看標題型態會誤降級。
+#
+# 規則：命中事件詞者 ev=true，且**強制不標 nz**（事件優先於行情）。
+# 事件則一律獨立列出並附連結，不併入行情快訊群組。
+EVENT_KW = re.compile(
+    r"洗產地|原產地|轉單規避|規避關稅|反傾銷|課徵關稅|禁令|制裁|出口管制|實體清單|"
+    r"搜索|起訴|偵查|約談|羈押|訴訟|仲裁|專利侵權|求償|"
+    r"裁罰|罰鍰|處分金|糾正|函詢|命令改善|限期改善|"
+    r"財報重編|重編|更正財報|保留意見|無法表示意見|會計師異動|更換會計師|"
+    r"內部稽核|稽核主管|財務主管異動|會計主管異動|"
+    r"停止買賣|停牌|變更交易|下市|下櫃|全額交割|違約交割|"
+    r"掏空|內線交易|假帳|財報不實|資產凍結|"
+    r"火災|爆炸|停工|罷工|斷鏈|召回|資安事件|遭駭|勒索軟體|"
+    r"現金增資|可轉債|GDR|私募|減資|設質|質押|申報轉讓")
+# 這幾個詞在一般報導裡是中性用語，命中僅這些不算事件
+EVENT_FALSE = re.compile(r"調查顯示|問卷調查|民意調查|民調|調查報告|市場調查")
+
+
+def is_event(title):
+    """重大事件回 True。ev 優先於 nz：事件則不得被當成行情快訊降級。"""
+    if EVENT_FALSE.search(title):
+        return False
+    return bool(EVENT_KW.search(title))
+
+
 def load_name_map():
     """由 repo 內既有的月營收檔建 名稱→代號 對照表（免額外抓取來源）。
 
@@ -144,7 +173,7 @@ def main():
     print("名稱對照表:", len(name_map), "家")
 
     items = payload.get("items", [])
-    n_cn = n_kwt = n_nz = 0
+    n_cn = n_kwt = n_nz = n_ev = 0
     for it in items:
         text = (it.get("t") or "") + " " + (it.get("d") or "")
         if not text.strip():
@@ -168,10 +197,27 @@ def main():
             it["kwt"] = kwt[:12]
             n_kwt += 1
 
-        if is_noise(it.get("t") or ""):
+        title = it.get("t") or ""
+        if is_event(title):
+            it["ev"] = True
+            n_ev += 1
+        elif is_noise(title):
             it["nz"] = True
             n_nz += 1
 
+    # ── 行情快訊去重（只歸類、不刪除）────────────────────────
+    # 2026/09/07 使用者指示：「台積電漲30元 台股早盤漲逾600點站上47000點」這類
+    # 重複性太高，只出一則，其餘與它相同、不影響判定者歸類為同一則消息。
+    # 作法：nz=true 者視為當日同一則大盤行情的不同媒體版本，取 ts 最新者為代表
+    # （nzr=true），其餘標 nzdup=true 並記下群組大小。**一則都不刪除。**
+    nz_items = [x for x in items if x.get("nz")]
+    if nz_items:
+        nz_items.sort(key=lambda x: (x.get("ts") or ""), reverse=True)
+        nz_items[0]["nzr"] = True
+        for x in nz_items[1:]:
+            x["nzdup"] = True
+    payload["nz_group_size"] = len(nz_items)
+    payload["ev_count"] = n_ev
     payload["cn_count"] = n_cn
     payload["kwt_count"] = n_kwt
     payload["nz_count"] = n_nz
@@ -181,7 +227,10 @@ def main():
         "刻意放寬、寧可多標）。兩者皆為候選標記，非結論；"
         "哪個主題對應哪一檔一律由讀取端自行對照，本 repo 不存任何持股資訊。"
         "nz=true 表示該則為大盤指數行情快訊（報價，非產業事件），"
-        "**僅供讀取端降序處理，不得據以刪除或略過**。"
+        "**僅供讀取端降序處理，不得據以刪除或略過**；其中 nzr=true 為該群組代表則，"
+        "nzdup=true 為同一則消息的其他媒體版本，讀取端只需顯示代表則並註明另有幾則同型。"
+        "ev=true 表示標題命中重大事件詞（監理、訴訟、關稅、財報重編、稽核人事、"
+        "停牌、籌資稀釋、質押、天災停工等），**ev 優先於 nz，事件則一律獨立列出並附連結**。"
     )
 
     with open(news_path, "w", encoding="utf-8") as f:
@@ -192,16 +241,15 @@ def main():
         manifest["files"]["news"]["cn_count"] = n_cn
         manifest["files"]["news"]["kwt_count"] = n_kwt
         manifest["files"]["news"]["nz_count"] = n_nz
+        manifest["files"]["news"]["ev_count"] = n_ev
         with open(idx_path, "w", encoding="utf-8") as f:
             json.dump(manifest, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print("併入索引失敗（非致命）:", repr(e))
 
     total = len(items)
-    print("標記完成：共 %d 則｜cn %d 則（%.1f%%）｜kwt %d 則（%.1f%%）｜nz %d 則（%.1f%%）" % (
-        total, n_cn, (n_cn / total * 100 if total else 0),
-        n_kwt, (n_kwt / total * 100 if total else 0),
-        n_nz, (n_nz / total * 100 if total else 0)))
+    print("標記完成：共 %d 則｜cn %d｜kwt %d｜nz %d（代表 1 則）｜ev %d" % (
+        total, n_cn, n_kwt, n_nz, n_ev))
 
 
 if __name__ == "__main__":
