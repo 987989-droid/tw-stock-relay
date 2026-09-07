@@ -30,6 +30,10 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_news.py
 
+      - name: enrich news（cn 名稱比對 / kwt 產業主題詞 標記）
+        continue-on-error: true
+        run: python scripts/enrich_news.py
+
       - name: commit
         run: |
           git config user.name "github-actions"
