@@ -36,17 +36,28 @@ UA = "Mozilla/5.0 (compatible; tw-stock-relay/1.0)"
 
 FEEDS = [
     # key,                 url,                                                              desc
+    # ── 已驗證可用（2026/09/07 於 Actions 實測 status=200 且為 RSS）──────
     ("cnyes_tw_stock",     "https://news.cnyes.com/rss/v1/news/category/tw_stock",            "鉅亨網 台股"),
     ("cnyes_wd_stock",     "https://news.cnyes.com/rss/v1/news/category/wd_stock",            "鉅亨網 國際股"),
     ("cnyes_tw_macro",     "https://news.cnyes.com/rss/v1/news/category/tw_macro",            "鉅亨網 台灣總經"),
+    ("cnyes_tw_industry",  "https://news.cnyes.com/rss/v1/news/category/tw_industry",         "鉅亨網 台灣產業"),
     ("technews",           "https://technews.tw/feed/",                                       "科技新報"),
     ("moneydj",            "https://www.moneydj.com/kmdj/RssCenter.aspx?svc=NW&fno=1&arg=X0000000", "MoneyDJ 焦點新聞"),
     ("cna_finance",        "https://feeds.feedburner.com/rsscna/finance",                     "中央社 財經"),
-    ("ctee",               "https://ctee.com.tw/feed",                                        "工商時報"),
     ("udn_money",          "https://money.udn.com/rssfeed/news/1001/5591?ch=money",           "經濟日報 股市"),
-    ("chinatimes_finance", "https://www.chinatimes.com/rss/realtimenews-finance.xml",         "中時 財經即時"),
+    ("udn_stock_sub",      "https://money.udn.com/rssfeed/news/1001/5591/7307?ch=money",      "經濟日報 股市要聞"),
+    ("ettoday_finance",    "https://feeds.feedburner.com/ettoday/finance",                    "ETtoday 財經"),
+    ("ltn_business",       "https://news.ltn.com.tw/rss/business.xml",                        "自由時報 財經"),
     ("yahoo_tw_market",    "https://tw.stock.yahoo.com/rss?category=tw-market",               "Yahoo 台股"),
 ]
+
+# ── 已移除的來源（2026/09/07，經 scripts/probe_feeds.py 在 Actions 實測後判定不可修）──
+#   ctee（工商時報）：/feed、/rss、/?feed=rss2、/category/news/tech/feed 四條路徑，
+#     在 bot UA 與瀏覽器 UA 下皆回 HTTP 403 → 阻擋發生在 IP／CDN 層，換 UA 無效。
+#   chinatimes（中時）：realtimenews-finance.xml、money.xml、realtimenews.xml、
+#     chinatimes.xml、/syndication/rss 全數 404（finance.xml 為 502），
+#     旺得富 wantrich 兩條路徑亦 404 → 中時集團已無對外 RSS。
+#   要重新檢查是否恢復，手動觸發 workflow_dispatch 即會重跑 probe_feeds.py。
 
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
