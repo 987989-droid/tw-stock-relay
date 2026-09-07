@@ -121,6 +121,40 @@ def is_event(title):
     return bool(EVENT_KW.search(title))
 
 
+# ── 弱詞：客戶名與泛用詞，單獨命中不算「有料」（供 nz 代表則挑選用）──
+NZ_WEAK_KW = {
+    "台積電", "鴻海", "輝達", "NVIDIA", "博通", "超微", "緯創", "廣達",
+    "伺服器", "資料中心", "算力", "資本支出", "電價", "台電",
+}
+
+# ── 標題相似度分群（dup）──────────────────────────────────
+DUP_TH = 0.50
+_DUP_PUNCT = re.compile(
+    r"[\s　！!？?，,。．\.、；;：:「」『』（）()《》〈〉【】\[\]／/\\|＋+－\-—…“”\"'\x60~%＄$#＊*·・]")
+
+
+def _title_sig(t):
+    """標題正規化後的字元 2-gram 集合。"""
+    t = _DUP_PUNCT.sub("", t or "")
+    if len(t) >= 2:
+        return {t[i:i + 2] for i in range(len(t) - 1)}
+    return {t} if t else set()
+
+
+def _overlap(a, b):
+    """重疊係數＝交集 ÷ 較短者。長短標題講同一件事時比 Jaccard 穩。"""
+    if not a or not b:
+        return 0.0
+    return len(a & b) / min(len(a), len(b))
+
+
+def _code_compat(a, b):
+    """兩則皆有股號時須有交集才可同群；一方無股號則不阻擋。"""
+    if not a or not b:
+        return True
+    return bool(a & b)
+
+
 def load_name_map():
     """由 repo 內既有的月營收檔建 名稱→代號 對照表（免額外抓取來源）。
 
@@ -208,15 +242,72 @@ def main():
     # ── 行情快訊去重（只歸類、不刪除）────────────────────────
     # 2026/09/07 使用者指示：「台積電漲30元 台股早盤漲逾600點站上47000點」這類
     # 重複性太高，只出一則，其餘與它相同、不影響判定者歸類為同一則消息。
-    # 作法：nz=true 者視為當日同一則大盤行情的不同媒體版本，取 ts 最新者為代表
+    # 作法：nz=true 者視為當日同一則大盤行情的不同媒體版本，取一則為代表
     # （nzr=true），其餘標 nzdup=true 並記下群組大小。**一則都不刪除。**
+    #
+    # 代表則怎麼挑（2026/09/07 修正）：原本取 ts 最新者，實測挑中
+    # 「早盤最熱族群》台積電領軍台股衝破47000點！**聯發科ASIC大單將至**」——
+    # 前半是行情快訊、後半有實質內容，整則被降級。
+    # 改為挑**資訊量最低**者：硬主題詞越少越好（弱詞＝客戶名與泛用詞不算資訊），
+    # 其次沒有股號者優先，最後才用 ts 最新破平手。代表則本來就只是「讓你知道
+    # 今天大盤在動」的一行，挑最沒料的那則才對。
     nz_items = [x for x in items if x.get("nz")]
     if nz_items:
-        nz_items.sort(key=lambda x: (x.get("ts") or ""), reverse=True)
+        def _info(x):
+            hard = [k for k in (x.get("kwt") or []) if k not in NZ_WEAK_KW]
+            has_code = 1 if (x.get("c") or x.get("cn")) else 0
+            return (len(hard), has_code, "" if not x.get("ts") else x["ts"])
+        nz_items.sort(key=lambda x: (_info(x)[0], _info(x)[1],
+                                     [-ord(ch) for ch in (x.get("ts") or "")]))
         nz_items[0]["nzr"] = True
         for x in nz_items[1:]:
             x["nzdup"] = True
     payload["nz_group_size"] = len(nz_items)
+
+    # ── 同一則消息的多媒體版本分群（dup，只歸類、不刪除）──────────
+    # 2026/09/07 實測抓到的第二類重複：同日「工研院院士」有 9 則不同媒體版本，
+    # 標題沒有指數詞、nz 抓不到，全部湧入丙候選。
+    # 作法：標題字元 2-gram 的**重疊係數**（交集 ÷ 較短者），門檻 0.50。
+    # 用重疊係數而非 Jaccard，是因為長短標題描述同一事件時 Jaccard 會被長度差稀釋。
+    #
+    # **股號相容性防護（必要，勿移除）**：純看字面會把同模板不同主角的新聞併掉——
+    # 實測「鉅亨速報 Factset：緯創(3231)EPS上修」與「…雙鴻(3324)EPS下修」
+    # 在 0.60 門檻下被判為同一群。故兩則**皆有**股號時必須有交集才可同群；
+    # 一方無股號則不阻擋。加防護後 0.50 門檻在當日 279 則上分出 14 組、
+    # 折疊 17 則，且逐組人工檢視**無任何誤群**。
+    #
+    # 代表則挑**資訊量最高**者（與 nz 相反：這裡要留最完整的那一則）。
+    # 標記為 dupg（群組編號）／dupr（代表）／dupn（群組大小），
+    # **僅供讀取端摺疊顯示，不得據以刪除；甲乙命中者一律全列，不受本欄影響。**
+    _sigs = [_title_sig(x.get("t") or "") for x in items]
+    _codes = [set(x.get("c") or []) | set(x.get("cn") or []) for x in items]
+    _groups = []
+    for i in range(len(items)):
+        hit = None
+        for g in _groups:
+            if any(_overlap(_sigs[i], _sigs[j]) >= DUP_TH
+                   and _code_compat(_codes[i], _codes[j]) for j in g):
+                hit = g
+                break
+        if hit is None:
+            _groups.append([i])
+        else:
+            hit.append(i)
+    n_dup = 0
+    for gi, g in enumerate(_groups):
+        if len(g) < 2:
+            continue
+        rep = max(g, key=lambda j: (len(items[j].get("kwt") or []),
+                                    len(items[j].get("t") or "")))
+        for j in g:
+            items[j]["dupg"] = gi
+            items[j]["dupn"] = len(g)
+            if j == rep:
+                items[j]["dupr"] = True
+            else:
+                n_dup += 1
+    payload["dup_group_count"] = sum(1 for g in _groups if len(g) > 1)
+    payload["dup_folded"] = n_dup
     payload["ev_count"] = n_ev
     payload["cn_count"] = n_cn
     payload["kwt_count"] = n_kwt
@@ -231,6 +322,9 @@ def main():
         "nzdup=true 為同一則消息的其他媒體版本，讀取端只需顯示代表則並註明另有幾則同型。"
         "ev=true 表示標題命中重大事件詞（監理、訴訟、關稅、財報重編、稽核人事、"
         "停牌、籌資稀釋、質押、天災停工等），**ev 優先於 nz，事件則一律獨立列出並附連結**。"
+        "dupg/dupr/dupn＝同一則消息的多媒體版本分群（標題 2-gram 重疊係數 ≥0.50，"
+        "且兩則皆有股號時須股號有交集），dupr=true 為資訊量最高的代表則；"
+        "**僅供摺疊顯示，不得據以刪除，甲乙命中者一律全列**。"
     )
 
     with open(news_path, "w", encoding="utf-8") as f:
@@ -242,14 +336,17 @@ def main():
         manifest["files"]["news"]["kwt_count"] = n_kwt
         manifest["files"]["news"]["nz_count"] = n_nz
         manifest["files"]["news"]["ev_count"] = n_ev
+        manifest["files"]["news"]["dup_folded"] = payload["dup_folded"]
         with open(idx_path, "w", encoding="utf-8") as f:
             json.dump(manifest, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print("併入索引失敗（非致命）:", repr(e))
 
     total = len(items)
-    print("標記完成：共 %d 則｜cn %d｜kwt %d｜nz %d（代表 1 則）｜ev %d" % (
-        total, n_cn, n_kwt, n_nz, n_ev))
+    print("標記完成：共 %d 則｜cn %d｜kwt %d｜nz %d（代表 1 則）｜ev %d｜"
+          "同消息分群 %d 組（折疊 %d 則）" % (
+              total, n_cn, n_kwt, n_nz, n_ev,
+              payload["dup_group_count"], payload["dup_folded"]))
 
 
 if __name__ == "__main__":
