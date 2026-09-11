@@ -1,6 +1,6 @@
 {
-  "run_at_taipei": "2026-09-10T19:11:35.326340+08:00",
-  "date": "2026-09-10",
+  "run_at_taipei": "2026-09-11T19:11:35.573696+08:00",
+  "date": "2026-09-11",
   "expected_period": "11508",
   "sources": {
     "material_listed": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 175268,
-          "content_length": 175268,
-          "elapsed": 9.43,
+          "bytes": 161775,
+          "content_length": 161775,
+          "elapsed": 1.6,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -24,11 +24,11 @@
         }
       ],
       "status": 200,
-      "bytes": 175268,
-      "elapsed": 9.43,
+      "bytes": 161775,
+      "elapsed": 1.6,
       "err": null,
-      "count": 106,
-      "path": "data/daily/material_listed/2026-09-10.json",
+      "count": 92,
+      "path": "data/daily/material_listed/2026-09-11.json",
       "keys": [
         "出表日期",
         "發言日期",
@@ -47,37 +47,26 @@
       "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O",
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep",
-      "tries": 2,
+      "tries": 1,
       "attempts": [
         {
-          "status": null,
-          "bytes": 0,
-          "content_length": null,
-          "elapsed": 11.51,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": "HTTPError: HTTP Error 520: <none>",
-          "attempt": 1
-        },
-        {
           "status": 200,
-          "bytes": 66075,
-          "content_length": 66075,
-          "elapsed": 4.85,
+          "bytes": 83085,
+          "content_length": 83085,
+          "elapsed": 4.46,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
-          "attempt": 2
+          "attempt": 1
         }
       ],
       "status": 200,
-      "bytes": 66075,
-      "elapsed": 4.85,
+      "bytes": 83085,
+      "elapsed": 4.46,
       "err": null,
-      "count": 41,
-      "path": "data/daily/material_otc/2026-09-10.json",
+      "count": 46,
+      "path": "data/daily/material_otc/2026-09-11.json",
       "keys": [
         "Date",
         "發言日期",
@@ -100,9 +89,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 3509,
-          "content_length": 3509,
-          "elapsed": 2.08,
+          "bytes": 708,
+          "content_length": 708,
+          "elapsed": 0.82,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -111,11 +100,11 @@
         }
       ],
       "status": 200,
-      "bytes": 3509,
-      "elapsed": 2.08,
+      "bytes": 708,
+      "elapsed": 0.82,
       "err": null,
-      "count": 5,
-      "path": "data/daily/insider_listed/2026-09-10.json",
+      "count": 1,
+      "path": "data/daily/insider_listed/2026-09-11.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -141,37 +130,26 @@
       "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap12_O",
       "desc": "上櫃內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep",
-      "tries": 2,
+      "tries": 1,
       "attempts": [
         {
-          "status": null,
-          "bytes": 0,
-          "content_length": null,
-          "elapsed": 5.58,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": "HTTPError: HTTP Error 520: <none>",
-          "attempt": 1
-        },
-        {
           "status": 200,
-          "bytes": 575,
-          "content_length": 575,
-          "elapsed": 0.25,
+          "bytes": 722,
+          "content_length": 722,
+          "elapsed": 1.05,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
-          "attempt": 2
+          "attempt": 1
         }
       ],
       "status": 200,
-      "bytes": 575,
-      "elapsed": 0.25,
+      "bytes": 722,
+      "elapsed": 1.05,
       "err": null,
       "count": 1,
-      "path": "data/daily/insider_otc/2026-09-10.json",
+      "path": "data/daily/insider_otc/2026-09-11.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -201,9 +179,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 319476,
-          "content_length": 319476,
-          "elapsed": 1.5,
+          "bytes": 319123,
+          "content_length": 319123,
+          "elapsed": 1.24,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -212,10 +190,10 @@
         }
       ],
       "status": 200,
-      "bytes": 319476,
-      "elapsed": 1.5,
+      "bytes": 319123,
+      "elapsed": 1.24,
       "err": null,
-      "count": 1382,
+      "count": 1379,
       "path": "data/latest/quotes_listed.json",
       "keys": [
         "Date",
@@ -237,25 +215,36 @@
       "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only",
-      "tries": 1,
+      "tries": 2,
       "attempts": [
         {
           "status": 200,
-          "bytes": 4363222,
-          "content_length": 4363222,
-          "elapsed": 9.24,
+          "bytes": 540265,
+          "content_length": 4368273,
+          "elapsed": 3.15,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": true,
+          "err": "傳輸不完整：收到 540265 / 應為 4368273 bytes",
+          "attempt": 1
+        },
+        {
+          "status": 200,
+          "bytes": 4368273,
+          "content_length": 4368273,
+          "elapsed": 12.1,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
-          "attempt": 1
+          "attempt": 2
         }
       ],
       "status": 200,
-      "bytes": 4363222,
-      "elapsed": 9.24,
+      "bytes": 4368273,
+      "elapsed": 12.1,
       "err": null,
-      "count": 11179,
+      "count": 11193,
       "path": "data/latest/quotes_otc.json",
       "keys": [
         "Date",
@@ -288,9 +277,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 116677,
-          "content_length": 116677,
-          "elapsed": 0.98,
+          "bytes": 116365,
+          "content_length": 116365,
+          "elapsed": 0.92,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -299,10 +288,10 @@
         }
       ],
       "status": 200,
-      "bytes": 116677,
-      "elapsed": 0.98,
+      "bytes": 116365,
+      "elapsed": 0.92,
       "err": null,
-      "count": 1083,
+      "count": 1080,
       "path": "data/latest/valuation_listed.json",
       "keys": [
         "Date",
@@ -325,7 +314,7 @@
           "status": 200,
           "bytes": 604474,
           "content_length": 604474,
-          "elapsed": 1.84,
+          "elapsed": 1.37,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -335,7 +324,7 @@
       ],
       "status": 200,
       "bytes": 604474,
-      "elapsed": 1.84,
+      "elapsed": 1.37,
       "err": null,
       "count": 1085,
       "path": "data/monthly/revenue_listed/11507.json",
@@ -366,9 +355,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 494726,
-          "content_length": 494726,
-          "elapsed": 3.02,
+          "bytes": 496010,
+          "content_length": 496010,
+          "elapsed": 2.16,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -377,11 +366,11 @@
         }
       ],
       "status": 200,
-      "bytes": 494726,
-      "elapsed": 3.02,
+      "bytes": 496010,
+      "elapsed": 2.16,
       "err": null,
-      "count": 890,
-      "path": "data/monthly/revenue_otc/11507.json",
+      "count": 891,
+      "path": "data/monthly/revenue_otc/11508.json",
       "keys": [
         "出表日期",
         "資料年月",
@@ -409,9 +398,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 200573,
-          "content_length": 200573,
-          "elapsed": 3.33,
+          "bytes": 201593,
+          "content_length": 201593,
+          "elapsed": 0.63,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -420,11 +409,11 @@
         }
       ],
       "status": 200,
-      "bytes": 200573,
-      "elapsed": 3.33,
+      "bytes": 201593,
+      "elapsed": 0.63,
       "err": null,
-      "count": 359,
-      "path": "data/monthly/revenue_emerging/11507.json",
+      "count": 362,
+      "path": "data/monthly/revenue_emerging/11508.json",
       "keys": [
         "出表日期",
         "資料年月",
@@ -454,7 +443,7 @@
           "status": 200,
           "bytes": 10375320,
           "content_length": 10375320,
-          "elapsed": 6.37,
+          "elapsed": 3.52,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -464,7 +453,7 @@
       ],
       "status": 200,
       "bytes": 10375320,
-      "elapsed": 6.37,
+      "elapsed": 3.52,
       "err": null,
       "count": 27528,
       "path": "data/monthly/pledge_listed/11507.json",
@@ -490,23 +479,34 @@
       "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O",
       "desc": "上櫃公司董監事持股餘額明細(含設質)",
       "mode": "monthly",
-      "tries": 1,
+      "tries": 2,
       "attempts": [
+        {
+          "status": 200,
+          "bytes": 343672,
+          "content_length": 6597882,
+          "elapsed": 1.47,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": true,
+          "err": "傳輸不完整：收到 343672 / 應為 6597882 bytes",
+          "attempt": 1
+        },
         {
           "status": 200,
           "bytes": 6597882,
           "content_length": 6597882,
-          "elapsed": 0.84,
+          "elapsed": 17.39,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
-          "attempt": 1
+          "attempt": 2
         }
       ],
       "status": 200,
       "bytes": 6597882,
-      "elapsed": 0.84,
+      "elapsed": 17.39,
       "err": null,
       "count": 17517,
       "path": "data/monthly/pledge_otc/11507.json",
