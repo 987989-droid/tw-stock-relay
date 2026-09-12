@@ -1,10 +1,10 @@
 {
-  "run_at_taipei": "2026-09-11T19:11:35.573696+08:00",
-  "date": "2026-09-11",
+  "run_at_taipei": "2026-09-12T19:10:04.649300+08:00",
+  "date": "2026-09-12",
   "expected_period": "11508",
   "sources": {
     "material_listed": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L",
       "desc": "上市公司每日重大訊息",
@@ -13,393 +13,8 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 161775,
-          "content_length": 161775,
-          "elapsed": 1.6,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 161775,
-      "elapsed": 1.6,
-      "err": null,
-      "count": 92,
-      "path": "data/daily/material_listed/2026-09-11.json",
-      "keys": [
-        "出表日期",
-        "發言日期",
-        "發言時間",
-        "公司代號",
-        "公司名稱",
-        "主旨 ",
-        "符合條款",
-        "事實發生日",
-        "說明"
-      ]
-    },
-    "material_otc": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O",
-      "desc": "上櫃公司每日重大訊息",
-      "mode": "daily_keep",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 83085,
-          "content_length": 83085,
-          "elapsed": 4.46,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 83085,
-      "elapsed": 4.46,
-      "err": null,
-      "count": 46,
-      "path": "data/daily/material_otc/2026-09-11.json",
-      "keys": [
-        "Date",
-        "發言日期",
-        "發言時間",
-        "SecuritiesCompanyCode",
-        "CompanyName",
-        "主旨",
-        "符合條款",
-        "事實發生日",
-        "說明"
-      ]
-    },
-    "insider_listed": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap12_L",
-      "desc": "上市內部人持股轉讓事前申報(轉讓)",
-      "mode": "daily_keep",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 708,
-          "content_length": 708,
-          "elapsed": 0.82,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 708,
-      "elapsed": 0.82,
-      "err": null,
-      "count": 1,
-      "path": "data/daily/insider_listed/2026-09-11.json",
-      "keys": [
-        "出表日期",
-        "公司代號",
-        "公司名稱",
-        "申報人身分",
-        "姓名",
-        "預定轉讓方式及股數-轉讓方式",
-        "預定轉讓方式及股數-轉讓股數",
-        "每日於盤中交易最大得轉讓股數",
-        "受讓人",
-        "目前持有股數-自有持股",
-        "目前持有股數-保留運用決定權信託股數",
-        "預定轉讓總股數-自有持股",
-        "預定轉讓總股數-保留運用決定權信託股數",
-        "預定轉讓後持股-自有持股",
-        "預定轉讓後持股-保留運用決定權信託股數",
-        "有效轉讓期間"
-      ]
-    },
-    "insider_otc": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap12_O",
-      "desc": "上櫃內部人持股轉讓事前申報(轉讓)",
-      "mode": "daily_keep",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 722,
-          "content_length": 722,
-          "elapsed": 1.05,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 722,
-      "elapsed": 1.05,
-      "err": null,
-      "count": 1,
-      "path": "data/daily/insider_otc/2026-09-11.json",
-      "keys": [
-        "Date",
-        "SecuritiesCompanyCode",
-        "CompanyName",
-        "申請人身分",
-        "姓名",
-        "預定轉讓方式及股數-轉讓方式",
-        "預定轉讓方式及股數-轉讓股數",
-        "每日於盤中交易最大得轉讓股數",
-        "受讓人",
-        "目前持有股數-自有持股",
-        "目前持有股數-保留運用決定權信託股數",
-        "預定轉讓總股數-自有持股",
-        "預定轉讓總股數-保留運用決定權信託股數",
-        "預定轉讓後持股-自有持股",
-        "預定轉讓後持股-保留運用決定權信託股數",
-        "有效轉讓期間"
-      ]
-    },
-    "quotes_listed": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
-      "desc": "上市個股當日成交資訊",
-      "mode": "latest_only",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 319123,
-          "content_length": 319123,
-          "elapsed": 1.24,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 319123,
-      "elapsed": 1.24,
-      "err": null,
-      "count": 1379,
-      "path": "data/latest/quotes_listed.json",
-      "keys": [
-        "Date",
-        "Code",
-        "Name",
-        "TradeVolume",
-        "TradeValue",
-        "OpeningPrice",
-        "HighestPrice",
-        "LowestPrice",
-        "ClosingPrice",
-        "Change",
-        "Transaction"
-      ]
-    },
-    "quotes_otc": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
-      "desc": "上櫃每日收盤行情",
-      "mode": "latest_only",
-      "tries": 2,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 540265,
-          "content_length": 4368273,
-          "elapsed": 3.15,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": true,
-          "err": "傳輸不完整：收到 540265 / 應為 4368273 bytes",
-          "attempt": 1
-        },
-        {
-          "status": 200,
-          "bytes": 4368273,
-          "content_length": 4368273,
-          "elapsed": 12.1,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 2
-        }
-      ],
-      "status": 200,
-      "bytes": 4368273,
-      "elapsed": 12.1,
-      "err": null,
-      "count": 11193,
-      "path": "data/latest/quotes_otc.json",
-      "keys": [
-        "Date",
-        "SecuritiesCompanyCode",
-        "CompanyName",
-        "Close",
-        "Change",
-        "Open",
-        "High",
-        "Low",
-        "Average",
-        "TradingShares",
-        "TransactionAmount",
-        "TransactionNumber",
-        "LatestBidPrice",
-        "LatesAskPrice",
-        "Capitals",
-        "NextReferencePrice",
-        "NextLimitUp",
-        "NextLimitDown"
-      ]
-    },
-    "valuation_listed": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL",
-      "desc": "上市本益比/殖利率/股價淨值比",
-      "mode": "latest_only",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 116365,
-          "content_length": 116365,
-          "elapsed": 0.92,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 116365,
-      "elapsed": 0.92,
-      "err": null,
-      "count": 1080,
-      "path": "data/latest/valuation_listed.json",
-      "keys": [
-        "Date",
-        "Code",
-        "Name",
-        "PEratio",
-        "DividendYield",
-        "PBratio"
-      ]
-    },
-    "revenue_listed": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
-      "desc": "上市公司每月營業收入彙總表",
-      "mode": "monthly",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 604474,
-          "content_length": 604474,
-          "elapsed": 1.37,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 604474,
-      "elapsed": 1.37,
-      "err": null,
-      "count": 1085,
-      "path": "data/monthly/revenue_listed/11507.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "產業別",
-        "營業收入-當月營收",
-        "營業收入-上月營收",
-        "營業收入-去年當月營收",
-        "營業收入-上月比較增減(%)",
-        "營業收入-去年同月增減(%)",
-        "累計營業收入-當月累計營收",
-        "累計營業收入-去年累計營收",
-        "累計營業收入-前期比較增減(%)",
-        "備註"
-      ]
-    },
-    "revenue_otc": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap05_O",
-      "desc": "上櫃公司每月營業收入彙總表",
-      "mode": "monthly",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 496010,
-          "content_length": 496010,
-          "elapsed": 2.16,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 496010,
-      "elapsed": 2.16,
-      "err": null,
-      "count": 891,
-      "path": "data/monthly/revenue_otc/11508.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "產業別",
-        "營業收入-當月營收",
-        "營業收入-上月營收",
-        "營業收入-去年當月營收",
-        "營業收入-上月比較增減(%)",
-        "營業收入-去年同月增減(%)",
-        "累計營業收入-當月累計營收",
-        "累計營業收入-去年累計營收",
-        "累計營業收入-前期比較增減(%)",
-        "備註"
-      ]
-    },
-    "revenue_emerging": {
-      "ok": true,
-      "skipped": false,
-      "url": "https://www.tpex.org.tw/openapi/v1/t187ap05_R",
-      "desc": "興櫃公司每月營業收入彙總表",
-      "mode": "monthly",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 201593,
-          "content_length": 201593,
+          "bytes": 800,
+          "content_length": null,
           "elapsed": 0.63,
           "truncated": false,
           "timed_out": false,
@@ -409,30 +24,313 @@
         }
       ],
       "status": 200,
-      "bytes": 201593,
+      "bytes": 800,
       "elapsed": 0.63,
-      "err": null,
-      "count": 362,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "material_otc": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O",
+      "desc": "上櫃公司每日重大訊息",
+      "mode": "daily_keep",
+      "tries": 3,
+      "attempts": [
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.36,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 1
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 1.28,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 2
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.44,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 3
+        }
+      ],
+      "status": null,
+      "bytes": 0,
+      "elapsed": 0.44,
+      "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "insider_listed": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap12_L",
+      "desc": "上市內部人持股轉讓事前申報(轉讓)",
+      "mode": "daily_keep",
+      "tries": 1,
+      "attempts": [
+        {
+          "status": 200,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.62,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": null,
+          "attempt": 1
+        }
+      ],
+      "status": 200,
+      "bytes": 800,
+      "elapsed": 0.62,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "insider_otc": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap12_O",
+      "desc": "上櫃內部人持股轉讓事前申報(轉讓)",
+      "mode": "daily_keep",
+      "tries": 3,
+      "attempts": [
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.43,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 1
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.44,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 2
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.43,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 3
+        }
+      ],
+      "status": null,
+      "bytes": 0,
+      "elapsed": 0.43,
+      "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "quotes_listed": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
+      "desc": "上市個股當日成交資訊",
+      "mode": "latest_only",
+      "tries": 3,
+      "attempts": [
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.45,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>",
+          "attempt": 1
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 15.48,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+          "attempt": 2
+        },
+        {
+          "status": 200,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.61,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": null,
+          "attempt": 3
+        }
+      ],
+      "status": 200,
+      "bytes": 800,
+      "elapsed": 0.61,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "quotes_otc": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
+      "desc": "上櫃每日收盤行情",
+      "mode": "latest_only",
+      "tries": 3,
+      "attempts": [
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.22,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 1
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.04,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 2
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.19,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 3
+        }
+      ],
+      "status": null,
+      "bytes": 0,
+      "elapsed": 0.19,
+      "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "valuation_listed": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL",
+      "desc": "上市本益比/殖利率/股價淨值比",
+      "mode": "latest_only",
+      "tries": 1,
+      "attempts": [
+        {
+          "status": 200,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.46,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": null,
+          "attempt": 1
+        }
+      ],
+      "status": 200,
+      "bytes": 800,
+      "elapsed": 0.46,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "revenue_listed": {
+      "ok": false,
+      "skipped": false,
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+      "desc": "上市公司每月營業收入彙總表",
+      "mode": "monthly",
+      "tries": 1,
+      "attempts": [
+        {
+          "status": 200,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.61,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": null,
+          "attempt": 1
+        }
+      ],
+      "status": 200,
+      "bytes": 800,
+      "elapsed": 0.61,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
+    },
+    "revenue_otc": {
+      "ok": true,
+      "skipped": true,
+      "path": "data/monthly/revenue_otc/11508.json",
+      "desc": "上櫃公司每月營業收入彙總表",
+      "reason": "目標年月 11508 已存在"
+    },
+    "revenue_emerging": {
+      "ok": true,
+      "skipped": true,
       "path": "data/monthly/revenue_emerging/11508.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "產業別",
-        "營業收入-當月營收",
-        "營業收入-上月營收",
-        "營業收入-去年當月營收",
-        "營業收入-上月比較增減(%)",
-        "營業收入-去年同月增減(%)",
-        "累計營業收入-當月累計營收",
-        "累計營業收入-去年累計營收",
-        "累計營業收入-前期比較增減(%)",
-        "備註"
-      ]
+      "desc": "興櫃公司每月營業收入彙總表",
+      "reason": "目標年月 11508 已存在"
     },
     "pledge_listed": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://openapi.twse.com.tw/v1/opendata/t187ap11_L",
       "desc": "上市公司董監事持股餘額明細(含設質)",
@@ -441,9 +339,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 10375320,
-          "content_length": 10375320,
-          "elapsed": 3.52,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.47,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -452,79 +350,62 @@
         }
       ],
       "status": 200,
-      "bytes": 10375320,
-      "elapsed": 3.52,
-      "err": null,
-      "count": 27528,
-      "path": "data/monthly/pledge_listed/11507.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "職稱",
-        "姓名",
-        "選任時持股 ",
-        "目前持股",
-        "設質股數",
-        "設質股數佔持股比例",
-        "內部人關係人目前持股合計",
-        "內部人關係人設質股數",
-        "內部人關係人設質比例"
-      ]
+      "bytes": 800,
+      "elapsed": 0.47,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
     },
     "pledge_otc": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O",
       "desc": "上櫃公司董監事持股餘額明細(含設質)",
       "mode": "monthly",
-      "tries": 2,
+      "tries": 3,
       "attempts": [
         {
-          "status": 200,
-          "bytes": 343672,
-          "content_length": 6597882,
-          "elapsed": 1.47,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": true,
-          "err": "傳輸不完整：收到 343672 / 應為 6597882 bytes",
-          "attempt": 1
-        },
-        {
-          "status": 200,
-          "bytes": 6597882,
-          "content_length": 6597882,
-          "elapsed": 17.39,
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.04,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
-          "err": null,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 1
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.19,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
           "attempt": 2
+        },
+        {
+          "status": null,
+          "bytes": 0,
+          "content_length": null,
+          "elapsed": 0.04,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": false,
+          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+          "attempt": 3
         }
       ],
-      "status": 200,
-      "bytes": 6597882,
-      "elapsed": 17.39,
-      "err": null,
-      "count": 17517,
-      "path": "data/monthly/pledge_otc/11507.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "職稱",
-        "姓名",
-        "選任時持股",
-        "目前持股",
-        "設質股數",
-        "設質股數佔持股比例",
-        "內部人關係人目前持股合計",
-        "內部人關係人設質股數",
-        "內部人關係人設質比例"
-      ]
+      "status": null,
+      "bytes": 0,
+      "elapsed": 0.04,
+      "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "count": null,
+      "path": null,
+      "keys": null
     }
   }
 }
