@@ -15,6 +15,19 @@
       "desc": "興櫃公司每月營業收入彙總表",
       "mode": "monthly",
       "count": null
+    },
+    "news": {
+      "path": "data/daily/news/2026-09-12.json",
+      "count": 293,
+      "mode": "daily",
+      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
+      "feeds_ok": 12,
+      "feeds_total": 12,
+      "cn_count": 90,
+      "kwt_count": 66,
+      "nz_count": 21,
+      "ev_count": 4,
+      "dup_folded": 32
     }
   },
   "failed": [
