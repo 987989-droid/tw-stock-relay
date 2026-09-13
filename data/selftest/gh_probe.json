@@ -1,0 +1,8 @@
+{
+ "ts": "2026-09-13T04:20:48.970633Z",
+ "mops_http": 200,
+ "mops_len": 21001,
+ "mops_has_company": true,
+ "mops_has_number": true,
+ "tg_skipped": "no TELEGRAM_BOT_TOKEN secret"
+}
