@@ -1,9 +1,39 @@
 {
-  "generated_at_taipei": "2026-09-12T19:10:04.649300+08:00",
-  "date": "2026-09-12",
+  "generated_at_taipei": "2026-09-13T19:10:26.835626+08:00",
+  "date": "2026-09-13",
   "expected_period": "11508",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
   "files": {
+    "material_listed": {
+      "path": "data/daily/material_listed/2026-09-13.json",
+      "count": 3,
+      "desc": "上市公司每日重大訊息",
+      "mode": "daily_keep"
+    },
+    "insider_listed": {
+      "path": "data/daily/insider_listed/2026-09-13.json",
+      "count": 8,
+      "desc": "上市內部人持股轉讓事前申報(轉讓)",
+      "mode": "daily_keep"
+    },
+    "quotes_listed": {
+      "path": "data/latest/quotes_listed.json",
+      "count": 1379,
+      "desc": "上市個股當日成交資訊",
+      "mode": "latest_only"
+    },
+    "valuation_listed": {
+      "path": "data/latest/valuation_listed.json",
+      "count": 1080,
+      "desc": "上市本益比/殖利率/股價淨值比",
+      "mode": "latest_only"
+    },
+    "revenue_listed": {
+      "path": "data/monthly/revenue_listed/11508.json",
+      "count": 1074,
+      "desc": "上市公司每月營業收入彙總表",
+      "mode": "monthly"
+    },
     "revenue_otc": {
       "path": "data/monthly/revenue_otc/11508.json",
       "desc": "上櫃公司每月營業收入彙總表",
@@ -16,30 +46,77 @@
       "mode": "monthly",
       "count": null
     },
-    "news": {
-      "path": "data/daily/news/2026-09-13.json",
-      "count": 233,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 12,
-      "feeds_total": 12,
-      "cn_count": 84,
-      "kwt_count": 61,
-      "nz_count": 18,
-      "ev_count": 2,
-      "dup_folded": 19
+    "pledge_listed": {
+      "path": "data/monthly/pledge_listed/11507.json",
+      "count": 27528,
+      "desc": "上市公司董監事持股餘額明細(含設質)",
+      "mode": "monthly"
+    },
+    "control_suspend_listed": {
+      "path": "data/daily/control_suspend_listed/2026-09-13.json",
+      "count": 1,
+      "desc": "經營權異動且營業範圍重大變更停止買賣",
+      "mode": "daily"
+    },
+    "control_altered_listed": {
+      "path": "data/daily/control_altered_listed/2026-09-13.json",
+      "count": 1,
+      "desc": "經營權異動且營業範圍重大變更列為變更交易",
+      "mode": "daily"
+    },
+    "penalty_listed": {
+      "path": "data/daily/penalty_listed/2026-09-13.json",
+      "count": 21,
+      "desc": "上市公司金管會證券期貨局裁罰案件",
+      "mode": "daily"
+    },
+    "disclosure_violation_listed": {
+      "path": "data/daily/disclosure_violation_listed/2026-09-13.json",
+      "count": 33,
+      "desc": "上市公司違反資訊申報、重大訊息及說明記者會規定",
+      "mode": "daily"
+    },
+    "control_change_listed": {
+      "path": "data/daily/control_change_listed/2026-09-13.json",
+      "count": 15,
+      "desc": "上市公司經營權異動",
+      "mode": "daily"
+    },
+    "shortfall_listed": {
+      "path": "data/daily/shortfall_listed/2026-09-13.json",
+      "count": 12,
+      "desc": "上市公司董監持股不足法定成數彙總表",
+      "mode": "daily"
+    },
+    "major_holder_listed": {
+      "path": "data/daily/major_holder_listed/2026-09-13.json",
+      "count": 1066,
+      "desc": "上市公司持股逾10%大股東名單",
+      "mode": "daily"
+    },
+    "profitability_listed": {
+      "path": "data/quarterly/profitability_listed/115Q2.json",
+      "count": 1053,
+      "desc": "上市公司營益分析查詢彙總表",
+      "mode": "period"
+    },
+    "income_listed_ci": {
+      "path": "data/quarterly/income_listed_ci/115Q2.json",
+      "count": 1048,
+      "desc": "上市公司綜合損益表(一般業)",
+      "mode": "period"
+    },
+    "balance_listed_ci": {
+      "path": "data/quarterly/balance_listed_ci/115Q2.json",
+      "count": 1048,
+      "desc": "上市公司資產負債表(一般業)",
+      "mode": "period"
     }
   },
   "failed": [
-    "material_listed",
     "material_otc",
-    "insider_listed",
     "insider_otc",
-    "quotes_listed",
     "quotes_otc",
-    "valuation_listed",
-    "revenue_listed",
-    "pledge_listed",
     "pledge_otc"
   ],
   "skipped": [
