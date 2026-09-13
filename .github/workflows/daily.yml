@@ -21,8 +21,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: fetch
-        run: python scripts/fetch_daily.py
+      - name: deps
+        run: python -m pip install --upgrade certifi
 
       - name: extra
         continue-on-error: true
