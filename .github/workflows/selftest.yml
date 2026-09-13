@@ -1,0 +1,65 @@
+name: selftest-mops-telegram
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: probe
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.parse, os, datetime
+          res = {"ts": datetime.datetime.utcnow().isoformat() + "Z"}
+          try:
+              body = urllib.parse.urlencode({
+                  "encodeURIComponent": "1", "step": "1", "firstin": "1", "off": "1",
+                  "queryName": "co_id", "inpuType": "co_id", "TYPEK": "all",
+                  "isnew": "true", "co_id": "6239", "year": "", "season": ""}).encode()
+              req = urllib.request.Request(
+                  "https://mopsov.twse.com.tw/mops/web/ajax_t164sb05",
+                  data=body,
+                  headers={"User-Agent": "Mozilla/5.0", "Content-Type": "application/x-www-form-urlencoded"})
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  html = r.read().decode("utf-8", "replace")
+              res["mops_http"] = 200
+              res["mops_len"] = len(html)
+              res["mops_has_company"] = ("力成" in html)
+              res["mops_has_number"] = ("10,074,675" in html)
+          except Exception as e:
+              res["mops_error"] = repr(e)
+          tok = os.environ.get("TG_TOKEN", "")
+          if tok:
+              try:
+                  with urllib.request.urlopen("https://api.telegram.org/bot%s/getMe" % tok, timeout=30) as r:
+                      j = json.load(r)
+                  res["tg_getme_ok"] = j.get("ok")
+                  res["tg_bot"] = (j.get("result") or {}).get("username")
+                  chat = os.environ.get("TG_CHAT", "")
+                  if chat:
+                      msg = urllib.parse.urlencode({"chat_id": chat, "text": "GitHub Actions 直發測試 OK"}).encode()
+                      with urllib.request.urlopen(urllib.request.Request(
+                              "https://api.telegram.org/bot%s/sendMessage" % tok, data=msg), timeout=30) as r2:
+                          jj = json.load(r2)
+                      res["tg_send_ok"] = jj.get("ok")
+              except Exception as e:
+                  res["tg_error"] = repr(e)
+          else:
+              res["tg_skipped"] = "no TELEGRAM_BOT_TOKEN secret"
+          os.makedirs("data/selftest", exist_ok=True)
+          with open("data/selftest/gh_probe.json", "w") as f:
+              f.write(json.dumps(res, ensure_ascii=False, indent=1))
+          print(json.dumps(res, ensure_ascii=False))
+          PY
+      - name: commit
+        run: |
+          git config user.name "gh-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/selftest/gh_probe.json
+          git commit -m "selftest gh_probe" || echo "no change"
+          git push
