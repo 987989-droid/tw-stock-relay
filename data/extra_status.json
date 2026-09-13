@@ -1,5 +1,5 @@
 {
-  "run_at_taipei": "2026-09-14T05:58:18.522275+08:00",
+  "run_at_taipei": "2026-09-14T06:09:36.662874+08:00",
   "budget_sec": 300,
   "sources": {
     "control_suspend_listed": {
@@ -10,7 +10,7 @@
       "status": 200,
       "count": 1,
       "bytes": 93,
-      "elapsed": 0.66,
+      "elapsed": 0.6,
       "path": "data/daily/control_suspend_listed/2026-09-14.json",
       "keys": [
         "出表日期",
@@ -44,7 +44,7 @@
       "status": 200,
       "count": 21,
       "bytes": 8117,
-      "elapsed": 0.58,
+      "elapsed": 0.44,
       "path": "data/daily/penalty_listed/2026-09-14.json",
       "keys": [
         "出表日期",
@@ -64,7 +64,7 @@
       "status": 200,
       "count": 33,
       "bytes": 26614,
-      "elapsed": 0.8,
+      "elapsed": 0.58,
       "path": "data/daily/disclosure_violation_listed/2026-09-14.json",
       "keys": [
         "出表日期",
@@ -85,7 +85,7 @@
       "status": 200,
       "count": 15,
       "bytes": 5560,
-      "elapsed": 0.61,
+      "elapsed": 0.44,
       "path": "data/daily/control_change_listed/2026-09-14.json",
       "keys": [
         "出表日期",
@@ -131,7 +131,7 @@
       "status": 200,
       "count": 1066,
       "bytes": 131687,
-      "elapsed": 0.86,
+      "elapsed": 0.87,
       "path": "data/daily/major_holder_listed/2026-09-14.json",
       "keys": [
         "出表日期",
@@ -148,7 +148,7 @@
       "status": 200,
       "count": 1053,
       "bytes": 383972,
-      "elapsed": 1.15,
+      "elapsed": 1.14,
       "path": "data/quarterly/profitability_listed/115Q2.json",
       "keys": [
         "出表日期",
@@ -171,7 +171,7 @@
       "status": 200,
       "count": 1048,
       "bytes": 1416792,
-      "elapsed": 1.59,
+      "elapsed": 1.58,
       "path": "data/quarterly/income_listed_ci/115Q2.json",
       "keys": [
         "出表日期",
@@ -217,7 +217,7 @@
       "status": 200,
       "count": 1048,
       "bytes": 893277,
-      "elapsed": 1.44,
+      "elapsed": 2.19,
       "path": "data/quarterly/balance_listed_ci/115Q2.json",
       "keys": [
         "出表日期",
@@ -249,5 +249,5 @@
       ]
     }
   },
-  "total_elapsed": 8.7
+  "total_elapsed": 8.9
 }
