@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
 
       - name: deps
-        run: python -m pip install --upgrade certifi
+        run: python -m pip install --upgrade certifi cryptography
 
       - name: fetch
         run: python scripts/fetch_daily.py
