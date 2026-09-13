@@ -25,24 +25,125 @@ import os
 import time
 import datetime
 import ssl
+import socket
+import urllib.parse
 import urllib.request
 
 # --- TLS 憑證信任 ---------------------------------------------------------
-# 問題背景：www.tpex.org.tw 的 TLS 握手在 GitHub Actions 的 setup-python
-#   環境會失敗，錯誤為
-#     [SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate
-#   而 openapi.twse.com.tw 正常。成因是憑證鏈驗證問題（TWCA 根憑證不在
-#   setup-python 內建憑證集，或 TPEx 未送出中繼憑證）。用 certifi 提供的
-#   最新根憑證集即可解決前者；若裝了 certifi 仍為同一錯誤，代表是後者
-#   （缺中繼憑證），需另行補入該中繼憑證（見 README 修復註記）。
-# 絕不停用憑證驗證：財報／申報資料的完整性不容以 verify=False 交換。
+# 問題：www.tpex.org.tw 在 GitHub Actions / Python 環境握手失敗，錯誤為
+#   [SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate
+#   而 openapi.twse.com.tw 正常。實測（2026-09-13）：裝了 certifi、根憑證
+#   （含 TWCA 根）齊全仍為同一錯 —— 成因確定為「TPEx 未送出中繼憑證」。
+#   瀏覽器能開是因為會依葉憑證的 AIA(caIssuers) 欄位自行補抓中繼憑證；
+#   Python 預設不做這件事。
+# 修法：以 certifi 根憑證為底；遇 CERTIFICATE_VERIFY_FAILED 時，對該主機
+#   依 AIA 自動抓回缺的中繼憑證、補進驗證信任後重試。全程仍完整驗證，
+#   絕不停用憑證驗證（財報／申報資料完整性不容以 verify=False 交換）。
 try:
     import certifi
-    SSL_CTX = ssl.create_default_context(cafile=certifi.where())
-    _SSL_SRC = "certifi %s" % certifi.where()
+    _CAFILE = certifi.where()
+    _SSL_SRC = "certifi %s" % _CAFILE
 except ImportError:
-    SSL_CTX = ssl.create_default_context()
+    _CAFILE = None
     _SSL_SRC = "system default (certifi 未安裝)"
+
+try:
+    from cryptography import x509
+    from cryptography.hazmat.primitives import serialization
+    from cryptography.x509.oid import AuthorityInformationAccessOID
+    _HAVE_CRYPTO = True
+except ImportError:
+    _HAVE_CRYPTO = False
+
+# host -> 補抓到的中繼憑證 PEM 字串（累積快取，一次抓妥後同主機直接復用）
+_AIA_CACHE = {}
+
+
+def _base_context():
+    if _CAFILE:
+        return ssl.create_default_context(cafile=_CAFILE)
+    return ssl.create_default_context()
+
+
+def context_for(host):
+    """該主機的驗證 context；若曾對它補抓過中繼憑證則一併載入。"""
+    ctx = _base_context()
+    extra = _AIA_CACHE.get(host)
+    if extra:
+        try:
+            ctx.load_verify_locations(cadata=extra)
+        except Exception:
+            pass
+    return ctx
+
+
+def _peer_leaf_der(host, port):
+    """以未驗證握手取回對方葉憑證的 DER（僅為讀取 AIA 用，不作信任）。"""
+    ictx = ssl._create_unverified_context()
+    with socket.create_connection((host, port), timeout=SOCKET_TIMEOUT) as s:
+        with ictx.wrap_socket(s, server_hostname=host) as ss:
+            return ss.getpeercert(binary_form=True)
+
+
+def _load_any(raw):
+    """caIssuers 回傳可能是單張 DER、PEM、或 PKCS7；盡量各種都解。"""
+    try:
+        return [x509.load_der_x509_certificate(raw)]
+    except Exception:
+        pass
+    try:
+        return [x509.load_pem_x509_certificate(raw)]
+    except Exception:
+        pass
+    try:
+        return list(x509.load_der_pkcs7_certificates(raw))
+    except Exception:
+        pass
+    try:
+        return list(x509.load_pem_pkcs7_certificates(raw))
+    except Exception:
+        return []
+
+
+def aia_chase(host, port=443, max_depth=5):
+    """依 AIA(caIssuers) 逐級補抓缺的中繼憑證，回傳其 PEM 串接字串。
+    任何失敗都吞掉、回傳目前已抓到的部分（fail-safe）。"""
+    if not _HAVE_CRYPTO:
+        return ""
+    pems = []
+    try:
+        der = _peer_leaf_der(host, port)
+        cert = x509.load_der_x509_certificate(der)
+        for _ in range(max_depth):
+            if cert.issuer == cert.subject:  # 已到自簽根，停
+                break
+            url = None
+            try:
+                aia = cert.extensions.get_extension_for_class(
+                    x509.AuthorityInformationAccess).value
+                for d in aia:
+                    if d.access_method == \
+                            AuthorityInformationAccessOID.CA_ISSUERS:
+                        url = d.access_location.value
+                        break
+            except x509.ExtensionNotFound:
+                url = None
+            if not url:
+                break
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=SOCKET_TIMEOUT) as r:
+                raw = r.read()
+            got = _load_any(raw)
+            if not got:
+                break
+            issuer_cert = got[0]
+            pems.append(issuer_cert.public_bytes(
+                serialization.Encoding.PEM).decode("ascii"))
+            cert = issuer_cert  # 續往上一層追（其 issuer 可能仍缺）
+    except Exception:
+        pass
+    return "".join(pems)
+
 
 SOCKET_TIMEOUT = 60
 MAX_SECONDS = 180
@@ -124,13 +225,14 @@ def attempt_fetch(url):
     """單次嘗試。回傳 (raw_bytes, info)。任何失敗都不拋出。"""
     info = {"status": None, "bytes": 0, "content_length": None,
             "elapsed": None, "truncated": False, "timed_out": False,
-            "incomplete": False, "err": None}
+            "incomplete": False, "err": None, "aia": None}
+    host = urllib.parse.urlparse(url).hostname
     t0 = time.time()
     buf = bytearray()
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         with urllib.request.urlopen(
-                req, timeout=SOCKET_TIMEOUT, context=SSL_CTX) as r:
+                req, timeout=SOCKET_TIMEOUT, context=context_for(host)) as r:
             info["status"] = r.status
             cl = r.headers.get("Content-Length")
             if cl and cl.isdigit():
@@ -150,6 +252,17 @@ def attempt_fetch(url):
                 buf.extend(chunk)
     except Exception as e:
         info["err"] = "%s: %s" % (type(e).__name__, e)
+        # 憑證鏈驗證失敗且尚未對此主機補抓過中繼憑證 -> 依 AIA 補抓，
+        # 供本 fetch_with_retry 的下一次重試使用（context_for 會載入）。
+        if ("CERTIFICATE_VERIFY_FAILED" in str(e)
+                and host and host not in _AIA_CACHE):
+            extra = aia_chase(host)
+            if extra:
+                _AIA_CACHE[host] = extra
+                n = extra.count("BEGIN CERTIFICATE")
+                info["aia"] = "已補抓 %d 張中繼憑證，下次重試套用" % n
+            else:
+                info["aia"] = "AIA 補抓失敗（無 caIssuers 或抓取失敗）"
 
     info["elapsed"] = round(time.time() - t0, 2)
     info["bytes"] = len(buf)
@@ -200,6 +313,10 @@ def main():
     today = now.strftime("%Y-%m-%d")
     period = expected_period(now)
     print("TLS 憑證來源：%s" % _SSL_SRC, flush=True)
+    print("AIA 中繼憑證自動補抓：%s"
+          % ("啟用（cryptography 已安裝）" if _HAVE_CRYPTO
+             else "停用（cryptography 未安裝，缺中繼憑證將無法自動修復）"),
+          flush=True)
 
     status = {"run_at_taipei": now.isoformat(), "date": today,
               "expected_period": period, "sources": {}}
@@ -243,12 +360,19 @@ def main():
                  "err": data_err or info.get("err"),
                  "count": None, "path": None, "keys": None}
 
+        # 把各次嘗試的 AIA 補抓註記併入 entry，方便事後看修復軌跡
+        aia_notes = [a.get("aia") for a in attempts if a.get("aia")]
+        if aia_notes:
+            entry["aia"] = aia_notes
+
         if data is None:
             status["sources"][key] = entry
             latest["failed"].append(key)
-            print("FAIL %-18s tries=%d status=%s bytes=%s err=%s"
+            print("FAIL %-18s tries=%d status=%s bytes=%s err=%s%s"
                   % (key, entry["tries"], entry["status"],
-                     entry["bytes"], entry["err"]), flush=True)
+                     entry["bytes"], entry["err"],
+                     ("  [AIA:%s]" % aia_notes[-1]) if aia_notes else ""),
+                  flush=True)
             continue
 
         entry["count"] = len(data)
