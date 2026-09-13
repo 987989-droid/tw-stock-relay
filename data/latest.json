@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-09-13T19:10:26.835626+08:00",
+  "generated_at_taipei": "2026-09-13T21:48:33.667636+08:00",
   "date": "2026-09-13",
   "expected_period": "11508",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
@@ -30,9 +30,9 @@
     },
     "revenue_listed": {
       "path": "data/monthly/revenue_listed/11508.json",
-      "count": 1074,
       "desc": "上市公司每月營業收入彙總表",
-      "mode": "monthly"
+      "mode": "monthly",
+      "count": null
     },
     "revenue_otc": {
       "path": "data/monthly/revenue_otc/11508.json",
@@ -111,19 +111,6 @@
       "count": 1048,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
-    },
-    "news": {
-      "path": "data/daily/news/2026-09-13.json",
-      "count": 238,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 12,
-      "feeds_total": 12,
-      "cn_count": 84,
-      "kwt_count": 56,
-      "nz_count": 6,
-      "ev_count": 2,
-      "dup_folded": 5
     }
   },
   "failed": [
@@ -133,6 +120,7 @@
     "pledge_otc"
   ],
   "skipped": [
+    "revenue_listed",
     "revenue_otc",
     "revenue_emerging"
   ]
