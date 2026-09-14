@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-09-14T06:08:21.524187+08:00",
+  "generated_at_taipei": "2026-09-14T19:05:59.532579+08:00",
   "date": "2026-09-14",
   "expected_period": "11508",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
@@ -12,7 +12,7 @@
     },
     "material_otc": {
       "path": "data/daily/material_otc/2026-09-14.json",
-      "count": 2,
+      "count": 6,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
@@ -36,7 +36,7 @@
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
-      "count": 11193,
+      "count": 11289,
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only"
     },
@@ -68,6 +68,12 @@
       "path": "data/monthly/pledge_listed/11507.json",
       "count": 27528,
       "desc": "上市公司董監事持股餘額明細(含設質)",
+      "mode": "monthly"
+    },
+    "pledge_otc": {
+      "path": "data/monthly/pledge_otc/11507.json",
+      "count": 17517,
+      "desc": "上櫃公司董監事持股餘額明細(含設質)",
       "mode": "monthly"
     },
     "control_suspend_listed": {
@@ -129,24 +135,9 @@
       "count": 1048,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
-    },
-    "news": {
-      "path": "data/daily/news/2026-09-14.json",
-      "count": 199,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 12,
-      "feeds_total": 12,
-      "cn_count": 76,
-      "kwt_count": 44,
-      "nz_count": 11,
-      "ev_count": 0,
-      "dup_folded": 3
     }
   },
-  "failed": [
-    "pledge_otc"
-  ],
+  "failed": [],
   "skipped": [
     "revenue_listed",
     "revenue_otc",
