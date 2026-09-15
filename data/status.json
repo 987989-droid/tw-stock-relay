@@ -1,6 +1,6 @@
 {
-  "run_at_taipei": "2026-09-14T19:05:59.532579+08:00",
-  "date": "2026-09-14",
+  "run_at_taipei": "2026-09-15T19:06:17.151561+08:00",
+  "date": "2026-09-15",
   "expected_period": "11508",
   "sources": {
     "material_listed": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 4469,
-          "content_length": 4469,
-          "elapsed": 2.05,
+          "bytes": 134452,
+          "content_length": 134452,
+          "elapsed": 1.55,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,11 +25,11 @@
         }
       ],
       "status": 200,
-      "bytes": 4469,
-      "elapsed": 2.05,
+      "bytes": 134452,
+      "elapsed": 1.55,
       "err": null,
-      "count": 3,
-      "path": "data/daily/material_listed/2026-09-14.json",
+      "count": 82,
+      "path": "data/daily/material_listed/2026-09-15.json",
       "keys": [
         "出表日期",
         "發言日期",
@@ -48,39 +48,27 @@
       "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap04_O",
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep",
-      "tries": 2,
+      "tries": 1,
       "attempts": [
         {
-          "status": null,
-          "bytes": 0,
-          "content_length": null,
-          "elapsed": 1.27,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
-          "aia": "已補抓 2 張中繼憑證，下次重試套用",
-          "attempt": 1
-        },
-        {
           "status": 200,
-          "bytes": 8407,
-          "content_length": 8407,
-          "elapsed": 0.91,
+          "bytes": 85864,
+          "content_length": 85864,
+          "elapsed": 0.93,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
           "aia": null,
-          "attempt": 2
+          "attempt": 1
         }
       ],
       "status": 200,
-      "bytes": 8407,
-      "elapsed": 0.91,
+      "bytes": 85864,
+      "elapsed": 0.93,
       "err": null,
-      "count": 6,
-      "path": "data/daily/material_otc/2026-09-14.json",
+      "count": 54,
+      "path": "data/daily/material_otc/2026-09-15.json",
       "keys": [
         "Date",
         "發言日期",
@@ -91,9 +79,6 @@
         "符合條款",
         "事實發生日",
         "說明"
-      ],
-      "aia": [
-        "已補抓 2 張中繼憑證，下次重試套用"
       ]
     },
     "insider_listed": {
@@ -106,9 +91,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 5558,
-          "content_length": 5558,
-          "elapsed": 0.8,
+          "bytes": 2139,
+          "content_length": 2139,
+          "elapsed": 1.49,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -118,11 +103,11 @@
         }
       ],
       "status": 200,
-      "bytes": 5558,
-      "elapsed": 0.8,
+      "bytes": 2139,
+      "elapsed": 1.49,
       "err": null,
-      "count": 8,
-      "path": "data/daily/insider_listed/2026-09-14.json",
+      "count": 3,
+      "path": "data/daily/insider_listed/2026-09-15.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -152,9 +137,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 665,
-          "content_length": 665,
-          "elapsed": 0.33,
+          "bytes": 575,
+          "content_length": 575,
+          "elapsed": 0.83,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -164,11 +149,11 @@
         }
       ],
       "status": 200,
-      "bytes": 665,
-      "elapsed": 0.33,
+      "bytes": 575,
+      "elapsed": 0.83,
       "err": null,
       "count": 1,
-      "path": "data/daily/insider_otc/2026-09-14.json",
+      "path": "data/daily/insider_otc/2026-09-15.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -198,9 +183,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 319396,
-          "content_length": 319396,
-          "elapsed": 4.93,
+          "bytes": 318881,
+          "content_length": 318881,
+          "elapsed": 1.22,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -210,8 +195,8 @@
         }
       ],
       "status": 200,
-      "bytes": 319396,
-      "elapsed": 4.93,
+      "bytes": 318881,
+      "elapsed": 1.22,
       "err": null,
       "count": 1379,
       "path": "data/latest/quotes_listed.json",
@@ -235,38 +220,26 @@
       "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only",
-      "tries": 2,
+      "tries": 1,
       "attempts": [
         {
           "status": 200,
-          "bytes": 24169,
-          "content_length": 4405747,
-          "elapsed": 0.31,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": true,
-          "err": "傳輸不完整：收到 24169 / 應為 4405747 bytes",
-          "aia": null,
-          "attempt": 1
-        },
-        {
-          "status": 200,
-          "bytes": 4405747,
-          "content_length": 4405747,
-          "elapsed": 1.29,
+          "bytes": 4434561,
+          "content_length": 4434561,
+          "elapsed": 33.26,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
           "aia": null,
-          "attempt": 2
+          "attempt": 1
         }
       ],
       "status": 200,
-      "bytes": 4405747,
-      "elapsed": 1.29,
+      "bytes": 4434561,
+      "elapsed": 33.26,
       "err": null,
-      "count": 11289,
+      "count": 11358,
       "path": "data/latest/quotes_otc.json",
       "keys": [
         "Date",
@@ -299,9 +272,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 116361,
-          "content_length": 116361,
-          "elapsed": 1.09,
+          "bytes": 116356,
+          "content_length": 116356,
+          "elapsed": 2.81,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -311,8 +284,8 @@
         }
       ],
       "status": 200,
-      "bytes": 116361,
-      "elapsed": 1.09,
+      "bytes": 116356,
+      "elapsed": 2.81,
       "err": null,
       "count": 1080,
       "path": "data/latest/valuation_listed.json",
@@ -356,9 +329,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 10375320,
-          "content_length": 10375320,
-          "elapsed": 8.84,
+          "bytes": 10343088,
+          "content_length": 10343088,
+          "elapsed": 21.73,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -368,11 +341,11 @@
         }
       ],
       "status": 200,
-      "bytes": 10375320,
-      "elapsed": 8.84,
+      "bytes": 10343088,
+      "elapsed": 21.73,
       "err": null,
-      "count": 27528,
-      "path": "data/monthly/pledge_listed/11507.json",
+      "count": 27442,
+      "path": "data/monthly/pledge_listed/11508.json",
       "keys": [
         "出表日期",
         "資料年月",
@@ -399,9 +372,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 6597882,
-          "content_length": 6597882,
-          "elapsed": 9.78,
+          "bytes": 6580394,
+          "content_length": 6580394,
+          "elapsed": 7.56,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -411,11 +384,11 @@
         }
       ],
       "status": 200,
-      "bytes": 6597882,
-      "elapsed": 9.78,
+      "bytes": 6580394,
+      "elapsed": 7.56,
       "err": null,
-      "count": 17517,
-      "path": "data/monthly/pledge_otc/11507.json",
+      "count": 17472,
+      "path": "data/monthly/pledge_otc/11508.json",
       "keys": [
         "出表日期",
         "資料年月",
