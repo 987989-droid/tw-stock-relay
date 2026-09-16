@@ -1,6 +1,6 @@
 {
-  "run_at_taipei": "2026-09-15T19:06:17.151561+08:00",
-  "date": "2026-09-15",
+  "run_at_taipei": "2026-09-16T19:06:08.096225+08:00",
+  "date": "2026-09-16",
   "expected_period": "11508",
   "sources": {
     "material_listed": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 134452,
-          "content_length": 134452,
-          "elapsed": 1.55,
+          "bytes": 192925,
+          "content_length": 192925,
+          "elapsed": 2.01,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,11 +25,11 @@
         }
       ],
       "status": 200,
-      "bytes": 134452,
-      "elapsed": 1.55,
+      "bytes": 192925,
+      "elapsed": 2.01,
       "err": null,
-      "count": 82,
-      "path": "data/daily/material_listed/2026-09-15.json",
+      "count": 108,
+      "path": "data/daily/material_listed/2026-09-16.json",
       "keys": [
         "出表日期",
         "發言日期",
@@ -52,9 +52,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 85864,
-          "content_length": 85864,
-          "elapsed": 0.93,
+          "bytes": 105614,
+          "content_length": 105614,
+          "elapsed": 3.17,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -64,11 +64,11 @@
         }
       ],
       "status": 200,
-      "bytes": 85864,
-      "elapsed": 0.93,
+      "bytes": 105614,
+      "elapsed": 3.17,
       "err": null,
-      "count": 54,
-      "path": "data/daily/material_otc/2026-09-15.json",
+      "count": 52,
+      "path": "data/daily/material_otc/2026-09-16.json",
       "keys": [
         "Date",
         "發言日期",
@@ -91,9 +91,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 2139,
-          "content_length": 2139,
-          "elapsed": 1.49,
+          "bytes": 575,
+          "content_length": 575,
+          "elapsed": 0.54,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -103,11 +103,11 @@
         }
       ],
       "status": 200,
-      "bytes": 2139,
-      "elapsed": 1.49,
+      "bytes": 575,
+      "elapsed": 0.54,
       "err": null,
-      "count": 3,
-      "path": "data/daily/insider_listed/2026-09-15.json",
+      "count": 1,
+      "path": "data/daily/insider_listed/2026-09-16.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -137,9 +137,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 575,
-          "content_length": 575,
-          "elapsed": 0.83,
+          "bytes": 713,
+          "content_length": 713,
+          "elapsed": 0.63,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -149,11 +149,11 @@
         }
       ],
       "status": 200,
-      "bytes": 575,
-      "elapsed": 0.83,
+      "bytes": 713,
+      "elapsed": 0.63,
       "err": null,
       "count": 1,
-      "path": "data/daily/insider_otc/2026-09-15.json",
+      "path": "data/daily/insider_otc/2026-09-16.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -183,9 +183,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 318881,
-          "content_length": 318881,
-          "elapsed": 1.22,
+          "bytes": 318948,
+          "content_length": 318948,
+          "elapsed": 2.58,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -195,8 +195,8 @@
         }
       ],
       "status": 200,
-      "bytes": 318881,
-      "elapsed": 1.22,
+      "bytes": 318948,
+      "elapsed": 2.58,
       "err": null,
       "count": 1379,
       "path": "data/latest/quotes_listed.json",
@@ -224,9 +224,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 4434561,
-          "content_length": 4434561,
-          "elapsed": 33.26,
+          "bytes": 4458814,
+          "content_length": 4458814,
+          "elapsed": 12.32,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -236,10 +236,10 @@
         }
       ],
       "status": 200,
-      "bytes": 4434561,
-      "elapsed": 33.26,
+      "bytes": 4458814,
+      "elapsed": 12.32,
       "err": null,
-      "count": 11358,
+      "count": 11415,
       "path": "data/latest/quotes_otc.json",
       "keys": [
         "Date",
@@ -272,9 +272,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 116356,
-          "content_length": 116356,
-          "elapsed": 2.81,
+          "bytes": 116354,
+          "content_length": 116354,
+          "elapsed": 1.04,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -284,8 +284,8 @@
         }
       ],
       "status": 200,
-      "bytes": 116356,
-      "elapsed": 2.81,
+      "bytes": 116354,
+      "elapsed": 1.04,
       "err": null,
       "count": 1080,
       "path": "data/latest/valuation_listed.json",
@@ -321,89 +321,17 @@
     },
     "pledge_listed": {
       "ok": true,
-      "skipped": false,
-      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap11_L",
-      "desc": "上市公司董監事持股餘額明細(含設質)",
-      "mode": "monthly",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 10343088,
-          "content_length": 10343088,
-          "elapsed": 21.73,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "aia": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 10343088,
-      "elapsed": 21.73,
-      "err": null,
-      "count": 27442,
+      "skipped": true,
       "path": "data/monthly/pledge_listed/11508.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "職稱",
-        "姓名",
-        "選任時持股 ",
-        "目前持股",
-        "設質股數",
-        "設質股數佔持股比例",
-        "內部人關係人目前持股合計",
-        "內部人關係人設質股數",
-        "內部人關係人設質比例"
-      ]
+      "desc": "上市公司董監事持股餘額明細(含設質)",
+      "reason": "目標年月 11508 已存在"
     },
     "pledge_otc": {
       "ok": true,
-      "skipped": false,
-      "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O",
-      "desc": "上櫃公司董監事持股餘額明細(含設質)",
-      "mode": "monthly",
-      "tries": 1,
-      "attempts": [
-        {
-          "status": 200,
-          "bytes": 6580394,
-          "content_length": 6580394,
-          "elapsed": 7.56,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": false,
-          "err": null,
-          "aia": null,
-          "attempt": 1
-        }
-      ],
-      "status": 200,
-      "bytes": 6580394,
-      "elapsed": 7.56,
-      "err": null,
-      "count": 17472,
+      "skipped": true,
       "path": "data/monthly/pledge_otc/11508.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "職稱",
-        "姓名",
-        "選任時持股",
-        "目前持股",
-        "設質股數",
-        "設質股數佔持股比例",
-        "內部人關係人目前持股合計",
-        "內部人關係人設質股數",
-        "內部人關係人設質比例"
-      ]
+      "desc": "上櫃公司董監事持股餘額明細(含設質)",
+      "reason": "目標年月 11508 已存在"
     }
   }
 }
