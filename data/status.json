@@ -1,10 +1,10 @@
 {
-  "run_at_taipei": "2026-09-18T19:05:47.319027+08:00",
-  "date": "2026-09-18",
+  "run_at_taipei": "2026-09-19T19:05:04.702236+08:00",
+  "date": "2026-09-19",
   "expected_period": "11508",
   "sources": {
     "material_listed": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L",
       "desc": "上市公司每日重大訊息",
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 184151,
-          "content_length": 184151,
-          "elapsed": 1.08,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.76,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,22 +25,12 @@
         }
       ],
       "status": 200,
-      "bytes": 184151,
-      "elapsed": 1.08,
-      "err": null,
-      "count": 99,
-      "path": "data/daily/material_listed/2026-09-18.json",
-      "keys": [
-        "出表日期",
-        "發言日期",
-        "發言時間",
-        "公司代號",
-        "公司名稱",
-        "主旨 ",
-        "符合條款",
-        "事實發生日",
-        "說明"
-      ]
+      "bytes": 800,
+      "elapsed": 0.76,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
     },
     "material_otc": {
       "ok": true,
@@ -52,9 +42,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 92165,
-          "content_length": 92165,
-          "elapsed": 3.63,
+          "bytes": 103545,
+          "content_length": 103545,
+          "elapsed": 1.87,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -64,11 +54,11 @@
         }
       ],
       "status": 200,
-      "bytes": 92165,
-      "elapsed": 3.63,
+      "bytes": 103545,
+      "elapsed": 1.87,
       "err": null,
-      "count": 39,
-      "path": "data/daily/material_otc/2026-09-18.json",
+      "count": 52,
+      "path": "data/daily/material_otc/2026-09-19.json",
       "keys": [
         "Date",
         "發言日期",
@@ -82,7 +72,7 @@
       ]
     },
     "insider_listed": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://openapi.twse.com.tw/v1/opendata/t187ap12_L",
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
@@ -91,9 +81,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 659,
-          "content_length": 659,
-          "elapsed": 0.66,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.72,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -103,29 +93,12 @@
         }
       ],
       "status": 200,
-      "bytes": 659,
-      "elapsed": 0.66,
-      "err": null,
-      "count": 1,
-      "path": "data/daily/insider_listed/2026-09-18.json",
-      "keys": [
-        "出表日期",
-        "公司代號",
-        "公司名稱",
-        "申報人身分",
-        "姓名",
-        "預定轉讓方式及股數-轉讓方式",
-        "預定轉讓方式及股數-轉讓股數",
-        "每日於盤中交易最大得轉讓股數",
-        "受讓人",
-        "目前持有股數-自有持股",
-        "目前持有股數-保留運用決定權信託股數",
-        "預定轉讓總股數-自有持股",
-        "預定轉讓總股數-保留運用決定權信託股數",
-        "預定轉讓後持股-自有持股",
-        "預定轉讓後持股-保留運用決定權信託股數",
-        "有效轉讓期間"
-      ]
+      "bytes": 800,
+      "elapsed": 0.72,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
     },
     "insider_otc": {
       "ok": true,
@@ -137,9 +110,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 1469,
-          "content_length": 1469,
-          "elapsed": 0.3,
+          "bytes": 691,
+          "content_length": 691,
+          "elapsed": 0.26,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -149,11 +122,11 @@
         }
       ],
       "status": 200,
-      "bytes": 1469,
-      "elapsed": 0.3,
+      "bytes": 691,
+      "elapsed": 0.26,
       "err": null,
-      "count": 2,
-      "path": "data/daily/insider_otc/2026-09-18.json",
+      "count": 1,
+      "path": "data/daily/insider_otc/2026-09-19.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -174,7 +147,7 @@
       ]
     },
     "quotes_listed": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
       "desc": "上市個股當日成交資訊",
@@ -183,9 +156,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 318250,
-          "content_length": 318250,
-          "elapsed": 1.17,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.75,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -195,24 +168,12 @@
         }
       ],
       "status": 200,
-      "bytes": 318250,
-      "elapsed": 1.17,
-      "err": null,
-      "count": 1377,
-      "path": "data/latest/quotes_listed.json",
-      "keys": [
-        "Date",
-        "Code",
-        "Name",
-        "TradeVolume",
-        "TradeValue",
-        "OpeningPrice",
-        "HighestPrice",
-        "LowestPrice",
-        "ClosingPrice",
-        "Change",
-        "Transaction"
-      ]
+      "bytes": 800,
+      "elapsed": 0.75,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
     },
     "quotes_otc": {
       "ok": true,
@@ -226,7 +187,7 @@
           "status": 200,
           "bytes": 4490821,
           "content_length": 4490821,
-          "elapsed": 0.82,
+          "elapsed": 7.61,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -237,7 +198,7 @@
       ],
       "status": 200,
       "bytes": 4490821,
-      "elapsed": 0.82,
+      "elapsed": 7.61,
       "err": null,
       "count": 11481,
       "path": "data/latest/quotes_otc.json",
@@ -263,7 +224,7 @@
       ]
     },
     "valuation_listed": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL",
       "desc": "上市本益比/殖利率/股價淨值比",
@@ -272,9 +233,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 116147,
-          "content_length": 116147,
-          "elapsed": 0.89,
+          "bytes": 800,
+          "content_length": null,
+          "elapsed": 0.73,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -284,19 +245,12 @@
         }
       ],
       "status": 200,
-      "bytes": 116147,
-      "elapsed": 0.89,
-      "err": null,
-      "count": 1078,
-      "path": "data/latest/valuation_listed.json",
-      "keys": [
-        "Date",
-        "Code",
-        "Name",
-        "PEratio",
-        "DividendYield",
-        "PBratio"
-      ]
+      "bytes": 800,
+      "elapsed": 0.73,
+      "err": "JSON 解析失敗: Expecting value: line 1 column 1 (char 0)",
+      "count": null,
+      "path": null,
+      "keys": null
     },
     "revenue_listed": {
       "ok": true,
