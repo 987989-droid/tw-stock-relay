@@ -1,5 +1,5 @@
 {
-  "run_at_taipei": "2026-09-22T19:06:24.968689+08:00",
+  "run_at_taipei": "2026-09-23T19:06:15.347832+08:00",
   "budget_sec": 300,
   "sources": {
     "control_suspend_listed": {
@@ -10,8 +10,8 @@
       "status": 200,
       "count": 1,
       "bytes": 93,
-      "elapsed": 0.65,
-      "path": "data/daily/control_suspend_listed/2026-09-22.json",
+      "elapsed": 0.71,
+      "path": "data/daily/control_suspend_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -27,8 +27,8 @@
       "status": 200,
       "count": 1,
       "bytes": 93,
-      "elapsed": 2.14,
-      "path": "data/daily/control_altered_listed/2026-09-22.json",
+      "elapsed": 0.72,
+      "path": "data/daily/control_altered_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -42,10 +42,10 @@
       "mode": "daily",
       "ok": true,
       "status": 200,
-      "count": 21,
-      "bytes": 8117,
-      "elapsed": 1.38,
-      "path": "data/daily/penalty_listed/2026-09-22.json",
+      "count": 22,
+      "bytes": 8369,
+      "elapsed": 0.71,
+      "path": "data/daily/penalty_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "發函日期",
@@ -64,8 +64,8 @@
       "status": 200,
       "count": 34,
       "bytes": 26982,
-      "elapsed": 0.91,
-      "path": "data/daily/disclosure_violation_listed/2026-09-22.json",
+      "elapsed": 0.86,
+      "path": "data/daily/disclosure_violation_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "發函日期",
@@ -85,8 +85,8 @@
       "status": 200,
       "count": 15,
       "bytes": 5560,
-      "elapsed": 0.44,
-      "path": "data/daily/control_change_listed/2026-09-22.json",
+      "elapsed": 2.18,
+      "path": "data/daily/control_change_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -103,8 +103,8 @@
       "status": 200,
       "count": 12,
       "bytes": 7430,
-      "elapsed": 0.44,
-      "path": "data/daily/shortfall_listed/2026-09-22.json",
+      "elapsed": 0.72,
+      "path": "data/daily/shortfall_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -131,8 +131,8 @@
       "status": 200,
       "count": 1068,
       "bytes": 131933,
-      "elapsed": 2.65,
-      "path": "data/daily/major_holder_listed/2026-09-22.json",
+      "elapsed": 4.0,
+      "path": "data/daily/major_holder_listed/2026-09-23.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -146,9 +146,9 @@
       "mode": "period",
       "ok": true,
       "status": 200,
-      "count": 1053,
-      "bytes": 383972,
-      "elapsed": 4.96,
+      "count": 1054,
+      "bytes": 384351,
+      "elapsed": 10.34,
       "path": "data/quarterly/profitability_listed/115Q2.json",
       "keys": [
         "出表日期",
@@ -169,9 +169,9 @@
       "mode": "period",
       "ok": true,
       "status": 200,
-      "count": 1048,
-      "bytes": 1416792,
-      "elapsed": 8.8,
+      "count": 1049,
+      "bytes": 1418112,
+      "elapsed": 16.27,
       "path": "data/quarterly/income_listed_ci/115Q2.json",
       "keys": [
         "出表日期",
@@ -215,9 +215,9 @@
       "mode": "period",
       "ok": true,
       "status": 200,
-      "count": 1048,
-      "bytes": 893277,
-      "elapsed": 8.71,
+      "count": 1049,
+      "bytes": 894108,
+      "elapsed": 6.06,
       "path": "data/quarterly/balance_listed_ci/115Q2.json",
       "keys": [
         "出表日期",
@@ -249,5 +249,5 @@
       ]
     }
   },
-  "total_elapsed": 31.1
+  "total_elapsed": 42.6
 }
