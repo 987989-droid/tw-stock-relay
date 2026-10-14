@@ -1,24 +1,24 @@
 {
-  "generated_at_taipei": "2026-10-14T01:53:03.121804+08:00",
+  "generated_at_taipei": "2026-10-14T23:39:46.886542+08:00",
   "date": "2026-10-14",
   "expected_period": "11509",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
   "files": {
     "material_listed": {
       "path": "data/daily/material_listed/2026-10-14.json",
-      "count": 102,
+      "count": 67,
       "desc": "上市公司每日重大訊息",
       "mode": "daily_keep"
     },
     "material_otc": {
       "path": "data/daily/material_otc/2026-10-14.json",
-      "count": 50,
+      "count": 41,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
     "insider_listed": {
       "path": "data/daily/insider_listed/2026-10-14.json",
-      "count": 14,
+      "count": 3,
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
     },
@@ -30,13 +30,13 @@
     },
     "quotes_listed": {
       "path": "data/latest/quotes_listed.json",
-      "count": 1381,
+      "count": 1382,
       "desc": "上市個股當日成交資訊",
       "mode": "latest_only"
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
-      "count": 12421,
+      "count": 12466,
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only"
     },
@@ -63,6 +63,12 @@
       "desc": "興櫃公司每月營業收入彙總表",
       "mode": "monthly",
       "count": null
+    },
+    "pledge_listed": {
+      "path": "data/monthly/pledge_listed/11508.json",
+      "count": 27475,
+      "desc": "上市公司董監事持股餘額明細(含設質)",
+      "mode": "monthly"
     },
     "pledge_otc": {
       "path": "data/monthly/pledge_otc/11508.json",
@@ -129,24 +135,9 @@
       "count": 1049,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
-    },
-    "news": {
-      "path": "data/daily/news/2026-10-14.json",
-      "count": 292,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 12,
-      "feeds_total": 12,
-      "cn_count": 92,
-      "kwt_count": 95,
-      "nz_count": 34,
-      "ev_count": 7,
-      "dup_folded": 26
     }
   },
-  "failed": [
-    "pledge_listed"
-  ],
+  "failed": [],
   "skipped": [
     "revenue_listed",
     "revenue_otc",
