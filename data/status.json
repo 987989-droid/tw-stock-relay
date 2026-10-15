@@ -1,6 +1,6 @@
 {
-  "run_at_taipei": "2026-10-14T23:39:46.886542+08:00",
-  "date": "2026-10-14",
+  "run_at_taipei": "2026-10-15T23:25:52.351344+08:00",
+  "date": "2026-10-15",
   "expected_period": "11509",
   "sources": {
     "material_listed": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 107013,
-          "content_length": 107013,
-          "elapsed": 3.18,
+          "bytes": 109039,
+          "content_length": 109039,
+          "elapsed": 3.72,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,11 +25,11 @@
         }
       ],
       "status": 200,
-      "bytes": 107013,
-      "elapsed": 3.18,
+      "bytes": 109039,
+      "elapsed": 3.72,
       "err": null,
-      "count": 67,
-      "path": "data/daily/material_listed/2026-10-14.json",
+      "count": 63,
+      "path": "data/daily/material_listed/2026-10-15.json",
       "keys": [
         "出表日期",
         "發言日期",
@@ -52,9 +52,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 89638,
-          "content_length": 89638,
-          "elapsed": 1.08,
+          "bytes": 74400,
+          "content_length": 74400,
+          "elapsed": 0.27,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -64,11 +64,11 @@
         }
       ],
       "status": 200,
-      "bytes": 89638,
-      "elapsed": 1.08,
+      "bytes": 74400,
+      "elapsed": 0.27,
       "err": null,
-      "count": 41,
-      "path": "data/daily/material_otc/2026-10-14.json",
+      "count": 40,
+      "path": "data/daily/material_otc/2026-10-15.json",
       "keys": [
         "Date",
         "發言日期",
@@ -91,9 +91,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 2043,
-          "content_length": 2043,
-          "elapsed": 0.6,
+          "bytes": 19157,
+          "content_length": 19157,
+          "elapsed": 1.69,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -103,11 +103,11 @@
         }
       ],
       "status": 200,
-      "bytes": 2043,
-      "elapsed": 0.6,
+      "bytes": 19157,
+      "elapsed": 1.69,
       "err": null,
-      "count": 3,
-      "path": "data/daily/insider_listed/2026-10-14.json",
+      "count": 27,
+      "path": "data/daily/insider_listed/2026-10-15.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -139,7 +139,7 @@
           "status": 200,
           "bytes": 14287,
           "content_length": 14287,
-          "elapsed": 0.69,
+          "elapsed": 0.56,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -150,10 +150,10 @@
       ],
       "status": 200,
       "bytes": 14287,
-      "elapsed": 0.69,
+      "elapsed": 0.56,
       "err": null,
       "count": 20,
-      "path": "data/daily/insider_otc/2026-10-14.json",
+      "path": "data/daily/insider_otc/2026-10-15.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -183,9 +183,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 320610,
-          "content_length": 320610,
-          "elapsed": 5.22,
+          "bytes": 319314,
+          "content_length": 319314,
+          "elapsed": 7.76,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -195,10 +195,10 @@
         }
       ],
       "status": 200,
-      "bytes": 320610,
-      "elapsed": 5.22,
+      "bytes": 319314,
+      "elapsed": 7.76,
       "err": null,
-      "count": 1382,
+      "count": 1381,
       "path": "data/latest/quotes_listed.json",
       "keys": [
         "Date",
@@ -220,26 +220,50 @@
       "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only",
-      "tries": 1,
+      "tries": 3,
       "attempts": [
         {
           "status": 200,
-          "bytes": 4873783,
-          "content_length": 4873783,
-          "elapsed": 10.13,
+          "bytes": 4341353,
+          "content_length": 4915639,
+          "elapsed": 28.02,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": true,
+          "err": "傳輸不完整：收到 4341353 / 應為 4915639 bytes",
+          "aia": null,
+          "attempt": 1
+        },
+        {
+          "status": 200,
+          "bytes": 1425001,
+          "content_length": 4915639,
+          "elapsed": 13.83,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": true,
+          "err": "傳輸不完整：收到 1425001 / 應為 4915639 bytes",
+          "aia": null,
+          "attempt": 2
+        },
+        {
+          "status": 200,
+          "bytes": 4915639,
+          "content_length": 4915639,
+          "elapsed": 7.22,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
           "aia": null,
-          "attempt": 1
+          "attempt": 3
         }
       ],
       "status": 200,
-      "bytes": 4873783,
-      "elapsed": 10.13,
+      "bytes": 4915639,
+      "elapsed": 7.22,
       "err": null,
-      "count": 12466,
+      "count": 12565,
       "path": "data/latest/quotes_otc.json",
       "keys": [
         "Date",
@@ -272,9 +296,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 116694,
-          "content_length": 116694,
-          "elapsed": 1.72,
+          "bytes": 116701,
+          "content_length": 116701,
+          "elapsed": 1.55,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -284,8 +308,8 @@
         }
       ],
       "status": 200,
-      "bytes": 116694,
-      "elapsed": 1.72,
+      "bytes": 116701,
+      "elapsed": 1.55,
       "err": null,
       "count": 1083,
       "path": "data/latest/valuation_listed.json",
@@ -329,9 +353,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 10355561,
-          "content_length": 10355561,
-          "elapsed": 77.08,
+          "bytes": 10323113,
+          "content_length": 10323113,
+          "elapsed": 175.17,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -341,11 +365,11 @@
         }
       ],
       "status": 200,
-      "bytes": 10355561,
-      "elapsed": 77.08,
+      "bytes": 10323113,
+      "elapsed": 175.17,
       "err": null,
-      "count": 27475,
-      "path": "data/monthly/pledge_listed/11508.json",
+      "count": 27387,
+      "path": "data/monthly/pledge_listed/11509.json",
       "keys": [
         "出表日期",
         "資料年月",
@@ -363,47 +387,45 @@
       ]
     },
     "pledge_otc": {
-      "ok": true,
+      "ok": false,
       "skipped": false,
       "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap11_O",
       "desc": "上櫃公司董監事持股餘額明細(含設質)",
       "mode": "monthly",
-      "tries": 1,
+      "tries": 2,
       "attempts": [
         {
           "status": 200,
-          "bytes": 6616900,
-          "content_length": 6616900,
-          "elapsed": 67.59,
+          "bytes": 2768504,
+          "content_length": 6615883,
+          "elapsed": 16.79,
+          "truncated": false,
+          "timed_out": false,
+          "incomplete": true,
+          "err": "傳輸不完整：收到 2768504 / 應為 6615883 bytes",
+          "aia": null,
+          "attempt": 1
+        },
+        {
+          "status": 200,
+          "bytes": 735232,
+          "content_length": 735232,
+          "elapsed": 5.81,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
           "aia": null,
-          "attempt": 1
+          "attempt": 2
         }
       ],
       "status": 200,
-      "bytes": 6616900,
-      "elapsed": 67.59,
-      "err": null,
-      "count": 17568,
-      "path": "data/monthly/pledge_otc/11508.json",
-      "keys": [
-        "出表日期",
-        "資料年月",
-        "公司代號",
-        "公司名稱",
-        "職稱",
-        "姓名",
-        "選任時持股",
-        "目前持股",
-        "設質股數",
-        "設質股數佔持股比例",
-        "內部人關係人目前持股合計",
-        "內部人關係人設質股數",
-        "內部人關係人設質比例"
-      ]
+      "bytes": 735232,
+      "elapsed": 5.81,
+      "err": "JSON 解析失敗: Unterminated string starting at: line 1951 column 132 (char 398594)",
+      "count": null,
+      "path": null,
+      "keys": null
     }
   }
 }

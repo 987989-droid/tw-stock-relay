@@ -1,42 +1,42 @@
 {
-  "generated_at_taipei": "2026-10-14T23:39:46.886542+08:00",
-  "date": "2026-10-14",
+  "generated_at_taipei": "2026-10-15T23:25:52.351344+08:00",
+  "date": "2026-10-15",
   "expected_period": "11509",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
   "files": {
     "material_listed": {
-      "path": "data/daily/material_listed/2026-10-14.json",
-      "count": 67,
+      "path": "data/daily/material_listed/2026-10-15.json",
+      "count": 63,
       "desc": "上市公司每日重大訊息",
       "mode": "daily_keep"
     },
     "material_otc": {
-      "path": "data/daily/material_otc/2026-10-14.json",
-      "count": 41,
+      "path": "data/daily/material_otc/2026-10-15.json",
+      "count": 40,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
     "insider_listed": {
-      "path": "data/daily/insider_listed/2026-10-14.json",
-      "count": 3,
+      "path": "data/daily/insider_listed/2026-10-15.json",
+      "count": 27,
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
     },
     "insider_otc": {
-      "path": "data/daily/insider_otc/2026-10-14.json",
+      "path": "data/daily/insider_otc/2026-10-15.json",
       "count": 20,
       "desc": "上櫃內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
     },
     "quotes_listed": {
       "path": "data/latest/quotes_listed.json",
-      "count": 1382,
+      "count": 1381,
       "desc": "上市個股當日成交資訊",
       "mode": "latest_only"
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
-      "count": 12466,
+      "count": 12565,
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only"
     },
@@ -65,56 +65,50 @@
       "count": null
     },
     "pledge_listed": {
-      "path": "data/monthly/pledge_listed/11508.json",
-      "count": 27475,
+      "path": "data/monthly/pledge_listed/11509.json",
+      "count": 27387,
       "desc": "上市公司董監事持股餘額明細(含設質)",
       "mode": "monthly"
     },
-    "pledge_otc": {
-      "path": "data/monthly/pledge_otc/11508.json",
-      "count": 17568,
-      "desc": "上櫃公司董監事持股餘額明細(含設質)",
-      "mode": "monthly"
-    },
     "control_suspend_listed": {
-      "path": "data/daily/control_suspend_listed/2026-10-14.json",
+      "path": "data/daily/control_suspend_listed/2026-10-15.json",
       "count": 1,
       "desc": "經營權異動且營業範圍重大變更停止買賣",
       "mode": "daily"
     },
     "control_altered_listed": {
-      "path": "data/daily/control_altered_listed/2026-10-14.json",
+      "path": "data/daily/control_altered_listed/2026-10-15.json",
       "count": 1,
       "desc": "經營權異動且營業範圍重大變更列為變更交易",
       "mode": "daily"
     },
     "penalty_listed": {
-      "path": "data/daily/penalty_listed/2026-10-14.json",
+      "path": "data/daily/penalty_listed/2026-10-15.json",
       "count": 22,
       "desc": "上市公司金管會證券期貨局裁罰案件",
       "mode": "daily"
     },
     "disclosure_violation_listed": {
-      "path": "data/daily/disclosure_violation_listed/2026-10-14.json",
+      "path": "data/daily/disclosure_violation_listed/2026-10-15.json",
       "count": 38,
       "desc": "上市公司違反資訊申報、重大訊息及說明記者會規定",
       "mode": "daily"
     },
     "control_change_listed": {
-      "path": "data/daily/control_change_listed/2026-10-14.json",
+      "path": "data/daily/control_change_listed/2026-10-15.json",
       "count": 15,
       "desc": "上市公司經營權異動",
       "mode": "daily"
     },
     "shortfall_listed": {
-      "path": "data/daily/shortfall_listed/2026-10-14.json",
+      "path": "data/daily/shortfall_listed/2026-10-15.json",
       "count": 12,
       "desc": "上市公司董監持股不足法定成數彙總表",
       "mode": "daily"
     },
     "major_holder_listed": {
-      "path": "data/daily/major_holder_listed/2026-10-14.json",
-      "count": 1062,
+      "path": "data/daily/major_holder_listed/2026-10-15.json",
+      "count": 1065,
       "desc": "上市公司持股逾10%大股東名單",
       "mode": "daily"
     },
@@ -135,22 +129,11 @@
       "count": 1049,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
-    },
-    "news": {
-      "path": "data/daily/news/2026-10-15.json",
-      "count": 291,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 12,
-      "feeds_total": 12,
-      "cn_count": 90,
-      "kwt_count": 103,
-      "nz_count": 40,
-      "ev_count": 4,
-      "dup_folded": 43
     }
   },
-  "failed": [],
+  "failed": [
+    "pledge_otc"
+  ],
   "skipped": [
     "revenue_listed",
     "revenue_otc",
