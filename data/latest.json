@@ -1,24 +1,24 @@
 {
-  "generated_at_taipei": "2026-10-20T01:17:17.083358+08:00",
+  "generated_at_taipei": "2026-10-20T23:30:47.238242+08:00",
   "date": "2026-10-20",
   "expected_period": "11509",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
   "files": {
     "material_listed": {
       "path": "data/daily/material_listed/2026-10-20.json",
-      "count": 4,
+      "count": 53,
       "desc": "上市公司每日重大訊息",
       "mode": "daily_keep"
     },
     "material_otc": {
       "path": "data/daily/material_otc/2026-10-20.json",
-      "count": 2,
+      "count": 59,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
     "insider_listed": {
       "path": "data/daily/insider_listed/2026-10-20.json",
-      "count": 3,
+      "count": 1,
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
     },
@@ -30,19 +30,19 @@
     },
     "quotes_listed": {
       "path": "data/latest/quotes_listed.json",
-      "count": 1380,
+      "count": 1381,
       "desc": "上市個股當日成交資訊",
       "mode": "latest_only"
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
-      "count": 12779,
+      "count": 12848,
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only"
     },
     "valuation_listed": {
       "path": "data/latest/valuation_listed.json",
-      "count": 1082,
+      "count": 1083,
       "desc": "上市本益比/殖利率/股價淨值比",
       "mode": "latest_only"
     },
@@ -135,19 +135,6 @@
       "count": 1050,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
-    },
-    "news": {
-      "path": "data/daily/news/2026-10-20.json",
-      "count": 296,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 12,
-      "feeds_total": 12,
-      "cn_count": 108,
-      "kwt_count": 100,
-      "nz_count": 32,
-      "ev_count": 4,
-      "dup_folded": 36
     }
   },
   "failed": [],
