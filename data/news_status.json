@@ -1,29 +1,34 @@
 {
-  "generated_at_taipei": "2026-10-23T23:49:51+08:00",
-  "date": "2026-10-23",
+  "generated_at_taipei": "2026-10-24T09:47:10+08:00",
+  "date": "2026-10-24",
   "window_hours": 36,
-  "count": 256,
-  "feeds_ok": 11,
+  "count": 263,
+  "feeds_ok": 12,
   "feeds_total": 12,
-  "coded": 28,
+  "coded": 29,
   "note": "全市場財經新聞標題，未做任何篩選。ts 為 null 表示該來源未提供可解析的發布時間，不得當作今日。c 欄為文中出現的台股代號（由「(2464-TW)」「(2330)」等寫法抽出），讀取端請以代號比對自己的清單；沒有 c 欄不代表與個股無關，仍須看標題。count 供讀取端對帳，確認未被截斷。",
   "feeds": {
     "cnyes_tw_stock": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_stock",
       "desc": "鉅亨網 台股",
-      "ok": false,
-      "err": "XML 解析失敗（非 RSS/Atom 或回傳二進位）: not well-formed (invalid token): line 941, column 42"
+      "ok": true,
+      "status": 200,
+      "bytes": 52192,
+      "fetched": 23,
+      "kept": 23,
+      "undated": 0,
+      "elapsed": 0.39
     },
     "cnyes_wd_stock": {
       "url": "https://news.cnyes.com/rss/v1/news/category/wd_stock",
       "desc": "鉅亨網 國際股",
       "ok": true,
       "status": 200,
-      "bytes": 214540,
+      "bytes": 211895,
       "fetched": 100,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.81
+      "elapsed": 1.3
     },
     "cnyes_tw_macro": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_macro",
@@ -34,7 +39,7 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.42
+      "elapsed": 0.35
     },
     "cnyes_tw_industry": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_industry",
@@ -52,44 +57,44 @@
       "desc": "科技新報",
       "ok": true,
       "status": 200,
-      "bytes": 36580,
+      "bytes": 37300,
       "fetched": 40,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.89
+      "elapsed": 0.76
     },
     "moneydj": {
       "url": "https://www.moneydj.com/kmdj/RssCenter.aspx?svc=NW&fno=1&arg=X0000000",
       "desc": "MoneyDJ 焦點新聞",
       "ok": true,
       "status": 200,
-      "bytes": 12893,
+      "bytes": 12523,
       "fetched": 20,
       "kept": 20,
       "undated": 0,
-      "elapsed": 0.79
+      "elapsed": 0.87
     },
     "cna_finance": {
       "url": "https://feeds.feedburner.com/rsscna/finance",
       "desc": "中央社 財經",
       "ok": true,
       "status": 200,
-      "bytes": 13631,
+      "bytes": 13073,
       "fetched": 20,
       "kept": 20,
       "undated": 0,
-      "elapsed": 0.18
+      "elapsed": 0.12
     },
     "udn_money": {
       "url": "https://money.udn.com/rssfeed/news/1001/5591?ch=money",
       "desc": "經濟日報 股市",
       "ok": true,
       "status": 200,
-      "bytes": 15902,
+      "bytes": 13737,
       "fetched": 20,
-      "kept": 16,
+      "kept": 17,
       "undated": 0,
-      "elapsed": 0.31
+      "elapsed": 0.27
     },
     "udn_stock_sub": {
       "url": "https://money.udn.com/rssfeed/news/1001/5591/7307?ch=money",
@@ -100,40 +105,40 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.25
+      "elapsed": 0.26
     },
     "ettoday_finance": {
       "url": "https://feeds.feedburner.com/ettoday/finance",
       "desc": "ETtoday 財經",
       "ok": true,
       "status": 200,
-      "bytes": 54583,
+      "bytes": 54124,
       "fetched": 50,
-      "kept": 40,
+      "kept": 26,
       "undated": 0,
-      "elapsed": 0.16
+      "elapsed": 0.27
     },
     "ltn_business": {
       "url": "https://news.ltn.com.tw/rss/business.xml",
       "desc": "自由時報 財經",
       "ok": true,
       "status": 200,
-      "bytes": 21205,
+      "bytes": 21676,
       "fetched": 40,
-      "kept": 40,
+      "kept": 37,
       "undated": 0,
-      "elapsed": 0.19
+      "elapsed": 0.6
     },
     "yahoo_tw_market": {
       "url": "https://tw.stock.yahoo.com/rss?category=tw-market",
       "desc": "Yahoo 台股",
       "ok": true,
       "status": 200,
-      "bytes": 39880,
+      "bytes": 38272,
       "fetched": 50,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.55
+      "elapsed": 0.59
     }
   }
 }
