@@ -1,0 +1,37 @@
+name: mops
+
+# MOPS 四大財報抓取：15 檔持股 × 4 表（資產負債／綜合損益／現金流量／權益變動）。
+# 期別與代號由回傳 HTML 的 XBRL 連結抽出，寫 data/mops/<期>/<代號>_<表>.html。
+# 詳見 scripts/fetch_mops.py。
+
+on:
+  workflow_dispatch:        # 手動觸發（首次驗證用）
+  schedule:
+    # 週日 19:40 UTC = 週一 03:40 台北；趕在「財報燈號週報」週一 08:00 台北之前。
+    # 避開整點 cron 壅塞；財報僅季變，每週跑為 idempotent（內容無變即不 commit）。
+    - cron: '40 19 * * 0'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: fetch MOPS 四表
+        run: python scripts/fetch_mops.py
+
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/mops
+          git diff --staged --quiet || git commit -m "mops 四表抓取 $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
