@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-全市場月營收歷史（GitHub Actions 中繼用，2026/10/28 建）。
+全市場月營收歷史（GitHub Actions 中繼用，2026/10/28 建；同日加入補抓模式）。
 - 來源：MOPS 舊站月營收彙總靜態頁 mopsov.twse.com.tw/nas/t21/<sii|otc>/t21sc03_<民國年>_<月>_<0|1>.html
         （0＝國內公司、1＝外國／KY；編碼 MS950）。抓最近 15 個月 × 上市／上櫃 × 國內／外國。
 - 刻意抓全市場，不抓追蹤清單，避免公開 repo 洩漏觀察名單。
@@ -32,10 +32,21 @@ def num(s):
         return None
 
 out, status = {}, {"run_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "pages": []}
+# 補抓模式：若已有前次結果，只重抓「錯誤或 0 列」的頁，其餘沿用（2026/10/28 首跑遭 MOPS 連線重置後加入）
+todo = None
+if os.path.exists("data/derived/_revhist_status.json") and os.path.exists("data/derived/revenue_hist.json"):
+    prev = json.load(open("data/derived/_revhist_status.json", encoding="utf-8"))
+    out = json.load(open("data/derived/revenue_hist.json", encoding="utf-8"))
+    todo = {(p["ym"], p["mk"], p["t"]) for p in prev["pages"] if p["err"] or not p["rows"]}
+    status["pages"] = [p for p in prev["pages"] if (p["ym"], p["mk"], p["t"]) not in todo]
+    status["mode"] = f"fill {len(todo)} pages"
+SLEEP = 3 if todo is not None else 1
 for (yy, mm) in months:
     ym = f"{yy}{mm:02d}"
     for mk in ("sii", "otc"):
         for t in (0, 1):
+            if todo is not None and (ym, mk, t) not in todo:
+                continue
             url = BASE.format(mk=mk, y=yy, m=mm, t=t)
             rec = {"ym": ym, "mk": mk, "t": t, "http": None, "rows": 0, "err": None}
             try:
@@ -60,7 +71,7 @@ for (yy, mm) in months:
             except Exception as e:
                 rec["err"] = f"{type(e).__name__}: {e}"[:200]
             status["pages"].append(rec)
-            time.sleep(1)
+            time.sleep(SLEEP)
 
 status["companies"] = len(out)
 status["months"] = [f"{a}{b:02d}" for a, b in months]
