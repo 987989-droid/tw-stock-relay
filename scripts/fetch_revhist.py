@@ -37,8 +37,14 @@ todo = None
 if os.path.exists("data/derived/_revhist_status.json") and os.path.exists("data/derived/revenue_hist.json"):
     prev = json.load(open("data/derived/_revhist_status.json", encoding="utf-8"))
     out = json.load(open("data/derived/revenue_hist.json", encoding="utf-8"))
-    todo = {(p["ym"], p["mk"], p["t"]) for p in prev["pages"] if p["err"] or not p["rows"]}
-    status["pages"] = [p for p in prev["pages"] if (p["ym"], p["mk"], p["t"]) not in todo]
+    # 2026/10/28 修正：原只重抓「失敗頁」，新月份永遠不會進來。改為：最近 15 個月中「前次沒成功」的頁，
+    # 加上最新 2 個月一律重抓（月營收 10 日截止，月初抓到的最新月可能不完整）。
+    okprev = {(p["ym"], p["mk"], p["t"]) for p in prev["pages"] if not p["err"] and p["rows"]}
+    allp = [(f"{a}{b:02d}", mk, t) for a, b in months for mk in ("sii", "otc") for t in (0, 1)]
+    recent = {f"{a}{b:02d}" for a, b in months[:2]}
+    todo = {k for k in allp if k not in okprev or k[0] in recent}
+    status["pages"] = [p for p in prev["pages"] if (p["ym"], p["mk"], p["t"]) not in todo
+                       and p["ym"] in {k[0] for k in allp}]
     status["mode"] = f"fill {len(todo)} pages"
 SLEEP = 3 if todo is not None else 1
 for (yy, mm) in months:

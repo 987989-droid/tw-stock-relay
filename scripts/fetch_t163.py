@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 全市場綜合損益表彙總（GitHub Actions 中繼用，2026/10/28 建）。
-- 來源：MOPS 舊站 POST ajax_t163sb04（綜合損益表彙總表），上市 sii／上櫃 otc，民國 115 年第 1～3 季（累計數）。
+- 來源：MOPS 舊站 POST ajax_t163sb04（綜合損益表彙總表），上市 sii／上櫃 otc，去年 Q3／Q4 與今年 Q1～Q3（累計數；Q4＝全年）。
 - 刻意抓全市場，避免公開 repo 洩漏觀察名單。
 - 依表頭欄名取值（各產業別表格欄位不同）：營業收入、營業毛利、營業利益、稅前、本期淨利、基本每股盈餘。
 - 寫入：data/derived/is_<期>.json（{代號: {...}}，累計數）與 data/derived/_t163_status.json。
@@ -64,13 +64,15 @@ def parse(html):
 
 status = {"run_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "pages": []}
 os.makedirs("data/derived", exist_ok=True)
-for season in (1, 2, 3):
-    per = f"115Q{season}"
+# 期別（2026/10/28 改為動態）：去年 Q3、Q4（Q4＝全年累計）＋今年 Q1～Q3；尚未公告者 0 列、不寫檔
+Y = datetime.date.today().year - 1911
+for (yy, season) in ((Y - 1, 3), (Y - 1, 4), (Y, 1), (Y, 2), (Y, 3)):
+    per = f"{yy}Q{season}"
     merged = {}
     for typek in ("sii", "otc"):
         rec = {"period": per, "typek": typek, "http": None, "rows": 0, "err": None}
         try:
-            st, html = post(typek, 115, season)
+            st, html = post(typek, yy, season)
             rec["http"] = st
             rows = parse(html)
             rec["rows"] = len(rows)
@@ -81,7 +83,8 @@ for season in (1, 2, 3):
             rec["err"] = f"{type(e).__name__}: {e}"[:200]
         status["pages"].append(rec)
         time.sleep(3)
-    if merged:
+    # 兩頁皆無錯誤才覆寫（避免單頁失敗時以半份資料蓋掉舊檔）
+    if merged and not any(p["err"] for p in status["pages"] if p["period"] == per):
         json.dump(merged, open(f"data/derived/is_{per}.json", "w", encoding="utf-8"), ensure_ascii=False)
 json.dump(status, open("data/derived/_t163_status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(json.dumps(status["pages"], ensure_ascii=False))
