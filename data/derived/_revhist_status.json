@@ -1,5 +1,5 @@
 {
- "run_at_utc": "2026-10-28T09:59:11.525814+00:00",
+ "run_at_utc": "2026-10-28T10:10:28.663570+00:00",
  "pages": [
   {
    "ym": "11509",
@@ -52,14 +52,6 @@
   {
    "ym": "11508",
    "mk": "otc",
-   "t": 0,
-   "http": 200,
-   "rows": 0,
-   "err": null
-  },
-  {
-   "ym": "11508",
-   "mk": "otc",
    "t": 1,
    "http": 200,
    "rows": 30,
@@ -136,102 +128,6 @@
    "http": 200,
    "rows": 996,
    "err": null
-  },
-  {
-   "ym": "11505",
-   "mk": "sii",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11505",
-   "mk": "otc",
-   "t": 0,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11505",
-   "mk": "otc",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11504",
-   "mk": "sii",
-   "t": 0,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11504",
-   "mk": "sii",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11504",
-   "mk": "otc",
-   "t": 0,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11504",
-   "mk": "otc",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11503",
-   "mk": "sii",
-   "t": 0,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11503",
-   "mk": "sii",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11503",
-   "mk": "otc",
-   "t": 0,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11503",
-   "mk": "otc",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
-  },
-  {
-   "ym": "11502",
-   "mk": "sii",
-   "t": 0,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
   },
   {
    "ym": "11502",
@@ -296,14 +192,6 @@
    "http": 200,
    "rows": 995,
    "err": null
-  },
-  {
-   "ym": "11412",
-   "mk": "sii",
-   "t": 1,
-   "http": null,
-   "rows": 0,
-   "err": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
   },
   {
    "ym": "11412",
@@ -480,8 +368,121 @@
    "http": 200,
    "rows": 30,
    "err": null
+  },
+  {
+   "ym": "11508",
+   "mk": "otc",
+   "t": 0,
+   "http": 200,
+   "rows": 866,
+   "err": null
+  },
+  {
+   "ym": "11505",
+   "mk": "sii",
+   "t": 1,
+   "http": 200,
+   "rows": 93,
+   "err": null
+  },
+  {
+   "ym": "11505",
+   "mk": "otc",
+   "t": 0,
+   "http": 200,
+   "rows": 865,
+   "err": null
+  },
+  {
+   "ym": "11505",
+   "mk": "otc",
+   "t": 1,
+   "http": 200,
+   "rows": 30,
+   "err": null
+  },
+  {
+   "ym": "11504",
+   "mk": "sii",
+   "t": 0,
+   "http": 200,
+   "rows": 996,
+   "err": null
+  },
+  {
+   "ym": "11504",
+   "mk": "sii",
+   "t": 1,
+   "http": 200,
+   "rows": 93,
+   "err": null
+  },
+  {
+   "ym": "11504",
+   "mk": "otc",
+   "t": 0,
+   "http": 200,
+   "rows": 865,
+   "err": null
+  },
+  {
+   "ym": "11504",
+   "mk": "otc",
+   "t": 1,
+   "http": 200,
+   "rows": 30,
+   "err": null
+  },
+  {
+   "ym": "11503",
+   "mk": "sii",
+   "t": 0,
+   "http": 200,
+   "rows": 995,
+   "err": null
+  },
+  {
+   "ym": "11503",
+   "mk": "sii",
+   "t": 1,
+   "http": 200,
+   "rows": 93,
+   "err": null
+  },
+  {
+   "ym": "11503",
+   "mk": "otc",
+   "t": 0,
+   "http": 200,
+   "rows": 865,
+   "err": null
+  },
+  {
+   "ym": "11503",
+   "mk": "otc",
+   "t": 1,
+   "http": 200,
+   "rows": 30,
+   "err": null
+  },
+  {
+   "ym": "11502",
+   "mk": "sii",
+   "t": 0,
+   "http": 200,
+   "rows": 995,
+   "err": null
+  },
+  {
+   "ym": "11412",
+   "mk": "sii",
+   "t": 1,
+   "http": 200,
+   "rows": 93,
+   "err": null
   }
  ],
+ "mode": "fill 14 pages",
  "companies": 1985,
  "months": [
   "11509",
