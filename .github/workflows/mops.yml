@@ -6,6 +6,11 @@ name: mops
 
 on:
   workflow_dispatch:        # 手動觸發（首次驗證用）
+  push:                     # 抓取程式或本檔被修改時自動跑一次（2026/10/28 加：本環境無法以 API 手動觸發）
+    branches: [main]
+    paths:
+      - '.github/workflows/mops.yml'
+      - 'scripts/fetch_mops.py'
   schedule:
     # 週日 19:40 UTC = 週一 03:40 台北；趕在「財報燈號週報」週一 08:00 台北之前。
     # 避開整點 cron 壅塞；財報僅季變，每週跑為 idempotent（內容無變即不 commit）。
@@ -13,6 +18,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: relay-commit       # 與 daily／news 共用，避免同時 push 互撞
+  cancel-in-progress: false
 
 jobs:
   fetch:
@@ -33,5 +42,12 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data/mops
-          git diff --staged --quiet || git commit -m "mops 四表抓取 $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "mops 四表抓取 $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "push 第 $i 次失敗，等 5 秒重試"
+            sleep 5
+          done
+          echo "push 三次都失敗"
+          exit 1
