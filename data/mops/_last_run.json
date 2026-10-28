@@ -1,0 +1,634 @@
+{
+ "fetched_at_utc": "2026-10-28T06:07:16.067019+00:00",
+ "requested_stocks": [
+  "1513",
+  "1519",
+  "2449",
+  "2474",
+  "3035",
+  "3105",
+  "3231",
+  "3363",
+  "4958",
+  "6147",
+  "6196",
+  "6239",
+  "6451",
+  "6643",
+  "8227"
+ ],
+ "tables": [
+  "t164sb03",
+  "t164sb04",
+  "t164sb05",
+  "t164sb06"
+ ],
+ "results": [
+  {
+   "co_id": "1513",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 49517,
+   "detected_co_id": "1513",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1513",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 29112,
+   "detected_co_id": "1513",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1513",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 22191,
+   "detected_co_id": "1513",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1513",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 40162,
+   "detected_co_id": "1513",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1519",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 45516,
+   "detected_co_id": "1519",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1519",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 34812,
+   "detected_co_id": "1519",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1519",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 20017,
+   "detected_co_id": "1519",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "1519",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 39122,
+   "detected_co_id": "1519",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2449",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 41445,
+   "detected_co_id": "2449",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2449",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 33921,
+   "detected_co_id": "2449",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2449",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 20000,
+   "detected_co_id": "2449",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2449",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 34850,
+   "detected_co_id": "2449",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2474",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 42818,
+   "detected_co_id": "2474",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2474",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 32802,
+   "detected_co_id": "2474",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2474",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 20743,
+   "detected_co_id": "2474",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "2474",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 48213,
+   "detected_co_id": "2474",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3035",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 42753,
+   "detected_co_id": "3035",
+   "period": "115Q3"
+  },
+  {
+   "co_id": "3035",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 30118,
+   "detected_co_id": "3035",
+   "period": "115Q3"
+  },
+  {
+   "co_id": "3035",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 18790,
+   "detected_co_id": "3035",
+   "period": "115Q3"
+  },
+  {
+   "co_id": "3035",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 30861,
+   "detected_co_id": "3035",
+   "period": "115Q3"
+  },
+  {
+   "co_id": "3105",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 38138,
+   "detected_co_id": "3105",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3105",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 32312,
+   "detected_co_id": "3105",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3105",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 20004,
+   "detected_co_id": "3105",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3105",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 34656,
+   "detected_co_id": "3105",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3231",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 42113,
+   "detected_co_id": "3231",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3231",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 30150,
+   "detected_co_id": "3231",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3231",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 23885,
+   "detected_co_id": "3231",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3231",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 51361,
+   "detected_co_id": "3231",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3363",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 44748,
+   "detected_co_id": "3363",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3363",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 29172,
+   "detected_co_id": "3363",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3363",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 18012,
+   "detected_co_id": "3363",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3363",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 29724,
+   "detected_co_id": "3363",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "4958",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 47451,
+   "detected_co_id": "4958",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "4958",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 31304,
+   "detected_co_id": "4958",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "4958",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 19526,
+   "detected_co_id": "4958",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "4958",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 42911,
+   "detected_co_id": "4958",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6147",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 42109,
+   "detected_co_id": "6147",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6147",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 30658,
+   "detected_co_id": "6147",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6147",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 16837,
+   "detected_co_id": "6147",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6147",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 41426,
+   "detected_co_id": "6147",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6196",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 51443,
+   "detected_co_id": "6196",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6196",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 30613,
+   "detected_co_id": "6196",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6196",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 20988,
+   "detected_co_id": "6196",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6196",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 38147,
+   "detected_co_id": "6196",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6239",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 44844,
+   "detected_co_id": "6239",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6239",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 28696,
+   "detected_co_id": "6239",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6239",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 21001,
+   "detected_co_id": "6239",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6239",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 34666,
+   "detected_co_id": "6239",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6451",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 46850,
+   "detected_co_id": "6451",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6451",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 34818,
+   "detected_co_id": "6451",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6451",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 19785,
+   "detected_co_id": "6451",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6451",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 46620,
+   "detected_co_id": "6451",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6643",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 36149,
+   "detected_co_id": "6643",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6643",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 27032,
+   "detected_co_id": "6643",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6643",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 16607,
+   "detected_co_id": "6643",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "6643",
+   "table": "t164sb06",
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
+  },
+  {
+   "co_id": "8227",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 35438,
+   "detected_co_id": "8227",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "8227",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 25839,
+   "detected_co_id": "8227",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "8227",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 15827,
+   "detected_co_id": "8227",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "8227",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 21936,
+   "detected_co_id": "8227",
+   "period": "115Q2"
+  }
+ ],
+ "ok_count": 59,
+ "fail_count": 1,
+ "periods_seen": {
+  "115Q2": 55,
+  "115Q3": 4
+ }
+}
