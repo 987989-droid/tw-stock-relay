@@ -1,0 +1,47 @@
+{
+ "run_at_utc": "2026-10-28T12:28:35.830267+00:00",
+ "pages": [
+  {
+   "period": "115Q1",
+   "typek": "sii",
+   "http": 200,
+   "rows": 1085,
+   "err": null
+  },
+  {
+   "period": "115Q1",
+   "typek": "otc",
+   "http": 200,
+   "rows": 895,
+   "err": null
+  },
+  {
+   "period": "115Q2",
+   "typek": "sii",
+   "http": 200,
+   "rows": 1087,
+   "err": null
+  },
+  {
+   "period": "115Q2",
+   "typek": "otc",
+   "http": 200,
+   "rows": 895,
+   "err": null
+  },
+  {
+   "period": "115Q3",
+   "typek": "sii",
+   "http": 200,
+   "rows": 18,
+   "err": null
+  },
+  {
+   "period": "115Q3",
+   "typek": "otc",
+   "http": 200,
+   "rows": 24,
+   "err": null
+  }
+ ]
+}
