@@ -1,0 +1,33 @@
+{
+ "list": {
+  "http": 200,
+  "bytes": 11791,
+  "has_樺成": true
+ },
+ "hits": [
+  {
+   "row_text": "class='even'> &nbsp;6414 &nbsp;樺漢 &nbsp;115/08/11 &nbsp;19:02:35 &nbsp;代子公司樺成國際投資公告董事會決議發放股利",
+   "fields": {},
+   "detail": {
+    "http": 200,
+    "bytes": 2508
+   }
+  },
+  {
+   "row_text": "class='odd'> &nbsp;6414 &nbsp;樺漢 &nbsp;115/08/11 &nbsp;19:02:53 &nbsp;代子公司樺成國際投資公告115年除息基準日",
+   "fields": {},
+   "detail": {
+    "http": 200,
+    "bytes": 2508
+   }
+  },
+  {
+   "row_text": "class='even'> &nbsp;6414 &nbsp;樺漢 &nbsp;115/08/11 &nbsp;19:03:17 &nbsp;代子公司樺成國際投資(股)公司依公開發行公司資金貸與 及背書保證處理準則第二十五條第一項第四款公告",
+   "fields": {},
+   "detail": {
+    "http": 200,
+    "bytes": 2508
+   }
+  }
+ ]
+}
