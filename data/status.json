@@ -1,6 +1,6 @@
 {
-  "run_at_taipei": "2026-10-28T00:07:38.535436+08:00",
-  "date": "2026-10-28",
+  "run_at_taipei": "2026-10-29T00:56:19.401138+08:00",
+  "date": "2026-10-29",
   "expected_period": "11509",
   "sources": {
     "material_listed": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 23896,
-          "content_length": 23896,
-          "elapsed": 1.36,
+          "bytes": 265907,
+          "content_length": 265907,
+          "elapsed": 3.37,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,11 +25,11 @@
         }
       ],
       "status": 200,
-      "bytes": 23896,
-      "elapsed": 1.36,
+      "bytes": 265907,
+      "elapsed": 3.37,
       "err": null,
-      "count": 9,
-      "path": "data/daily/material_listed/2026-10-28.json",
+      "count": 137,
+      "path": "data/daily/material_listed/2026-10-29.json",
       "keys": [
         "出表日期",
         "發言日期",
@@ -52,9 +52,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 6838,
-          "content_length": 6838,
-          "elapsed": 2.64,
+          "bytes": 87240,
+          "content_length": 87240,
+          "elapsed": 0.67,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -64,11 +64,11 @@
         }
       ],
       "status": 200,
-      "bytes": 6838,
-      "elapsed": 2.64,
+      "bytes": 87240,
+      "elapsed": 0.67,
       "err": null,
-      "count": 7,
-      "path": "data/daily/material_otc/2026-10-28.json",
+      "count": 60,
+      "path": "data/daily/material_otc/2026-10-29.json",
       "keys": [
         "Date",
         "發言日期",
@@ -91,9 +91,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 714,
-          "content_length": 714,
-          "elapsed": 0.67,
+          "bytes": 17802,
+          "content_length": 17802,
+          "elapsed": 1.44,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -103,11 +103,11 @@
         }
       ],
       "status": 200,
-      "bytes": 714,
-      "elapsed": 0.67,
+      "bytes": 17802,
+      "elapsed": 1.44,
       "err": null,
-      "count": 1,
-      "path": "data/daily/insider_listed/2026-10-28.json",
+      "count": 25,
+      "path": "data/daily/insider_listed/2026-10-29.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -137,9 +137,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 3574,
-          "content_length": 3574,
-          "elapsed": 0.29,
+          "bytes": 575,
+          "content_length": 575,
+          "elapsed": 1.45,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -149,11 +149,11 @@
         }
       ],
       "status": 200,
-      "bytes": 3574,
-      "elapsed": 0.29,
+      "bytes": 575,
+      "elapsed": 1.45,
       "err": null,
-      "count": 5,
-      "path": "data/daily/insider_otc/2026-10-28.json",
+      "count": 1,
+      "path": "data/daily/insider_otc/2026-10-29.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -183,9 +183,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 320388,
-          "content_length": 320388,
-          "elapsed": 1.36,
+          "bytes": 320948,
+          "content_length": 320948,
+          "elapsed": 2.91,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -195,10 +195,10 @@
         }
       ],
       "status": 200,
-      "bytes": 320388,
-      "elapsed": 1.36,
+      "bytes": 320948,
+      "elapsed": 2.91,
       "err": null,
-      "count": 1383,
+      "count": 1386,
       "path": "data/latest/quotes_listed.json",
       "keys": [
         "Date",
@@ -220,50 +220,26 @@
       "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
       "desc": "上櫃每日收盤行情",
       "mode": "latest_only",
-      "tries": 3,
+      "tries": 1,
       "attempts": [
         {
           "status": 200,
-          "bytes": 2326121,
-          "content_length": 5139445,
-          "elapsed": 5.58,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": true,
-          "err": "傳輸不完整：收到 2326121 / 應為 5139445 bytes",
-          "aia": null,
-          "attempt": 1
-        },
-        {
-          "status": 200,
-          "bytes": 2702953,
-          "content_length": 5139445,
-          "elapsed": 4.8,
-          "truncated": false,
-          "timed_out": false,
-          "incomplete": true,
-          "err": "傳輸不完整：收到 2702953 / 應為 5139445 bytes",
-          "aia": null,
-          "attempt": 2
-        },
-        {
-          "status": 200,
-          "bytes": 5139445,
-          "content_length": 5139445,
-          "elapsed": 10.59,
+          "bytes": 5126025,
+          "content_length": 5126025,
+          "elapsed": 33.25,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
           "err": null,
           "aia": null,
-          "attempt": 3
+          "attempt": 1
         }
       ],
       "status": 200,
-      "bytes": 5139445,
-      "elapsed": 10.59,
+      "bytes": 5126025,
+      "elapsed": 33.25,
       "err": null,
-      "count": 13186,
+      "count": 13127,
       "path": "data/latest/quotes_otc.json",
       "keys": [
         "Date",
@@ -296,9 +272,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 116795,
-          "content_length": 116795,
-          "elapsed": 1.48,
+          "bytes": 117124,
+          "content_length": 117124,
+          "elapsed": 2.74,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -308,10 +284,10 @@
         }
       ],
       "status": 200,
-      "bytes": 116795,
-      "elapsed": 1.48,
+      "bytes": 117124,
+      "elapsed": 2.74,
       "err": null,
-      "count": 1084,
+      "count": 1087,
       "path": "data/latest/valuation_listed.json",
       "keys": [
         "Date",
