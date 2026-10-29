@@ -1,6 +1,6 @@
 {
-  "run_at_taipei": "2026-10-29T00:56:19.401138+08:00",
-  "date": "2026-10-29",
+  "run_at_taipei": "2026-10-30T01:14:12.810615+08:00",
+  "date": "2026-10-30",
   "expected_period": "11509",
   "sources": {
     "material_listed": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 265907,
-          "content_length": 265907,
-          "elapsed": 3.37,
+          "bytes": 305303,
+          "content_length": 305303,
+          "elapsed": 1.73,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,11 +25,11 @@
         }
       ],
       "status": 200,
-      "bytes": 265907,
-      "elapsed": 3.37,
+      "bytes": 305303,
+      "elapsed": 1.73,
       "err": null,
-      "count": 137,
-      "path": "data/daily/material_listed/2026-10-29.json",
+      "count": 160,
+      "path": "data/daily/material_listed/2026-10-30.json",
       "keys": [
         "出表日期",
         "發言日期",
@@ -52,9 +52,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 87240,
-          "content_length": 87240,
-          "elapsed": 0.67,
+          "bytes": 112497,
+          "content_length": 112497,
+          "elapsed": 0.9,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -64,11 +64,11 @@
         }
       ],
       "status": 200,
-      "bytes": 87240,
-      "elapsed": 0.67,
+      "bytes": 112497,
+      "elapsed": 0.9,
       "err": null,
-      "count": 60,
-      "path": "data/daily/material_otc/2026-10-29.json",
+      "count": 70,
+      "path": "data/daily/material_otc/2026-10-30.json",
       "keys": [
         "Date",
         "發言日期",
@@ -91,9 +91,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 17802,
-          "content_length": 17802,
-          "elapsed": 1.44,
+          "bytes": 2023,
+          "content_length": 2023,
+          "elapsed": 0.78,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -103,11 +103,11 @@
         }
       ],
       "status": 200,
-      "bytes": 17802,
-      "elapsed": 1.44,
+      "bytes": 2023,
+      "elapsed": 0.78,
       "err": null,
-      "count": 25,
-      "path": "data/daily/insider_listed/2026-10-29.json",
+      "count": 3,
+      "path": "data/daily/insider_listed/2026-10-30.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -139,7 +139,7 @@
           "status": 200,
           "bytes": 575,
           "content_length": 575,
-          "elapsed": 1.45,
+          "elapsed": 0.28,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -150,10 +150,10 @@
       ],
       "status": 200,
       "bytes": 575,
-      "elapsed": 1.45,
+      "elapsed": 0.28,
       "err": null,
       "count": 1,
-      "path": "data/daily/insider_otc/2026-10-29.json",
+      "path": "data/daily/insider_otc/2026-10-30.json",
       "keys": [
         "Date",
         "SecuritiesCompanyCode",
@@ -183,9 +183,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 320948,
-          "content_length": 320948,
-          "elapsed": 2.91,
+          "bytes": 320176,
+          "content_length": 320176,
+          "elapsed": 1.37,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -195,8 +195,8 @@
         }
       ],
       "status": 200,
-      "bytes": 320948,
-      "elapsed": 2.91,
+      "bytes": 320176,
+      "elapsed": 1.37,
       "err": null,
       "count": 1386,
       "path": "data/latest/quotes_listed.json",
@@ -224,9 +224,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 5126025,
-          "content_length": 5126025,
-          "elapsed": 33.25,
+          "bytes": 5168670,
+          "content_length": 5168670,
+          "elapsed": 0.85,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -236,10 +236,10 @@
         }
       ],
       "status": 200,
-      "bytes": 5126025,
-      "elapsed": 33.25,
+      "bytes": 5168670,
+      "elapsed": 0.85,
       "err": null,
-      "count": 13127,
+      "count": 13242,
       "path": "data/latest/quotes_otc.json",
       "keys": [
         "Date",
@@ -272,9 +272,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 117124,
-          "content_length": 117124,
-          "elapsed": 2.74,
+          "bytes": 117126,
+          "content_length": 117126,
+          "elapsed": 1.13,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -284,8 +284,8 @@
         }
       ],
       "status": 200,
-      "bytes": 117124,
-      "elapsed": 2.74,
+      "bytes": 117126,
+      "elapsed": 1.13,
       "err": null,
       "count": 1087,
       "path": "data/latest/valuation_listed.json",
