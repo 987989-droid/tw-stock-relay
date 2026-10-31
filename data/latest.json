@@ -135,6 +135,19 @@
       "count": 1053,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
+    },
+    "news": {
+      "path": "data/daily/news/2026-11-01.json",
+      "count": 265,
+      "mode": "daily",
+      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
+      "feeds_ok": 12,
+      "feeds_total": 12,
+      "cn_count": 75,
+      "kwt_count": 79,
+      "nz_count": 16,
+      "ev_count": 4,
+      "dup_folded": 17
     }
   },
   "failed": [],
