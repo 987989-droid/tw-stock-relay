@@ -1,24 +1,24 @@
 {
-  "generated_at_taipei": "2026-10-31T00:54:45.200987+08:00",
+  "generated_at_taipei": "2026-10-31T23:55:32.423423+08:00",
   "date": "2026-10-31",
   "expected_period": "11509",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
   "files": {
     "material_listed": {
       "path": "data/daily/material_listed/2026-10-31.json",
-      "count": 182,
+      "count": 170,
       "desc": "上市公司每日重大訊息",
       "mode": "daily_keep"
     },
     "material_otc": {
       "path": "data/daily/material_otc/2026-10-31.json",
-      "count": 74,
+      "count": 67,
       "desc": "上櫃公司每日重大訊息",
       "mode": "daily_keep"
     },
     "insider_listed": {
       "path": "data/daily/insider_listed/2026-10-31.json",
-      "count": 1,
+      "count": 2,
       "desc": "上市內部人持股轉讓事前申報(轉讓)",
       "mode": "daily_keep"
     },
@@ -30,7 +30,7 @@
     },
     "quotes_listed": {
       "path": "data/latest/quotes_listed.json",
-      "count": 1388,
+      "count": 1389,
       "desc": "上市個股當日成交資訊",
       "mode": "latest_only"
     },
@@ -42,7 +42,7 @@
     },
     "valuation_listed": {
       "path": "data/latest/valuation_listed.json",
-      "count": 1087,
+      "count": 1088,
       "desc": "上市本益比/殖利率/股價淨值比",
       "mode": "latest_only"
     },
@@ -114,40 +114,27 @@
     },
     "major_holder_listed": {
       "path": "data/daily/major_holder_listed/2026-10-31.json",
-      "count": 1072,
+      "count": 1074,
       "desc": "上市公司持股逾10%大股東名單",
       "mode": "daily"
     },
     "profitability_listed": {
       "path": "data/quarterly/profitability_listed/115Q2.json",
-      "count": 1057,
+      "count": 1058,
       "desc": "上市公司營益分析查詢彙總表",
       "mode": "period"
     },
     "income_listed_ci": {
       "path": "data/quarterly/income_listed_ci/115Q2.json",
-      "count": 1052,
+      "count": 1053,
       "desc": "上市公司綜合損益表(一般業)",
       "mode": "period"
     },
     "balance_listed_ci": {
       "path": "data/quarterly/balance_listed_ci/115Q2.json",
-      "count": 1052,
+      "count": 1053,
       "desc": "上市公司資產負債表(一般業)",
       "mode": "period"
-    },
-    "news": {
-      "path": "data/daily/news/2026-10-31.json",
-      "count": 255,
-      "mode": "daily",
-      "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
-      "feeds_ok": 11,
-      "feeds_total": 12,
-      "cn_count": 69,
-      "kwt_count": 66,
-      "nz_count": 23,
-      "ev_count": 7,
-      "dup_folded": 22
     }
   },
   "failed": [],

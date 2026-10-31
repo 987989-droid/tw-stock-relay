@@ -1,5 +1,5 @@
 {
-  "run_at_taipei": "2026-10-31T00:54:45.200987+08:00",
+  "run_at_taipei": "2026-10-31T23:55:32.423423+08:00",
   "date": "2026-10-31",
   "expected_period": "11509",
   "sources": {
@@ -13,9 +13,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 372440,
-          "content_length": 372440,
-          "elapsed": 2.06,
+          "bytes": 313747,
+          "content_length": 313747,
+          "elapsed": 2.43,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -25,10 +25,10 @@
         }
       ],
       "status": 200,
-      "bytes": 372440,
-      "elapsed": 2.06,
+      "bytes": 313747,
+      "elapsed": 2.43,
       "err": null,
-      "count": 182,
+      "count": 170,
       "path": "data/daily/material_listed/2026-10-31.json",
       "keys": [
         "出表日期",
@@ -52,9 +52,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 112961,
-          "content_length": 112961,
-          "elapsed": 0.82,
+          "bytes": 105239,
+          "content_length": 105239,
+          "elapsed": 1.65,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -64,10 +64,10 @@
         }
       ],
       "status": 200,
-      "bytes": 112961,
-      "elapsed": 0.82,
+      "bytes": 105239,
+      "elapsed": 1.65,
       "err": null,
-      "count": 74,
+      "count": 67,
       "path": "data/daily/material_otc/2026-10-31.json",
       "keys": [
         "Date",
@@ -91,9 +91,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 721,
-          "content_length": 721,
-          "elapsed": 0.68,
+          "bytes": 1411,
+          "content_length": 1411,
+          "elapsed": 1.17,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -103,10 +103,10 @@
         }
       ],
       "status": 200,
-      "bytes": 721,
-      "elapsed": 0.68,
+      "bytes": 1411,
+      "elapsed": 1.17,
       "err": null,
-      "count": 1,
+      "count": 2,
       "path": "data/daily/insider_listed/2026-10-31.json",
       "keys": [
         "出表日期",
@@ -139,7 +139,7 @@
           "status": 200,
           "bytes": 741,
           "content_length": 741,
-          "elapsed": 0.3,
+          "elapsed": 1.01,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -150,7 +150,7 @@
       ],
       "status": 200,
       "bytes": 741,
-      "elapsed": 0.3,
+      "elapsed": 1.01,
       "err": null,
       "count": 1,
       "path": "data/daily/insider_otc/2026-10-31.json",
@@ -183,9 +183,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 320782,
-          "content_length": 320782,
-          "elapsed": 1.36,
+          "bytes": 322154,
+          "content_length": 322154,
+          "elapsed": 1.35,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -195,10 +195,10 @@
         }
       ],
       "status": 200,
-      "bytes": 320782,
-      "elapsed": 1.36,
+      "bytes": 322154,
+      "elapsed": 1.35,
       "err": null,
-      "count": 1388,
+      "count": 1389,
       "path": "data/latest/quotes_listed.json",
       "keys": [
         "Date",
@@ -226,7 +226,7 @@
           "status": 200,
           "bytes": 5210880,
           "content_length": 5210880,
-          "elapsed": 12.03,
+          "elapsed": 10.1,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -237,7 +237,7 @@
       ],
       "status": 200,
       "bytes": 5210880,
-      "elapsed": 12.03,
+      "elapsed": 10.1,
       "err": null,
       "count": 13360,
       "path": "data/latest/quotes_otc.json",
@@ -272,9 +272,9 @@
       "attempts": [
         {
           "status": 200,
-          "bytes": 117123,
-          "content_length": 117123,
-          "elapsed": 1.62,
+          "bytes": 117222,
+          "content_length": 117222,
+          "elapsed": 1.97,
           "truncated": false,
           "timed_out": false,
           "incomplete": false,
@@ -284,10 +284,10 @@
         }
       ],
       "status": 200,
-      "bytes": 117123,
-      "elapsed": 1.62,
+      "bytes": 117222,
+      "elapsed": 1.97,
       "err": null,
-      "count": 1087,
+      "count": 1088,
       "path": "data/latest/valuation_listed.json",
       "keys": [
         "Date",
