@@ -1,5 +1,5 @@
 {
- "fetched_at_utc": "2026-10-28T06:07:16.067019+00:00",
+ "fetched_at_utc": "2026-11-01T23:01:56.990732+00:00",
  "requested_stocks": [
   "1513",
   "1519",
@@ -167,12 +167,12 @@
   {
    "co_id": "2474",
    "table": "t164sb05",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 20743,
-   "detected_co_id": "2474",
-   "period": "115Q2"
+   "ok": false,
+   "err": "URLError: <urlopen error timed out>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "2474",
@@ -390,9 +390,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 42109,
+   "bytes": 43445,
    "detected_co_id": "6147",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6147",
@@ -402,7 +402,7 @@
    "http": 200,
    "bytes": 30658,
    "detected_co_id": "6147",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6147",
@@ -410,9 +410,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 16837,
+   "bytes": 17314,
    "detected_co_id": "6147",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6147",
@@ -420,9 +420,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 41426,
+   "bytes": 40024,
    "detected_co_id": "6147",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6196",
@@ -578,7 +578,7 @@
    "co_id": "6643",
    "table": "t164sb06",
    "ok": false,
-   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "err": "URLError: <urlopen error timed out>",
    "http": null,
    "bytes": 0,
    "detected_co_id": null,
@@ -625,10 +625,10 @@
    "period": "115Q2"
   }
  ],
- "ok_count": 59,
- "fail_count": 1,
+ "ok_count": 58,
+ "fail_count": 2,
  "periods_seen": {
-  "115Q2": 55,
-  "115Q3": 4
+  "115Q2": 50,
+  "115Q3": 8
  }
 }
