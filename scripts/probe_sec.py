@@ -52,3 +52,4 @@ os.makedirs("data/selftest", exist_ok=True)
 with open("data/selftest/sec_probe.json", "w", encoding="utf-8") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print(json.dumps({k: (v.get("http") if isinstance(v, dict) and "http" in v else {kk: vv.get("http") for kk, vv in v.items()}) for k, v in out.items() if k in ("companyfacts", "archive")}))
+# rerun 2026-11-04: SEC_CONTACT secret set
