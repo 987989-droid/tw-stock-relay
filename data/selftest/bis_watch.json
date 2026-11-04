@@ -1,5 +1,5 @@
 {
- "run_at_utc": "2026-11-04T07:51:20.352460+00:00",
+ "run_at_utc": "2026-11-04T07:51:52.419641+00:00",
  "query": "BIS, term=affiliates, since 2026-10-01",
  "count": 1,
  "results": [
@@ -13,5 +13,6 @@
    "effective_on": null
   }
  ],
+ "relevant": [],
  "status": "ok"
 }
