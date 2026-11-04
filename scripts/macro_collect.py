@@ -62,13 +62,33 @@ try:
 except Exception as e:
     status["nvda_ar"] = repr(e)[:300]
 
-# 2) Federal Register
+# 2) Federal Register：BIS 文件清單＋規則全文重點
 try:
-    q = [("conditions[agencies][]", "industry-and-security-bureau"), ("conditions[publication_date][gte]", (datetime.date.today() - datetime.timedelta(days=400)).isoformat()),
-         ("per_page", "1000"), ("order", "newest")] + [("fields[]", f) for f in ("title", "type", "publication_date", "document_number", "action")]
+    q = [("conditions[agencies][]", "industry-and-security-bureau"),
+         ("conditions[publication_date][gte]", (datetime.date.today() - datetime.timedelta(days=400)).isoformat()),
+         ("per_page", "1000"), ("order", "newest")] + [("fields[]", f) for f in (
+         "title", "type", "publication_date", "document_number", "action", "abstract", "raw_text_url", "effective_on")]
     d = json.loads(get("https://www.federalregister.gov/api/v1/documents.json?" + urllib.parse.urlencode(q), "tw-stock-relay research"))
-    json.dump({"count": d.get("count"), "results": d.get("results", [])}, open(OUT + "/fr_bis.json", "w"), ensure_ascii=False, indent=0)
-    status["fr_bis"] = f"ok {d.get('count')}"
+    res = d.get("results", [])
+    rules = []
+    for r in res:
+        if r.get("type") != "Rule" or not r.get("raw_text_url"):
+            continue
+        rec = {k: r.get(k) for k in ("document_number", "publication_date", "effective_on", "title", "action", "abstract")}
+        try:
+            t = get(r["raw_text_url"], "tw-stock-relay research").decode("utf-8", "replace")
+            flat = re.sub(r"\s+", " ", t)
+            rec["chars"] = len(flat)
+            rec["china_mentions"] = len(re.findall(r"China|Chinese|PRC|Hong Kong|Macau", flat))
+            rec["entity_sentences"] = [x[:400] for x in re.findall(r"[^.]*\b(?:add(?:s|ing|ed)?|remov(?:es|ing|ed)|revis(?:es|ing|ed)|modif(?:ies|ying|ied))\b[^.]*\bentit(?:y|ies)\b[^.]*\.", flat)][:12]
+            rec["country_counts"] = {c: len(re.findall(c, flat)) for c in ("China", "Russia", "Iran", "Hong Kong", "Taiwan", "United Arab Emirates", "Singapore", "Malaysia")}
+            rec["semi_terms"] = {k: len(re.findall(k, flat, re.I)) for k in ("semiconductor", "advanced computing", "integrated circuit", "high bandwidth memory", "HBM", "polysilicon", "supercomputer", "artificial intelligence", "model weights")}
+        except Exception as e:
+            rec["text_error"] = repr(e)[:200]
+        rules.append(rec)
+    json.dump({"count": d.get("count"), "results": res}, open(OUT + "/fr_bis.json", "w"), ensure_ascii=False, indent=0)
+    json.dump(rules, open(OUT + "/fr_rules.json", "w"), ensure_ascii=False, indent=1)
+    status["fr_bis"] = f"ok {d.get('count')} rules {len(rules)}"
 except Exception as e:
     status["fr_bis"] = repr(e)[:300]
 
