@@ -5,8 +5,8 @@ on:
   schedule:
     - cron: '50 20 10 * *'
     - cron: '50 20 15 4,5,8,11 *'
-    # 週六 20:50 UTC = 台北週日 04:50，供週日「注意力落差」推播使用（2026/11/04 新增）
-    - cron: '50 20 * * 6'
+    # 週六 08:50 UTC = 台北週六 16:50（取週五收盤），供週日 10:37「注意力落差」推播使用；GitHub 延遲數小時仍來得及（2026/11/04 新增）
+    - cron: '50 8 * * 6'
   push:
     branches: [main]
     paths: ['.github/workflows/beta.yml', 'scripts/fetch_beta.py']
