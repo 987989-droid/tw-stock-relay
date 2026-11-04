@@ -1,0 +1,848 @@
+{
+ "run_at_utc": "2026-11-04T03:11:49.682340",
+ "contact_declared": true,
+ "companies": {
+  "MSFT": {
+   "filings": [
+    {
+     "form": "10-Q",
+     "reportDate": "2026-09-30",
+     "filed": "2026-10-28",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+     "n_contexts": 111,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:AgentsAndInfraMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 76795000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:AgentsAndInfraMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 61672000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:AgentsAndInfraMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 40558000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:AgentsAndInfraMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 32718000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:DevicesAndConsumerMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 15484000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:DevicesAndConsumerMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 16001000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:DevicesAndConsumerMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 5357000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:DevicesAndConsumerMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 5243000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-K",
+     "reportDate": "2026-06-30",
+     "filed": "2026-07-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+     "n_contexts": 225,
+     "facts": []
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-03-31",
+     "filed": "2026-04-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm",
+     "n_contexts": 205,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:ProductivityAndBusinessProcessesMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 35013000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:ProductivityAndBusinessProcessesMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 29944000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:ProductivityAndBusinessProcessesMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 20973000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:ProductivityAndBusinessProcessesMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 17379000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:IntelligentCloudMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 34681000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:IntelligentCloudMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 26751000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:IntelligentCloudMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 13753000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:IntelligentCloudMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 11095000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:MorePersonalComputingMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 13192000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "msft:MorePersonalComputingMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 13371000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:MorePersonalComputingMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 3672000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "msft:MorePersonalComputingMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 3526000000.0
+      }
+     ]
+    }
+   ],
+   "error": null
+  },
+  "GOOGL": {
+   "filings": [
+    {
+     "form": "10-Q",
+     "reportDate": "2026-09-30",
+     "filed": "2026-10-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+     "n_contexts": 337,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleServicesMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 87052000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleServicesMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 96302000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleCloudMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 15157000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleCloudMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 30709000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "us-gaap:AllOtherSegmentsMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 344000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "us-gaap:AllOtherSegmentsMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 372000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-06-30",
+     "filed": "2026-07-23",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+     "n_contexts": 308,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleServicesMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 82543000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleServicesMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 94540000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleCloudMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 13624000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleCloudMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 24768000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "us-gaap:AllOtherSegmentsMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 373000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "us-gaap:AllOtherSegmentsMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 382000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-03-31",
+     "filed": "2026-04-30",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+     "n_contexts": 160,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleServicesMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 77264000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleServicesMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 89637000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleCloudMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 12260000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "goog:GoogleCloudMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 20028000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "us-gaap:AllOtherSegmentsMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 450000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "us-gaap:AllOtherSegmentsMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 411000000.0
+      }
+     ]
+    }
+   ],
+   "error": null
+  },
+  "AMZN": {
+   "filings": [
+    {
+     "form": "10-Q",
+     "reportDate": "2026-09-30",
+     "filed": "2026-10-30",
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+     "n_contexts": 188,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 106267000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 112852000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 4789000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 8723000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 40896000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 43108000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 1199000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 1580000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 33006000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 45984000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 11434000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 17773000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-06-30",
+     "filed": "2026-07-31",
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "n_contexts": 180,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 100068000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 116177000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 7517000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 9123000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 36761000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 42197000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 1494000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 1717000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 30873000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 42232000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 10160000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 16621000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-03-31",
+     "filed": "2026-04-30",
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+     "n_contexts": 111,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 92887000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 104143000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 5841000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:NorthAmericaSegmentMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 8267000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 33513000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 39789000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 1017000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:InternationalSegmentMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 1424000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 29267000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 37587000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 11547000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "amzn:AmazonWebServicesSegmentMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 14161000000.0
+      }
+     ]
+    }
+   ],
+   "error": null
+  },
+  "META": {
+   "filings": [
+    {
+     "form": "10-Q",
+     "reportDate": "2026-09-30",
+     "filed": "2026-10-22",
+     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+     "n_contexts": 106,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 64158000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 50772000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:RealityLabsMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 443000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:RealityLabsMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 470000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": 17117000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": 24967000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:RealityLabsMember",
+       "start": "2026-07-01",
+       "end": "2026-09-30",
+       "val": -4129000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:RealityLabsMember",
+       "start": "2025-07-01",
+       "end": "2025-09-30",
+       "val": -4432000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-06-30",
+     "filed": "2026-07-30",
+     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+     "n_contexts": 105,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 60370000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 47146000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:RealityLabsMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 431000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:RealityLabsMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 370000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": 23394000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": 24971000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:RealityLabsMember",
+       "start": "2026-04-01",
+       "end": "2026-06-30",
+       "val": -4619000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:RealityLabsMember",
+       "start": "2025-04-01",
+       "end": "2025-06-30",
+       "val": -4530000000.0
+      }
+     ]
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-03-31",
+     "filed": "2026-04-30",
+     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
+     "n_contexts": 65,
+     "facts": [
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 55909000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 41902000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:RealityLabsMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 402000000.0
+      },
+      {
+       "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+       "member": "meta:RealityLabsMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 412000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": 26900000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:FamilyOfAppsMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": 21765000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:RealityLabsMember",
+       "start": "2026-01-01",
+       "end": "2026-03-31",
+       "val": -4028000000.0
+      },
+      {
+       "concept": "us-gaap:OperatingIncomeLoss",
+       "member": "meta:RealityLabsMember",
+       "start": "2025-01-01",
+       "end": "2025-03-31",
+       "val": -4210000000.0
+      }
+     ]
+    }
+   ],
+   "error": null
+  },
+  "NVDA": {
+   "filings": [
+    {
+     "form": "10-Q",
+     "reportDate": "2026-07-26",
+     "filed": "2026-08-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+     "n_contexts": 139,
+     "facts": []
+    },
+    {
+     "form": "10-Q",
+     "reportDate": "2026-04-26",
+     "filed": "2026-05-20",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+     "n_contexts": 77,
+     "facts": []
+    },
+    {
+     "form": "10-K",
+     "reportDate": "2026-01-25",
+     "filed": "2026-02-25",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+     "n_contexts": 139,
+     "facts": []
+    }
+   ],
+   "error": null
+  }
+ }
+}
