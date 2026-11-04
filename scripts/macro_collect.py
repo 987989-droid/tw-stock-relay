@@ -24,7 +24,10 @@ try:
     CIKS = {"MSFT": 789019, "GOOGL": 1652044, "AMZN": 1018724, "META": 1326801, "NVDA": 1045810}
     TAGS = ["PaymentsToAcquirePropertyPlantAndEquipment", "PaymentsToAcquireProductiveAssets", "GrossProfit",
             "Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax",
-            "NetCashProvidedByUsedInOperatingActivities"]
+            "NetCashProvidedByUsedInOperatingActivities", "FinanceLeasePrincipalPayments",
+            "FinanceLeaseRightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+            "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+            "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability"]
     res = {}
     for tk, cik in CIKS.items():
         d = json.loads(get(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json", ua))
