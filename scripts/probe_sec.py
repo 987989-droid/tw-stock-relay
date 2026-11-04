@@ -2,7 +2,8 @@
 輸出 data/selftest/sec_probe.json。不重試；每個請求間隔 1 秒（SEC 公平存取上限為每秒 10 次）。"""
 import json, time, urllib.request, urllib.error, datetime, os
 
-UA = "tw-stock-relay research probe (https://github.com/987989-droid/tw-stock-relay)"
+CONTACT = os.environ.get("SEC_CONTACT", "").strip()  # 來自 repo secret，信箱不進公開 repo
+UA = f"tw-stock-relay research {CONTACT}" if CONTACT else "tw-stock-relay research probe (https://github.com/987989-droid/tw-stock-relay)"
 CIKS = {"MSFT": 789019, "GOOGL": 1652044, "AMZN": 1018724, "META": 1326801, "NVDA": 1045810}
 TAGS = ["PaymentsToAcquirePropertyPlantAndEquipment", "PaymentsToAcquireProductiveAssets",
         "GrossProfit", "Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax"]
@@ -20,7 +21,7 @@ def get(url):
         return None, repr(e).encode()
 
 
-out = {"run_at_utc": datetime.datetime.utcnow().isoformat(), "ua": UA, "companyfacts": {}, "archive": {}}
+out = {"run_at_utc": datetime.datetime.utcnow().isoformat(), "contact_declared": bool(CONTACT), "companyfacts": {}, "archive": {}}
 for tk, cik in CIKS.items():
     url = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json"
     code, body = get(url)
