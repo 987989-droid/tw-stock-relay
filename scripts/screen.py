@@ -24,6 +24,8 @@ import json, glob, os, re, sys, datetime
 R, WL = sys.argv[1], sys.argv[2]
 AS_JSON = "--json" in sys.argv
 QUARTERLY = "--quarterly" in sys.argv
+# --attention[=N]：注意力落差模式（2026/11/04 建）。營收加速＋落後大盤＋近 30 日新聞提及 ≤N（預設 2）
+ATT = next((int(a.split("=")[1]) if "=" in a else 2 for a in sys.argv if a.startswith("--attention")), None)
 J = lambda p: json.load(open(os.path.join(R, p), encoding="utf-8"))
 wl = list(dict.fromkeys(re.findall(r"(?<!\d)\d{4}(?!\d)", open(WL, encoding="utf-8").read())))
 
@@ -52,6 +54,27 @@ for c in wl:
 cand = [r for r in rows if r["yoy"] > 0 and r["acc"] > 0 and r["rel3m"] < 0]
 strict = sorted([r for r in cand if r["yoy"] >= 20 and r["acc"] >= 10 and r["rel3m"] <= -10 and r["beta"] >= 1.0],
                 key=lambda r: -r["acc"])
+
+# ---- 注意力（新聞提及次數）----
+def news_counts():
+    fs = sorted(glob.glob(os.path.join(R, "data/daily/news/*.json")))
+    out = []
+    for part in (fs[-30:], fs[-60:-30]):
+        seen, c = set(), {}
+        for f in part:
+            for x in json.load(open(f, encoding="utf-8"))["items"]:
+                if x.get("u") in seen: continue
+                seen.add(x.get("u"))
+                for k in set(x.get("c") or []):  # 只用 c 欄（文中明寫代號，高信心）；cn 名稱比對有誤配，不採
+                    c[k] = c.get(k, 0) + 1
+        out.append(c)
+    return out, (os.path.basename(fs[-1])[:-5] if fs else None), len(fs)
+if ATT is not None:
+    (n30, nprev), news_last, news_days = news_counts()
+    for r in rows:
+        r["att30"], r["attprev"] = n30.get(r["code"], 0), nprev.get(r["code"], 0)
+    strict = sorted([r for r in rows if r["yoy"] >= 20 and r["acc"] >= 10 and r["rel3m"] <= -10 and r["att30"] <= ATT],
+                    key=lambda r: -r["acc"])
 
 # ---- 地雷關資料 ----
 def latest(d):
@@ -149,6 +172,10 @@ for r in strict:
     if last and last["nonop"] is not None and last["nonop"] >= 50: why.append(("🟡", f"{LP}單季業外佔稅前{last['nonop']:.0f}%"))
     if last and last["oi"] is not None and last["oi"] < 0: why.append(("🟡", f"{LP}單季本業虧損"))
     if r["liq"] and r["liq"][0] < 1: why.append(("🟡", f"日成交值{r['liq'][0]:.2f}億"))
+    if ATT is not None and (r["yoy"] >= 200 or r["yoy_prev"] < 0): why.append(("🟡", "低基期（YoY 失真，須看絕對營收）"))
+    if ATT is not None:
+        r["catalyst"] = [f"{d} {s}" for s, d in r["material"].items()
+                         if not re.search(KW, s) and not re.search(r"自結|自行結算|營收|NDR|路演|法說|說明會|股東會|公司債|理財|董事會決議日期", s)][:2]
     r["flag"] = "⚫" if any(f == "⚫" for f, _ in why) else ("🟡" if why else "🟢")
     r["why"] = [w for _, w in why]
 
@@ -162,9 +189,17 @@ def age_days(iso):
     except Exception: return 999
 stale = []
 py, pm = (today.year - 1911, today.month - 1) if today.month > 1 else (today.year - 1912, 12)
-if not q3 or q3[-1] != f"{py}{pm:02d}": stale.append(f"營收最新完整月 {q3[-1] if q3 else '無'}，應為 {py}{pm:02d}")
-for nm, iso in (("beta", beta_gen), ("revhist", J("data/derived/_revhist_status.json").get("run_at_utc"))):
-    if age_days(iso) > 3: stale.append(f"{nm} 產生於 {iso}")
+if ATT is not None:
+    py2, pm2 = (py, pm - 1) if pm > 1 else (py - 1, 12)
+    ok = {f"{py}{pm:02d}", f"{py2}{pm2:02d}"}
+    if not q3 or q3[-1] not in ok: stale.append(f"營收最新完整月 {q3[-1] if q3 else '無'}，應為 {' 或 '.join(sorted(ok))}")
+    if age_days(beta_gen) > 3: stale.append(f"beta 產生於 {beta_gen}")
+    if not news_last or (today - datetime.date.fromisoformat(news_last)).days > 2: stale.append(f"新聞最新檔 {news_last}")
+    if news_days < 30: stale.append(f"新聞檔僅 {news_days} 天，不足 30 天")
+else:
+    if not q3 or q3[-1] != f"{py}{pm:02d}": stale.append(f"營收最新完整月 {q3[-1] if q3 else '無'}，應為 {py}{pm:02d}")
+    for nm, iso in (("beta", beta_gen), ("revhist", J("data/derived/_revhist_status.json").get("run_at_utc"))):
+        if age_days(iso) > 3: stale.append(f"{nm} 產生於 {iso}")
 if QUARTERLY:
     Y = today.year - 1911
     want = {4: f"{Y-1}Q4", 5: f"{Y}Q1", 8: f"{Y}Q2", 11: f"{Y}Q3"}.get(today.month)
@@ -178,9 +213,23 @@ if AS_JSON:
     print(json.dumps({"meta": meta, "strict": strict}, ensure_ascii=False, indent=1, default=list)); sys.exit()
 
 f1 = lambda v: "—" if v is None else f"{v:.1f}%"
+order = {"⚫": 0, "🟡": 1, "🟢": 2}
+if ATT is not None:
+    L = [f"注意力落差｜營收 {q3[0]}–{q3[-1]} 對 {q2[0]}–{q2[-1]}｜股價 {strict[0]['date'] if strict else '—'}｜新聞至 {news_last}",
+         f"名單 {len(wl)} 檔 → 營收加速且落後大盤、近30日新聞≤{ATT}則：{len(strict)} 檔"]
+    for r in sorted(strict, key=lambda r: (order[r["flag"]], -r["acc"])):
+        L.append("")
+        L.append(f"{r['flag']} {r['code']} {r['name']}")
+        L.append(f"營收YoY {r['yoy_prev']:.1f}%→{r['yoy']:.1f}%｜落後大盤 {r['rel3m']:.1f}%｜新聞30日 {r['att30']}則（前30日 {r['attprev']}）")
+        p = r["pledge"]
+        L.append(f"整體質押 {p['overall']:.2f}%（{p['ym']}）" if p else "整體質押 查無")
+        for c in r.get("catalyst") or []: L.append("重訊 " + c)
+        for w in r["why"]: L.append(w)
+    L.append("")
+    L.append("研究候選，非買賣建議；燈號為機械地雷規則")
+    print("\n".join(L)); sys.exit()
 L = [f"營收加速×股價落後 篩選｜營收 {q3[0]}–{q3[-1]} 對 {q2[0]}–{q2[-1]}｜β/股價 {strict[0]['date'] if strict else '—'}",
      f"名單 {len(wl)} 檔（缺資料 {len(nodata)}）→ 候選 {len(cand)} → 嚴格 {len(strict)}"]
-order = {"⚫": 0, "🟡": 1, "🟢": 2}
 for r in sorted(strict, key=lambda r: (order[r["flag"]], -r["acc"])):
     L.append("")
     L.append(f"{r['flag']} {r['code']} {r['name']}")
