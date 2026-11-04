@@ -39,7 +39,8 @@ for name, (sym, kws) in CO.items():
                 and r.get("FILE_LINK", "").lower().endswith(".pdf")]
         if not cand:
             rec["error"] = "找不到業績公告"; out["companies"][name] = rec; continue
-        r0 = cand[0]
+        q3 = [r for r in cand if re.search(r"三個月|季度", r.get("TITLE", ""))]  # 優先單季公告，避免中期／年度報告
+        r0 = (q3 or cand)[0]
         rec.update({"title": r0["TITLE"], "date": r0["DATE_TIME"], "link": BASE + r0["FILE_LINK"]})
         pdf = get(BASE + r0["FILE_LINK"])
         rec["pdf_bytes"] = len(pdf)
