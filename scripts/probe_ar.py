@@ -5,7 +5,7 @@ import json, os, re, time, html, urllib.request, urllib.parse
 CODES = ["2382", "2317", "3231"]
 PERIODS = [("115", "2"), ("115", "1")]
 BASE = "https://mopsov.twse.com.tw/mops/web/ajax_"
-KEYS = re.compile(r"應收帳款|營業收入合計|營業收入淨額|銷貨收入淨額|^收入合計")
+KEYS = re.compile(r"應收帳款|應付帳款|存貨|營業收入合計|營業收入淨額|銷貨收入淨額|^收入合計")
 XBRL_RE = re.compile(r"CO_ID=(\d+)&SYEAR=(\d+)&SSEASON=(\d+)")
 
 
