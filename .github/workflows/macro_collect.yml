@@ -2,9 +2,15 @@ name: macro_collect
 
 on:
   workflow_dispatch:
+  schedule:
+    # 每季財報季後各跑一次（UTC 02:10＝台北 10:10）：Q4 4/5、Q1 5/25、Q2 8/30、Q3 11/28
+    - cron: '10 2 5 4 *'
+    - cron: '10 2 25 5 *'
+    - cron: '10 2 30 8 *'
+    - cron: '10 2 28 11 *'
   push:
     branches: [main]
-    paths: ['.github/workflows/macro_collect.yml', 'scripts/macro_collect.py']
+    paths: ['.github/workflows/macro_collect.yml', 'scripts/macro_collect.py', 'scripts/macro_compute.py']
 
 permissions:
   contents: write
@@ -24,15 +30,21 @@ jobs:
           python-version: '3.12'
       - name: deps
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: segments
+        env:
+          SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+        run: python scripts/probe_segments.py
       - name: collect
         env:
           SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
         run: python scripts/macro_collect.py
+      - name: compute
+        run: python scripts/macro_compute.py
       - name: commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/selftest/macro
+          git add data/selftest/macro data/selftest/segments.json
           git diff --staged --quiet && echo "無變更" && exit 0
           git commit -m "macro_collect $(TZ=Asia/Taipei date +%F_%H%M)"
           for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done

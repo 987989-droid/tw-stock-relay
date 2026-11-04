@@ -64,7 +64,7 @@ except Exception as e:
 
 # 2) Federal Register
 try:
-    q = [("conditions[agencies][]", "industry-and-security-bureau"), ("conditions[publication_date][gte]", "2026-01-01"),
+    q = [("conditions[agencies][]", "industry-and-security-bureau"), ("conditions[publication_date][gte]", (datetime.date.today() - datetime.timedelta(days=400)).isoformat()),
          ("per_page", "1000"), ("order", "newest")] + [("fields[]", f) for f in ("title", "type", "publication_date", "document_number", "action")]
     d = json.loads(get("https://www.federalregister.gov/api/v1/documents.json?" + urllib.parse.urlencode(q), "tw-stock-relay research"))
     json.dump({"count": d.get("count"), "results": d.get("results", [])}, open(OUT + "/fr_bis.json", "w"), ensure_ascii=False, indent=0)
@@ -104,6 +104,55 @@ for name, sym in CO.items():
         status["hkex"][name] = got
     except Exception as e:
         status["hkex"][name] = repr(e)[:300]
+
+# 4) 台股組裝三家營運資金（MOPS 最新一季與前一季的資產負債表、綜合損益表）
+MOPS = "https://mopsov.twse.com.tw/mops/web/ajax_"
+WC_KEYS = re.compile(r"應收帳款|應付帳款|^存貨$|營業收入合計")
+
+
+def mops(table, co, isnew, y="", s=""):
+    body = urllib.parse.urlencode({"encodeURIComponent": "1", "step": "1", "firstin": "1", "off": "1", "queryName": "co_id",
+                                   "inpuType": "co_id", "TYPEK": "all", "isnew": isnew, "co_id": co, "year": y, "season": s}).encode()
+    req = urllib.request.Request(MOPS + table, data=body, headers={"User-Agent": "Mozilla/5.0",
+                                 "Content-Type": "application/x-www-form-urlencoded"})
+    time.sleep(1.5)
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def rows(h):
+    out = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", h, re.S):
+        cells = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", c)).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+        if cells and (WC_KEYS.search(cells[0]) or cells[0] == "會計項目"):
+            out.append(cells[:7])
+    return out
+
+
+wc = {}
+status["tw_wc"] = {}
+for co in ["2382", "2317", "3231"]:
+    try:
+        h = mops("t164sb03", co, "true")
+        m = re.search(r"CO_ID=(\d+)&SYEAR=(\d+)&SSEASON=(\d+)", h)
+        if not m or m.group(1) != co:
+            raise ValueError("代號或期別抽不到")
+        y, q = int(m.group(2)) - 1911, int(m.group(3))
+        periods = [(y, q)] + ([(y, q - 1)] if q > 1 else [])  # 跨年度 Q4 為全年報表，不取
+        wc[co] = {}
+        for (yy, qq) in periods:
+            rec = {}
+            for t in ("t164sb03", "t164sb04"):
+                hh = h if (t == "t164sb03" and (yy, qq) == (y, q)) else mops(t, co, "false", str(yy), str(qq))
+                mm = re.search(r"CO_ID=(\d+)&SYEAR=(\d+)&SSEASON=(\d+)", hh)
+                if not mm or mm.group(1) != co or int(mm.group(2)) - 1911 != yy or int(mm.group(3)) != qq:
+                    raise ValueError(f"{t} {yy}Q{qq} 回傳代號或期別不符")
+                rec[t] = rows(hh)
+            wc[co][f"{yy}Q{qq}"] = rec
+        status["tw_wc"][co] = "ok " + ",".join(wc[co])
+    except Exception as e:
+        status["tw_wc"][co] = repr(e)[:200]
+json.dump(wc, open(OUT + "/tw_wc.json", "w"), ensure_ascii=False, indent=0)
 
 json.dump(status, open(OUT + "/status.json", "w"), ensure_ascii=False, indent=1)
 print(json.dumps(status, ensure_ascii=False))
