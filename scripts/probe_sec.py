@@ -15,7 +15,7 @@ def get(url):
         with urllib.request.urlopen(req, timeout=60) as r:
             return r.status, r.read()
     except urllib.error.HTTPError as e:
-        return e.code, e.read()[:300]
+        return e.code, e.read()[:4000]
     except Exception as e:
         return None, repr(e).encode()
 
@@ -38,7 +38,8 @@ for tk, cik in CIKS.items():
             rows.sort(key=lambda x: (x.get("filed", ""), x.get("end", "")))
             rec["tags"][t] = [{k: x.get(k) for k in ("start", "end", "val", "form", "fy", "fp", "filed")} for x in rows[-4:]]
     else:
-        rec["error_head"] = body[:300].decode("utf-8", "replace")
+        import re
+        rec["error_text"] = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body.decode("utf-8", "replace")))[:1200]
     out["companyfacts"][tk] = rec
     time.sleep(1)
 
