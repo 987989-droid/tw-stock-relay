@@ -50,7 +50,8 @@ for c in wl:
     if a is None or b is None or not bt:
         nodata.append(c); continue
     rows.append(dict(code=c, name=rev[c]["name"], yoy=a, yoy_prev=b, acc=a - b, beta=bt["beta"],
-                     rel3m=bt["rel_3m"] * 100, close=bt["last_close"], date=bt["last_date"]))
+                     rel3m=bt["rel_3m"] * 100, rel12m=(bt.get("rel_12m") * 100 if bt.get("rel_12m") is not None else None),
+                     close=bt["last_close"], date=bt["last_date"]))
 cand = [r for r in rows if r["yoy"] > 0 and r["acc"] > 0 and r["rel3m"] < 0]
 strict = sorted([r for r in cand if r["yoy"] >= 20 and r["acc"] >= 10 and r["rel3m"] <= -10 and r["beta"] >= 1.0],
                 key=lambda r: -r["acc"])
@@ -73,8 +74,10 @@ if ATT is not None:
     (n30, nprev), news_last, news_days = news_counts()
     for r in rows:
         r["att30"], r["attprev"] = n30.get(r["code"], 0), nprev.get(r["code"], 0)
-    strict = sorted([r for r in rows if r["yoy"] >= 20 and r["acc"] >= 10 and r["rel3m"] <= -10 and r["att30"] <= ATT],
-                    key=lambda r: -r["acc"])
+    pre = [r for r in rows if r["yoy"] >= 20 and r["acc"] >= 10 and r["rel3m"] <= -10 and r["att30"] <= ATT]
+    # 2026/11/04：近 12 個月已贏大盤 >30% 者＝大漲後回檔，不算被忽視，排除但列名（3163 案例：12 月 +134%、近 3 月 −22%）
+    ran_up = [r for r in pre if r["rel12m"] is not None and r["rel12m"] > 30]
+    strict = sorted([r for r in pre if r not in ran_up], key=lambda r: -r["acc"])
 
 # ---- 地雷關資料 ----
 def latest(d):
@@ -216,11 +219,13 @@ f1 = lambda v: "—" if v is None else f"{v:.1f}%"
 order = {"⚫": 0, "🟡": 1, "🟢": 2}
 if ATT is not None:
     L = [f"注意力落差｜營收 {q3[0]}–{q3[-1]} 對 {q2[0]}–{q2[-1]}｜股價 {strict[0]['date'] if strict else '—'}｜新聞至 {news_last}",
-         f"名單 {len(wl)} 檔 → 營收加速且落後大盤、近30日新聞≤{ATT}則：{len(strict)} 檔"]
+         f"名單 {len(wl)} 檔 → 營收加速且落後大盤、近30日新聞≤{ATT}則、近12月未大漲：{len(strict)} 檔"]
+    if ran_up:
+        L.append("排除（近12月已贏大盤>30%，屬大漲後回檔）：" + "、".join(f"{r['code']}{r['name']} {r['rel12m']:+.0f}%" for r in ran_up))
     for r in sorted(strict, key=lambda r: (order[r["flag"]], -r["acc"])):
         L.append("")
         L.append(f"{r['flag']} {r['code']} {r['name']}")
-        L.append(f"營收YoY {r['yoy_prev']:.1f}%→{r['yoy']:.1f}%｜落後大盤 {r['rel3m']:.1f}%｜新聞30日 {r['att30']}則（前30日 {r['attprev']}）")
+        L.append(f"營收YoY {r['yoy_prev']:.1f}%→{r['yoy']:.1f}%｜相對大盤 3月 {r['rel3m']:.1f}%／12月 {r['rel12m']:+.1f}%｜新聞30日 {r['att30']}則（前30日 {r['attprev']}）")
         p = r["pledge"]
         L.append(f"整體質押 {p['overall']:.2f}%（{p['ym']}）" if p else "整體質押 查無")
         for c in r.get("catalyst") or []: L.append("重訊 " + c)
