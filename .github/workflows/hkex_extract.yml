@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: deps
-        run: sudo apt-get install -y -qq poppler-utils
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
       - name: probe
         run: python scripts/extract_hkex.py
       - name: commit
