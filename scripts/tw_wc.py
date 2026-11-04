@@ -12,7 +12,7 @@ import json, os, re, time, datetime, urllib.request, urllib.parse, urllib.error
 
 OUT = "data/selftest/macro"
 CODES = ["2382", "2317", "3231"]
-MOPS = "https://mopsov.twse.com.tw/mops/web/ajax_"
+HOSTS = ["https://mopsov.twse.com.tw/mops/web/ajax_", "https://mops.twse.com.tw/mops/web/ajax_"]  # 第二個為備援，實測結果見 status
 WC_KEYS = re.compile(r"應收帳款|應付帳款|^存貨$|營業收入合計")
 META = re.compile(r"CO_ID=(\d+)&SYEAR=(\d+)&SSEASON=(\d+)")
 GAP, BACKOFF = 4, [30, 60]
@@ -23,24 +23,26 @@ def mops(table, co, isnew, y="", s=""):
     body = urllib.parse.urlencode({"encodeURIComponent": "1", "step": "1", "firstin": "1", "off": "1", "queryName": "co_id",
                                    "inpuType": "co_id", "TYPEK": "all", "isnew": isnew, "co_id": co, "year": y, "season": s}).encode()
     for i in range(len(BACKOFF) + 1):
-        time.sleep(GAP)
-        log["requests"] += 1
-        try:
-            req = urllib.request.Request(MOPS + table, data=body, headers={"User-Agent": "Mozilla/5.0",
-                                         "Content-Type": "application/x-www-form-urlencoded"})
-            with urllib.request.urlopen(req, timeout=60) as r:
-                h = r.read().decode("utf-8", "replace")
-            if i:
-                log["attempts"].append(f"{co} {table} {y}Q{s} 第{i + 1}次成功")
-            return h
-        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
-            code = getattr(e, "code", None)
-            if code and code < 500:
-                raise
-            log["attempts"].append(f"{co} {table} {y}Q{s} 第{i + 1}次失敗：{repr(e)[:120]}")
-            if i < len(BACKOFF):
-                time.sleep(BACKOFF[i])
-    raise ConnectionError(f"{co} {table} {y}Q{s} 三次皆失敗")
+        for host in HOSTS:  # 每一輪先試主站，被拒再試備援站
+            time.sleep(GAP)
+            log["requests"] += 1
+            tag = "主站" if host == HOSTS[0] else "備援站"
+            try:
+                req = urllib.request.Request(host + table, data=body, headers={"User-Agent": "Mozilla/5.0",
+                                             "Content-Type": "application/x-www-form-urlencoded"})
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    h = r.read().decode("utf-8", "replace")
+                if i or host != HOSTS[0]:
+                    log["attempts"].append(f"{co} {table} {y}Q{s} 第{i + 1}輪{tag}成功")
+                return h
+            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+                code = getattr(e, "code", None)
+                log["attempts"].append(f"{co} {table} {y}Q{s} 第{i + 1}輪{tag}失敗：{repr(e)[:110]}")
+                if code and code < 500 and host == HOSTS[-1]:
+                    raise
+        if i < len(BACKOFF):
+            time.sleep(BACKOFF[i])
+    raise ConnectionError(f"{co} {table} {y}Q{s} 三輪主站與備援站皆失敗")
 
 
 def rows(h):
@@ -99,9 +101,10 @@ for co in CODES:
     except Exception as e:
         st["result"] = repr(e)[:200]
         # 失敗時保留舊快取中的完整期別，讓計算端自行判斷是否缺期
-        if co in cache:
-            wc[co] = {k: v for k, v in cache[co].items() if complete(v)}
-            st["kept_from_cache"] = list(wc[co])
+        kept = {k: v for k, v in cache.get(co, {}).items() if complete(v)}
+        kept.update(wc.get(co, {}))  # 本次已成功抓到的期別也保留
+        wc[co] = dict(sorted(kept.items(), reverse=True))
+        st["kept"] = list(wc[co])
     log["companies"][co] = st
 
 os.makedirs(OUT, exist_ok=True)
