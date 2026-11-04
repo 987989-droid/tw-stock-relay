@@ -12,6 +12,11 @@ try:
         d = json.load(r)
     out["count"] = d.get("count")
     out["results"] = d.get("results", [])
+    import re
+    pat = re.compile(r"affiliates of certain listed entities|end-user controls|50 percent|fifty percent|2025-19846|2025-19001", re.I)
+    out["relevant"] = [{k: r.get(k) for k in ("publication_date", "type", "title", "document_number", "html_url", "effective_on")}
+                       | {"abstract": (r.get("abstract") or "")[:600]}
+                       for r in out["results"] if pat.search(f"{r.get('title') or ''} {r.get('abstract') or ''}")]
     out["status"] = "ok"
 except Exception as e:
     out["status"] = repr(e)[:300]
