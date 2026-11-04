@@ -3,11 +3,12 @@ name: macro_collect
 on:
   workflow_dispatch:
   schedule:
-    # 每季財報季後各跑一次（UTC 02:10＝台北 10:10）：Q4 4/5、Q1 5/25、Q2 8/30、Q3 11/28
+    # 每季財報季後各跑一次（UTC 02:10＝台北 10:10）：Q4 4/5、Q1 5/25、Q2 9/5、Q3 11/25
+    # 推播排程固定在隔天（4/6、5/26、9/6、11/26）讀 summary，日期須兩邊一起改
     - cron: '10 2 5 4 *'
     - cron: '10 2 25 5 *'
-    - cron: '10 2 30 8 *'
-    - cron: '10 2 28 11 *'
+    - cron: '10 2 5 9 *'
+    - cron: '10 2 25 11 *'
   push:
     branches: [main]
     paths: ['.github/workflows/macro_collect.yml', 'scripts/macro_collect.py', 'scripts/macro_compute.py']
