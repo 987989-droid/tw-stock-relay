@@ -283,13 +283,50 @@ try:
     agg = {}
     for r in FR:
         k = qk(r["publication_date"])
-        a = agg.setdefault(k, {"rule": 0, "notice": 0, "entity_list_rules": 0, "semi_kw_rules": 0})
+        a = agg.setdefault(k, {"rule": 0, "notice": 0})
         a["rule" if r["type"] == "Rule" else "notice"] += 1
-        if r["type"] == "Rule" and re.search(r"entity list", r["title"], re.I):
-            a["entity_list_rules"] += 1
-        if r["type"] == "Rule" and re.search(r"semiconductor|advanced computing|integrated circuit|polysilicon|supercomput|artificial intelligence", r["title"], re.I):
-            a["semi_kw_rules"] += 1
-    S["L4_bis"] = {"by_quarter": dict(sorted(agg.items())), "light": "⚪", "note": "只依標題分類，未讀內文"}
+    # 規則全文分類（只依標題＋摘要＋全文關鍵字計數，機械規則，不讀政策意圖）
+    EASE = re.compile(r"removing|removal|easing|case-by-case|favorable treatment|suspension|extending|streamlining", re.I)
+    TIGHT = re.compile(r"adding \d+|additions to the entity list|restrict|new license requirement|imposes", re.I)
+    rules = json.load(open(f"{IN}/fr_rules.json"))
+    cls, watch = {}, []
+    for r in rules:
+        txt = f"{r.get('title') or ''} {r.get('abstract') or ''}"
+        semi = sum((r.get("semi_terms") or {}).values())
+        relevant = semi >= 3 or (r.get("china_mentions") or 0) >= 5
+        d = "放寬" if EASE.search(txt) else "收緊" if TIGHT.search(txt) else "中性"
+        cn_add = 0
+        m = re.search(r"adding (\d+) entr(?:y|ies).*?China\)? \((\d+)\)", txt)
+        if m:
+            cn_add = int(m.group(2))
+        q = qk(r["publication_date"])
+        c = cls.setdefault(q, {"相關收緊": 0, "相關放寬": 0, "中國實體新增": 0, "items": []})
+        if relevant:
+            c["相關收緊" if d == "收緊" else "相關放寬" if d == "放寬" else "items"] += 0 if d == "中性" else 1
+            c["items"].append(f"{r['publication_date']} {d} {r['title'][:60]}")
+        c["中國實體新增"] += cn_add
+        for mm in re.finditer(r"set to end ([A-Z][a-z]+ \d{1,2}, \d{4})", txt):
+            try:
+                end = dt.datetime.strptime(mm.group(1), "%B %d, %Y").date()
+                if 0 <= (end - dt.date.today()).days <= 120:
+                    watch.append(f"{end} 到期：{r['title'][:60]}")
+            except ValueError:
+                pass
+    curq = f"{dt.date.today().year}Q{(dt.date.today().month - 1) // 3 + 1}"
+    full = sorted(q for q in cls if q < curq)
+    lq = full[-1] if full else None
+    L = cls.get(lq, {})
+    if not L:
+        light = "⚪"
+    elif L["相關收緊"] > L["相關放寬"] or L["中國實體新增"] > 0:
+        light = "🔴"
+    elif L["相關放寬"] > L["相關收緊"]:
+        light = "🟢"
+    else:
+        light = "🟡"
+    S["L4_bis"] = {"by_quarter": dict(sorted(agg.items())), "classified": dict(sorted(cls.items())), "last_full_quarter": lq,
+                   "light": light, "watch": watch,
+                   "note": "相關＝半導體／AI 關鍵字≥3 次或提及中國≥5 次；方向依標題與摘要關鍵字機械分類"}
 except Exception as e:
     err("BIS", e)
 
@@ -328,9 +365,10 @@ if "L4_smic" in S:
     a = S["L4_smic"]
     L.append(f"L4 中芯 {a['light']} 利用率 {a['util_prev']}→{a['util']}% 營收QoQ {a['rev_qoq']}%")
 if "L4_bis" in S:
-    curq = f"{dt.date.today().year}Q{(dt.date.today().month - 1) // 3 + 1}"
-    k = [x for x in S["L4_bis"]["by_quarter"].items() if x[0] < curq][-2:]
-    L.append("L4 BIS ⚪ " + "／".join(f"{q} 規則{v['rule']} EntityList{v['entity_list_rules']}" for q, v in k))
+    a = S["L4_bis"]; q = a["last_full_quarter"]; c = a["classified"].get(q, {})
+    L.append(f"L4 BIS {a['light']} {q} 相關規則 收緊{c.get('相關收緊', 0)}／放寬{c.get('相關放寬', 0)}／中國實體新增{c.get('中國實體新增', 0)}")
+    for w in a["watch"]:
+        L.append(f"   🟡 {w}")
 if S["errors"]:
     L.append("")
     L.append("⚠️ 抽取失敗：")
