@@ -264,12 +264,15 @@ try:
             apv = row("t164sb03", "應付帳款") + row("t164sb03", "應付帳款－關係人")
             iv = row("t164sb03", "存貨")
             out[co][p] = {"ar_days": round(arv / rev * 91, 1), "ap_days": round(apv / rev * 91, 1), "inv_days": round(iv / rev * 91, 1)}
-    ps = sorted({p for v in out.values() for p in v})
-    tot = lambda p, k: sum(out[c][p][k] for c in out if p in out[c])
-    light = "🟢"
-    if len(ps) >= 2 and tot(ps[-1], "ar_days") > tot(ps[-2], "ar_days"):
-        light = "🟡"
-    S["L3_5d"] = {"by_co": out, "light": light, "note": "以單季營收為分母；連兩季拉長才升🔴，需跨期資料"}
+    out = {c: dict(sorted(v.items())) for c, v in out.items()}
+    complete = [c for c in out if len(out[c]) >= 2]
+    if len(complete) < 3:
+        light = "⚪"
+        err("台股組裝營運資金", f"僅 {complete} 有兩期資料，其餘抓取失敗（見 status.json tw_wc），不亮燈")
+    else:
+        ar = lambda i: sum(list(out[c].values())[i]["ar_days"] for c in complete)
+        light = "🟡" if ar(-1) > ar(-2) else "🟢"
+    S["L3_5d"] = {"by_co": out, "light": light, "note": "以單季營收為分母；三家應收天數合計單季拉長🟡、連兩季拉長🔴（需跨期資料）"}
 except Exception as e:
     err("台股組裝營運資金", e)
 
