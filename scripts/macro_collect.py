@@ -35,6 +35,13 @@ try:
         res[tk] = {t: [{k: x.get(k) for k in ("start", "end", "val", "form", "fy", "fp", "filed", "accn")}
                        for x in g[t]["units"]["USD"] if x.get("form") in ("10-Q", "10-K") and x.get("end", "") >= "2024-01-01"]
                    for t in TAGS if t in g}
+        if tk == "NVDA":  # 營業現金流拆解：淨利、調整項、營運資金變動、期末餘額
+            res["NVDA_ocf_detail"] = {t: [{k: x.get(k) for k in ("start", "end", "val", "form", "filed")}
+                                          for x in v["units"].get("USD", []) if x.get("form") in ("10-Q", "10-K") and x.get("end", "") >= "2025-01-01"]
+                                      for t, v in g.items()
+                                      if t.startswith("IncreaseDecrease") or t in ("NetIncomeLoss", "ShareBasedCompensation",
+                                         "DepreciationDepletionAndAmortization", "AccountsReceivableNetCurrent", "InventoryNet",
+                                         "DeferredIncomeTaxExpenseBenefit", "IncomeTaxesPaidNet")}
     json.dump(res, open(OUT + "/us_facts.json", "w"), indent=0)
     status["us_facts"] = "ok"
 except Exception as e:
