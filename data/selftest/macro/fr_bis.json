@@ -1,5 +1,5 @@
 {
-"count": 45,
+"count": 77,
 "results": [
 {
 "title": "Order Renewing Order Temporarily Denying Export Privileges",
@@ -314,6 +314,230 @@
 "type": "Rule",
 "publication_date": "2026-01-15",
 "document_number": "2026-00789",
+"action": "Final rule."
+},
+{
+"title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; License Exceptions and Other Authorizations",
+"type": "Notice",
+"publication_date": "2025-12-30",
+"document_number": "2025-23969",
+"action": null
+},
+{
+"title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Miscellaneous Licensing and Reporting Responsibilities and Enforcement",
+"type": "Notice",
+"publication_date": "2025-12-19",
+"document_number": "2025-23439",
+"action": "Notice of information collection, request for comment."
+},
+{
+"title": "In the Matter of: Arthur Ching-Fu Gau, 8802 South Feliz Drive, Tempe, AZ 85284; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-17",
+"document_number": "2025-23123",
+"action": null
+},
+{
+"title": "Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-17",
+"document_number": "2025-23122",
+"action": null
+},
+{
+"title": "In the Matter of: Richard G. Shih, 26 Buggy Whip Drive, Rolling Hills, CA 90274; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-17",
+"document_number": "2025-23120",
+"action": null
+},
+{
+"title": "Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-17",
+"document_number": "2025-23119",
+"action": null
+},
+{
+"title": "In the Matter of Marco Antonio Santillan Valencia, 12904 Foxley Drive, Whittier, CA 90602; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-17",
+"document_number": "2025-23118",
+"action": null
+},
+{
+"title": "Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-17",
+"document_number": "2025-23117",
+"action": null
+},
+{
+"title": "Order Renewing Temporary Denial of Export Privileges; Nordwind Airlines; Leningradskaya Str., Building 25, Office 27. 28, Moscow Region, Khimki City, 141402, Russia",
+"type": "Notice",
+"publication_date": "2025-12-09",
+"document_number": "2025-22354",
+"action": null
+},
+{
+"title": "Siberian Airlines d/b/a S7 Airlines, 633104, Russia, Novosibirskaya obl., g. Ob. prospekt Mozzherina, d. 10 ofis 201; Order Renewing Temporary Denial of Export Privileges",
+"type": "Notice",
+"publication_date": "2025-12-08",
+"document_number": "2025-22199",
+"action": null
+},
+{
+"title": "The Commerce Control List",
+"type": "Rule",
+"publication_date": "2025-12-05",
+"document_number": "2025-22137",
+"action": null
+},
+{
+"title": "In the Matter of: Varun Maharajh a/k/a Kelvin Singh, Inmate Number: 92279-510, MCFP Springfield, Federal Medical Center, P.O. Box 4000, Springfield, MO 65801; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21105",
+"action": null
+},
+{
+"title": "In the Matter of: Sadir Arvizu Velazquez, Inmate Number: 31345-510, FCI Forrest City Low, Federal Correctional Institution, P.O. Box 9000, Forrest City, AR 72336; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21104",
+"action": null
+},
+{
+"title": "In the Matter of: Pedro Mascorro, Inmate Number: 94824-510, FPC Montgomery, Federal Prison Camp, Maxwell Air Force Base, Montgomery, AL 36112; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21103",
+"action": null
+},
+{
+"title": "In the Matter of: Miguel Ocura-Arenas, Inmate Number: 26154-510, FCI Beaumont Low, Federal Correctional Institution, P.O. Box 26020, Beaumont, TX 77720; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21101",
+"action": null
+},
+{
+"title": "In the Matter of: Kevin Uriel Garza, Inmate Number: 80673-510, FCI Talladega, Federal Correctional Institution, P.M.B. 1000, Talladega, AL 35160; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21099",
+"action": null
+},
+{
+"title": "Order Denying Export Privileges; In the Matter of: Mohamed Daoud Ghacham, Inmate Number: 10038-511, FCI Lompoc II, Federal Correctional Institution, 3901 Klein Blvd, Lompoc, CA 93436",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21098",
+"action": null
+},
+{
+"title": "In the Matter of: Federick Joseph Bergmann, Jr. Also Known as Frederick Bergmann, Inmate Number: 44293-510, FCI Miami, Federal Correctional Institution, P.O. Box 779800, Miami, FL 33177; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21097",
+"action": null
+},
+{
+"title": "In the Matter of: James Mwangangi Kiilu, Inmate Number: 31358-510, FCI Beaumont Low, Federal Correctional Institution, P.O. Box 26020, Beaumont, TX 77720; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21096",
+"action": null
+},
+{
+"title": "In the Matter of: Antonio Jose Melean Reyes, Inmate Number: 75982-510, USP Coleman I, U.S. Penitentiary, P.O. Box 1033, Coleman, FL 33521; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21095",
+"action": null
+},
+{
+"title": "In the Matter of: Ghacham, Inc., 7340 Alondra Blvd., Paramount, California 90273; Order Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-11-26",
+"document_number": "2025-21094",
+"action": null
+},
+{
+"title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Inclusions to the Section 232 National Security Adjustments to Imports",
+"type": "Notice",
+"publication_date": "2025-11-25",
+"document_number": "2025-20874",
+"action": null
+},
+{
+"title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; International Import Certificate",
+"type": "Notice",
+"publication_date": "2025-11-21",
+"document_number": "2025-20564",
+"action": null
+},
+{
+"title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Delivery Verification Procedure for Imports",
+"type": "Notice",
+"publication_date": "2025-11-21",
+"document_number": "2025-20562",
+"action": null
+},
+{
+"title": "Order Renewing Temporary Denial of Export Privileges: Rossiya Airlines, Pilotov St 18-4, St. Petersburg, Russia, 196210",
+"type": "Notice",
+"publication_date": "2025-11-13",
+"document_number": "2025-19863",
+"action": null
+},
+{
+"title": "Revisions to the Entity List",
+"type": "Rule",
+"publication_date": "2025-11-12",
+"document_number": "2025-19858",
+"action": "Final rule."
+},
+{
+"title": "One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
+"type": "Rule",
+"publication_date": "2025-11-12",
+"document_number": "2025-19846",
+"action": "Final rule; stay."
+},
+{
+"title": "Order Renewing Order Temporarily Denying Export Privileges",
+"type": "Notice",
+"publication_date": "2025-10-31",
+"document_number": "2025-19727",
+"action": null
+},
+{
+"title": "Additions to the Entity List",
+"type": "Rule",
+"publication_date": "2025-10-09",
+"document_number": "2025-19508",
+"action": "Final rule."
+},
+{
+"title": "URAL Airlines JSC, Utrenniy Lane 1-g, Yekaterinburg, Russia 620025; Order Renewing Temporary Denial of Export Privileges",
+"type": "Notice",
+"publication_date": "2025-10-03",
+"document_number": "2025-19436",
+"action": null
+},
+{
+"title": "Expansion of End-User Controls To Cover Affiliates of Certain Listed Entities",
+"type": "Rule",
+"publication_date": "2025-09-30",
+"document_number": "2025-19001",
+"action": "Interim final rule."
+},
+{
+"title": "Revision of Firearms License Requirements",
+"type": "Rule",
+"publication_date": "2025-09-30",
+"document_number": "2025-18992",
 "action": "Final rule."
 }
 ]

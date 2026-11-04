@@ -1,8 +1,8 @@
 {
- "run_at_utc": "2026-11-04T05:16:07.758917",
+ "run_at_utc": "2026-11-04T06:24:22.365795",
  "us_facts": "ok",
  "nvda_ar": "ok 33",
- "fr_bis": "ok 45",
+ "fr_bis": "ok 77",
  "hkex": {
   "tencent": [
    {
@@ -52,5 +52,10 @@
     "file": "data/selftest/macro/hkex/smic_20260514.txt"
    }
   ]
+ },
+ "tw_wc": {
+  "2382": "<HTTPError 502: 'Bad Gateway'>",
+  "2317": "ok 115Q2,115Q1",
+  "3231": "ok 115Q2,115Q1"
  }
 }
