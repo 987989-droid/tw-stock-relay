@@ -1,0 +1,42 @@
+{
+ "run_at_utc": "2026-11-04T02:53:15.768965",
+ "ua": "tw-stock-relay research probe (https://github.com/987989-droid/tw-stock-relay)",
+ "companyfacts": {
+  "MSFT": {
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+   "http": 403,
+   "bytes": 300,
+   "error_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>SEC.gov | Your Request Originates from an Undeclar"
+  },
+  "GOOGL": {
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+   "http": 403,
+   "bytes": 300,
+   "error_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>SEC.gov | Your Request Originates from an Undeclar"
+  },
+  "AMZN": {
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+   "http": 403,
+   "bytes": 300,
+   "error_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>SEC.gov | Your Request Originates from an Undeclar"
+  },
+  "META": {
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
+   "http": 403,
+   "bytes": 300,
+   "error_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>SEC.gov | Your Request Originates from an Undeclar"
+  },
+  "NVDA": {
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+   "http": 403,
+   "bytes": 300,
+   "error_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>SEC.gov | Your Request Originates from an Undeclar"
+  }
+ },
+ "archive": {
+  "url": "https://www.sec.gov/Archives/edgar/data/0000789019/000119312526436133/msft-20260930.htm",
+  "http": 403,
+  "bytes": 300,
+  "has_property_line": false
+ }
+}
