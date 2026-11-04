@@ -1,0 +1,610 @@
+[
+ {
+  "document_number": "2026-19537",
+  "publication_date": "2026-09-24",
+  "effective_on": "2026-09-22",
+  "title": "Measures To Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052",
+  "action": "Temporary final rule.",
+  "abstract": "On August 6, 2026, the President issued Proclamation 11052, \"Adjusting Imports of Polysilicon and Its Derivatives Into the United States\" (Proclamation 11052), ordering the Secretary of Commerce (Secretary) to take action to restrict imports by a company if he determines the company is stockpiling polysilicon or polysilicon derivatives (Polysilicon Products) in advance of import adjustments that will be effective on December 4, 2026. The Bureau of Industry and Security (BIS), in this temporary final rule (TFR), announces the criteria and process it will use to monitor existing companies for evidence of stockpiling, limit a newly established importer's ability to stockpile, and subject companies that are stockpiling to an import prohibition if necessary. This TFR also establishes the process for such companies to obtain a waiver from any import prohibitions imposed pursuant to this rule, and imposes certain import limitations on new importers that register with U.S. Customs and Border Protection (CBP) on or after August 6, 2026.",
+  "chars": 39925,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 2,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 118,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "C1-2026-16628",
+  "publication_date": "2026-08-28",
+  "effective_on": null,
+  "title": "Streamlining Export Controls for Drone Exports",
+  "action": null,
+  "abstract": null,
+  "chars": 1149,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-17231",
+  "publication_date": "2026-08-24",
+  "effective_on": "2026-08-21",
+  "title": "Revisions to the Entity List",
+  "action": "Final rule.",
+  "abstract": "In this rule, the Bureau of Industry and Security (BIS) revises the Export Administration Regulations (EAR) by removing two addresses associated with Arrow Electronics (Hong Kong) Co., Ltd. from the Entity List under the destination of China, People's Republic of (China). This determination follows the removal from the Entity List of Arrow China Electronics Trading Co., Ltd., and the removal of six aliases for Arrow Electronics (Hong Kong) Co., Ltd. in November 2025.",
+  "chars": 9955,
+  "china_mentions": 18,
+  "entity_sentences": [
+   " The license review policy for each listed entity is identified in the ``License Review Policy'' column on the Entity List, and the impact on the availability of license exceptions is described in the relevant Federal Register document that added the entity to the Entity List."
+  ],
+  "country_counts": {
+   "China": 5,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 13,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-17230",
+  "publication_date": "2026-08-24",
+  "effective_on": "2026-08-21",
+  "title": "Removal From the Entity List",
+  "action": "Final rule.",
+  "abstract": "In this rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by removing one entity from the Entity List under the destination of Turkey.",
+  "chars": 8835,
+  "china_mentions": 0,
+  "entity_sentences": [
+   " ----------------------------------------------------------------------- SUMMARY: In this rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by removing one entity from the Entity List under the destination of Turkey.",
+   " The license review policy for each listed entity is identified in the ``License Review Policy'' column on the Entity List, and the impact on the availability of license exceptions is described in the relevant Federal Register document that added the entity to the Entity List."
+  ],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-16628",
+  "publication_date": "2026-08-14",
+  "effective_on": "2026-08-13",
+  "title": "Streamlining Export Controls for Drone Exports",
+  "action": "Final rule.",
+  "abstract": "The Bureau of Industry and Security (BIS) is easing export controls on certain Unmanned Aerial Vehicles (UAVs or drones) and related parts, components, accessories, attachments, technology, and software under the Export Administration Regulations (EAR). Specifically, this rule: eliminates wind gust tolerance as a parameter for determining UAV controls under the EAR; increases the threshold for national security controls on certain UAVs from an endurance of 30 minutes to an endurance of 3 hours; makes conforming changes to remove national security controls on software and technology associated with UAVs with an endurance less than 3 hours; maintains military end-use and end-user controls on those lower endurance drones and associated software and technology; clarifies Commerce Control List (CCL) controls for certain UAVs specially designed for military use; and removes national security controls on certain specially designed parts, components, accessories, and attachments for such UAVs as they do not provide any significant military or intelligence capabilities.",
+  "chars": 51780,
+  "china_mentions": 2,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 1,
+   "Russia": 1,
+   "Iran": 0,
+   "Hong Kong": 1,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-16078",
+  "publication_date": "2026-08-06",
+  "effective_on": "2026-08-27",
+  "title": "DPAS Directive Allocation Order and Additional Requirements for Recoverable Critical Minerals and Materials",
+  "action": "Temporary final rule; Request for comments.",
+  "abstract": "The Bureau of Industry and Security (\"BIS\") is publishing this temporary final rule to restrict the exportation of black mass and tungsten waste and scrap without a license. Specifically, as of August 27, 2026, U.S. persons engaged in the sale of black mass and tungsten waste and scrap must allocate 100 percent of monthly sales to U.S. persons, unless an adjustment or exception is obtained in advance from BIS. This action is taken pursuant to section 101 of the Defense Production Act of 1950, as amended (\"DPA\" or the \"Act\"), the Defense Priorities and Allocations System (15 CFR part 700) and Presidential Determination Pursuant to Section 101 of the Defense Production Act of 1950, as Amended, on Recoverable Critical Minerals and Materials, dated July 30, 2026 (\"DPA Determination on Recoverable CMMs\"), in which the President authorized the Department of Commerce (\"Commerce\") to address the scarcity of recoverable critical minerals and materials (\"CMMs\"). BIS invites the public to submit comments on whether any additional sales requirements are necessary or appropriate to promote the national defense.",
+  "chars": 42648,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-14942",
+  "publication_date": "2026-07-23",
+  "effective_on": "2026-11-20",
+  "title": "Implementation of EAR Export Controls on Silencers, Mufflers, and Sound Suppressors; and Other Firearms Related Changes",
+  "action": "Interim final rule.",
+  "abstract": "The Department of Commerce (Commerce), Bureau of Industry and Security (BIS) is revising the Export Administration Regulations (EAR) and the Commerce Control List (CCL) to appropriately control certain silencers, mufflers, and sound suppressors (sound suppressors) that will no longer be described on the International Traffic in Arms Regulations U.S. Munitions List (USML). This interim final rule (IFR) complements a Department of State interim final rule published elsewhere in this issue of the Federal Register (International Traffic in Arms Regulations: USML Category I Firearm Suppressors (1400-AG11) (State IFR)). This transfer of jurisdiction will reduce the regulatory burden on exports of sound suppressors. This IFR also revises the EAR to allow firearms and related items to be temporarily exported and reexported under a license exception as tools of trade, thereby relieving exporters of the regulatory burden of applying for authorization. Finally, this IFR clarifies which items fall within the scope of the EAR's entry clearance requirements for a temporary import.",
+  "chars": 86068,
+  "china_mentions": 1,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 1,
+   "Russia": 2,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-14132",
+  "publication_date": "2026-07-14",
+  "effective_on": "2026-07-10",
+  "title": "Enhanced Favorable Treatment for the United Arab Emirates Under the Export Administration Regulations",
+  "action": "Final rule.",
+  "abstract": "In this final rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) to provide enhanced favorable treatment for the United Arab Emirates (UAE). Specifically, BIS is removing the UAE from Country Groups D:3 and D:4 and adding the UAE to Country Group A:5. More license exceptions will now be available, including Strategic Trade Authorization (STA) for the UAE Government and approved commercial entities in the UAE. STA will authorize the export, reexport, or transfer (in-country) of military items; certain commercial satellites and spacecraft; and dual-use items useful in, inter alia, oil and gas production, desalination, and civil nuclear power generation. The UAE Government and approved commercial entities will also have license-free access to advanced computing items, consistent with the May 2025 U.S.-UAE Artificial Intelligence Cooperation framework, without compromising U.S. digital infrastructure buildout.",
+  "chars": 33906,
+  "china_mentions": 3,
+  "entity_sentences": [
+   " This rule makes the following amendments to the EAR to accomplish these policy objectives: (1) removes the UAE from Country Groups D:3 (Chemical & Biological) and D:4 (Missile Technology), (2) adds the UAE to Country Group A:5 with eligibility for License Exception STA for the UAE Government and approved commercial entities, and (3) maintains license requirements for advanced computing items dest",
+   " Within 5 days of a determination, BIS will notify the entity requesting the advisory opinion of the determination and, if approved, initiate the process to add the requestor to the approved entities listed in this supplement no."
+  ],
+  "country_counts": {
+   "China": 1,
+   "Russia": 3,
+   "Iran": 2,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 8,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 3,
+   "advanced computing": 29,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 2,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-06851",
+  "publication_date": "2026-04-09",
+  "effective_on": "2026-04-07",
+  "title": "Extension of Authorized Integrated Circuit (IC) Designer Status and Application Deadline To Become an Approved IC Designer",
+  "action": "Final rule.",
+  "abstract": "The Bureau of Industry and Security (BIS) is revising the Export Administration Regulations (EAR) by extending by about eight months the triggering date for authorized integrated circuit designer status and submission date for applications to become an approved integrated circuit (IC) designer. The new date is December 31, 2026.",
+  "chars": 8616,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 4,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-02262",
+  "publication_date": "2026-02-04",
+  "effective_on": "2026-02-03",
+  "title": "Conforming Change to the Export Administration Regulations for Cambodia",
+  "action": "Final rule.",
+  "abstract": "In this final rule, the Bureau of Industry and Security (BIS) makes a conforming change to the Export Administration Regulations (EAR) to reflect that Cambodia is no longer a Country Group D:5 country. On November 7, 2025, the Department of State published a final rule, \"International Traffic in Arms Regulations: Changes to Section 126.1,\" that removed Cambodia as an arms embargoed destination under the International Traffic in Arms Regulations (ITAR), pursuant to a determination made by the Secretary of State.",
+  "chars": 10959,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-01059",
+  "publication_date": "2026-01-21",
+  "effective_on": "2026-01-20",
+  "title": "Streamlining Export Controls for Drone Exports",
+  "action": "Interim final rule.",
+  "abstract": "The Bureau of Industry and Security (BIS) is easing export controls on certain civil Unmanned Aerial Vehicles (UAVs) and related technologies, which currently need a license to be exported to most countries. In particular, this interim final rule (IFR): a) allows less sensitive UAVs--namely, commercial UAVs with a maximum endurance of less than one hour, for which there is broad foreign availability--to be exported to most Wassenaar Arrangement Participating States (Country Group A:1) without a license; and b) allows more capable non-military UAVs--namely, certain long-range cargo delivery and agricultural spraying drones--to be exported to certain U.S. partners and allies (Country Group A:5) under License Exception Strategic Trade Authorization (STA). Exports pursuant to License Exception STA are subject to notification and reporting requirements to ensure the security of the exports. BIS is making these changes pursuant to Executive Order (E.O.) 14307, \"Unleashing American Drone Dominance.\"",
+  "chars": 23182,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2026-00789",
+  "publication_date": "2026-01-15",
+  "effective_on": "2026-01-15",
+  "title": "Revision to License Review Policy for Advanced Computing Commodities",
+  "action": "Final rule.",
+  "abstract": "The Bureau of Industry and Security (BIS) is revising its license review policy for exports of certain semiconductors to China and Macau--changing it from a presumption of denial to a case-by-case review. The semiconductors covered by this rule are the Nvidia H200 and its equivalents, as well as less advanced chips--provided that (1) the semiconductors are commercially available in the United States at the time of publication of this rule and (2) the exporter certifies that: there is sufficient supply of this product in the United States; production of this product for exports to China will not divert global foundry capacity for similar or more advanced products for end users in the United States; the recipient has demonstrated sufficient security procedures; and the item undergoes independent, third-party testing in the United States to verify its performance specifications.",
+  "chars": 31907,
+  "china_mentions": 37,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 15,
+   "Russia": 3,
+   "Iran": 3,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 7,
+   "advanced computing": 14,
+   "integrated circuit": 7,
+   "high bandwidth memory": 1,
+   "HBM": 1,
+   "polysilicon": 0,
+   "supercomputer": 2,
+   "artificial intelligence": 1,
+   "model weights": 1
+  }
+ },
+ {
+  "document_number": "2025-22137",
+  "publication_date": "2025-12-05",
+  "effective_on": null,
+  "title": "The Commerce Control List",
+  "action": null,
+  "abstract": null,
+  "chars": 2526,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2025-19858",
+  "publication_date": "2025-11-12",
+  "effective_on": "2025-11-10",
+  "title": "Revisions to the Entity List",
+  "action": "Final rule.",
+  "abstract": "The Bureau of Industry and Security (BIS) is removing one entity from the Entity List under the destination of China, People's Republic of (China). BIS is also removing six aliases associated with a different entity on the Entity List under the destination of China. BIS has determined, based on the review of additional information, that the entities do not pose a significant risk of being or becoming involved in activities that are contrary to the national security or foreign policy interests of the United States.",
+  "chars": 9910,
+  "china_mentions": 15,
+  "entity_sentences": [
+   " ----------------------------------------------------------------------- SUMMARY: The Bureau of Industry and Security (BIS) is removing one entity from the Entity List under the destination of China, People's Republic of (China).",
+   " BIS is also removing six aliases associated with a different entity on the Entity List under the destination of China.",
+   " The license review policy for each listed entity is identified in the ``License Review Policy'' column on the Entity List, and the impact on the availability of license exceptions is described in the relevant Federal Register document that added the entity to the Entity List."
+  ],
+  "country_counts": {
+   "China": 7,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 8,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2025-19846",
+  "publication_date": "2025-11-12",
+  "effective_on": "2025-11-10",
+  "title": "One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
+  "action": "Final rule; stay.",
+  "abstract": "In this final rule, the Bureau of Industry and Security (BIS) imposes a one-year suspension of the interim final rule, \"Expansion of End-User Controls to Cover Affiliates of Certain Listed Entities,\". The suspension is set to end November 9, 2026, absent a future extension.",
+  "chars": 10227,
+  "china_mentions": 0,
+  "entity_sentences": [],
+  "country_counts": {
+   "China": 0,
+   "Russia": 0,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2025-19508",
+  "publication_date": "2025-10-09",
+  "effective_on": "2025-10-08",
+  "title": "Additions to the Entity List",
+  "action": "Final rule.",
+  "abstract": "In this rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 29 entries (26 entities and 3 addresses) to the Entity List under the destinations of People's Republic of China (China) (19), Turkey (9), and the United Arab Emirates (UAE) (1). These entities have been determined by the U.S. Government to be acting contrary to the national security or foreign policy interests of the United States.",
+  "chars": 38818,
+  "china_mentions": 107,
+  "entity_sentences": [
+   " ----------------------------------------------------------------------- SUMMARY: In this rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 29 entries (26 entities and 3 addresses) to the Entity List under the destinations of People's Republic of China (China) (19), Turkey (9), and the United Arab Emirates (UAE) (1).",
+   " The license review policy for each listed entity is identified in the ``License Review Policy'' column on the Entity List, and the impact on the availability of license exceptions is described in the relevant Federal Register document that added the entity to the Entity List.",
+   " The ERC determined to add five entities to the Entity List under the destination of China: Easy Fly Intelligent Technology Co.",
+   " For the reasons described above, this final rule adds the following 26 entities and 3 addresses to the Entity List and includes, where appropriate, aliases: China <bullet> Address 16, <bullet> Address 17, <bullet> Address 18, <bullet> Arrow China Electronics Trading Co."
+  ],
+  "country_counts": {
+   "China": 83,
+   "Russia": 0,
+   "Iran": 13,
+   "Hong Kong": 24,
+   "Taiwan": 0,
+   "United Arab Emirates": 5,
+   "Singapore": 0,
+   "Malaysia": 0
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 1,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2025-19001",
+  "publication_date": "2025-09-30",
+  "effective_on": "2025-09-29",
+  "title": "Expansion of End-User Controls To Cover Affiliates of Certain Listed Entities",
+  "action": "Interim final rule.",
+  "abstract": "In this interim final rule (IFR), the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) to address diversion concerns involving entities on the Entity List and certain other restricted end users. Under this IFR, any entity that is at least 50 percent owned by one or more entities on the Entity List will itself automatically be subject to Entity List restrictions. This is a marked improvement over the current standard, which excludes all entities that are not specifically included on the Entity List, regardless of affiliation with Entity List entities. This IFR similarly applies restrictions to entities at least 50 percent owned by listed `military end users' and certain sanctioned parties. The 50 percent ownership standard in this IFR is designed to be consistent with longstanding Department of the Treasury practice, so as to limit the additional burden on the business community.",
+  "chars": 99272,
+  "china_mentions": 4,
+  "entity_sentences": [
+   " The license review policy for each listed entity is identified in the ``License Review Policy'' column on the Entity List, and the impact on the availability of license exceptions is described in the relevant Federal Register rule that added the entity to the Entity List.",
+   " BIS has determined that applying the 50 percent rule under the EAR (which BIS refers to as the Affiliates rule) will reduce the need to publish additional final rules to add entities to the Entity List and more broadly and effectively impose license requirements for exports, reexports, and transfers (in-country) to or involving entities that pose a significant risk of being or becoming involved i",
+   " To further support compliance, BIS may in certain circumstances add those additional entities to the Entity List.",
+   " Additionally, this IFR does not constrain the ERC's ability to add an affiliated entity that is under the 50 percent threshold when the ERC has reasonable cause to believe, based on specific and articulable facts, that the foreign entity has been involved, is involved, or poses a significant risk of being or becoming involved in activities contrary to the national security or foreign policy inter",
+   " Extending the Entity List Requirements As discussed above, BIS, in consultation with the Departments of Defense, Energy, State, and the Treasury, has determined the existing Entity List restrictions for all existing entries on the Entity List, including any new entities that will be added to the Entity List in future rulemakings, extend to any foreign entity that is owned by 50 percent or more by",
+   " This IFR adds a new fourth sentence to specify that the Entity List license requirements and other Entity List restrictions also apply to any foreign entity that is owned 50 percent or more by one or more listed entities or entities that are subject to restrictions based upon their ownership.",
+   " This IFR also adds a new sixth sentence to specify that if an exporter, reexporter, or transferor cannot determine the ownership percentage of a foreign entity that is an entity owned, directly or indirectly, by one or more listed entities, they must resolve new Red Flag 29, obtain a license from BIS, or identify an applicable license exception prior to proceeding with the export, reexport, or tr",
+   " Lastly, this IFR adds the phrase ``and other Entity List restrictions'' after the reference to ``license requirements'' in the first sentence of the introductory text to clarify that listed entities are subject to restrictions on license exception availability and the license review policy stated in the listing, as well as the indicated license requirements.",
+   "11 (License requirements that apply to entities acting or at significant risk of acting contrary to the national security or foreign policy interests of the United States), this IFR adds paragraph (a)(1) (Entity List entries extend to other foreign affiliates of listed entities owned 50 percent or more by one or more listed entities or unlisted entities that are subject to ownership-related restri",
+   " This IFR adds a second sentence to specify that these requirements apply to all entities on the Entity List with a footnote referenced under this paragraph (e).",
+   " This IFR adds a final sentence stating that if the foreign entity is owned 50 percent or more by one or more listed entities or unlisted entities that are subject to Entity List license requirements or other Entity List restrictions based upon their ownership, including at least one entity within the end-user scope, these Entity List FDP requirements are applicable, even when only one of the owne",
+   "16 (Entity List) this IFR revises paragraph (e) (Removal or modification requests) to add a new second sentence to specify that any foreign entity that is owned, directly or indirectly, individually or in aggregate, 50 percent or more by one or more entities listed on the Entity List or by entities subject to Entity List license requirements or other Entity List restrictions based upon their owner"
+  ],
+  "country_counts": {
+   "China": 1,
+   "Russia": 4,
+   "Iran": 0,
+   "Hong Kong": 0,
+   "Taiwan": 0,
+   "United Arab Emirates": 0,
+   "Singapore": 0,
+   "Malaysia": 3
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ },
+ {
+  "document_number": "2025-18992",
+  "publication_date": "2025-09-30",
+  "effective_on": "2025-09-30",
+  "title": "Revision of Firearms License Requirements",
+  "action": "Final rule.",
+  "abstract": "On April 30, 2024, the Bureau of Industry and Security (BIS) published an interim final rule (Firearms IFR) that imposed new export license requirements for firearms and related ammunition and components. American firearms manufacturers estimated that these regulatory restrictions would cost them hundreds of millions of dollars per year in lost sales. BIS, informed by public comments on the Firearms IFR, has determined that the Firearms IFR should be rescinded in its entirety--with the only exception being to maintain new Export Control Classification Numbers (ECCNs). This final rule also amends the EAR by removing the Congressional notification requirement for certain semi-automatic firearms license applications. By restoring export controls on firearms to the state they were in at the end of the first Trump Administration, BIS is advancing the Administration's commitment to reducing regulatory burdens on industry and law-abiding firearms owners.",
+  "chars": 222007,
+  "china_mentions": 6,
+  "entity_sentences": [
+   "7(a)(3) is revised to read `Shotguns with barrel length greater than or equal to 24 inches, identified in ECCN 0A502 or 0A508 on the CCL under CC Column 3 in the Country Chart column of the ``License Requirements'' section only if for sale or resale to police or law enforcement entities in countries listed in CC Column 3 (supplement no."
+  ],
+  "country_counts": {
+   "China": 5,
+   "Russia": 6,
+   "Iran": 1,
+   "Hong Kong": 0,
+   "Taiwan": 1,
+   "United Arab Emirates": 1,
+   "Singapore": 1,
+   "Malaysia": 2
+  },
+  "semi_terms": {
+   "semiconductor": 0,
+   "advanced computing": 0,
+   "integrated circuit": 0,
+   "high bandwidth memory": 0,
+   "HBM": 0,
+   "polysilicon": 0,
+   "supercomputer": 0,
+   "artificial intelligence": 0,
+   "model weights": 0
+  }
+ }
+]
