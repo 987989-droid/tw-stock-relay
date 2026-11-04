@@ -1,11 +1,7 @@
 {
- "run_at_utc": "2026-11-04T07:20:35.305839+00:00",
- "requests": 10,
- "attempts": [
-  "2317 t164sb03 115Q1 第1次失敗：URLError(ConnectionRefusedError(111, 'Connection refused'))",
-  "2317 t164sb03 115Q1 第2次失敗：URLError(ConnectionRefusedError(111, 'Connection refused'))",
-  "2317 t164sb03 115Q1 第3次失敗：URLError(ConnectionRefusedError(111, 'Connection refused'))"
- ],
+ "run_at_utc": "2026-11-04T07:25:27.437972+00:00",
+ "requests": 5,
+ "attempts": [],
  "companies": {
   "2382": {
    "cached": [
@@ -16,18 +12,20 @@
    "result": "ok"
   },
   "2317": {
-   "cached": [],
-   "fetched": [
+   "cached": [
     "115Q2"
    ],
-   "result": "ConnectionError('2317 t164sb03 115Q1 三次皆失敗')"
+   "fetched": [
+    "115Q1"
+   ],
+   "result": "ok"
   },
   "3231": {
-   "cached": [],
-   "fetched": [
+   "cached": [
     "115Q2",
     "115Q1"
    ],
+   "fetched": [],
    "result": "ok"
   }
  }
