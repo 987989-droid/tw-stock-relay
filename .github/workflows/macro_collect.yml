@@ -39,6 +39,8 @@ jobs:
         env:
           SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
         run: python scripts/macro_collect.py
+      - name: tw working capital
+        run: python scripts/tw_wc.py
       - name: compute
         run: python scripts/macro_compute.py
       - name: commit

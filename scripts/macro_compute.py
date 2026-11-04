@@ -266,7 +266,11 @@ try:
             out[co][p] = {"ar_days": round(arv / rev * 91, 1), "ap_days": round(apv / rev * 91, 1), "inv_days": round(iv / rev * 91, 1)}
     out = {c: dict(sorted(v.items())) for c, v in out.items()}
     complete = [c for c in out if len(out[c]) >= 2]
-    if len(complete) < 3:
+    lastp = {list(out[c])[-1] for c in complete}
+    if len(complete) == 3 and len(lastp) > 1:
+        light = "⚪"
+        err("台股組裝營運資金", f"三家最新期別不一致 {sorted(lastp)}，不亮燈")
+    elif len(complete) < 3:
         light = "⚪"
         err("台股組裝營運資金", f"僅 {complete} 有兩期資料，其餘抓取失敗（見 status.json tw_wc），不亮燈")
     else:
