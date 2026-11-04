@@ -12,7 +12,7 @@ import json, os, re, time, datetime, urllib.request, urllib.parse, urllib.error
 
 OUT = "data/selftest/macro"
 CODES = ["2382", "2317", "3231"]
-HOSTS = ["https://mopsov.twse.com.tw/mops/web/ajax_", "https://mops.twse.com.tw/mops/web/ajax_"]  # 第二個為備援，實測結果見 status
+HOSTS = ["https://mopsov.twse.com.tw/mops/web/ajax_"]  # 2026/11/04 實測：mops.twse.com.tw 的舊 ajax 端點回「因為安全性考量，您所執行的頁面無法呈現」，不能當備援
 WC_KEYS = re.compile(r"應收帳款|應付帳款|^存貨$|營業收入合計")
 META = re.compile(r"CO_ID=(\d+)&SYEAR=(\d+)&SSEASON=(\d+)")
 GAP, BACKOFF = 4, [30, 60]
@@ -42,7 +42,7 @@ def mops(table, co, isnew, y="", s=""):
                     raise
         if i < len(BACKOFF):
             time.sleep(BACKOFF[i])
-    raise ConnectionError(f"{co} {table} {y}Q{s} 三輪主站與備援站皆失敗")
+    raise ConnectionError(f"{co} {table} {y}Q{s} 三輪皆失敗")
 
 
 def rows(h):
