@@ -1,5 +1,5 @@
 {
- "run_at_utc": "2026-11-04T07:01:49.892991",
+ "run_at_utc": "2026-11-04T07:08:19.823976",
  "us_facts": "ok",
  "nvda_ar": "ok 33",
  "fr_bis": "ok 77 rules 18",
@@ -55,7 +55,7 @@
  },
  "tw_wc": {
   "2382": "ok 115Q2,115Q1",
-  "2317": "ok 115Q2,115Q1",
-  "3231": "ok 115Q2,115Q1"
+  "2317": "URLError(ConnectionRefusedError(111, 'Connection refused'))",
+  "3231": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
  }
 }

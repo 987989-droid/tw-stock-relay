@@ -1,6 +1,8 @@
 {
- "generated_utc": "2026-11-04T07:03:32.733399+00:00",
- "errors": [],
+ "generated_utc": "2026-11-04T07:10:21.331093+00:00",
+ "errors": [
+  "台股組裝營運資金: 僅 ['2382'] 有兩期資料，其餘抓取失敗（見 status.json tw_wc），不亮燈"
+ ],
  "L1_us": {
   "quarter_end": "2026-09-30",
   "total": 201923000000,
@@ -229,74 +231,88 @@
      "inv_days": 69.4
     }
    },
-   "2317": {
-    "115Q1": {
-     "ar_days": 50.1,
-     "ap_days": 56.8,
-     "inv_days": 51.9
-    },
-    "115Q2": {
-     "ar_days": 49.9,
-     "ap_days": 55.0,
-     "inv_days": 49.4
-    }
-   },
-   "3231": {
-    "115Q1": {
-     "ar_days": 61.1,
-     "ap_days": 61.9,
-     "inv_days": 65.8
-    },
-    "115Q2": {
-     "ar_days": 58.4,
-     "ap_days": 44.2,
-     "inv_days": 54.2
-    }
-   }
+   "3231": {}
   },
-  "light": "🟢",
+  "light": "⚪",
   "note": "以單季營收為分母；三家應收天數合計單季拉長🟡、連兩季拉長🔴（需跨期資料）"
  },
  "L4_bis": {
   "by_quarter": {
    "2025Q3": {
     "rule": 2,
-    "notice": 0,
-    "entity_list_rules": 0,
-    "semi_kw_rules": 0
+    "notice": 0
    },
    "2025Q4": {
     "rule": 4,
-    "notice": 26,
-    "entity_list_rules": 2,
-    "semi_kw_rules": 0
+    "notice": 26
    },
    "2026Q1": {
     "rule": 3,
-    "notice": 7,
-    "entity_list_rules": 0,
-    "semi_kw_rules": 1
+    "notice": 7
    },
    "2026Q2": {
     "rule": 1,
-    "notice": 14,
-    "entity_list_rules": 0,
-    "semi_kw_rules": 1
+    "notice": 14
    },
    "2026Q3": {
     "rule": 8,
-    "notice": 10,
-    "entity_list_rules": 2,
-    "semi_kw_rules": 1
+    "notice": 10
    },
    "2026Q4": {
     "rule": 0,
-    "notice": 2,
-    "entity_list_rules": 0,
-    "semi_kw_rules": 0
+    "notice": 2
    }
   },
-  "light": "⚪",
-  "note": "只依標題分類，未讀內文"
+  "classified": {
+   "2025Q3": {
+    "相關收緊": 0,
+    "相關放寬": 1,
+    "中國實體新增": 0,
+    "items": [
+     "2025-09-30 放寬 Revision of Firearms License Requirements"
+    ]
+   },
+   "2025Q4": {
+    "相關收緊": 1,
+    "相關放寬": 1,
+    "中國實體新增": 19,
+    "items": [
+     "2025-11-12 放寬 Revisions to the Entity List",
+     "2025-10-09 收緊 Additions to the Entity List"
+    ]
+   },
+   "2026Q1": {
+    "相關收緊": 0,
+    "相關放寬": 1,
+    "中國實體新增": 0,
+    "items": [
+     "2026-01-15 放寬 Revision to License Review Policy for Advanced Computing Com"
+    ]
+   },
+   "2026Q2": {
+    "相關收緊": 0,
+    "相關放寬": 1,
+    "中國實體新增": 0,
+    "items": [
+     "2026-04-09 放寬 Extension of Authorized Integrated Circuit (IC) Designer Sta"
+    ]
+   },
+   "2026Q3": {
+    "相關收緊": 1,
+    "相關放寬": 2,
+    "中國實體新增": 0,
+    "items": [
+     "2026-09-24 收緊 Measures To Restrict Stockpiling of Polysilicon and Polysili",
+     "2026-08-24 放寬 Revisions to the Entity List",
+     "2026-07-14 放寬 Enhanced Favorable Treatment for the United Arab Emirates Un"
+    ]
+   }
+  },
+  "last_full_quarter": "2026Q3",
+  "light": "🟢",
+  "watch": [
+   "2026-11-09 到期：One Year Suspension of Expansion of End-User Controls for Af"
+  ],
+  "note": "相關＝半導體／AI 關鍵字≥3 次或提及中國≥5 次；方向依標題與摘要關鍵字機械分類"
  }
 }
