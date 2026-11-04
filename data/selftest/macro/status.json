@@ -1,0 +1,55 @@
+{
+ "run_at_utc": "2026-11-04T04:35:28.104098",
+ "us_facts": "ok",
+ "fr_bis": "ok 45",
+ "hkex": {
+  "tencent": [
+   {
+    "title": "截至二零二六年六月三十日止三個月及六個月業績公佈",
+    "date": "12/08/2026 16:31",
+    "file": "data/selftest/macro/hkex/tencent_20260812.txt"
+   },
+   {
+    "title": "截至二零二六年三月三十一日止三個月業績公佈",
+    "date": "13/05/2026 16:31",
+    "file": "data/selftest/macro/hkex/tencent_20260513.txt"
+   }
+  ],
+  "alibaba": [
+   {
+    "title": "2026年六月底止季度業績公告",
+    "date": "20/08/2026 17:46",
+    "file": "data/selftest/macro/hkex/alibaba_20260820.txt"
+   },
+   {
+    "title": "2026年三月底止季度業績及2026財務年度業績公告",
+    "date": "13/05/2026 17:30",
+    "file": "data/selftest/macro/hkex/alibaba_20260513.txt"
+   }
+  ],
+  "baidu": [
+   {
+    "title": "2026年第二季度業績公告",
+    "date": "18/08/2026 17:40",
+    "file": "data/selftest/macro/hkex/baidu_20260818.txt"
+   },
+   {
+    "title": "2026 年第一季度業績公告",
+    "date": "18/05/2026 17:00",
+    "file": "data/selftest/macro/hkex/baidu_20260518.txt"
+   }
+  ],
+  "smic": [
+   {
+    "title": "中芯國際截至2026年6月30日止三個月未經審核業績公佈",
+    "date": "13/08/2026 16:37",
+    "file": "data/selftest/macro/hkex/smic_20260813.txt"
+   },
+   {
+    "title": "中芯國際截至2026年3月31日止三個月未經審核業績公佈",
+    "date": "14/05/2026 18:17",
+    "file": "data/selftest/macro/hkex/smic_20260514.txt"
+   }
+  ]
+ }
+}
