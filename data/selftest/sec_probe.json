@@ -1,42 +1,774 @@
 {
- "run_at_utc": "2026-11-04T02:59:45.775401",
- "contact_declared": false,
+ "run_at_utc": "2026-11-04T03:08:58.283462",
+ "contact_declared": true,
  "companyfacts": {
   "MSFT": {
    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
-   "http": 403,
-   "bytes": 4000,
-   "error_text": " SEC.gov | Your Request Originates from an Undeclared Automated Tool html {height: 100%} body {height: 100%; margin:0; padding:0;} #header {background-color:#003968; color:#fff; padding:15px 20px 10px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px; border-bottom:solid 5px #000;} #footer {background-color:#003968; color:#fff; padding:15px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px;} #content {max-width:650px;margin:60px auto; padding:0 20px 100px 20px; background-image:url(seal_bw.png);background-repeat:no-repeat;background-position:50% 100%;} h1 {font-family:Georgia, Times, serif; font-size:20px;} h2 {text-align:center; font-family:Georgia, Times, serif; font-size:20px; width:100%; border-bottom:solid #999 1px;padding-bottom:10px; margin-bottom:20px;} h3 {font-family:Georgia, Times, serif; font-size:16px; margin:25px 0 0 0;} p {font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:1.3;} .grey_box {background-color:#eee; padding:5px 40px 20px 40px;margin-top:75px;} .grey_box p {font-size:12px;line-height:1.5} .note {padding: 0 40px; font-style: italic;} U.S. Securities and Exchange Commission Your Request Originates from an Undeclared A"
+   "http": 200,
+   "bytes": 4938072,
+   "entityName": "MICROSOFT CORP",
+   "tags": {
+    "PaymentsToAcquirePropertyPlantAndEquipment": [
+     {
+      "start": "2024-07-01",
+      "end": "2025-06-30",
+      "val": 64551000000,
+      "form": "10-K",
+      "fy": 2026,
+      "fp": "FY",
+      "filed": "2026-07-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "val": 115948000000,
+      "form": "10-K",
+      "fy": 2026,
+      "fp": "FY",
+      "filed": "2026-07-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 19394000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-10-28"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 39367000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-10-28"
+     }
+    ],
+    "GrossProfit": [
+     {
+      "start": "2024-07-01",
+      "end": "2025-06-30",
+      "val": 193893000000,
+      "form": "10-K",
+      "fy": 2026,
+      "fp": "FY",
+      "filed": "2026-07-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "val": 225465000000,
+      "form": "10-K",
+      "fy": 2026,
+      "fp": "FY",
+      "filed": "2026-07-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 53630000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-10-28"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 62559000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-10-28"
+     }
+    ],
+    "Revenues": [
+     {
+      "start": "2009-07-01",
+      "end": "2009-12-31",
+      "val": 31942000000,
+      "form": "10-Q",
+      "fy": 2011,
+      "fp": "Q2",
+      "filed": "2011-01-27"
+     },
+     {
+      "start": "2009-10-01",
+      "end": "2009-12-31",
+      "val": 19022000000,
+      "form": "10-Q",
+      "fy": 2011,
+      "fp": "Q2",
+      "filed": "2011-01-27"
+     },
+     {
+      "start": "2010-07-01",
+      "end": "2010-12-31",
+      "val": 36148000000,
+      "form": "10-Q",
+      "fy": 2011,
+      "fp": "Q2",
+      "filed": "2011-01-27"
+     },
+     {
+      "start": "2010-10-01",
+      "end": "2010-12-31",
+      "val": 19953000000,
+      "form": "10-Q",
+      "fy": 2011,
+      "fp": "Q2",
+      "filed": "2011-01-27"
+     }
+    ],
+    "RevenueFromContractWithCustomerExcludingAssessedTax": [
+     {
+      "start": "2024-07-01",
+      "end": "2025-06-30",
+      "val": 281724000000,
+      "form": "10-K",
+      "fy": 2026,
+      "fp": "FY",
+      "filed": "2026-07-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "val": 331839000000,
+      "form": "10-K",
+      "fy": 2026,
+      "fp": "FY",
+      "filed": "2026-07-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 77673000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-10-28"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 92279000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-10-28"
+     }
+    ]
+   }
   },
   "GOOGL": {
    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
-   "http": 403,
-   "bytes": 4000,
-   "error_text": " SEC.gov | Your Request Originates from an Undeclared Automated Tool html {height: 100%} body {height: 100%; margin:0; padding:0;} #header {background-color:#003968; color:#fff; padding:15px 20px 10px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px; border-bottom:solid 5px #000;} #footer {background-color:#003968; color:#fff; padding:15px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px;} #content {max-width:650px;margin:60px auto; padding:0 20px 100px 20px; background-image:url(seal_bw.png);background-repeat:no-repeat;background-position:50% 100%;} h1 {font-family:Georgia, Times, serif; font-size:20px;} h2 {text-align:center; font-family:Georgia, Times, serif; font-size:20px; width:100%; border-bottom:solid #999 1px;padding-bottom:10px; margin-bottom:20px;} h3 {font-family:Georgia, Times, serif; font-size:16px; margin:25px 0 0 0;} p {font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:1.3;} .grey_box {background-color:#eee; padding:5px 40px 20px 40px;margin-top:75px;} .grey_box p {font-size:12px;line-height:1.5} .note {padding: 0 40px; font-style: italic;} U.S. Securities and Exchange Commission Your Request Originates from an Undeclared A"
+   "http": 200,
+   "bytes": 3249987,
+   "entityName": "Alphabet Inc.",
+   "tags": {
+    "PaymentsToAcquirePropertyPlantAndEquipment": [
+     {
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "val": 39643000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q2",
+      "filed": "2026-07-23"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "val": 80598000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q2",
+      "filed": "2026-07-23"
+     },
+     {
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "val": 63596000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-29"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "val": 131953000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-29"
+     }
+    ],
+    "Revenues": [
+     {
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "val": 289007000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-29"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 102346000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-29"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "val": 357269000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-29"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 127577000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-29"
+     }
+    ],
+    "RevenueFromContractWithCustomerExcludingAssessedTax": [
+     {
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "val": 307394000000,
+      "form": "10-K",
+      "fy": 2024,
+      "fp": "FY",
+      "filed": "2025-02-05"
+     },
+     {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "val": 350018000000,
+      "form": "10-K",
+      "fy": 2024,
+      "fp": "FY",
+      "filed": "2025-02-05"
+     },
+     {
+      "start": "2024-01-01",
+      "end": "2024-03-31",
+      "val": 80539000000,
+      "form": "10-Q",
+      "fy": 2025,
+      "fp": "Q1",
+      "filed": "2025-04-25"
+     },
+     {
+      "start": "2025-01-01",
+      "end": "2025-03-31",
+      "val": 90234000000,
+      "form": "10-Q",
+      "fy": 2025,
+      "fp": "Q1",
+      "filed": "2025-04-25"
+     }
+    ]
+   }
   },
   "AMZN": {
    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
-   "http": 403,
-   "bytes": 4000,
-   "error_text": " SEC.gov | Your Request Originates from an Undeclared Automated Tool html {height: 100%} body {height: 100%; margin:0; padding:0;} #header {background-color:#003968; color:#fff; padding:15px 20px 10px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px; border-bottom:solid 5px #000;} #footer {background-color:#003968; color:#fff; padding:15px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px;} #content {max-width:650px;margin:60px auto; padding:0 20px 100px 20px; background-image:url(seal_bw.png);background-repeat:no-repeat;background-position:50% 100%;} h1 {font-family:Georgia, Times, serif; font-size:20px;} h2 {text-align:center; font-family:Georgia, Times, serif; font-size:20px; width:100%; border-bottom:solid #999 1px;padding-bottom:10px; margin-bottom:20px;} h3 {font-family:Georgia, Times, serif; font-size:16px; margin:25px 0 0 0;} p {font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:1.3;} .grey_box {background-color:#eee; padding:5px 40px 20px 40px;margin-top:75px;} .grey_box p {font-size:12px;line-height:1.5} .note {padding: 0 40px; font-style: italic;} U.S. Securities and Exchange Commission Your Request Originates from an Undeclared A"
+   "http": 200,
+   "bytes": 4554378,
+   "entityName": "AMAZON.COM, INC.",
+   "tags": {
+    "PaymentsToAcquirePropertyPlantAndEquipment": [
+     {
+      "start": "2015-04-01",
+      "end": "2016-03-31",
+      "val": 4897000000,
+      "form": "10-Q",
+      "fy": 2017,
+      "fp": "Q1",
+      "filed": "2017-04-28"
+     },
+     {
+      "start": "2016-01-01",
+      "end": "2016-03-31",
+      "val": 1179000000,
+      "form": "10-Q",
+      "fy": 2017,
+      "fp": "Q1",
+      "filed": "2017-04-28"
+     },
+     {
+      "start": "2016-04-01",
+      "end": "2017-03-31",
+      "val": 7417000000,
+      "form": "10-Q",
+      "fy": 2017,
+      "fp": "Q1",
+      "filed": "2017-04-28"
+     },
+     {
+      "start": "2017-01-01",
+      "end": "2017-03-31",
+      "val": 1861000000,
+      "form": "10-Q",
+      "fy": 2017,
+      "fp": "Q1",
+      "filed": "2017-04-28"
+     }
+    ],
+    "PaymentsToAcquireProductiveAssets": [
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 35095000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     },
+     {
+      "start": "2025-10-01",
+      "end": "2026-09-30",
+      "val": 215192000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "val": 175670000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 77259000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     }
+    ],
+    "GrossProfit": [
+     {
+      "start": "2009-07-01",
+      "end": "2009-09-30",
+      "val": 1273000000,
+      "form": "10-Q",
+      "fy": 2009,
+      "fp": "Q3",
+      "filed": "2009-10-23"
+     },
+     {
+      "start": "2007-01-01",
+      "end": "2007-12-31",
+      "val": 3353000000,
+      "form": "10-K",
+      "fy": 2009,
+      "fp": "FY",
+      "filed": "2010-01-29"
+     },
+     {
+      "start": "2008-01-01",
+      "end": "2008-12-31",
+      "val": 4270000000,
+      "form": "10-K",
+      "fy": 2009,
+      "fp": "FY",
+      "filed": "2010-01-29"
+     },
+     {
+      "start": "2009-01-01",
+      "end": "2009-12-31",
+      "val": 5531000000,
+      "form": "10-K",
+      "fy": 2009,
+      "fp": "FY",
+      "filed": "2010-01-29"
+     }
+    ],
+    "RevenueFromContractWithCustomerExcludingAssessedTax": [
+     {
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "val": 503538000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 180169000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "val": 584069000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 201944000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-30"
+     }
+    ]
+   }
   },
   "META": {
    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
-   "http": 403,
-   "bytes": 4000,
-   "error_text": " SEC.gov | Your Request Originates from an Undeclared Automated Tool html {height: 100%} body {height: 100%; margin:0; padding:0;} #header {background-color:#003968; color:#fff; padding:15px 20px 10px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px; border-bottom:solid 5px #000;} #footer {background-color:#003968; color:#fff; padding:15px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px;} #content {max-width:650px;margin:60px auto; padding:0 20px 100px 20px; background-image:url(seal_bw.png);background-repeat:no-repeat;background-position:50% 100%;} h1 {font-family:Georgia, Times, serif; font-size:20px;} h2 {text-align:center; font-family:Georgia, Times, serif; font-size:20px; width:100%; border-bottom:solid #999 1px;padding-bottom:10px; margin-bottom:20px;} h3 {font-family:Georgia, Times, serif; font-size:16px; margin:25px 0 0 0;} p {font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:1.3;} .grey_box {background-color:#eee; padding:5px 40px 20px 40px;margin-top:75px;} .grey_box p {font-size:12px;line-height:1.5} .note {padding: 0 40px; font-style: italic;} U.S. Securities and Exchange Commission Your Request Originates from an Undeclared A"
+   "http": 200,
+   "bytes": 2809504,
+   "entityName": "Meta Platforms, Inc.",
+   "tags": {
+    "PaymentsToAcquirePropertyPlantAndEquipment": [
+     {
+      "start": "2025-01-01",
+      "end": "2025-06-30",
+      "val": 29479000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q2",
+      "filed": "2026-07-30"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "val": 49113000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q2",
+      "filed": "2026-07-30"
+     },
+     {
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "val": 48308000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-22"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "val": 83055000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-22"
+     }
+    ],
+    "Revenues": [
+     {
+      "start": "2017-01-01",
+      "end": "2017-09-30",
+      "val": 27681000000,
+      "form": "10-Q",
+      "fy": 2018,
+      "fp": "Q3",
+      "filed": "2018-10-31"
+     },
+     {
+      "start": "2017-07-01",
+      "end": "2017-09-30",
+      "val": 10328000000,
+      "form": "10-Q",
+      "fy": 2018,
+      "fp": "Q3",
+      "filed": "2018-10-31"
+     },
+     {
+      "start": "2018-01-01",
+      "end": "2018-09-30",
+      "val": 38924000000,
+      "form": "10-Q",
+      "fy": 2018,
+      "fp": "Q3",
+      "filed": "2018-10-31"
+     },
+     {
+      "start": "2018-07-01",
+      "end": "2018-09-30",
+      "val": 13727000000,
+      "form": "10-Q",
+      "fy": 2018,
+      "fp": "Q3",
+      "filed": "2018-10-31"
+     }
+    ],
+    "RevenueFromContractWithCustomerExcludingAssessedTax": [
+     {
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "val": 141073000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-22"
+     },
+     {
+      "start": "2025-07-01",
+      "end": "2025-09-30",
+      "val": 51242000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-22"
+     },
+     {
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "val": 181712000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-22"
+     },
+     {
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "val": 64601000000,
+      "form": "10-Q",
+      "fy": 2026,
+      "fp": "Q3",
+      "filed": "2026-10-22"
+     }
+    ]
+   }
   },
   "NVDA": {
    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
-   "http": 403,
-   "bytes": 4000,
-   "error_text": " SEC.gov | Your Request Originates from an Undeclared Automated Tool html {height: 100%} body {height: 100%; margin:0; padding:0;} #header {background-color:#003968; color:#fff; padding:15px 20px 10px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px; border-bottom:solid 5px #000;} #footer {background-color:#003968; color:#fff; padding:15px 20px;font-family:Arial, Helvetica, sans-serif; font-size:20px;} #content {max-width:650px;margin:60px auto; padding:0 20px 100px 20px; background-image:url(seal_bw.png);background-repeat:no-repeat;background-position:50% 100%;} h1 {font-family:Georgia, Times, serif; font-size:20px;} h2 {text-align:center; font-family:Georgia, Times, serif; font-size:20px; width:100%; border-bottom:solid #999 1px;padding-bottom:10px; margin-bottom:20px;} h3 {font-family:Georgia, Times, serif; font-size:16px; margin:25px 0 0 0;} p {font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:1.3;} .grey_box {background-color:#eee; padding:5px 40px 20px 40px;margin-top:75px;} .grey_box p {font-size:12px;line-height:1.5} .note {padding: 0 40px; font-style: italic;} U.S. Securities and Exchange Commission Your Request Originates from an Undeclared A"
+   "http": 200,
+   "bytes": 4092966,
+   "entityName": "NVIDIA CORP",
+   "tags": {
+    "PaymentsToAcquirePropertyPlantAndEquipment": [
+     {
+      "start": "2019-01-28",
+      "end": "2019-04-28",
+      "val": 128000000,
+      "form": "10-Q",
+      "fy": 2020,
+      "fp": "Q1",
+      "filed": "2020-05-21"
+     },
+     {
+      "start": "2020-01-27",
+      "end": "2020-04-26",
+      "val": 155000000,
+      "form": "10-Q",
+      "fy": 2020,
+      "fp": "Q1",
+      "filed": "2020-05-21"
+     },
+     {
+      "start": "2019-01-28",
+      "end": "2019-07-28",
+      "val": 241000000,
+      "form": "10-Q",
+      "fy": 2020,
+      "fp": "Q2",
+      "filed": "2020-08-19"
+     },
+     {
+      "start": "2020-01-27",
+      "end": "2020-07-26",
+      "val": 372000000,
+      "form": "10-Q",
+      "fy": 2020,
+      "fp": "Q2",
+      "filed": "2020-08-19"
+     }
+    ],
+    "PaymentsToAcquireProductiveAssets": [
+     {
+      "start": "2025-01-27",
+      "end": "2025-04-27",
+      "val": 1227000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-05-20"
+     },
+     {
+      "start": "2026-01-26",
+      "end": "2026-04-26",
+      "val": 1757000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q1",
+      "filed": "2026-05-20"
+     },
+     {
+      "start": "2025-01-27",
+      "end": "2025-07-27",
+      "val": 3122000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2026-01-26",
+      "end": "2026-07-26",
+      "val": 4434000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     }
+    ],
+    "GrossProfit": [
+     {
+      "start": "2025-01-27",
+      "end": "2025-07-27",
+      "val": 60521000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2025-04-28",
+      "end": "2025-07-27",
+      "val": 33853000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2026-01-26",
+      "end": "2026-07-26",
+      "val": 133299000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2026-04-27",
+      "end": "2026-07-26",
+      "val": 72142000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     }
+    ],
+    "Revenues": [
+     {
+      "start": "2025-01-27",
+      "end": "2025-07-27",
+      "val": 90805000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2025-04-28",
+      "end": "2025-07-27",
+      "val": 46743000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2026-01-26",
+      "end": "2026-07-26",
+      "val": 177837000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     },
+     {
+      "start": "2026-04-27",
+      "end": "2026-07-26",
+      "val": 96221000000,
+      "form": "10-Q",
+      "fy": 2027,
+      "fp": "Q2",
+      "filed": "2026-08-26"
+     }
+    ],
+    "RevenueFromContractWithCustomerExcludingAssessedTax": [
+     {
+      "start": "2020-01-27",
+      "end": "2021-01-31",
+      "val": 16675000000,
+      "form": "10-K",
+      "fy": 2021,
+      "fp": "FY",
+      "filed": "2021-02-26"
+     },
+     {
+      "start": "2019-01-28",
+      "end": "2020-01-26",
+      "val": 10918000000,
+      "form": "10-K",
+      "fy": 2022,
+      "fp": "FY",
+      "filed": "2022-03-18"
+     },
+     {
+      "start": "2020-01-27",
+      "end": "2021-01-31",
+      "val": 16675000000,
+      "form": "10-K",
+      "fy": 2022,
+      "fp": "FY",
+      "filed": "2022-03-18"
+     },
+     {
+      "start": "2021-02-01",
+      "end": "2022-01-30",
+      "val": 26914000000,
+      "form": "10-K",
+      "fy": 2022,
+      "fp": "FY",
+      "filed": "2022-03-18"
+     }
+    ]
+   }
   }
  },
  "archive": {
   "url": "https://www.sec.gov/Archives/edgar/data/0000789019/000119312526436133/msft-20260930.htm",
-  "http": 403,
-  "bytes": 4000,
-  "has_property_line": false
+  "http": 200,
+  "bytes": 5482975,
+  "has_property_line": true
  }
 }
