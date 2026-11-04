@@ -135,7 +135,7 @@ def mops(table, co, isnew, y="", s=""):
                                    "inpuType": "co_id", "TYPEK": "all", "isnew": isnew, "co_id": co, "year": y, "season": s}).encode()
     req = urllib.request.Request(MOPS + table, data=body, headers={"User-Agent": "Mozilla/5.0",
                                  "Content-Type": "application/x-www-form-urlencoded"})
-    time.sleep(1.5)
+    time.sleep(4)  # MOPS 連續請求會被拒（2026/11/04 同日多次重跑後 Connection refused），間隔拉到 4 秒
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read().decode("utf-8", "replace")
 

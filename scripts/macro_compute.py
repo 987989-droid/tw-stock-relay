@@ -355,7 +355,7 @@ if "L3_6" in S:
     L.append(f"空方題 {a['light']} " + " → ".join(f"{v['ratio']}" for v in a["series"].values()))
 if "L3_5d" in S:
     a = S["L3_5d"]
-    L.append(f"台股組裝應收天數 {a['light']} " + "／".join(f"{c} " + "→".join(str(p['ar_days']) for p in v.values()) for c, v in a["by_co"].items()))
+    L.append(f"台股組裝應收天數 {a['light']} " + "／".join(f"{c} " + ("→".join(str(p['ar_days']) for p in v.values()) or "缺") for c, v in a["by_co"].items()))
 if "L3_tw_gm" in S:
     a = S["L3_tw_gm"]
     L.append(f"L3 台股毛利率 {a['period']} 上游 {a['upstream']}%／下游 {a['downstream']}%")
