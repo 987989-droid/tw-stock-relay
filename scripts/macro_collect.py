@@ -47,6 +47,21 @@ try:
 except Exception as e:
     status["us_facts"] = repr(e)[:300]
 
+# 1b) NVDA 最新 10-Q 中提及應收帳款與客戶集中度的句子
+try:
+    import html as _h
+    sub = json.loads(get("https://data.sec.gov/submissions/CIK0001045810.json", ua))["filings"]["recent"]
+    i = next(k for k, f in enumerate(sub["form"]) if f == "10-Q")
+    url = f"https://www.sec.gov/Archives/edgar/data/1045810/{sub['accessionNumber'][i].replace('-', '')}/{sub['primaryDocument'][i]}"
+    raw = get(url, ua).decode("utf-8", "replace")
+    txt = re.sub(r"\s+", " ", _h.unescape(re.sub(r"<[^>]+>", " ", raw)))
+    sents = re.split(r"(?<=[.;])\s+", txt)
+    keep = [x[:600] for x in sents if re.search(r"accounts receivable|Customer [A-Z]\b|direct customer|indirect customer", x, re.I)]
+    json.dump({"url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:80]}, open(OUT + "/nvda_ar.json", "w"), indent=1)
+    status["nvda_ar"] = f"ok {len(keep)}"
+except Exception as e:
+    status["nvda_ar"] = repr(e)[:300]
+
 # 2) Federal Register
 try:
     q = [("conditions[agencies][]", "industry-and-security-bureau"), ("conditions[publication_date][gte]", "2026-01-01"),
