@@ -1,0 +1,17 @@
+{
+ "run_at_utc": "2026-11-04T07:51:20.352460+00:00",
+ "query": "BIS, term=affiliates, since 2026-10-01",
+ "count": 1,
+ "results": [
+  {
+   "title": "Order Renewing Order Temporarily Denying Export Privileges",
+   "type": "Notice",
+   "publication_date": "2026-10-27",
+   "document_number": "2026-21840",
+   "abstract": null,
+   "html_url": "https://www.federalregister.gov/documents/2026/10/27/2026-21840/order-renewing-order-temporarily-denying-export-privileges",
+   "effective_on": null
+  }
+ ],
+ "status": "ok"
+}
