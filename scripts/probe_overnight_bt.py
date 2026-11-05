@@ -16,7 +16,7 @@ GROUPS = (("6239 2408 2344 3260 8299 4967", "MU"),
           ("3231 2382 2317 6669 2356 2376 3013 8210", "NVDA"),
           ("2330 3711 2449 6147 6239 6451 6770 2303", "TSM NVDA"),
           ("4958 2368 3037 8046 3189 2383 6274", "NVDA AVGO"),
-          ("2308 3017 3324 2421 8996 1519 1513 1503 1514", "VRT"))
+          ("2308 3017 3324 2421 8996 1519 1513 1503 1514", "VRT ETN GEV"))
 mk = {r["code"]: r.get("market") for r in json.load(open("data/derived/beta_alpha.json"))["rows"]}
 pairs = []
 for g, p in GROUPS:
@@ -27,9 +27,22 @@ pairs.append(("^TWII", "^SOX")); pairs.append(("^TWII", "TSM"))
 us_t = sorted({q for _, q in pairs} | {"^SOX"})
 tw_t = sorted({c for c, _ in pairs})
 def tw_sym(c): return c if c.startswith("^") else c + (".TWO" if mk.get(c) == "otc" else ".TW")
+ONLY = os.environ.get("ONLY", "").split()
+if ONLY:
+    pairs = [(c, q) for c, q in pairs if q in ONLY]
+    us_t = sorted({q for _, q in pairs}); tw_t = sorted({c for c, _ in pairs})
 US = yf.download(us_t, period="14mo", auto_adjust=True, progress=False, group_by="column")["Close"]
+# 2026/11/06：VRT 在批次下載中整欄為空 → 逐檔補抓並記錄診斷
+diag = {}
+for q in us_t:
+    n = int(US[q].dropna().shape[0]) if q in US.columns else 0
+    if n < 120:
+        h = yf.Ticker(q).history(period="14mo", auto_adjust=True)["Close"]
+        h.index = h.index.tz_localize(None) if h.index.tz is not None else h.index
+        US[q] = h.reindex(US.index.tz_localize(None) if US.index.tz is not None else US.index) if len(US.index) else h
+        diag[q] = {"batch_rows": n, "single_rows": int(h.dropna().shape[0])}
 TWd = yf.download([tw_sym(c) for c in tw_t], period="14mo", auto_adjust=True, progress=False, group_by="column")
-out = {"pairs": [], "note": "R² 0.10 以上才算有實用解釋力；big 為 |美國同業|≥7% 的日子"}
+out = {"diag_us": None, "pairs": [], "note": "R² 0.10 以上才算有實用解釋力；big 為 |美國同業|≥7% 的日子"}
 for c, q in pairs:
     s = tw_sym(c)
     try:
@@ -64,6 +77,7 @@ out["summary"] = {"n_pairs": len(ok),
                   "median_r2_cc": round(float(pd.Series([p["r2_cc"] for p in ok]).median()), 3),
                   "median_base_r2_cc": round(float(pd.Series([p["base_r2_cc"] for p in ok]).median()), 3),
                   "pairs_r2_cc_ge_0.10": sum(p["r2_cc"] >= 0.10 for p in ok)}
+out["diag_us"] = diag
 os.makedirs("data/selftest", exist_ok=True)
-json.dump(out, open("data/selftest/overnight_bt.json", "w"), ensure_ascii=False, indent=1)
+json.dump(out, open("data/selftest/overnight_bt" + ("_" + "_".join(ONLY) if ONLY else "") + ".json", "w"), ensure_ascii=False, indent=1)
 print(json.dumps(out["summary"], ensure_ascii=False))
