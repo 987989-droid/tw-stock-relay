@@ -31,7 +31,7 @@ num = lambda s: float(str(s).replace(",", "")) if str(s).strip() not in ("", "--
 
 # 需要抓的交易日：今天往回 14 個日曆日中，history 尚無證交所資料者（週末自動因 stat≠OK 略過）
 days = [today - datetime.timedelta(days=i) for i in range(0, 15)]
-todo = [d for d in days if d.weekday() < 5 and not H.get(d.strftime("%Y%m%d"), {}).get("bfi82u")]
+todo = [d for d in days if d.weekday() < 5 and "foreign" not in H.get(d.strftime("%Y%m%d"), {}).get("bfi82u", {})]
 for d in todo[:10]:
     ds = d.strftime("%Y%m%d")
     rec = H.setdefault(ds, {})
@@ -46,7 +46,8 @@ for d in todo[:10]:
         for row in j["data"]:
             name = row[0]
             v = num(row[3])
-            if name.startswith("外資及陸資") and "自營商" not in name: net["foreign"] = v
+            if name.startswith("外資及陸資") and "不含" in name: net["foreign"] = v  # 「外資及陸資(不含外資自營商)」
+            elif name.startswith("外資自營商"): net["foreign_dealer"] = v
             elif name.startswith("投信"): net["trust"] = v
             elif name.startswith("自營商(自行買賣)"): net["dealer_self"] = v
             elif name.startswith("自營商(避險)"): net["dealer_hedge"] = v
