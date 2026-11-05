@@ -1,5 +1,5 @@
 {
-  "run_at_taipei": "2026-11-05T02:23:37.607791+08:00",
+  "run_at_taipei": "2026-11-06T02:27:03.967885+08:00",
   "budget_sec": 300,
   "sources": {
     "control_suspend_listed": {
@@ -10,8 +10,8 @@
       "status": 200,
       "count": 1,
       "bytes": 93,
-      "elapsed": 1.0,
-      "path": "data/daily/control_suspend_listed/2026-11-05.json",
+      "elapsed": 1.59,
+      "path": "data/daily/control_suspend_listed/2026-11-06.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -28,7 +28,7 @@
       "count": 1,
       "bytes": 93,
       "elapsed": 0.66,
-      "path": "data/daily/control_altered_listed/2026-11-05.json",
+      "path": "data/daily/control_altered_listed/2026-11-06.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -44,8 +44,8 @@
       "status": 200,
       "count": 23,
       "bytes": 8946,
-      "elapsed": 0.86,
-      "path": "data/daily/penalty_listed/2026-11-05.json",
+      "elapsed": 0.69,
+      "path": "data/daily/penalty_listed/2026-11-06.json",
       "keys": [
         "出表日期",
         "發函日期",
@@ -64,8 +64,8 @@
       "status": 200,
       "count": 38,
       "bytes": 29462,
-      "elapsed": 0.85,
-      "path": "data/daily/disclosure_violation_listed/2026-11-05.json",
+      "elapsed": 0.67,
+      "path": "data/daily/disclosure_violation_listed/2026-11-06.json",
       "keys": [
         "出表日期",
         "發函日期",
@@ -86,7 +86,7 @@
       "count": 15,
       "bytes": 5560,
       "elapsed": 0.68,
-      "path": "data/daily/control_change_listed/2026-11-05.json",
+      "path": "data/daily/control_change_listed/2026-11-06.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -99,8 +99,29 @@
       "url": "https://openapi.twse.com.tw/v1/opendata/t187ap08_L",
       "desc": "上市公司董監持股不足法定成數彙總表",
       "mode": "daily",
-      "ok": false,
-      "err": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "ok": true,
+      "status": 200,
+      "count": 12,
+      "bytes": 7430,
+      "elapsed": 0.68,
+      "path": "data/daily/shortfall_listed/2026-11-06.json",
+      "keys": [
+        "出表日期",
+        "公司代號",
+        "公司名稱",
+        "已發行股份總額",
+        "全體董事應持有股數",
+        "全體董事本人實際持有股數",
+        "全體董事法人代表人分戶集保股數",
+        "全體董事保留運用決定權信託股數",
+        "全體董事不足股數",
+        "全體監察人應持有股數",
+        "全體監察人本人實際持有股數",
+        "全體監察人法人代表人分戶集保股數",
+        "全體監察人保留運用決定權信託股數",
+        "全體監察人不足股數",
+        "持股不足已通知其董監"
+      ]
     },
     "major_holder_listed": {
       "url": "https://openapi.twse.com.tw/v1/opendata/t187ap02_L",
@@ -108,10 +129,10 @@
       "mode": "daily",
       "ok": true,
       "status": 200,
-      "count": 115,
-      "bytes": 14136,
-      "elapsed": 0.89,
-      "path": "data/daily/major_holder_listed/2026-11-05.json",
+      "count": 323,
+      "bytes": 39794,
+      "elapsed": 0.9,
+      "path": "data/daily/major_holder_listed/2026-11-06.json",
       "keys": [
         "出表日期",
         "公司代號",
@@ -125,9 +146,9 @@
       "mode": "period",
       "ok": true,
       "status": 200,
-      "count": 75,
-      "bytes": 27390,
-      "elapsed": 1.04,
+      "count": 108,
+      "bytes": 39438,
+      "elapsed": 0.72,
       "path": "data/quarterly/profitability_listed/115Q3.json",
       "keys": [
         "出表日期",
@@ -148,9 +169,9 @@
       "mode": "period",
       "ok": true,
       "status": 200,
-      "count": 75,
-      "bytes": 102088,
-      "elapsed": 0.9,
+      "count": 108,
+      "bytes": 146647,
+      "elapsed": 1.0,
       "path": "data/quarterly/income_listed_ci/115Q3.json",
       "keys": [
         "出表日期",
@@ -194,9 +215,9 @@
       "mode": "period",
       "ok": true,
       "status": 200,
-      "count": 75,
-      "bytes": 64186,
-      "elapsed": 1.15,
+      "count": 108,
+      "bytes": 92133,
+      "elapsed": 1.04,
       "path": "data/quarterly/balance_listed_ci/115Q3.json",
       "keys": [
         "出表日期",
@@ -228,5 +249,5 @@
       ]
     }
   },
-  "total_elapsed": 8.7
+  "total_elapsed": 8.6
 }
