@@ -1,0 +1,40 @@
+name: us_overnight
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 21:20 UTC（週一至五）＝台北週二至週六 05:20；美股冬令 21:00 UTC、夏令 20:00 UTC 收盤
+    - cron: '20 21 * * 1-5'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/us_overnight.yml', 'scripts/fetch_us_overnight.py']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: relay-commit
+  cancel-in-progress: false
+
+jobs:
+  us:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: deps
+        run: python -m pip install yfinance pandas
+      - name: fetch
+        run: python scripts/fetch_us_overnight.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/derived/us_overnight.json
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "us_overnight $(TZ=Asia/Taipei date +%F_%H%M)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done
+          exit 1
