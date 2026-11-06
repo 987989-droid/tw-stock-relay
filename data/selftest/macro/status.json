@@ -1,8 +1,9 @@
 {
- "run_at_utc": "2026-11-04T07:08:19.823976",
+ "run_at_utc": "2026-11-06T02:05:44.005895",
  "us_facts": "ok",
  "nvda_ar": "ok 33",
- "fr_bis": "ok 77 rules 18",
+ "gev_grid": "ok 10-Q 2026-09-30 3",
+ "fr_bis": "ok 75 rules 16",
  "hkex": {
   "tencent": [
    {
@@ -52,10 +53,5 @@
     "file": "data/selftest/macro/hkex/smic_20260514.txt"
    }
   ]
- },
- "tw_wc": {
-  "2382": "ok 115Q2,115Q1",
-  "2317": "URLError(ConnectionRefusedError(111, 'Connection refused'))",
-  "3231": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
  }
 }
