@@ -363,6 +363,13 @@ if "L3_5d" in S:
 if "L3_tw_gm" in S:
     a = S["L3_tw_gm"]
     L.append(f"L3 台股毛利率 {a['period']} 上游 {a['upstream']}%／下游 {a['downstream']}%")
+# L2 電力・北美電網（2026/11/06 新增）：GE Vernova Electrification 訂單句，數字季度人工核對
+try:
+    G = json.load(open(f"{IN}/gev_grid.json"))
+    S["L2_gev"] = {"form": G["form"], "reportDate": G["reportDate"], "n": len(G["sentences"]), "url": G["url"]}
+    L.append(f"L2 電力・北美電網 ⚪ GEV Electrification 訂單句 {len(G['sentences'])} 則（{G['form']} {G['reportDate']}），數字待人工核對")
+except Exception as e:
+    L.append(f"L2 電力・北美電網 ⚪ 未取得（{repr(e)[:60]}）")
 if "L5" in S:
     L.append("L5 ⚪ 觀察 " + "／".join(f"{k} {v['cur']}%（{v['prev']}）" for k, v in S["L5"].items()))
 if "L4_smic" in S:

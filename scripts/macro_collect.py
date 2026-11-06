@@ -62,6 +62,26 @@ try:
 except Exception as e:
     status["nvda_ar"] = repr(e)[:300]
 
+# 1c) GE Vernova 電網（Electrification 部門）訂單與積壓訂單句（2026/11/06 新增）
+# 用途：宏觀 L2 電力段的北美電網設備需求一手指標，對照台股重電（華城等）月營收。
+# 訂單為 MD&A 揭露（非 XBRL），故抽句不抽數；季度判讀時人工核對數字。
+try:
+    tick = json.loads(get("https://www.sec.gov/files/company_tickers.json", ua))
+    gcik = next(v["cik_str"] for v in tick.values() if v["ticker"] == "GEV")
+    sub = json.loads(get(f"https://data.sec.gov/submissions/CIK{gcik:010d}.json", ua))["filings"]["recent"]
+    i = next(k for k, f in enumerate(sub["form"]) if f in ("10-Q", "10-K"))
+    url = f"https://www.sec.gov/Archives/edgar/data/{gcik}/{sub['accessionNumber'][i].replace('-', '')}/{sub['primaryDocument'][i]}"
+    import html as _h2
+    raw = get(url, ua).decode("utf-8", "replace")
+    txt = re.sub(r"\s+", " ", _h2.unescape(re.sub(r"<[^>]+>", " ", raw)))
+    sents = re.split(r"(?<=[.;])\s+", txt)
+    keep = [x[:500] for x in sents if re.search(r"Electrification", x) and re.search(r"[Oo]rders|backlog|[Bb]acklog|remaining performance", x)]
+    json.dump({"cik": gcik, "form": sub["form"][i], "url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:40]},
+              open(OUT + "/gev_grid.json", "w"), ensure_ascii=False, indent=1)
+    status["gev_grid"] = f"ok {sub['form'][i]} {sub['reportDate'][i]} {len(keep)}"
+except Exception as e:
+    status["gev_grid"] = repr(e)[:300]
+
 # 2) Federal Register：BIS 文件清單＋規則全文重點
 try:
     q = [("conditions[agencies][]", "industry-and-security-bureau"),
