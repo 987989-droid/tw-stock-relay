@@ -76,9 +76,19 @@ try:
     txt = re.sub(r"\s+", " ", _h2.unescape(re.sub(r"<[^>]+>", " ", raw)))
     sents = re.split(r"(?<=[.;])\s+", txt)
     keep = [x[:500] for x in sents if re.search(r"Electrification", x) and re.search(r"[Oo]rders|backlog|[Bb]acklog|remaining performance", x)]
-    json.dump({"cik": gcik, "form": sub["form"][i], "url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:40]},
+    # 表格數字：在每個 "Electrification" 之後 4,000 字內找「Orders／Backlog」後接金額的片段（含前文 60 字供核對）
+    tables = []
+    for m in re.finditer(r"Electrification", txt):
+        w = txt[m.start(): m.start() + 4000]
+        for t in re.finditer(r"(?:Equipment |Services )?(?:Orders|Backlog|backlog)\b[^.]{0,40}?\$\s?[\d,.]+(?:\s+\$?\s?[\d,.()%-]+){0,4}", w):
+            frag = w[max(0, t.start() - 60): t.end()]
+            if frag not in tables:
+                tables.append(frag)
+        if len(tables) >= 30:
+            break
+    json.dump({"cik": gcik, "form": sub["form"][i], "url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:40], "table_frags": tables[:30]},
               open(OUT + "/gev_grid.json", "w"), ensure_ascii=False, indent=1)
-    status["gev_grid"] = f"ok {sub['form'][i]} {sub['reportDate'][i]} {len(keep)}"
+    status["gev_grid"] = f"ok {sub['form'][i]} {sub['reportDate'][i]} 句{len(keep)} 表{len(tables)}"
 except Exception as e:
     status["gev_grid"] = repr(e)[:300]
 
