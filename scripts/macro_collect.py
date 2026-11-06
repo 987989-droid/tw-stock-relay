@@ -78,16 +78,16 @@ try:
     keep = [x[:500] for x in sents if re.search(r"Electrification", x) and re.search(r"[Oo]rders|backlog|[Bb]acklog|remaining performance", x)]
     # 表格數字：在每個 "Electrification" 之後 4,000 字內找「Orders／Backlog」後接金額的片段（含前文 60 字供核對）
     tables = []
-    for m in re.finditer(r"Electrification", txt):
+    for m in re.finditer(r"ELECTRIFICATION", txt):  # 部門段落大寫標題
         w = txt[m.start(): m.start() + 4000]
-        for t in re.finditer(r"(?:Equipment |Services )?(?:Orders|Backlog|backlog)\b[^.]{0,40}?\$\s?[\d,.]+(?:\s+\$?\s?[\d,.()%-]+){0,4}", w):
+        for t in re.finditer(r"(?:Equipment |Services |Total )?(?:Orders|ORDERS|RPO|Backlog|BACKLOG)\b[^.]{0,60}?\$\s?[\d,.]+(?:\s+\$?\s?[\d,.()%-]+){0,4}", w):
             frag = w[max(0, t.start() - 60): t.end()]
             if frag not in tables:
                 tables.append(frag)
         if len(tables) >= 30:
             break
     # 診斷：保存含「rders」或「acklog」的 Electrification 視窗前 4 段，供格式核對（2026/11/06）
-    win = [txt[m.start(): m.start() + 1500] for m in re.finditer(r"Electrification", txt)]
+    win = [txt[m.start(): m.start() + 2500] for m in re.finditer(r"ELECTRIFICATION", txt)]
     win = [w for w in win if re.search(r"rders|acklog", w)][:4]
     json.dump({"cik": gcik, "form": sub["form"][i], "url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:40], "table_frags": tables[:30], "windows": win},
               open(OUT + "/gev_grid.json", "w"), ensure_ascii=False, indent=1)
