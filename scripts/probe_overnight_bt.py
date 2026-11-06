@@ -16,7 +16,7 @@ GROUPS = (("6239 2408 2344 3260 8299 4967", "MU"),
           ("3231 2382 2317 6669 2356 2376 3013 8210", "NVDA"),
           ("2330 3711 2449 6147 6239 6451 6770 2303", "TSM NVDA"),
           ("4958 2368 3037 8046 3189 2383 6274", "NVDA AVGO"),
-          ("2308 3017 3324 2421 8996 1519 1513 1503 1514", "VRT ETN GEV"))
+          ("2308 3017 3324 2421 8996 1519 1513 1503 1514", "VRT ETN GEV POWL HUBB PWR"))
 mk = {r["code"]: r.get("market") for r in json.load(open("data/derived/beta_alpha.json"))["rows"]}
 pairs = []
 for g, p in GROUPS:
