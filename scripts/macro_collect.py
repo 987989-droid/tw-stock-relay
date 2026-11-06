@@ -86,7 +86,10 @@ try:
                 tables.append(frag)
         if len(tables) >= 30:
             break
-    json.dump({"cik": gcik, "form": sub["form"][i], "url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:40], "table_frags": tables[:30]},
+    # 診斷：保存含「rders」或「acklog」的 Electrification 視窗前 4 段，供格式核對
+    win = [txt[m.start(): m.start() + 1500] for m in re.finditer(r"Electrification", txt)]
+    win = [w for w in win if re.search(r"rders|acklog", w)][:4]
+    json.dump({"cik": gcik, "form": sub["form"][i], "url": url, "reportDate": sub["reportDate"][i], "sentences": keep[:40], "table_frags": tables[:30], "windows": win},
               open(OUT + "/gev_grid.json", "w"), ensure_ascii=False, indent=1)
     status["gev_grid"] = f"ok {sub['form'][i]} {sub['reportDate'][i]} 句{len(keep)} 表{len(tables)}"
 except Exception as e:
