@@ -3,7 +3,7 @@
       data/selftest/segments.json、data/derived/revenue_hist.json、data/derived/is_<期>.json
 輸出：data/selftest/macro/summary.json（全部數字）、summary.md（推播正文）。
 任何一項抽不到即標 ⚠️ 並寫明原因，不以舊值或推估補。"""
-import json, os, re, glob, datetime as dt
+import json, re, os, re, glob, datetime as dt
 
 IN = "data/selftest/macro"
 S = {"generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "errors": []}
@@ -366,8 +366,15 @@ if "L3_tw_gm" in S:
 # L2 電力・北美電網（2026/11/06 新增）：GE Vernova Electrification 訂單句，數字季度人工核對
 try:
     G = json.load(open(f"{IN}/gev_grid.json"))
-    S["L2_gev"] = {"form": G["form"], "reportDate": G["reportDate"], "n": len(G["sentences"]), "url": G["url"]}
-    L.append(f"L2 電力・北美電網 ⚪ GEV Electrification 訂單句 {len(G['sentences'])} 則（{G['form']} {G['reportDate']}），數字待人工核對")
+    S["L2_gev"] = {"form": G["form"], "reportDate": G["reportDate"], "url": G["url"]}
+    # 第一個「Total RPO $ a $ b $ c」片段＝Electrification 部門（欄位：本季末／上年底／去年同季末，單位百萬美元）
+    m = next((re.search(r"Total RPO \$ ([\d,]+) \$ ([\d,]+) \$ ([\d,]+)", t) for t in G.get("table_frags", []) if "Total RPO" in t), None)
+    if m:
+        a, b, c = (int(x.replace(",", "")) for x in m.groups())
+        S["L2_gev"].update({"rpo": a, "rpo_ye": b, "rpo_ly": c, "yoy": round((a / c - 1) * 100, 1)})
+        L.append(f"L2 電力・北美電網 ⚪ GEV Electrification 積壓訂單(RPO) {a:,}百萬美元 YoY {S['L2_gev']['yoy']}%（{G['reportDate']}；含併購須人工扣除）")
+    else:
+        L.append(f"L2 電力・北美電網 ⚪ GEV RPO 表格未解析（{G['form']} {G['reportDate']}）")
 except Exception as e:
     L.append(f"L2 電力・北美電網 ⚪ 未取得（{repr(e)[:60]}）")
 if "L5" in S:
