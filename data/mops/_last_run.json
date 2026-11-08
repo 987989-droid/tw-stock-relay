@@ -1,5 +1,5 @@
 {
- "fetched_at_utc": "2026-11-01T23:01:56.990732+00:00",
+ "fetched_at_utc": "2026-11-08T23:06:49.446419+00:00",
  "requested_stocks": [
   "1513",
   "1519",
@@ -152,7 +152,7 @@
    "http": 200,
    "bytes": 42818,
    "detected_co_id": "2474",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "2474",
@@ -160,19 +160,19 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 32802,
+   "bytes": 32801,
    "detected_co_id": "2474",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "2474",
    "table": "t164sb05",
-   "ok": false,
-   "err": "URLError: <urlopen error timed out>",
-   "http": null,
-   "bytes": 0,
-   "detected_co_id": null,
-   "period": null
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 21218,
+   "detected_co_id": "2474",
+   "period": "115Q3"
   },
   {
    "co_id": "2474",
@@ -180,9 +180,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 48213,
+   "bytes": 49745,
    "detected_co_id": "2474",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3035",
@@ -387,22 +387,22 @@
   {
    "co_id": "6147",
    "table": "t164sb03",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 43445,
-   "detected_co_id": "6147",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error timed out>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "6147",
    "table": "t164sb04",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 30658,
-   "detected_co_id": "6147",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error timed out>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "6147",
@@ -470,9 +470,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 44844,
+   "bytes": 45507,
    "detected_co_id": "6239",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6239",
@@ -480,9 +480,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 28696,
+   "bytes": 29404,
    "detected_co_id": "6239",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6239",
@@ -490,9 +490,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 21001,
+   "bytes": 21263,
    "detected_co_id": "6239",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6239",
@@ -500,9 +500,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 34666,
+   "bytes": 41519,
    "detected_co_id": "6239",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6451",
@@ -552,7 +552,7 @@
    "http": 200,
    "bytes": 36149,
    "detected_co_id": "6643",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6643",
@@ -562,7 +562,7 @@
    "http": 200,
    "bytes": 27032,
    "detected_co_id": "6643",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6643",
@@ -570,19 +570,19 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 16607,
+   "bytes": 17557,
    "detected_co_id": "6643",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6643",
    "table": "t164sb06",
-   "ok": false,
-   "err": "URLError: <urlopen error timed out>",
-   "http": null,
-   "bytes": 0,
-   "detected_co_id": null,
-   "period": null
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 32739,
+   "detected_co_id": "6643",
+   "period": "115Q3"
   },
   {
    "co_id": "8227",
@@ -628,7 +628,7 @@
  "ok_count": 58,
  "fail_count": 2,
  "periods_seen": {
-  "115Q2": 50,
-  "115Q3": 8
+  "115Q2": 40,
+  "115Q3": 18
  }
 }
