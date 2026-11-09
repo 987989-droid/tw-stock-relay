@@ -138,16 +138,16 @@
     },
     "news": {
       "path": "data/daily/news/2026-11-09.json",
-      "count": 212,
+      "count": 257,
       "mode": "daily",
       "desc": "台灣財經新聞標題彙整（多來源 RSS，全市場零過濾）",
       "feeds_ok": 12,
       "feeds_total": 12,
-      "cn_count": 78,
-      "kwt_count": 59,
-      "nz_count": 10,
-      "ev_count": 4,
-      "dup_folded": 11
+      "cn_count": 93,
+      "kwt_count": 87,
+      "nz_count": 40,
+      "ev_count": 0,
+      "dup_folded": 16
     }
   },
   "failed": [],
