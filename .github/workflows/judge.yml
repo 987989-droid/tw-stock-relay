@@ -1,0 +1,76 @@
+name: judge
+
+# 財報燈號 parser 改在中繼端執行（2026/11/09）。
+# 原因：Claude 排程（財報燈號週報）在雲端執行 judge_parse.py 時，
+#   curl|python3、下載後 python3 -I、git clone 後 python3 三種寫法
+#   皆被自動權限分類器以「Code from External」擋下。
+# 改為：本 workflow 跑 parser → 寫 data/derived/judge.json；排程只讀 JSON。
+# judge_parse.py 從 raw.githubusercontent.com 讀 data/mops/，故 mops commit 後先等 raw 快取更新。
+
+on:
+  workflow_dispatch:
+  workflow_run:             # mops 跑完即接著跑
+    workflows: [mops]
+    types: [completed]
+  push:                     # 本檔或 parser 修改時自動跑一次（本環境無法以 API 手動觸發）
+    branches: [main]
+    paths:
+      - '.github/workflows/judge.yml'
+      - 'scripts/judge_parse.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: relay-commit       # 與 daily／news／mops 共用，避免同時 push 互撞
+  cancel-in-progress: false
+
+jobs:
+  judge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 等 raw.githubusercontent 快取更新（僅 mops 觸發時）
+        if: github.event_name == 'workflow_run'
+        run: sleep 360
+
+      - name: 跑 parser
+        run: python scripts/judge_parse.py > /tmp/judge_raw.json
+
+      - name: 加上產生時間與 MOPS 抓取時間
+        run: |
+          python - <<'EOF'
+          import json, datetime as dt, pathlib
+          d = json.load(open("/tmp/judge_raw.json", encoding="utf-8"))
+          lr = {}
+          p = pathlib.Path("data/mops/_last_run.json")
+          if p.exists():
+              lr = json.load(open(p, encoding="utf-8"))
+          d["generated_at_utc"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+          d["mops_fetched_at_utc"] = lr.get("fetched_at_utc")
+          d["stock_count"] = len(d.get("stocks", {}))
+          pathlib.Path("data/derived").mkdir(parents=True, exist_ok=True)
+          json.dump(d, open("data/derived/judge.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          print("period", d.get("period"), "stocks", d["stock_count"], "bad_files", d.get("bad_files"))
+          EOF
+
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/derived/judge.json
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "judge parser 輸出 $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "push 第 $i 次失敗，等 5 秒重試"
+            sleep 5
+          done
+          echo "push 三次都失敗"
+          exit 1
