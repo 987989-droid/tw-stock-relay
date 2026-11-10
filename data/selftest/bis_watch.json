@@ -1,8 +1,46 @@
 {
- "run_at_utc": "2026-11-10T05:24:47.093118+00:00",
- "query": "BIS, term=affiliates, since 2026-11-10",
- "count": 0,
- "results": [],
- "relevant": [],
+ "run_at_utc": "2026-11-10T05:32:01.221979+00:00",
+ "query": "BIS, term=affiliates, since 2026-08-10",
+ "count": 3,
+ "results": [
+  {
+   "title": "Extension of the Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
+   "type": "Rule",
+   "publication_date": "2026-11-09",
+   "document_number": "2026-22793",
+   "abstract": "The Bureau of Industry and Security (BIS) is extending the suspension of the interim final rule (IFR), \"Expansion of End-User Controls to Cover Affiliates of Certain Listed Entities.\" The suspension was set to end November 9, 2026. This final rule extends the suspension through January 10, 2027.",
+   "html_url": "https://www.federalregister.gov/documents/2026/11/09/2026-22793/extension-of-the-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed",
+   "effective_on": "2026-11-09"
+  },
+  {
+   "title": "Order Renewing Order Temporarily Denying Export Privileges",
+   "type": "Notice",
+   "publication_date": "2026-10-27",
+   "document_number": "2026-21840",
+   "abstract": null,
+   "html_url": "https://www.federalregister.gov/documents/2026/10/27/2026-21840/order-renewing-order-temporarily-denying-export-privileges",
+   "effective_on": null
+  },
+  {
+   "title": "Measures To Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052",
+   "type": "Rule",
+   "publication_date": "2026-09-24",
+   "document_number": "2026-19537",
+   "abstract": "On August 6, 2026, the President issued Proclamation 11052, \"Adjusting Imports of Polysilicon and Its Derivatives Into the United States\" (Proclamation 11052), ordering the Secretary of Commerce (Secretary) to take action to restrict imports by a company if he determines the company is stockpiling polysilicon or polysilicon derivatives (Polysilicon Products) in advance of import adjustments that will be effective on December 4, 2026. The Bureau of Industry and Security (BIS), in this temporary final rule (TFR), announces the criteria and process it will use to monitor existing companies for evidence of stockpiling, limit a newly established importer's ability to stockpile, and subject companies that are stockpiling to an import prohibition if necessary. This TFR also establishes the process for such companies to obtain a waiver from any import prohibitions imposed pursuant to this rule, and imposes certain import limitations on new importers that register with U.S. Customs and Border Protection (CBP) on or after August 6, 2026.",
+   "html_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19537/measures-to-restrict-stockpiling-of-polysilicon-and-polysilicon-derivatives-under-proclamation-11052",
+   "effective_on": "2026-09-22"
+  }
+ ],
+ "relevant": [
+  {
+   "publication_date": "2026-11-09",
+   "type": "Rule",
+   "title": "Extension of the Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
+   "document_number": "2026-22793",
+   "html_url": "https://www.federalregister.gov/documents/2026/11/09/2026-22793/extension-of-the-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed",
+   "effective_on": "2026-11-09",
+   "abstract": "The Bureau of Industry and Security (BIS) is extending the suspension of the interim final rule (IFR), \"Expansion of End-User Controls to Cover Affiliates of Certain Listed Entities.\" The suspension was set to end November 9, 2026. This final rule extends the suspension through January 10, 2027."
+  }
+ ],
  "status": "ok"
 }
