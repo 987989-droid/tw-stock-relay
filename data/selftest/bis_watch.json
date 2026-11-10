@@ -1,37 +1,8 @@
 {
- "run_at_utc": "2026-11-10T03:58:13.552885+00:00",
- "query": "BIS, term=affiliates, since 2026-10-01",
- "count": 2,
- "results": [
-  {
-   "title": "Extension of the Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
-   "type": "Rule",
-   "publication_date": "2026-11-09",
-   "document_number": "2026-22793",
-   "abstract": "The Bureau of Industry and Security (BIS) is extending the suspension of the interim final rule (IFR), \"Expansion of End-User Controls to Cover Affiliates of Certain Listed Entities.\" The suspension was set to end November 9, 2026. This final rule extends the suspension through January 10, 2027.",
-   "html_url": "https://www.federalregister.gov/documents/2026/11/09/2026-22793/extension-of-the-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed",
-   "effective_on": "2026-11-09"
-  },
-  {
-   "title": "Order Renewing Order Temporarily Denying Export Privileges",
-   "type": "Notice",
-   "publication_date": "2026-10-27",
-   "document_number": "2026-21840",
-   "abstract": null,
-   "html_url": "https://www.federalregister.gov/documents/2026/10/27/2026-21840/order-renewing-order-temporarily-denying-export-privileges",
-   "effective_on": null
-  }
- ],
- "relevant": [
-  {
-   "publication_date": "2026-11-09",
-   "type": "Rule",
-   "title": "Extension of the Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
-   "document_number": "2026-22793",
-   "html_url": "https://www.federalregister.gov/documents/2026/11/09/2026-22793/extension-of-the-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed",
-   "effective_on": "2026-11-09",
-   "abstract": "The Bureau of Industry and Security (BIS) is extending the suspension of the interim final rule (IFR), \"Expansion of End-User Controls to Cover Affiliates of Certain Listed Entities.\" The suspension was set to end November 9, 2026. This final rule extends the suspension through January 10, 2027."
-  }
- ],
+ "run_at_utc": "2026-11-10T04:41:56.476704+00:00",
+ "query": "BIS, term=affiliates, since 2026-11-10",
+ "count": 0,
+ "results": [],
+ "relevant": [],
  "status": "ok"
 }
