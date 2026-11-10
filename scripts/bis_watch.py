@@ -1,11 +1,12 @@
 """監看：BIS「關係企業 50% 規則」暫停是否再延長或有後續規則。
 2026/11/09 規則 2026-22793 已把暫停延長至 2027/01/10；起算日改為 2026-11-10，只抓此後的新文件。
 查 Federal Register API：BIS 自起算日起、全文含 affiliates 的文件。輸出 data/selftest/bis_watch.json。不重試。"""
-import json, urllib.request, urllib.parse, datetime
-out = {"run_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "query": "BIS, term=affiliates, since 2026-11-10"}
+import json, urllib.request, urllib.parse, datetime, os
+SINCE = (os.environ.get("BIS_SINCE") or "").strip() or "2026-11-10"  # 手動觸發可指定起算日（YYYY-MM-DD），排程與 push 用預設值
+out = {"run_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "query": f"BIS, term=affiliates, since {SINCE}"}
 try:
     q = [("conditions[agencies][]", "industry-and-security-bureau"), ("conditions[term]", "affiliates"),
-         ("conditions[publication_date][gte]", "2026-11-10"), ("per_page", "100"), ("order", "newest")] + \
+         ("conditions[publication_date][gte]", SINCE), ("per_page", "100"), ("order", "newest")] + \
         [("fields[]", f) for f in ("title", "type", "publication_date", "document_number", "abstract", "html_url", "effective_on")]
     req = urllib.request.Request("https://www.federalregister.gov/api/v1/documents.json?" + urllib.parse.urlencode(q),
                                  headers={"User-Agent": "tw-stock-relay research"})

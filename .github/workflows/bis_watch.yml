@@ -2,6 +2,11 @@ name: bis_watch
 
 on:
   workflow_dispatch:
+    inputs:
+      since:
+        description: '起算日 YYYY-MM-DD（留空＝2026-11-10）'
+        required: false
+        default: ''
   schedule:
     # 2027/01/10 22:00 UTC＝台北 01/11 06:00（暫停期 2027/01/10 屆滿）；Claude 查核排在台北 01/11 16:43（GitHub 延遲實測最長 9.6 小時）
     # 本 cron 每年 1/10 都會觸發，查核完成後須改掉或刪除本檔
@@ -27,6 +32,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: fetch
+        env:
+          BIS_SINCE: ${{ github.event.inputs.since }}
         run: python scripts/bis_watch.py
       - name: commit
         run: |
