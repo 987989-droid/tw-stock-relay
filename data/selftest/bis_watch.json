@@ -1,5 +1,5 @@
 {
- "run_at_utc": "2026-11-10T03:07:41.027839+00:00",
+ "run_at_utc": "2026-11-10T03:58:13.552885+00:00",
  "query": "BIS, term=affiliates, since 2026-10-01",
  "count": 2,
  "results": [
