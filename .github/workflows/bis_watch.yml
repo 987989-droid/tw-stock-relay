@@ -3,9 +3,9 @@ name: bis_watch
 on:
   workflow_dispatch:
   schedule:
-    # 2026/11/09 22:00 UTC＝台北 11/10 06:00，推播排程 11/10 08:43 讀結果；用完可刪本檔
-    # 2026/11/10 補跑：排程到 11:00 仍未啟動，改由本次 push 觸發一次
-    - cron: '0 22 9 11 *'
+    # 2027/01/10 22:00 UTC＝台北 01/11 06:00（暫停期 2027/01/10 屆滿）；Claude 查核排在台北 01/11 16:43（GitHub 延遲實測最長 9.6 小時）
+    # 本 cron 每年 1/10 都會觸發，查核完成後須改掉或刪除本檔
+    - cron: '0 22 10 1 *'
   push:
     branches: [main]
     paths: ['.github/workflows/bis_watch.yml', 'scripts/bis_watch.py']
