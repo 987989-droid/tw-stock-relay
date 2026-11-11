@@ -65,7 +65,7 @@ def quarters(rows):
         if not prev:
             continue
         p = by[prev[0]]
-        out[e] = {"start": prev[0][1], "end": e, "val": x["val"] - p["val"], "method": "derived",
+        out[e] = {"start": (d(prev[0][1]) + datetime.timedelta(days=1)).isoformat(), "end": e, "val": x["val"] - p["val"], "method": "derived",
                   "filed": x["filed"], "form": x["form"], "basis": f"{s}~{e} 累計 − {s}~{prev[0][1]} 累計"}
     qs = sorted(out.values(), key=lambda q: q["end"])
     for q in qs:
