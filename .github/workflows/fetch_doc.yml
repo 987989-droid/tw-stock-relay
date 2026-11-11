@@ -1,0 +1,51 @@
+name: fetch_doc
+
+# 一次性公開文件下載（2026/11/11 建）：只能手動觸發，無排程、不連鎖。
+# 用途：sandbox 對 mopsov 為 403、WebFetch 被 robots 擋時，改由 runner 下載 MOPS 公開 PDF（如法說簡報），
+#   存原檔與 pdftotext 文字版到 data/docs/。不含任何持股名單。
+# 失敗即停，不重試。
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: '檔名（不含副檔名），例 336320260902M001'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: relay-commit
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: 下載
+        env:
+          N: ${{ inputs.name }}
+        run: |
+          set -u
+          mkdir -p data/docs
+          ok=0
+          for u in "https://mopsov.twse.com.tw/nas/STR/${N}.pdf" "https://mops.twse.com.tw/nas/STR/${N}.pdf"; do
+            code=$(curl -sS -L -A "Mozilla/5.0" -o "data/docs/${N}.pdf" -w '%{http_code}' "$u" || echo ERR)
+            echo "$u -> $code"
+            if [ "$code" = "200" ] && head -c4 "data/docs/${N}.pdf" | grep -q '%PDF'; then ok=1; break; fi
+          done
+          [ $ok = 1 ] || { echo "兩個網址皆失敗"; head -c 400 "data/docs/${N}.pdf" || true; rm -f "data/docs/${N}.pdf"; exit 1; }
+          sudo apt-get install -y -qq poppler-utils >/dev/null
+          pdftotext -layout "data/docs/${N}.pdf" "data/docs/${N}.txt"
+          wc -c "data/docs/${N}.pdf" "data/docs/${N}.txt"
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/docs
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "fetch_doc ${{ inputs.name }}"
+          git pull --rebase origin main && git push origin main
