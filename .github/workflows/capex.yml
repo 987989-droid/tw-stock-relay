@@ -1,0 +1,40 @@
+name: capex
+
+# 大客戶資本支出（2026/11/11 使用者核可建立）：每週日抓 SEC EDGAR 五家雲端大廠現金資本支出，
+#   還原單季並算 YoY，寫 data/derived/hyperscaler_capex.json。不含任何持股資訊。
+# 每天最多一次；出錯即停、不重試、不連鎖觸發其他動作、不寄信。
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * 0'     # 週日 02:17 UTC＝台北 10:17
+  push:
+    branches: [main]
+    paths: ['.github/workflows/capex.yml', 'scripts/fetch_capex.py']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: relay-commit
+  cancel-in-progress: false
+
+jobs:
+  capex:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 抓取
+        run: python scripts/fetch_capex.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/derived/hyperscaler_capex.json
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "capex $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main && git push origin main
