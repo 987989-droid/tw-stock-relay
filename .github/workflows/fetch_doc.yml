@@ -1,16 +1,25 @@
 name: fetch_doc
 
-# 一次性公開文件下載（2026/11/11 建）：只能手動觸發，無排程、不連鎖。
-# 用途：sandbox 對 mopsov 為 403、WebFetch 被 robots 擋時，改由 runner 下載 MOPS 公開 PDF（如法說簡報），
-#   存原檔與 pdftotext 文字版到 data/docs/。不含任何持股名單。
-# 失敗即停，不重試。
+# 公開文件下載（2026/11/11 建、11/12 擴充財報）：只能手動觸發，無排程、不連鎖。
+# 用途：sandbox 連不到 MOPS／doc.twse 時，改由 runner 下載公開 PDF 並轉文字，存 data/docs/。
+#   kind=str：MOPS 法說簡報（name＝檔名不含副檔名）
+#   kind=fin：合併財報 PDF（name＝公司代號；periods＝西元年＋季別，逗號分隔，例 202603,202601）
+# 失敗即停，不重試。詳見 scripts/fetch_doc.py。
 
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: '檔名（不含副檔名），例 336320260902M001'
+      kind:
+        description: 'str＝法說簡報；fin＝財報'
         required: true
+        default: 'str'
+      name:
+        description: 'str：檔名（例 336320260902M001）；fin：公司代號'
+        required: true
+      periods:
+        description: 'fin 專用：期別清單（例 202603,202601,202504）'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -22,30 +31,28 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: 安裝 pdftotext
+        run: sudo apt-get install -y -qq poppler-utils >/dev/null
       - name: 下載
+        id: dl
+        continue-on-error: true
+        shell: bash
         env:
-          N: ${{ inputs.name }}
-        run: |
-          set -u
-          mkdir -p data/docs
-          ok=0
-          for u in "https://mopsov.twse.com.tw/nas/STR/${N}.pdf" "https://mops.twse.com.tw/nas/STR/${N}.pdf"; do
-            code=$(curl -sS -L -A "Mozilla/5.0" -o "data/docs/${N}.pdf" -w '%{http_code}' "$u" || echo ERR)
-            echo "$u -> $code"
-            if [ "$code" = "200" ] && head -c4 "data/docs/${N}.pdf" | grep -q '%PDF'; then ok=1; break; fi
-          done
-          [ $ok = 1 ] || { echo "兩個網址皆失敗"; head -c 400 "data/docs/${N}.pdf" || true; rm -f "data/docs/${N}.pdf"; exit 1; }
-          sudo apt-get install -y -qq poppler-utils >/dev/null
-          pdftotext -layout "data/docs/${N}.pdf" "data/docs/${N}.txt"
-          wc -c "data/docs/${N}.pdf" "data/docs/${N}.txt"
+          KIND: ${{ inputs.kind }}
+          NAME: ${{ inputs.name }}
+          PERIODS: ${{ inputs.periods }}
+        run: python3 scripts/fetch_doc.py "$KIND" "$NAME" "$PERIODS" | tee data/docs/_last_run.txt
       - name: commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data/docs
           git diff --staged --quiet && echo "無變更" && exit 0
-          git commit -m "fetch_doc ${{ inputs.name }}"
+          git commit -m "fetch_doc ${{ inputs.kind }} ${{ inputs.name }} ${{ inputs.periods }}"
           git pull --rebase origin main && git push origin main
+      - name: 結果
+        if: steps.dl.outcome != 'success'
+        run: exit 1
