@@ -1,0 +1,33 @@
+probe 2026-11-11T13:22Z
+== https://buzzorange.com/techorange/ -> 200 text/html; charset=UTF-8 282079 final=https://techorange.com/
+  html title: TechOrange 科技報橘
+  dates found: ['2026/11/4', '2026/11/5', '2026/11/55', '2026/11/8', '2026/11/92']
+  article links=0
+== https://buzzorange.com/techorange/latest/ -> 200 text/html; charset=UTF-8 1141866 final=https://techorange.com/latest/
+  html title: 最新文章 | TechOrange 科技報橘
+  dates found: ['2026/11/9', '2026/11/91', '2026/11/92', '2026/11/94', '2026/11/97']
+  article links=0
+== https://buzzorange.com/techorange/feed/ -> 200 application/rss+xml; charset=UTF-8 238716 final=https://techorange.com/feed/
+  RSS items=20 lastBuildDate=Wed, 11 Nov 2026 13:21:45 +0800
+  - Wed, 11 Nov 2026 15:00:55 +0800 | AI 預算還要加碼，投資報酬卻說不清：38% 受訪者曾因超支延後、縮減或取消專案 | https://techorange.com/2026/11/11/ai-project-cost-overruns-vb-pulse/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 14:50:00 +0800 | 靠 AI 開拓新生意：全美最大婚紗商 David’s Bridal 如何從賣婚紗轉型婚禮平台？ | https://techorange.com/2026/11/11/ai-davids-bridal/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 12:07:23 +0800 | Google Gemini Robotics 2.5 進賓士產線：人形機器人自主揀料，概念驗證成功率 96% | https://techorange.com/2026/11/11/google-gemini-robotics-2-5-mercedes-kitting/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 10:42:52 +0800 | 【別只看 token 單價】從支出追到成果，看懂 AI 代理人的經濟效益將成為管理優勢 | https://techorange.com/2026/11/11/token-spend-management/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 10:37:50 +0800 | Anthropic IPO 前推出 AI 辦公套件：從試算表到會議協作，為何開始挑戰 Microsoft、Google？ | https://techorange.com/2026/11/11/anthropic-unveils-office-tools-ahead-of-ipo/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 08:10:00 +0800 | 聯合利華再部署 40 多套 AI 數位分身：數百座工廠中，怎麼挑出值得導入的據點？ | https://techorange.com/2026/11/11/unilever-digital-twins-manufacturing/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 05:30:00 +0800 | 【科技早餐】Anthropic IPO 260 億美元認購草案曝光又撤回！台積電、NVIDIA 列名單 | https://techorange.com/2026/11/11/anthropic-ipo-tsmc-nvidia-investment-draft-withdrawn/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Tue, 10 Nov 2026 15:07:54 +0800 | 日月光攜手 SAS 建構 Agentic AI 智慧營運中樞 | https://techorange.com/2026/11/10/asegroup-sas-viya-agenticai/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+== https://techorange.com/ -> 200 text/html; charset=UTF-8 282079 final=https://techorange.com/
+  html title: TechOrange 科技報橘
+  dates found: ['2026/11/4', '2026/11/5', '2026/11/55', '2026/11/8', '2026/11/92']
+  article links=0
+== https://techorange.com/feed/ -> 200 application/rss+xml; charset=UTF-8 238716 final=https://techorange.com/feed/
+  RSS items=20 lastBuildDate=Wed, 11 Nov 2026 13:21:45 +0800
+  - Wed, 11 Nov 2026 15:00:55 +0800 | AI 預算還要加碼，投資報酬卻說不清：38% 受訪者曾因超支延後、縮減或取消專案 | https://techorange.com/2026/11/11/ai-project-cost-overruns-vb-pulse/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 14:50:00 +0800 | 靠 AI 開拓新生意：全美最大婚紗商 David’s Bridal 如何從賣婚紗轉型婚禮平台？ | https://techorange.com/2026/11/11/ai-davids-bridal/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 12:07:23 +0800 | Google Gemini Robotics 2.5 進賓士產線：人形機器人自主揀料，概念驗證成功率 96% | https://techorange.com/2026/11/11/google-gemini-robotics-2-5-mercedes-kitting/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 10:42:52 +0800 | 【別只看 token 單價】從支出追到成果，看懂 AI 代理人的經濟效益將成為管理優勢 | https://techorange.com/2026/11/11/token-spend-management/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 10:37:50 +0800 | Anthropic IPO 前推出 AI 辦公套件：從試算表到會議協作，為何開始挑戰 Microsoft、Google？ | https://techorange.com/2026/11/11/anthropic-unveils-office-tools-ahead-of-ipo/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 08:10:00 +0800 | 聯合利華再部署 40 多套 AI 數位分身：數百座工廠中，怎麼挑出值得導入的據點？ | https://techorange.com/2026/11/11/unilever-digital-twins-manufacturing/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Wed, 11 Nov 2026 05:30:00 +0800 | 【科技早餐】Anthropic IPO 260 億美元認購草案曝光又撤回！台積電、NVIDIA 列名單 | https://techorange.com/2026/11/11/anthropic-ipo-tsmc-nvidia-investment-draft-withdrawn/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
+  - Tue, 10 Nov 2026 15:07:54 +0800 | 日月光攜手 SAS 建構 Agentic AI 智慧營運中樞 | https://techorange.com/2026/11/10/asegroup-sas-viya-agenticai/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=techorange_rss
