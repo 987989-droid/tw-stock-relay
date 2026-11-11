@@ -25,7 +25,7 @@ jobs:
           mkdir -p data/probe
           python3 - > data/probe/sec.txt <<'PY'
           import json, time, urllib.request, datetime
-          UA = "tw-stock-relay research github.com/987989-droid/tw-stock-relay"
+          UA = "tw-stock-relay research-bot@example.com"
           def get(u):
               r = urllib.request.Request(u, headers={"User-Agent": UA, "Accept-Encoding": "identity"})
               try:
@@ -38,7 +38,7 @@ jobs:
           print("probe", datetime.datetime.utcnow().isoformat(timespec="minutes"), "Z")
           s, b = get("https://www.sec.gov/files/company_tickers.json")
           print("company_tickers", s, len(b))
-          cik = {}
+          cik = {"GOOGL":1652044,"MSFT":789019,"AMZN":1018724,"META":1326801,"ORCL":1341439,"NVDA":1045810,"AVGO":1730168}
           if s == 200:
               for v in json.loads(b).values():
                   cik[v["ticker"]] = v["cik_str"]
