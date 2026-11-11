@@ -63,6 +63,8 @@ def do_fin(co, periods):
             pages = subprocess.run(["pdfinfo", pdf], capture_output=True, text=True).stdout
             pg = re.search(r"Pages:\s+(\d+)", pages)
             print(fn, "pdf bytes", len(b), "pages", pg.group(1) if pg else "?", "txt bytes", n)
+            # 核閱／查核報告頁多為掃描圖，文字版讀不到：第 3～6 頁另存小圖
+            subprocess.run(["pdftoppm", "-r", "70", "-f", "3", "-l", "6", "-png", pdf, pdf[:-4] + "_p"], check=False)
             if n > 20000:
                 os.remove(pdf)          # 有文字層：只留文字版
             else:
