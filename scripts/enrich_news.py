@@ -32,6 +32,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 這些公司簡稱同時是常用詞或人名，直接比對會大量誤命中。
 # 已知實例：2026-09-07「拜登兒子杭特可能參選 2028」被比對成 杭特(3297)。
 NAME_STOP = {
+    "互動", "全新",  # 2026/11/11 加：一般用語，科技報橘接入後誤配 6486、2455
     "大同", "統一", "中華", "台灣", "第一", "國際", "中國", "富邦", "元大", "永豐",
     "合庫", "開發", "國票", "日盛", "台名", "力麗", "三洋", "東元", "國建", "南亞",
     "中鋼", "台塑", "杭特", "大成", "勤益", "華新", "遠東", "中興", "亞洲", "全國",
@@ -160,6 +161,16 @@ def _code_compat(a, b):
 NAME_PREV_WORDS = {"算力", "電力", "動力", "能力", "壓力", "實力", "人力", "財力", "火力", "效力", "產力", "推力", "助力", "主力", "潛力", "魅力", "合力", "全力", "努力", "勢力", "馬力", "熱力", "風力", "水力", "核力"}
 NAME_NEXT_WORDS = {"成長", "成本", "成為", "成功", "成立", "成績", "成效", "成交", "成熟", "成果", "成員", "成分", "成品", "成型", "成形", "成就", "成真", "成數", "成份"}
 
+# 含兩字公司名的固定詞組（2026/11/11 加：科技報橘接入後「聯合利華」誤配 1423、「略勝一籌」誤配 1773）
+NAME_MASK = ("聯合利華", "略勝一籌")
+
+def masked(text, i, nm):
+    for ph in NAME_MASK:
+        j = ph.find(nm)
+        if j != -1 and text[i - j:i - j + len(ph)] == ph:
+            return True
+    return False
+
 def name_hit(text, nm):
     if len(nm) != 2:
         return True
@@ -167,7 +178,7 @@ def name_hit(text, nm):
     while i != -1:
         prev = text[i - 1:i + 1] if i > 0 else ""
         nxt = text[i + 1:i + 3]
-        if prev not in NAME_PREV_WORDS and nxt not in NAME_NEXT_WORDS:
+        if prev not in NAME_PREV_WORDS and nxt not in NAME_NEXT_WORDS and not masked(text, i, nm):
             return True
         i = text.find(nm, i + 1)
     return False
