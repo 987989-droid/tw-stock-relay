@@ -1,5 +1,5 @@
 {
- "generated_at_utc": "2026-11-11T13:50Z",
+ "generated_at_utc": "2026-11-11T13:52Z",
  "source": "SEC EDGAR XBRL companyfacts（10-Q／10-K）",
  "unit": "百萬美元（val_musd）",
  "note": "現金資本支出（購置不動產廠房設備）。method=derived 為年初累計相減還原之單季值。甲骨文會計季末為 2／5／8／11 月，不併入日曆季合計。",
@@ -11,7 +11,7 @@
    "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
    "quarters": [
     {
-     "start": "2023-09-30",
+     "start": "2023-10-01",
      "end": "2023-12-31",
      "val": 11019000000,
      "method": "derived",
@@ -32,7 +32,7 @@
      "val_musd": 12012
     },
     {
-     "start": "2024-03-31",
+     "start": "2024-04-01",
      "end": "2024-06-30",
      "val": 13186000000,
      "method": "derived",
@@ -43,7 +43,7 @@
      "val_musd": 13186
     },
     {
-     "start": "2024-06-30",
+     "start": "2024-07-01",
      "end": "2024-09-30",
      "val": 13061000000,
      "method": "derived",
@@ -54,7 +54,7 @@
      "val_musd": 13061
     },
     {
-     "start": "2024-09-30",
+     "start": "2024-10-01",
      "end": "2024-12-31",
      "val": 14276000000,
      "method": "derived",
@@ -75,7 +75,7 @@
      "val_musd": 17197
     },
     {
-     "start": "2025-03-31",
+     "start": "2025-04-01",
      "end": "2025-06-30",
      "val": 22446000000,
      "method": "derived",
@@ -86,7 +86,7 @@
      "val_musd": 22446
     },
     {
-     "start": "2025-06-30",
+     "start": "2025-07-01",
      "end": "2025-09-30",
      "val": 23953000000,
      "method": "derived",
@@ -97,7 +97,7 @@
      "val_musd": 23953
     },
     {
-     "start": "2025-09-30",
+     "start": "2025-10-01",
      "end": "2025-12-31",
      "val": 27851000000,
      "method": "derived",
@@ -118,7 +118,7 @@
      "val_musd": 35674
     },
     {
-     "start": "2026-03-31",
+     "start": "2026-04-01",
      "end": "2026-06-30",
      "val": 44924000000,
      "method": "derived",
@@ -129,7 +129,7 @@
      "val_musd": 44924
     },
     {
-     "start": "2026-06-30",
+     "start": "2026-07-01",
      "end": "2026-09-30",
      "val": 51355000000,
      "method": "derived",
@@ -168,7 +168,7 @@
      "val_musd": 10952
     },
     {
-     "start": "2024-03-31",
+     "start": "2024-04-01",
      "end": "2024-06-30",
      "val": 13873000000,
      "method": "derived",
@@ -209,7 +209,7 @@
      "val_musd": 16745
     },
     {
-     "start": "2025-03-31",
+     "start": "2025-04-01",
      "end": "2025-06-30",
      "val": 17079000000,
      "method": "derived",
@@ -250,7 +250,7 @@
      "val_musd": 30876
     },
     {
-     "start": "2026-03-31",
+     "start": "2026-04-01",
      "end": "2026-06-30",
      "val": 35802000000,
      "method": "derived",
@@ -279,7 +279,7 @@
    "concept": "PaymentsToAcquireProductiveAssets",
    "quarters": [
     {
-     "start": "2023-09-30",
+     "start": "2023-10-01",
      "end": "2023-12-31",
      "val": 14588000000,
      "method": "derived",
@@ -320,7 +320,7 @@
      "val_musd": 22620
     },
     {
-     "start": "2024-09-30",
+     "start": "2024-10-01",
      "end": "2024-12-31",
      "val": 27834000000,
      "method": "derived",
@@ -361,7 +361,7 @@
      "val_musd": 35095
     },
     {
-     "start": "2025-09-30",
+     "start": "2025-10-01",
      "end": "2025-12-31",
      "val": 39522000000,
      "method": "derived",
@@ -410,7 +410,7 @@
    "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
    "quarters": [
     {
-     "start": "2023-09-30",
+     "start": "2023-10-01",
      "end": "2023-12-31",
      "val": 7592000000,
      "method": "derived",
@@ -431,7 +431,7 @@
      "val_musd": 6400
     },
     {
-     "start": "2024-03-31",
+     "start": "2024-04-01",
      "end": "2024-06-30",
      "val": 8173000000,
      "method": "derived",
@@ -442,7 +442,7 @@
      "val_musd": 8173
     },
     {
-     "start": "2024-06-30",
+     "start": "2024-07-01",
      "end": "2024-09-30",
      "val": 8258000000,
      "method": "derived",
@@ -453,7 +453,7 @@
      "val_musd": 8258
     },
     {
-     "start": "2024-09-30",
+     "start": "2024-10-01",
      "end": "2024-12-31",
      "val": 14425000000,
      "method": "derived",
@@ -474,7 +474,7 @@
      "val_musd": 12941
     },
     {
-     "start": "2025-03-31",
+     "start": "2025-04-01",
      "end": "2025-06-30",
      "val": 16538000000,
      "method": "derived",
@@ -485,7 +485,7 @@
      "val_musd": 16538
     },
     {
-     "start": "2025-06-30",
+     "start": "2025-07-01",
      "end": "2025-09-30",
      "val": 18829000000,
      "method": "derived",
@@ -496,7 +496,7 @@
      "val_musd": 18829
     },
     {
-     "start": "2025-09-30",
+     "start": "2025-10-01",
      "end": "2025-12-31",
      "val": 21383000000,
      "method": "derived",
@@ -517,7 +517,7 @@
      "val_musd": 18997
     },
     {
-     "start": "2026-03-31",
+     "start": "2026-04-01",
      "end": "2026-06-30",
      "val": 30116000000,
      "method": "derived",
@@ -528,7 +528,7 @@
      "val_musd": 30116
     },
     {
-     "start": "2026-06-30",
+     "start": "2026-07-01",
      "end": "2026-09-30",
      "val": 33942000000,
      "method": "derived",
@@ -547,7 +547,7 @@
    "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
    "quarters": [
     {
-     "start": "2023-08-31",
+     "start": "2023-09-01",
      "end": "2023-11-30",
      "val": 1080000000,
      "method": "derived",
@@ -558,7 +558,7 @@
      "val_musd": 1080
     },
     {
-     "start": "2023-11-30",
+     "start": "2023-12-01",
      "end": "2024-02-29",
      "val": 1674000000,
      "method": "derived",
@@ -569,7 +569,7 @@
      "val_musd": 1674
     },
     {
-     "start": "2024-02-29",
+     "start": "2024-03-01",
      "end": "2024-05-31",
      "val": 2798000000,
      "method": "derived",
@@ -590,7 +590,7 @@
      "val_musd": 2303
     },
     {
-     "start": "2024-08-31",
+     "start": "2024-09-01",
      "end": "2024-11-30",
      "val": 3970000000,
      "method": "derived",
@@ -601,7 +601,7 @@
      "val_musd": 3970
     },
     {
-     "start": "2024-11-30",
+     "start": "2024-12-01",
      "end": "2025-02-28",
      "val": 5862000000,
      "method": "derived",
@@ -612,7 +612,7 @@
      "val_musd": 5862
     },
     {
-     "start": "2025-02-28",
+     "start": "2025-03-01",
      "end": "2025-05-31",
      "val": 9080000000,
      "method": "derived",
@@ -633,7 +633,7 @@
      "val_musd": 8502
     },
     {
-     "start": "2025-08-31",
+     "start": "2025-09-01",
      "end": "2025-11-30",
      "val": 12033000000,
      "method": "derived",
@@ -644,7 +644,7 @@
      "val_musd": 12033
     },
     {
-     "start": "2025-11-30",
+     "start": "2025-12-01",
      "end": "2026-02-28",
      "val": 18635000000,
      "method": "derived",
@@ -655,7 +655,7 @@
      "val_musd": 18635
     },
     {
-     "start": "2026-02-28",
+     "start": "2026-03-01",
      "end": "2026-05-31",
      "val": 16493000000,
      "method": "derived",
