@@ -49,6 +49,8 @@ FEEDS = [
     ("ettoday_finance",    "https://feeds.feedburner.com/ettoday/finance",                    "ETtoday 財經"),
     ("ltn_business",       "https://news.ltn.com.tw/rss/business.xml",                        "自由時報 財經"),
     ("yahoo_tw_market",    "https://tw.stock.yahoo.com/rss?category=tw-market",               "Yahoo 台股"),
+    # 2026/11/11 加：Actions 實測 HTTP 200、RSS 20 則（buzzorange.com/techorange/feed/ 會轉址到此）
+    ("techorange",         "https://techorange.com/feed/",                                    "科技報橘"),
 ]
 
 # ── 已移除的來源（2026/09/07，經 scripts/probe_feeds.py 在 Actions 實測後判定不可修）──
