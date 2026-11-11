@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-11-11T21:25:55+08:00",
+  "generated_at_taipei": "2026-11-11T21:27:16+08:00",
   "date": "2026-11-11",
   "window_hours": 36,
   "count": 305,
@@ -17,7 +17,7 @@
       "fetched": 95,
       "kept": 40,
       "undated": 0,
-      "elapsed": 1.21
+      "elapsed": 0.84
     },
     "cnyes_wd_stock": {
       "url": "https://news.cnyes.com/rss/v1/news/category/wd_stock",
@@ -28,7 +28,7 @@
       "fetched": 100,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.96
+      "elapsed": 0.52
     },
     "cnyes_tw_macro": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_macro",
@@ -39,7 +39,7 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.34
+      "elapsed": 0.33
     },
     "cnyes_tw_industry": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_industry",
@@ -50,7 +50,7 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.36
+      "elapsed": 0.26
     },
     "technews": {
       "url": "https://technews.tw/feed/",
@@ -61,18 +61,18 @@
       "fetched": 40,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.71
+      "elapsed": 0.78
     },
     "moneydj": {
       "url": "https://www.moneydj.com/kmdj/RssCenter.aspx?svc=NW&fno=1&arg=X0000000",
       "desc": "MoneyDJ 焦點新聞",
       "ok": true,
       "status": 200,
-      "bytes": 12348,
+      "bytes": 12360,
       "fetched": 20,
       "kept": 20,
       "undated": 0,
-      "elapsed": 1.03
+      "elapsed": 0.72
     },
     "cna_finance": {
       "url": "https://feeds.feedburner.com/rsscna/finance",
@@ -83,7 +83,7 @@
       "fetched": 20,
       "kept": 20,
       "undated": 0,
-      "elapsed": 0.24
+      "elapsed": 0.14
     },
     "udn_money": {
       "url": "https://money.udn.com/rssfeed/news/1001/5591?ch=money",
@@ -94,7 +94,7 @@
       "fetched": 20,
       "kept": 10,
       "undated": 0,
-      "elapsed": 0.3
+      "elapsed": 0.16
     },
     "udn_stock_sub": {
       "url": "https://money.udn.com/rssfeed/news/1001/5591/7307?ch=money",
@@ -105,7 +105,7 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.28
+      "elapsed": 0.48
     },
     "ettoday_finance": {
       "url": "https://feeds.feedburner.com/ettoday/finance",
@@ -116,18 +116,18 @@
       "fetched": 50,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.22
+      "elapsed": 0.15
     },
     "ltn_business": {
       "url": "https://news.ltn.com.tw/rss/business.xml",
       "desc": "自由時報 財經",
       "ok": true,
       "status": 200,
-      "bytes": 20389,
+      "bytes": 20392,
       "fetched": 40,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.98
+      "elapsed": 0.12
     },
     "yahoo_tw_market": {
       "url": "https://tw.stock.yahoo.com/rss?category=tw-market",
@@ -138,7 +138,7 @@
       "fetched": 50,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.58
+      "elapsed": 0.37
     },
     "techorange": {
       "url": "https://techorange.com/feed/",
@@ -149,7 +149,7 @@
       "fetched": 20,
       "kept": 15,
       "undated": 0,
-      "elapsed": 1.03
+      "elapsed": 0.56
     }
   }
 }
