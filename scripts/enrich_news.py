@@ -155,6 +155,24 @@ def _code_compat(a, b):
     return bool(a & b)
 
 
+# 2026/11/11：兩字公司名的詞界防護。實例：「算力成長」被比對成力成(6239)。
+# 兩字名只要有任一次出現「不」與前一字或後一字組成常用詞，即算命中；全部出現都被常用詞吃掉才不算。
+NAME_PREV_WORDS = {"算力", "電力", "動力", "能力", "壓力", "實力", "人力", "財力", "火力", "效力", "產力", "推力", "助力", "主力", "潛力", "魅力", "合力", "全力", "努力", "勢力", "馬力", "熱力", "風力", "水力", "核力"}
+NAME_NEXT_WORDS = {"成長", "成本", "成為", "成功", "成立", "成績", "成效", "成交", "成熟", "成果", "成員", "成分", "成品", "成型", "成形", "成就", "成真", "成數", "成份"}
+
+def name_hit(text, nm):
+    if len(nm) != 2:
+        return True
+    i = text.find(nm)
+    while i != -1:
+        prev = text[i - 1:i + 1] if i > 0 else ""
+        nxt = text[i + 1:i + 3]
+        if prev not in NAME_PREV_WORDS and nxt not in NAME_NEXT_WORDS:
+            return True
+        i = text.find(nm, i + 1)
+    return False
+
+
 def load_name_map():
     """由 repo 內既有的月營收檔建 名稱→代號 對照表（免額外抓取來源）。
 
@@ -216,7 +234,7 @@ def main():
         existing = set(it.get("c") or [])
         cn = []
         for nm in names:
-            if nm in text:
+            if nm in text and name_hit(text, nm):
                 code = name_map[nm]
                 if code not in existing and code not in cn:
                     cn.append(code)

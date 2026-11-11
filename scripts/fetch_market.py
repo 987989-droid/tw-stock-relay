@@ -83,7 +83,8 @@ try:
     for tk in ("^SOX", "^IXIC", "TSM", "2330.TW", "^TWII", "^VIX", "^TNX", "TWD=X"):
         try:
             h = yf.Ticker(tk).history(period="2mo", auto_adjust=False)
-            YF[tk] = {str(i.date()): float(c) for i, c in h["Close"].items()}
+            # 2026/11/11：排除 NaN（Yahoo 盤中或當日未收盤時最後一列為 NaN，曾造成溫度計「加權5日 +nan%」）
+            YF[tk] = {str(i.date()): float(c) for i, c in h["Close"].items() if c == c}
             status["yf"][tk] = f"ok {len(YF[tk])}"
         except Exception as e:
             status["yf"][tk] = repr(e)[:150]
