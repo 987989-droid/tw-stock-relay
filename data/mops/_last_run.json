@@ -1,5 +1,5 @@
 {
- "fetched_at_utc": "2026-11-08T23:06:49.446419+00:00",
+ "fetched_at_utc": "2026-11-11T10:33:28.275922+00:00",
  "requested_stocks": [
   "1513",
   "1519",
@@ -30,9 +30,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 49517,
+   "bytes": 48849,
    "detected_co_id": "1513",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "1513",
@@ -42,7 +42,7 @@
    "http": 200,
    "bytes": 29112,
    "detected_co_id": "1513",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "1513",
@@ -50,9 +50,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 22191,
+   "bytes": 22663,
    "detected_co_id": "1513",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "1513",
@@ -60,9 +60,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 40162,
+   "bytes": 42921,
    "detected_co_id": "1513",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "1519",
@@ -110,9 +110,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 41445,
+   "bytes": 40781,
    "detected_co_id": "2449",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "2449",
@@ -120,9 +120,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 33921,
+   "bytes": 34629,
    "detected_co_id": "2449",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "2449",
@@ -130,9 +130,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 20000,
+   "bytes": 20982,
    "detected_co_id": "2449",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "2449",
@@ -140,9 +140,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 34850,
+   "bytes": 34864,
    "detected_co_id": "2449",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "2474",
@@ -167,12 +167,12 @@
   {
    "co_id": "2474",
    "table": "t164sb05",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 21218,
-   "detected_co_id": "2474",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "2474",
@@ -232,7 +232,7 @@
    "http": 200,
    "bytes": 38138,
    "detected_co_id": "3105",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3105",
@@ -240,9 +240,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 32312,
+   "bytes": 33047,
    "detected_co_id": "3105",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3105",
@@ -250,9 +250,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 20004,
+   "bytes": 20976,
    "detected_co_id": "3105",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3105",
@@ -260,9 +260,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 34656,
+   "bytes": 35900,
    "detected_co_id": "3105",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3231",
@@ -272,7 +272,7 @@
    "http": 200,
    "bytes": 42113,
    "detected_co_id": "3231",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3231",
@@ -282,17 +282,17 @@
    "http": 200,
    "bytes": 30150,
    "detected_co_id": "3231",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3231",
    "table": "t164sb05",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 23885,
-   "detected_co_id": "3231",
-   "period": "115Q2"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "3231",
@@ -300,19 +300,19 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 51361,
+   "bytes": 54272,
    "detected_co_id": "3231",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3363",
    "table": "t164sb03",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 44748,
-   "detected_co_id": "3363",
-   "period": "115Q2"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "3363",
@@ -322,7 +322,7 @@
    "http": 200,
    "bytes": 29172,
    "detected_co_id": "3363",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3363",
@@ -330,9 +330,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 18012,
+   "bytes": 18248,
    "detected_co_id": "3363",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "3363",
@@ -340,9 +340,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 29724,
+   "bytes": 29734,
    "detected_co_id": "3363",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "4958",
@@ -352,7 +352,7 @@
    "http": 200,
    "bytes": 47451,
    "detected_co_id": "4958",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "4958",
@@ -362,7 +362,7 @@
    "http": 200,
    "bytes": 31304,
    "detected_co_id": "4958",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "4958",
@@ -370,9 +370,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 19526,
+   "bytes": 21207,
    "detected_co_id": "4958",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "4958",
@@ -380,29 +380,29 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 42911,
+   "bytes": 49802,
    "detected_co_id": "4958",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6147",
    "table": "t164sb03",
-   "ok": false,
-   "err": "URLError: <urlopen error timed out>",
-   "http": null,
-   "bytes": 0,
-   "detected_co_id": null,
-   "period": null
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 43445,
+   "detected_co_id": "6147",
+   "period": "115Q3"
   },
   {
    "co_id": "6147",
    "table": "t164sb04",
-   "ok": false,
-   "err": "URLError: <urlopen error timed out>",
-   "http": null,
-   "bytes": 0,
-   "detected_co_id": null,
-   "period": null
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 30658,
+   "detected_co_id": "6147",
+   "period": "115Q3"
   },
   {
    "co_id": "6147",
@@ -432,7 +432,7 @@
    "http": 200,
    "bytes": 51443,
    "detected_co_id": "6196",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6196",
@@ -442,7 +442,7 @@
    "http": 200,
    "bytes": 30613,
    "detected_co_id": "6196",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6196",
@@ -450,9 +450,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 20988,
+   "bytes": 22195,
    "detected_co_id": "6196",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6196",
@@ -460,9 +460,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 38147,
+   "bytes": 38145,
    "detected_co_id": "6196",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6239",
@@ -512,7 +512,7 @@
    "http": 200,
    "bytes": 46850,
    "detected_co_id": "6451",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6451",
@@ -520,9 +520,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 34818,
+   "bytes": 47086,
    "detected_co_id": "6451",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6451",
@@ -530,9 +530,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 19785,
+   "bytes": 20499,
    "detected_co_id": "6451",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6451",
@@ -540,9 +540,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 46620,
+   "bytes": 46618,
    "detected_co_id": "6451",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "6643",
@@ -592,7 +592,7 @@
    "http": 200,
    "bytes": 35438,
    "detected_co_id": "8227",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "8227",
@@ -600,9 +600,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 25839,
+   "bytes": 29168,
    "detected_co_id": "8227",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "8227",
@@ -610,9 +610,9 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 15827,
+   "bytes": 16308,
    "detected_co_id": "8227",
-   "period": "115Q2"
+   "period": "115Q3"
   },
   {
    "co_id": "8227",
@@ -620,15 +620,15 @@
    "ok": true,
    "err": null,
    "http": 200,
-   "bytes": 21936,
+   "bytes": 21934,
    "detected_co_id": "8227",
-   "period": "115Q2"
+   "period": "115Q3"
   }
  ],
- "ok_count": 58,
- "fail_count": 2,
+ "ok_count": 57,
+ "fail_count": 3,
  "periods_seen": {
-  "115Q2": 40,
-  "115Q3": 18
+  "115Q3": 53,
+  "115Q2": 4
  }
 }
