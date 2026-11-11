@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""跌幅拆解＋市場溫度計（2026/11/06 建；排程以 curl … | python3 - <代號…> 呼叫）。
+"""跌幅拆解＋市場溫度計（2026/11/06 建）。
+2026/11/11 改：加 --all 模式，由 GitHub Actions（attribution.yml）預先算好全市場、寫 data/derived/attribution.json；
+排程只讀該 JSON，不再 curl … | python3 執行外部程式（11/09 同寫法曾被雲端權限分類器以 Code from External 擋下）。
+舊用法 python3 attribution.py <代號…> 仍可用（互動式對話）。
 名單由呼叫端以參數傳入，本檔不含任何持股。只讀中繼公開檔：
 - data/derived/beta_alpha.json（每交易日更新：近 1 月報酬、相對大盤、β）
 - data/derived/market_daily.json（溫度計）、market_t86_<日期>.json（上市個股法人買賣超）
@@ -15,6 +18,7 @@ def J(name):
     with urllib.request.urlopen(B + name, timeout=60) as r:
         return json.load(r)
 
+ALL = "--all" in sys.argv
 codes = [c for c in sys.argv[1:] if c.isdigit() and len(c) == 4]
 # 美國同業對照（依次產業，含追蹤清單常見代號；只是對照，不代表兩者必然連動）
 PEERS = {}
@@ -41,11 +45,11 @@ if th.get("twse_last_date"):
     try: t86 = J(f"market_t86_{th['twse_last_date']}.json")["data"]
     except Exception: t86 = {}
 
-L = []
-for c in codes:
+def one(c):
+    L = []
     r = rows.get(c)
     if not r or r.get("ret_1m") is None or r.get("beta") is None:
-        L.append(f"拆解 {c}：資料不足（beta_alpha 無此檔或樣本不足）"); continue
+        L.append(f"拆解 {c}：資料不足（beta_alpha 無此檔或樣本不足）"); return L
     ri, rel, b = r["ret_1m"] * 100, r["rel_1m"] * 100, r["beta"]
     rm = ri - rel
     exp = b * rm
@@ -64,15 +68,22 @@ for c in codes:
     if big:
         L.append(f"  ⚡ 美國同業隔夜 ≥7%：{'、'.join(big)}（{UL[PEERS[c][0]]['date'] if PEERS[c][0] in UL else ''}）")
 
+    return L
+
+L = []
+for c in codes:
+    L += one(c)
+
 def s(k, fmt="{:+.2f}"):
     v = th.get(k)
     return "—" if v is None else fmt.format(v)
+F = []
 if th:
     fs, ts = th.get("foreign_streak_days", 0), th.get("trust_streak_days", 0)
     fdesc = f"外資連{'買' if fs > 0 else '賣'}{abs(fs)}日" if fs else "外資今日持平"
     tdesc = f"投信連{'買' if ts > 0 else '賣'}{abs(ts)}日" if ts else "投信今日持平"
     d = th.get("twse_last_date") or ""
-    L.append(f"溫度計 {d[4:6]}/{d[6:]}：{fdesc}（5日{s('foreign_net_5d_e8', '{:+,.1f}')}億）｜{tdesc}"
+    F.append(f"溫度計 {d[4:6]}/{d[6:]}：{fdesc}（5日{s('foreign_net_5d_e8', '{:+,.1f}')}億）｜{tdesc}"
              f"（5日{s('trust_net_5d_e8', '{:+,.1f}')}億）｜融資5日{s('margin_chg_5d_pct')}%｜"
              f"加權5日{s('twii_chg_5d_pct')}%｜費半5日{s('sox_chg_5d_pct')}%｜美元兌台幣5日{s('usdtwd_chg_5d_pct')}%｜VIX {s('vix', '{:.1f}')}")
 if UL:
@@ -80,6 +91,19 @@ if UL:
     a = us.get("tsm_adr") or {}
     adr = f"｜台積電ADR {g('TSM')}（隱含 {a['implied_twd']:,.1f} 元，較台股 {a['tw_date'][5:]} 收盤 {a['gap_pct']:+.2f}%）" if a else ""
     d = UL.get("^SOX", {}).get("date", "")
-    L.append(f"美股隔夜 {d[5:]}：費半 {g('^SOX')}｜那指 {g('^IXIC')}{adr}｜VIX {UL.get('^VIX', {}).get('close', '—')}"
+    F.append(f"美股隔夜 {d[5:]}：費半 {g('^SOX')}｜那指 {g('^IXIC')}{adr}｜VIX {UL.get('^VIX', {}).get('close', '—')}"
              f"（抓取 {us.get('generated_at_utc', '')[:16]}Z）")
-print("\n".join(L))
+if ALL:
+    import datetime as _dt, os as _os
+    out = {"generated_at_utc": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "basis": {"beta_alpha_generated": ba.get("generated_at_utc") or ba.get("generated"),
+                     "twse_last_date": th.get("twse_last_date"),
+                     "us_overnight_generated": us.get("generated_at_utc")},
+           "note": "拆解為近似法（大盤貢獻＝β×加權近1月報酬），非精確歸因；溫度計與美股隔夜為全市場共用行",
+           "codes": {r_c: one(r_c) for r_c in sorted(rows)},
+           "footer": F}
+    _os.makedirs("data/derived", exist_ok=True)
+    json.dump(out, open("data/derived/attribution.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    print("attribution.json：", len(out["codes"]), "檔；footer", len(F), "行")
+else:
+    print("\n".join(L + F))
