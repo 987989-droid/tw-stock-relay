@@ -32,7 +32,11 @@
       "path": "data/latest/quotes_listed.json",
       "count": 1389,
       "desc": "上市個股當日成交資訊",
-      "mode": "latest_only"
+      "mode": "latest_only",
+      "source": "twse_rwd_MI_INDEX",
+      "quote_date": "1151113",
+      "openapi_date": "1151112",
+      "refreshed_at_taipei": "2026-11-14T07:43:59.692438+08:00"
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
