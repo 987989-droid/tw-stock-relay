@@ -1,0 +1,44 @@
+name: quotes_fresh
+
+# 上市收盤補新（2026/11/14 建）。手動觸發用：
+#   probe＝只探測與對帳，寫 data/selftest/quotes_probe.json，不改資料檔
+#   apply＝最新交易日比現有檔新就改寫 data/latest/quotes_listed.json
+# 每日排程已在 daily.yml 內含同一步驟；本 workflow 供收盤後臨時補價與驗證。
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'probe 或 apply'
+        required: true
+        default: 'apply'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: relay-commit
+  cancel-in-progress: false
+
+jobs:
+  quotes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: run
+        env:
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          if [ "$MODE" = "probe" ]; then python scripts/fetch_quotes_fresh.py --probe; else python scripts/fetch_quotes_fresh.py; fi
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "quotes_fresh $(TZ=Asia/Taipei date +%F_%H%M)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done
+          exit 1

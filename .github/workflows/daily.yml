@@ -3,9 +3,12 @@ name: daily
 on:
   workflow_dispatch:
   schedule:
-    # 11:00 UTC = 台北時間 19:00
-    # 註：GitHub 排程在尖峰時段可能延遲數分鐘至數十分鐘，非準時觸發
+    # 11:00 UTC = 台北 19:00。實測（2026/10/31～11/13 共 14 次）GitHub 實際啟動於 15:55～21:14 UTC
+    #   （台北 23:55～05:14），延遲 4.9～10.2 小時。晨間排程自 2026/11/16 起於台北 06:07 開始讀取。
     - cron: '0 11 * * *'
+    # 08:17 UTC = 台北 16:17 備援班（2026/11/14 加）：主班若拖過清晨，至少已有一批含當日收盤的資料。
+    #   兩班都跑、後到的覆蓋先到的（重訊越晚越完整）。
+    - cron: '17 8 * * *'
 
 permissions:
   contents: write
@@ -15,23 +18,50 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # 晨間保護（2026/11/14 加）：排程觸發若拖到台北 05:45～09:30 才啟動就不跑，
+      #   避免晨間排程讀到一半資料被覆蓋（索引與檔案筆數對不上會誤報異常）。手動觸發不受限。
+      - name: guard
+        id: guard
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          H=$(TZ=Asia/Taipei date +%H%M)
+          if [ "$EVENT" = "schedule" ] && [ $((10#$H)) -ge 545 ] && [ $((10#$H)) -lt 930 ]; then
+            echo "skip=1" >> "$GITHUB_OUTPUT"; echo "台北 $H 屬晨間讀取時段，本次不更新"
+          else
+            echo "skip=0" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != '1'
 
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != '1'
         with:
           python-version: '3.12'
 
       - name: deps
+        if: steps.guard.outputs.skip != '1'
         run: python -m pip install --upgrade certifi cryptography
 
       - name: fetch
+        if: steps.guard.outputs.skip != '1'
         run: python scripts/fetch_daily.py
 
+      # 上市收盤補新（2026/11/14 加）：OpenAPI 上市收盤比實際晚一個交易日，改向證交所 rwd 取最新交易日。
+      #   失敗或驗證不過時原檔不動，不影響其餘步驟。
+      - name: quotes fresh
+        if: steps.guard.outputs.skip != '1'
+        continue-on-error: true
+        run: python scripts/fetch_quotes_fresh.py
+
       - name: extra
+        if: steps.guard.outputs.skip != '1'
         continue-on-error: true
         run: python scripts/fetch_extra.py
 
       - name: commit
+        if: steps.guard.outputs.skip != '1'
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
