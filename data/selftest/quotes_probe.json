@@ -1,0 +1,127 @@
+{
+ "run_at_taipei": "2026-11-14T07:42:17.850846+08:00",
+ "mode": "probe",
+ "tries": [
+  {
+   "date": "20261113",
+   "err": null,
+   "rows": 1389
+  }
+ ],
+ "result": "probe_ok",
+ "openapi_date": "1151112",
+ "openapi_count": 1389,
+ "detail": {
+  "date": "20261113",
+  "roc": "1151113",
+  "rows": 1389,
+  "overlap": 1.0,
+  "table_title": "115年11月13日 每日收盤行情(全部(不含權證、牛熊證、可展延牛熊證))",
+  "fields": [
+   "證券代號",
+   "證券名稱",
+   "成交股數",
+   "成交筆數",
+   "成交金額",
+   "開盤價",
+   "最高價",
+   "最低價",
+   "收盤價",
+   "漲跌(+/-)",
+   "漲跌價差",
+   "最後揭示買價",
+   "最後揭示買量",
+   "最後揭示賣價",
+   "最後揭示賣量",
+   "本益比"
+  ]
+ },
+ "reconcile": {
+  "date": "20261112",
+  "same": 1389,
+  "diff": 0,
+  "missing_in_rwd": 0,
+  "diff_sample": []
+ },
+ "samples": [
+  {
+   "Date": "1151113",
+   "Code": "00878",
+   "Name": "國泰永續高股息",
+   "TradeVolume": "66602238",
+   "TradeValue": "2240056148",
+   "OpeningPrice": "33.35",
+   "HighestPrice": "33.84",
+   "LowestPrice": "33.34",
+   "ClosingPrice": "33.60",
+   "Change": "0.6000",
+   "Transaction": "33387"
+  },
+  {
+   "Date": "1151113",
+   "Code": "00940",
+   "Name": "元大台灣價值高息",
+   "TradeVolume": "8887866",
+   "TradeValue": "109982666",
+   "OpeningPrice": "12.29",
+   "HighestPrice": "12.49",
+   "LowestPrice": "12.27",
+   "ClosingPrice": "12.32",
+   "Change": "0.1300",
+   "Transaction": "1828"
+  },
+  {
+   "Date": "1151113",
+   "Code": "1519",
+   "Name": "華城",
+   "TradeVolume": "2449973",
+   "TradeValue": "1236219423",
+   "OpeningPrice": "480.00",
+   "HighestPrice": "521.00",
+   "LowestPrice": "480.00",
+   "ClosingPrice": "505.00",
+   "Change": "26.0000",
+   "Transaction": "4553"
+  },
+  {
+   "Date": "1151113",
+   "Code": "2330",
+   "Name": "台積電",
+   "TradeVolume": "30973127",
+   "TradeValue": "73326711390",
+   "OpeningPrice": "2375.00",
+   "HighestPrice": "2390.00",
+   "LowestPrice": "2340.00",
+   "ClosingPrice": "2350.00",
+   "Change": "10.0000",
+   "Transaction": "76864"
+  },
+  {
+   "Date": "1151113",
+   "Code": "3231",
+   "Name": "緯創",
+   "TradeVolume": "24345816",
+   "TradeValue": "4168612943",
+   "OpeningPrice": "174.00",
+   "HighestPrice": "175.00",
+   "LowestPrice": "169.00",
+   "ClosingPrice": "171.00",
+   "Change": "1.0000",
+   "Transaction": "17437"
+  },
+  {
+   "Date": "1151113",
+   "Code": "6239",
+   "Name": "力成",
+   "TradeVolume": "11485144",
+   "TradeValue": "2929306961",
+   "OpeningPrice": "252.00",
+   "HighestPrice": "262.00",
+   "LowestPrice": "249.00",
+   "ClosingPrice": "251.50",
+   "Change": "11.0000",
+   "Transaction": "12422"
+  }
+ ],
+ "bad": []
+}
