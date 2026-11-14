@@ -1,17 +1,37 @@
 """買賣評級測試期（2026/11/12–12/12）每日判定。唯讀；不含任何持股或追蹤清單，兩者由呼叫端以檔案傳入。
-用法：python3 scripts/rating_test.py <repo 根目錄> <名單檔> <持股 json>
+用法：python3 scripts/rating_test.py <repo 根目錄> <名單檔> <持股基準區原文 hold.txt> [附加 json：void、wl_chk]（舊格式持股 json 仍可用）
 結束碼：0 正常；3 中繼批次過舊；4 持股或名單核對不符。"""
 import json, os, sys, subprocess, datetime as dt
 R, WL, HF = sys.argv[1], sys.argv[2], sys.argv[3]
 TZ = dt.timezone(dt.timedelta(hours=8)); now = dt.datetime.now(TZ)
 J = lambda p: json.load(open(os.path.join(R, p), encoding="utf-8"))
-H = json.load(open(HF, encoding="utf-8"))
-hold, void = H["hold"], H["void"]
+_raw = open(HF, encoding="utf-8").read()
 import re as _re
 _wl = list(dict.fromkeys(_re.findall(r"(?<!\d)\d{4}(?!\d)", open(WL, encoding="utf-8").read())))
-_chk = [len(hold), sum(h["sh"] for h in hold.values()), sum(h["cost"] for h in hold.values()), round(sum(h["gate"] for h in hold.values()), 2), len(_wl), sum(map(int, _wl))]
-if _chk != H["chk"]:
-    print(f"ABORT 持股或名單抄寫有誤：實得 {_chk}，應為 {H['chk']}"); sys.exit(4)
+if _raw.lstrip().startswith("{"):
+    # 舊格式：持股 json（含 void、chk 六欄）
+    H = json.loads(_raw); hold, void = H["hold"], H["void"]
+    _chk = [len(hold), sum(h["sh"] for h in hold.values()), sum(h["cost"] for h in hold.values()), round(sum(h["gate"] for h in hold.values()), 2), len(_wl), sum(map(int, _wl))]
+    if _chk != H["chk"]:
+        print(f"ABORT 持股或名單抄寫有誤：實得 {_chk}，應為 {H['chk']}"); sys.exit(4)
+    FOOT = FOOT
+else:
+    # 新格式（2026/11/14）：持股基準檔的機器讀取區原文（代號|名稱|市場|股數|成本|均價|出場價＋chk），第四參數為 {"void":{}, "wl_chk":[檔數, 代號和]}
+    X = json.load(open(sys.argv[4], encoding="utf-8")) if len(sys.argv) > 4 else {}
+    void, hold, chk, asof = X.get("void", {}), {}, None, ""
+    for l in _raw.splitlines():
+        l = l.strip()
+        if not l or l.startswith(("```", "格式", "核對碼格式")): continue
+        if l.startswith("asof"): asof = l.split(":", 1)[1].strip(); continue
+        if l.startswith("chk:"): chk = l[4:].strip(); continue
+        c, _n, _m, sh, cost, _a, gate = l.split("|")
+        hold[c] = dict(sh=int(sh), cost=round(float(cost)), gate=float(gate))
+    got = "%d|%d|%d|%.2f" % (len(hold), sum(h["sh"] for h in hold.values()), sum(h["cost"] for h in hold.values()), sum(h["gate"] for h in hold.values()))
+    if got != chk:
+        print(f"ABORT 持股或名單抄寫有誤：持股基準核對碼實得 {got}，應為 {chk}"); sys.exit(4)
+    if X.get("wl_chk") and [len(_wl), sum(map(int, _wl))] != X["wl_chk"]:
+        print(f"ABORT 持股或名單抄寫有誤：名單實得 {[len(_wl), sum(map(int, _wl))]}，應為 {X['wl_chk']}"); sys.exit(4)
+    FOOT = f"持股基準：{asof}。持股由成交回報帳本每個交易日清晨自動入帳，買賣後不必手動更新"
 def md(s):
     s = str(s).replace("-", "")
     if len(s) == 7: s = str(int(s[:3]) + 1911) + s[3:]
@@ -90,11 +110,11 @@ L += [s if can_buy else s.replace("🟢 買進候選", "🟡 觀察（水位🔴
 L += watch
 if excl: L.append("排除：" + "、".join(excl))
 L += ["候選只過了月營收、地雷、流動性三關；現金流與應收存貨未驗，下單前在對話說「查核 XXXX 買」，並寫齊四欄（預估機率由你填）", "", "── 美債 ──", bond]
-for c in ("00679B", "00687B"):
+for c in [k for k in hold if k.endswith("B")]:
     for grp in (sell, near, keep):
         for cc, s in grp:
             if cc == c: L.append(s)
-L += ["", f"持股基準：{H['asof']}。已賣出或有買進，請在對話說「更新評級測試持股」", "依你的規則與中繼資料機械判定；作廢條件逐條比對仍以每日地雷監測為準；不含目標價"]
+L += ["", FOOT, "依你的規則與中繼資料機械判定；作廢條件逐條比對仍以每日地雷監測為準；不含目標價"]
 print("\n".join(L))
 print("=====SMS=====")
 print(one)
