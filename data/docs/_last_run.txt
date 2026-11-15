@@ -1,1 +1,10 @@
-202603_3583_AI1.pdf step9 200 無下載連結；回應前 300 字： <html><head><title>電子資料查詢作業</title></head><body background='/image/t57sf13.jpg'> <center> <h2><font color="blue">電子資料查詢作業</font></h2> <br><h4 align='center'><font color='red'>檔案不存在</font></h4> <script>window.focus();</script> 
+=== strlist 1519 1 ===
+sii mopsov.twse.com.tw http=200 bytes=2574 hits=0
+sii mops.twse.com.tw http=200 bytes=833 hits=0
+otc mopsov.twse.com.tw http=200 bytes=2574 hits=0
+otc mops.twse.com.tw http=200 bytes=833 hits=0
+rotc mopsov.twse.com.tw http=200 bytes=2574 hits=0
+rotc mops.twse.com.tw http=200 bytes=833 hits=0
+pub mopsov.twse.com.tw http=200 bytes=2574 hits=0
+pub mops.twse.com.tw http=200 bytes=833 hits=0
+1519 查無法說簡報檔名
