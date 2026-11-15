@@ -85,19 +85,22 @@ def do_strlist(co, n_text):
     2026/11/15 建。year／month 留空＝最新資料；上市（sii）不中再試上櫃（otc）。"""
     n = int(n_text) if (n_text or "").strip().isdigit() else 1
     found, log = {}, []
-    for typek in ("sii", "otc", "rotc", "pub"):
-        body = urllib.parse.urlencode({"encodeURIComponent": "1", "step": "1", "firstin": "1", "off": "1",
-                                       "TYPEK": typek, "co_id": co, "year": "", "month": ""}).encode()
-        for host in ("mopsov.twse.com.tw", "mops.twse.com.tw"):
+    roc = time.gmtime().tm_year - 1911
+    # 年度留空時 MOPS 回條件頁（2026/11/15 實測 2574 bytes、零命中）→ 改帶民國年，今年、去年各查一次並合併
+    for typek in ("sii", "otc"):
+        for year in (str(roc), str(roc - 1)):
+            body = urllib.parse.urlencode({"encodeURIComponent": "1", "step": "1", "firstin": "1", "off": "1",
+                                           "TYPEK": typek, "co_id": co, "year": year, "month": ""}).encode()
             try:
-                s, b = http(f"https://{host}/mops/web/ajax_t100sb02_1", body)
+                s, b = http("https://mopsov.twse.com.tw/mops/web/ajax_t100sb02_1", body)
             except Exception as e:
-                log.append(f"{typek} {host} ERR {e}"); continue
+                log.append(f"{typek} {year} ERR {e}"); continue
             html = b.decode("utf-8", "replace")
             hits = {m.group(1): m.group(2) for m in STR_RE.finditer(html) if m.group(1).startswith(co)}
-            log.append(f"{typek} {host} http={s} bytes={len(html)} hits={len(hits)}")
-            if hits:
-                found.update(hits); break
+            head = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))[:160]
+            log.append(f"{typek} {year} http={s} bytes={len(html)} hits={len(hits)} 回應頭：{head}")
+            found.update(hits)
+            time.sleep(2)
         if found:
             break
     for line in log:
@@ -115,7 +118,7 @@ def do_strlist(co, n_text):
     return ok
 
 
-SEC_UA = "tw-stock-relay research (github.com/987989-droid/tw-stock-relay)"
+SEC_UA = "tw-stock-relay research-bot@example.com"   # SEC 要求信箱格式，無則 403（capex.py 2026/11/11 實測）
 SEC_FORMS = ("10-Q", "10-K", "20-F", "6-K", "40-F")
 
 

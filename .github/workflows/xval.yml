@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/derived/xval.json data/derived/_xval_status.json 2>/dev/null || true
+          for f in data/derived/xval.json data/derived/_xval_status.json; do [ -f "$f" ] && git add "$f"; done
           git diff --staged --quiet && echo "無變更" && exit 0
           git commit -m "xval $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do

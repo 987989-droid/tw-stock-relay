@@ -9,7 +9,7 @@
 不讀任何持股清單：對象＝judge.json 已有的代號。
 紀律：單檔失敗不影響其他檔；不重試；呼叫間隔遵守免費額度（高階模型每分鐘 10 次）。
 """
-import json, os, re, sys, time, datetime, html as htmlmod, urllib.request
+import json, os, re, sys, time, datetime, html as htmlmod, urllib.request, urllib.error
 
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 CAT = "https://models.github.ai/catalog/models"
@@ -98,20 +98,28 @@ def same(a, b, eps):
 def main():
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
     status = {"run_at_utc": now, "ok": False}
-    try:
-        cat = http_json(CAT)
-        ids = [m.get("id") or m.get("name") for m in (cat if isinstance(cat, list) else cat.get("models", cat.get("data", [])))]
-    except Exception as e:
-        status["error"] = f"讀模型目錄失敗：{e!r}"[:400]
-        json.dump(status, open("data/derived/_xval_status.json", "w"), ensure_ascii=False, indent=1)
-        print(status["error"]); sys.exit(1)
-    mA = next((m for m in PREF_A if m in ids), None)
-    mB = next((m for m in PREF_B if m in ids), None)
-    status.update({"catalog_count": len(ids), "model_a": mA, "model_b": mB})
+    # 模型目錄端點 2026/11/15 實測回空內容（非 JSON）→ 不依賴目錄，直接依偏好清單逐一試呼叫
+    def pick(prefs):
+        tried = []
+        for m in prefs:
+            try:
+                j = http_json(INF, {"model": m, "max_tokens": 5, "messages": [{"role": "user", "content": "回覆 OK"}]})
+                if j.get("choices"):
+                    return m, tried
+                tried.append(f"{m}: 無 choices")
+            except urllib.error.HTTPError as e:
+                tried.append(f"{m}: HTTP {e.code} {e.read()[:120]!r}")
+            except Exception as e:
+                tried.append(f"{m}: {e!r}"[:160])
+            time.sleep(3)
+        return None, tried
+    mA, triedA = pick(PREF_A)
+    mB, triedB = pick(PREF_B)
+    status.update({"model_a": mA, "model_b": mB, "tried_a": triedA, "tried_b": triedB})
     if not (mA and mB):
-        status["error"] = "目錄中找不到兩家不同廠商的偏好模型"; status["catalog_sample"] = ids[:40]
+        status["error"] = "兩家不同廠商的模型未能都呼叫成功"
         json.dump(status, open("data/derived/_xval_status.json", "w"), ensure_ascii=False, indent=1)
-        print(status); sys.exit(1)
+        print(json.dumps(status, ensure_ascii=False)); sys.exit(1)
 
     judge = json.load(open("data/derived/judge.json", encoding="utf-8"))
     out = {"generated_at_utc": now, "judge_generated_at_utc": judge.get("generated_at_utc"),

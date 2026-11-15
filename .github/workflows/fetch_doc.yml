@@ -54,6 +54,7 @@ jobs:
           NAME: ${{ inputs.name }}
           PERIODS: ${{ inputs.periods }}
         run: |
+          set +e +o pipefail   # shell: bash 預設 -eo pipefail，單一請求失敗會中斷其餘請求（2026/11/15 實測）
           mkdir -p data/docs
           : > data/docs/_last_run.txt
           if [ "$EVENT" = "push" ]; then
