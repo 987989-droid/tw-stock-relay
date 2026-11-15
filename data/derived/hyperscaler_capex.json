@@ -1,5 +1,5 @@
 {
- "generated_at_utc": "2026-11-11T13:52Z",
+ "generated_at_utc": "2026-11-15T09:21Z",
  "source": "SEC EDGAR XBRL companyfacts（10-Q／10-K）",
  "unit": "百萬美元（val_musd）",
  "note": "現金資本支出（購置不動產廠房設備）。method=derived 為年初累計相減還原之單季值。甲骨文會計季末為 2／5／8／11 月，不併入日曆季合計。",
