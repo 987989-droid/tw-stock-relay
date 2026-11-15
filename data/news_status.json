@@ -1,11 +1,11 @@
 {
-  "generated_at_taipei": "2026-11-15T10:56:18+08:00",
-  "date": "2026-11-15",
+  "generated_at_taipei": "2026-11-16T01:54:59+08:00",
+  "date": "2026-11-16",
   "window_hours": 36,
-  "count": 252,
+  "count": 201,
   "feeds_ok": 13,
   "feeds_total": 13,
-  "coded": 25,
+  "coded": 21,
   "note": "全市場財經新聞標題，未做任何篩選。ts 為 null 表示該來源未提供可解析的發布時間，不得當作今日。c 欄為文中出現的台股代號（由「(2464-TW)」「(2330)」等寫法抽出），讀取端請以代號比對自己的清單；沒有 c 欄不代表與個股無關，仍須看標題。count 供讀取端對帳，確認未被截斷。",
   "feeds": {
     "cnyes_tw_stock": {
@@ -13,22 +13,22 @@
       "desc": "鉅亨網 台股",
       "ok": true,
       "status": 200,
-      "bytes": 54809,
-      "fetched": 24,
-      "kept": 24,
+      "bytes": 12351,
+      "fetched": 5,
+      "kept": 5,
       "undated": 0,
-      "elapsed": 0.44
+      "elapsed": 0.38
     },
     "cnyes_wd_stock": {
       "url": "https://news.cnyes.com/rss/v1/news/category/wd_stock",
       "desc": "鉅亨網 國際股",
       "ok": true,
       "status": 200,
-      "bytes": 146107,
-      "fetched": 65,
-      "kept": 40,
+      "bytes": 36165,
+      "fetched": 15,
+      "kept": 15,
       "undated": 0,
-      "elapsed": 0.82
+      "elapsed": 0.46
     },
     "cnyes_tw_macro": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_macro",
@@ -39,7 +39,7 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.32
+      "elapsed": 0.42
     },
     "cnyes_tw_industry": {
       "url": "https://news.cnyes.com/rss/v1/news/category/tw_industry",
@@ -50,51 +50,51 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.31
+      "elapsed": 0.32
     },
     "technews": {
       "url": "https://technews.tw/feed/",
       "desc": "科技新報",
       "ok": true,
       "status": 200,
-      "bytes": 39594,
+      "bytes": 38007,
       "fetched": 40,
-      "kept": 38,
+      "kept": 40,
       "undated": 0,
-      "elapsed": 0.91
+      "elapsed": 0.68
     },
     "moneydj": {
       "url": "https://www.moneydj.com/kmdj/RssCenter.aspx?svc=NW&fno=1&arg=X0000000",
       "desc": "MoneyDJ 焦點新聞",
       "ok": true,
       "status": 200,
-      "bytes": 12710,
+      "bytes": 12552,
       "fetched": 20,
-      "kept": 18,
+      "kept": 15,
       "undated": 0,
-      "elapsed": 0.91
+      "elapsed": 0.88
     },
     "cna_finance": {
       "url": "https://feeds.feedburner.com/rsscna/finance",
       "desc": "中央社 財經",
       "ok": true,
       "status": 200,
-      "bytes": 14018,
+      "bytes": 14286,
       "fetched": 20,
       "kept": 20,
       "undated": 0,
-      "elapsed": 0.3
+      "elapsed": 0.24
     },
     "udn_money": {
       "url": "https://money.udn.com/rssfeed/news/1001/5591?ch=money",
       "desc": "經濟日報 股市",
       "ok": true,
       "status": 200,
-      "bytes": 13788,
+      "bytes": 14350,
       "fetched": 20,
-      "kept": 15,
+      "kept": 16,
       "undated": 0,
-      "elapsed": 0.32
+      "elapsed": 0.4
     },
     "udn_stock_sub": {
       "url": "https://money.udn.com/rssfeed/news/1001/5591/7307?ch=money",
@@ -105,40 +105,40 @@
       "fetched": 0,
       "kept": 0,
       "undated": 0,
-      "elapsed": 0.37
+      "elapsed": 0.38
     },
     "ettoday_finance": {
       "url": "https://feeds.feedburner.com/ettoday/finance",
       "desc": "ETtoday 財經",
       "ok": true,
       "status": 200,
-      "bytes": 56411,
+      "bytes": 56360,
       "fetched": 50,
-      "kept": 16,
+      "kept": 10,
       "undated": 0,
-      "elapsed": 0.26
+      "elapsed": 0.21
     },
     "ltn_business": {
       "url": "https://news.ltn.com.tw/rss/business.xml",
       "desc": "自由時報 財經",
       "ok": true,
       "status": 200,
-      "bytes": 21814,
+      "bytes": 21834,
       "fetched": 40,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.09
+      "elapsed": 0.6
     },
     "yahoo_tw_market": {
       "url": "https://tw.stock.yahoo.com/rss?category=tw-market",
       "desc": "Yahoo 台股",
       "ok": true,
       "status": 200,
-      "bytes": 39019,
+      "bytes": 40033,
       "fetched": 50,
       "kept": 40,
       "undated": 0,
-      "elapsed": 0.35
+      "elapsed": 0.45
     },
     "techorange": {
       "url": "https://techorange.com/feed/",
@@ -147,9 +147,9 @@
       "status": 200,
       "bytes": 262886,
       "fetched": 20,
-      "kept": 1,
+      "kept": 0,
       "undated": 0,
-      "elapsed": 0.56
+      "elapsed": 2.17
     }
   }
 }
