@@ -37,7 +37,7 @@ KEEP = re.compile(r"營業收入|營業成本|營業毛利|營業費用|營業�
 
 ENDPOINTS = [   # 2026/11/15 第二輪實測：models.github.ai 回 2xx 但 body 空 → 加舊網域備援（模型名不帶廠商前綴）
     ("https://models.github.ai/inference/chat/completions", False),
-    ("https://models.inference.ai.azure.com/chat/completions", True),
+    # ("https://models.inference.ai.azure.com/chat/completions", True),  2026/11/15 實測 DNS 不存在（舊網域已退役），移除
 ]
 DIAG = []
 
@@ -66,7 +66,11 @@ def http_json(url, data=None, hops=3):
         if not raw.strip() or code >= 400:
             DIAG.append(f"{url} http={code} ctype={hdr.get('Content-Type')} body={raw[:200]!r}")
             raise RuntimeError(f"http={code} body={raw[:120]!r}")
-        return json.loads(raw)
+        try:
+            return json.loads(raw)
+        except ValueError:   # 2026/11/15 第三輪：2xx 但非 JSON，內容未記錄 → 補記
+            DIAG.append(f"{url} http={code} ctype={hdr.get('Content-Type')} 非JSON body={raw[:300]!r}")
+            raise RuntimeError(f"http={code} 非JSON ctype={hdr.get('Content-Type')} body={raw[:120]!r}")
     raise RuntimeError("轉址過多")
 
 
