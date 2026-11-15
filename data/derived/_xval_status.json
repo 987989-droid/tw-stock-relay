@@ -1,34 +1,35 @@
 {
- "run_at_utc": "2026-11-15T11:16:39.229236+00:00",
+ "run_at_utc": "2026-11-15T23:39:47.588162+00:00",
  "ok": false,
  "model_a": null,
  "model_b": null,
  "tried_a": [
-  "openai/gpt-4.1@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "gpt-4.1@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "openai/gpt-4o@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "gpt-4o@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "openai/gpt-4.1-mini@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "gpt-4.1-mini@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "openai/gpt-4o-mini@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "gpt-4o-mini@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>"
+  "openai/gpt-4.1@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "openai/gpt-4o@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "openai/gpt-4.1-mini@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "openai/gpt-4o-mini@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'"
  ],
  "tried_b": [
-  "deepseek/DeepSeek-V3-0324@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "DeepSeek-V3-0324@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "meta/Llama-4-Maverick-17B-128E-Instruct-FP8@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "Llama-4-Maverick-17B-128E-Instruct-FP8@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "meta/Llama-3.3-70B-Instruct@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "Llama-3.3-70B-Instruct@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "mistral-ai/mistral-medium-2505@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "mistral-medium-2505@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "xai/grok-3-mini@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "grok-3-mini@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "mistral-ai/Mistral-Large-2411@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "Mistral-Large-2411@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>",
-  "cohere/cohere-command-a@models.github.ai: Expecting value: line 1 column 1 (char 0)",
-  "cohere-command-a@models.inference.ai.azure.com: <urlopen error [Errno -2] Name or service not known>"
+  "deepseek/DeepSeek-V3-0324@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "meta/Llama-4-Maverick-17B-128E-Instruct-FP8@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "meta/Llama-3.3-70B-Instruct@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "mistral-ai/mistral-medium-2505@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "xai/grok-3-mini@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "mistral-ai/Mistral-Large-2411@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'",
+  "cohere/cohere-command-a@models.github.ai: http=200 非JSON ctype=text/plain body=b'OK\\r\\n'"
  ],
- "diag": [],
+ "diag": [
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'",
+  "https://models.github.ai/inference/chat/completions http=200 ctype=text/plain 非JSON body=b'OK\\r\\n'"
+ ],
  "error": "兩家不同廠商的模型未能都呼叫成功"
 }
