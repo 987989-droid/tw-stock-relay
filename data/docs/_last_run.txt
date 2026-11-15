@@ -1,10 +1,10 @@
 === strlist 1519 1 ===
-sii mopsov.twse.com.tw http=200 bytes=2574 hits=0
-sii mops.twse.com.tw http=200 bytes=833 hits=0
-otc mopsov.twse.com.tw http=200 bytes=2574 hits=0
-otc mops.twse.com.tw http=200 bytes=833 hits=0
-rotc mopsov.twse.com.tw http=200 bytes=2574 hits=0
-rotc mops.twse.com.tw http=200 bytes=833 hits=0
-pub mopsov.twse.com.tw http=200 bytes=2574 hits=0
-pub mops.twse.com.tw http=200 bytes=833 hits=0
+sii 115 ERR HTTP Error 307: Temporary Redirect
+sii 114 ERR HTTP Error 307: Temporary Redirect
+otc 115 ERR HTTP Error 307: Temporary Redirect
+otc 114 ERR HTTP Error 307: Temporary Redirect
 1519 查無法說簡報檔名
+=== sec LITE 1 ===
+company_tickers 200 796319
+LITE CIK 1633978 符合表單 35
+10-Q 2026-11-03 bytes 254150 -> data/docs/sec_LITE_10-Q_2026-11-03.txt
