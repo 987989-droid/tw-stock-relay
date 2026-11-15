@@ -1,0 +1,59 @@
+name: xval
+
+# 多模型交叉驗證（2026/11/15 建）：燈號 parser 抽出的關鍵數字 vs 兩家不同廠商模型各自抽一次，三方對帳。
+# 模型走 GitHub Models（runner 的 GITHUB_TOKEN＋models: read，免額外金鑰）。
+# 觸發：judge 跑完自動接著跑（即每週一 mops→judge→xval）；本檔或 xval.py 修改時跑一次；手動。
+# 只收資料、不推播、不寄信。輸出 data/derived/xval.json。詳見 scripts/xval.py。
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [judge]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/xval.yml'
+      - 'scripts/xval.py'
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: relay-commit
+  cancel-in-progress: false
+
+jobs:
+  xval:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 交叉驗證
+        id: xv
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/xval.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/derived/xval.json data/derived/_xval_status.json 2>/dev/null || true
+          git diff --staged --quiet && echo "無變更" && exit 0
+          git commit -m "xval $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
+      - name: 結果
+        if: steps.xv.outcome != 'success'
+        run: exit 1

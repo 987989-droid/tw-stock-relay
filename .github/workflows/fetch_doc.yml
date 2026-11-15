@@ -1,25 +1,33 @@
 name: fetch_doc
 
-# 公開文件下載（2026/11/11 建、11/12 擴充財報）：只能手動觸發，無排程、不連鎖。
-# 用途：sandbox 連不到 MOPS／doc.twse 時，改由 runner 下載公開 PDF 並轉文字，存 data/docs/。
+# 公開文件下載（2026/11/11 建、11/12 擴充財報、11/15 擴充法說清單與 SEC＋請求檔觸發）：無排程、不連鎖。
+# 用途：sandbox 連不到 MOPS／doc.twse／sec.gov 時，改由 runner 下載公開文件並轉文字，存 data/docs/。
 #   kind=str：MOPS 法說簡報（name＝檔名不含副檔名）
 #   kind=fin：合併財報 PDF（name＝公司代號；periods＝西元年＋季別，逗號分隔，例 202603,202601）
+#   kind=strlist：代號→查 MOPS 法說會一覽→下載最新 N 份簡報（periods＝N，預設 1）；清單寫 strlist_<代號>.txt
+#   kind=sec：美股代號→EDGAR 最新 N 份 10-Q/10-K/20-F/6-K/40-F 主文件（periods＝N，預設 1）
+# 觸發：①手動 workflow_dispatch；②推送 requests/fetch_doc.txt（每行「kind name periods」，可多行）。
+#   本環境無法以 API 手動觸發，故②為 Claude 端的正式觸發方式。
 # 失敗即停，不重試。詳見 scripts/fetch_doc.py。
 
 on:
   workflow_dispatch:
     inputs:
       kind:
-        description: 'str＝法說簡報；fin＝財報'
+        description: 'str／fin／strlist／sec'
         required: true
         default: 'str'
       name:
-        description: 'str：檔名（例 336320260902M001）；fin：公司代號'
+        description: 'str：檔名；fin／strlist：公司代號；sec：美股代號'
         required: true
       periods:
-        description: 'fin 專用：期別清單（例 202603,202601,202504）'
+        description: 'fin：期別清單；strlist／sec：份數'
         required: false
         default: ''
+  push:
+    branches: [main]
+    paths:
+      - 'requests/fetch_doc.txt'
 
 permissions:
   contents: write
@@ -31,7 +39,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: 安裝 pdftotext
@@ -41,18 +49,39 @@ jobs:
         continue-on-error: true
         shell: bash
         env:
+          EVENT: ${{ github.event_name }}
           KIND: ${{ inputs.kind }}
           NAME: ${{ inputs.name }}
           PERIODS: ${{ inputs.periods }}
-        run: python3 scripts/fetch_doc.py "$KIND" "$NAME" "$PERIODS" | tee data/docs/_last_run.txt
+        run: |
+          mkdir -p data/docs
+          : > data/docs/_last_run.txt
+          if [ "$EVENT" = "push" ]; then
+            reqs=$(grep -vE '^\s*(#|$)' requests/fetch_doc.txt)
+          else
+            reqs="$KIND $NAME $PERIODS"
+          fi
+          rc=0
+          while read -r k n p; do
+            [ -z "$k" ] && continue
+            echo "=== $k $n $p ===" | tee -a data/docs/_last_run.txt
+            python3 scripts/fetch_doc.py "$k" "$n" "$p" 2>&1 | tee -a data/docs/_last_run.txt
+            [ "${PIPESTATUS[0]}" -ne 0 ] && rc=1
+            sleep 3
+          done <<< "$reqs"
+          exit $rc
       - name: commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data/docs
           git diff --staged --quiet && echo "無變更" && exit 0
-          git commit -m "fetch_doc ${{ inputs.kind }} ${{ inputs.name }} ${{ inputs.periods }}"
-          git pull --rebase origin main && git push origin main
+          git commit -m "fetch_doc ${{ github.event_name }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
       - name: 結果
         if: steps.dl.outcome != 'success'
         run: exit 1
