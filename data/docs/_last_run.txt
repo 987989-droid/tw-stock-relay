@@ -1,10 +1,10 @@
 === strlist 1519 1 ===
-sii 115 ERR HTTP Error 307: Temporary Redirect
-sii 114 ERR HTTP Error 307: Temporary Redirect
-otc 115 ERR HTTP Error 307: Temporary Redirect
-otc 114 ERR HTTP Error 307: Temporary Redirect
-1519 查無法說簡報檔名
-=== sec LITE 1 ===
+sii 115 http=200 bytes=2571 hits=0 回應頭： 公開資訊觀測站 查無資料 try { if(!document.querySelector('#table01')){ var table01 = document.createElement("div"); table01.id = "table01"; document.body.appendChild(tabl
+sii 114 http=200 bytes=7441 hits=1 回應頭： 公開資訊觀測站 請選擇排列方式： 證券代號 召開法人說明會日期 請選擇排列順序： 資料由小到大/舊到新 資料由大到小/新到舊 公司代號 公司名稱 召開法人說明會日期 召開法人說明會時間 召開法人說明會地點 法人說明會擇要訊息 法人說明會簡報內容 公司網站是否提供法人說明會相關資訊 影音連結資訊 其他應敘明事項 歷年法
+清單 1 份；下載最新 ['151920251212M001']
+mopsov.twse.com.tw 200 4813588
+txt bytes 13617
+=== sec COHR 1 ===
 company_tickers 200 796319
-LITE CIK 1633978 符合表單 35
-10-Q 2026-11-03 bytes 254150 -> data/docs/sec_LITE_10-Q_2026-11-03.txt
+COHR CIK 820318 符合表單 33
+10-Q 2026-11-04 bytes 140873 -> data/docs/sec_COHR_10-Q_2026-11-04.txt
