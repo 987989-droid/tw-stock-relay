@@ -1,0 +1,22 @@
+{
+ "run_at_utc": "2026-11-15T11:12:50.860583+00:00",
+ "ok": false,
+ "model_a": null,
+ "model_b": null,
+ "tried_a": [
+  "openai/gpt-4.1: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "openai/gpt-4o: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "openai/gpt-4.1-mini: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "openai/gpt-4o-mini: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')"
+ ],
+ "tried_b": [
+  "deepseek/DeepSeek-V3-0324: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "meta/Llama-4-Maverick-17B-128E-Instruct-FP8: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "meta/Llama-3.3-70B-Instruct: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "mistral-ai/mistral-medium-2505: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "xai/grok-3-mini: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "mistral-ai/Mistral-Large-2411: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "cohere/cohere-command-a: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')"
+ ],
+ "error": "兩家不同廠商的模型未能都呼叫成功"
+}
