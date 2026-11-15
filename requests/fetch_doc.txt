@@ -1,3 +1,3 @@
-# 每行：kind name periods（推送本檔即觸發 fetch_doc）｜第二輪 11:12Z
+# 每行：kind name periods（推送本檔即觸發 fetch_doc）｜第三輪
 strlist 1519 1
-sec LITE 1
+sec COHR 1

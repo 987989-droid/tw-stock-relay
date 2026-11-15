@@ -11,16 +11,36 @@
       財報只在文字層過少（疑為掃描檔）時才留 PDF。
 紀律：失敗即停、不重試。
 """
-import os, re, subprocess, sys, time, urllib.parse, urllib.request
+import os, re, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
 OUT = "data/docs"
 
 
-def http(url, data=None):
-    req = urllib.request.Request(url, data=data, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return r.status, r.read()
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None   # 自己處理轉址：Python 預設不對 POST 的 307 轉址（2026/11/15 實測法說查詢回 307）
+
+
+_OPENER = urllib.request.build_opener(_NoRedirect)
+
+
+def http(url, data=None, hops=4):
+    for _ in range(hops):
+        req = urllib.request.Request(url, data=data, headers={"User-Agent": UA})
+        try:
+            r = _OPENER.open(req, timeout=120)
+            return r.status, r.read()
+        except urllib.error.HTTPError as e:
+            loc = e.headers.get("Location") if e.headers else None
+            if e.code in (301, 302, 303, 307, 308) and loc:
+                url = urllib.parse.urljoin(url, loc)
+                print("  轉址", e.code, "->", url)
+                if e.code == 303:
+                    data = None
+                continue
+            raise
+    raise RuntimeError("轉址過多")
 
 
 def to_text(pdf, txt):

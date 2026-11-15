@@ -9,7 +9,7 @@
 不讀任何持股清單：對象＝judge.json 已有的代號。
 紀律：單檔失敗不影響其他檔；不重試；呼叫間隔遵守免費額度（高階模型每分鐘 10 次）。
 """
-import json, os, re, sys, time, datetime, html as htmlmod, urllib.request, urllib.error
+import json, os, re, sys, time, datetime, html as htmlmod, urllib.request, urllib.error, urllib.parse
 
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 CAT = "https://models.github.ai/catalog/models"
@@ -35,12 +35,39 @@ KEEP = re.compile(r"營業收入|營業成本|營業毛利|營業費用|營業�
                   r"營業活動之淨現金|營運產生|應收帳款|存貨|合計|會計項目|民國|單位")
 
 
-def http_json(url, data=None):
-    h = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/json",
-         "Content-Type": "application/json", "X-GitHub-Api-Version": "2022-11-28"}
-    req = urllib.request.Request(url, data=json.dumps(data).encode() if data else None, headers=h)
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return json.loads(r.read())
+ENDPOINTS = [   # 2026/11/15 第二輪實測：models.github.ai 回 2xx 但 body 空 → 加舊網域備援（模型名不帶廠商前綴）
+    ("https://models.github.ai/inference/chat/completions", False),
+    ("https://models.inference.ai.azure.com/chat/completions", True),
+]
+DIAG = []
+
+
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None          # 不自動轉址：Python 對 POST 的 301/302 會改成無 body 的 GET，造成空回應
+
+
+_OPENER = urllib.request.build_opener(_NoRedirect)
+
+
+def http_json(url, data=None, hops=3):
+    h = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/json", "Content-Type": "application/json"}
+    body = json.dumps(data).encode() if data else None
+    for _ in range(hops):
+        req = urllib.request.Request(url, data=body, headers=h, method="POST" if body else "GET")
+        try:
+            r = _OPENER.open(req, timeout=120)
+            code, hdr, raw = r.status, dict(r.headers), r.read()
+        except urllib.error.HTTPError as e:
+            code, hdr, raw = e.code, dict(e.headers or {}), e.read()
+        if code in (301, 302, 303, 307, 308) and hdr.get("Location"):
+            DIAG.append(f"{url} -> {code} {hdr['Location']}")
+            url = urllib.parse.urljoin(url, hdr["Location"]); continue
+        if not raw.strip() or code >= 400:
+            DIAG.append(f"{url} http={code} ctype={hdr.get('Content-Type')} body={raw[:200]!r}")
+            raise RuntimeError(f"http={code} body={raw[:120]!r}")
+        return json.loads(raw)
+    raise RuntimeError("轉址過多")
 
 
 def rows(path):
@@ -68,13 +95,14 @@ def context(co, per):
     return txt[:CTX_LIMIT]
 
 
-def ask(model, co, per, ctx):
+def ask(sel, co, per, ctx):
+    ep, model = sel
     spec = "\n".join(f'- "{k}": {v[1]}' for k, v in FIELDS.items())
     prompt = (f"以下是台灣上市櫃公司 {co} 於 {per} 的合併財務報表節錄（MOPS 原表，金額單位新台幣仟元，"
               f"每列為『科目、各期欄位』；綜合損益表欄位順序通常為：本年當季、去年當季、本年累計、去年累計，"
               f"每個金額後可能跟一個百分比欄，百分比不是金額）。\n請只根據表格內容抽出下列欄位，"
               f"只回傳一個 JSON 物件，數值用數字（負數用負號、不要千分位），找不到填 null，不要任何說明：\n{spec}\n\n{ctx}")
-    j = http_json(INF, {"model": model, "temperature": 0, "max_tokens": 600,
+    j = http_json(ep, {"model": model, "temperature": 0, "max_tokens": 600,
                         "messages": [{"role": "system", "content": "你是嚴謹的財報數字抽取器，只輸出 JSON。"},
                                      {"role": "user", "content": prompt}]})
     txt = j["choices"][0]["message"]["content"]
@@ -102,20 +130,20 @@ def main():
     def pick(prefs):
         tried = []
         for m in prefs:
-            try:
-                j = http_json(INF, {"model": m, "max_tokens": 5, "messages": [{"role": "user", "content": "回覆 OK"}]})
-                if j.get("choices"):
-                    return m, tried
-                tried.append(f"{m}: 無 choices")
-            except urllib.error.HTTPError as e:
-                tried.append(f"{m}: HTTP {e.code} {e.read()[:120]!r}")
-            except Exception as e:
-                tried.append(f"{m}: {e!r}"[:160])
-            time.sleep(3)
+            for ep, strip in ENDPOINTS:
+                name = m.split("/", 1)[1] if strip else m
+                try:
+                    j = http_json(ep, {"model": name, "max_tokens": 5, "messages": [{"role": "user", "content": "回覆 OK"}]})
+                    if j.get("choices"):
+                        return (ep, name), tried
+                    tried.append(f"{name}@{ep.split('/')[2]}: 無 choices")
+                except Exception as e:
+                    tried.append(f"{name}@{ep.split('/')[2]}: {e!s}"[:200])
+                time.sleep(2)
         return None, tried
     mA, triedA = pick(PREF_A)
     mB, triedB = pick(PREF_B)
-    status.update({"model_a": mA, "model_b": mB, "tried_a": triedA, "tried_b": triedB})
+    status.update({"model_a": mA, "model_b": mB, "tried_a": triedA, "tried_b": triedB, "diag": DIAG[:20]})
     if not (mA and mB):
         status["error"] = "兩家不同廠商的模型未能都呼叫成功"
         json.dump(status, open("data/derived/_xval_status.json", "w"), ensure_ascii=False, indent=1)
@@ -151,7 +179,7 @@ def main():
 
     json.dump(out, open("data/derived/xval.json", "w"), ensure_ascii=False, indent=1)
     status.update({"ok": fails == 0, "calls_ok": calls, "calls_failed": fails,
-                   "stocks": len(out["stocks"]), "divergent_fields": len(out["divergent"])})
+                   "stocks": len(out["stocks"]), "divergent_fields": len(out["divergent"]), "diag": DIAG[:30]})
     json.dump(status, open("data/derived/_xval_status.json", "w"), ensure_ascii=False, indent=1)
     print("DONE", status)
 
