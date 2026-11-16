@@ -1,5 +1,5 @@
 {
-  "run_at_taipei": "2026-11-17T02:37:03.199334+08:00",
+  "run_at_taipei": "2026-11-17T04:46:19.223066+08:00",
   "budget_sec": 300,
   "sources": {
     "control_suspend_listed": {
@@ -10,7 +10,7 @@
       "status": 200,
       "count": 1,
       "bytes": 93,
-      "elapsed": 1.17,
+      "elapsed": 0.56,
       "path": "data/daily/control_suspend_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -27,7 +27,7 @@
       "status": 200,
       "count": 1,
       "bytes": 93,
-      "elapsed": 0.6,
+      "elapsed": 0.69,
       "path": "data/daily/control_altered_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -44,7 +44,7 @@
       "status": 200,
       "count": 23,
       "bytes": 8946,
-      "elapsed": 0.64,
+      "elapsed": 0.59,
       "path": "data/daily/penalty_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -64,7 +64,7 @@
       "status": 200,
       "count": 40,
       "bytes": 30645,
-      "elapsed": 0.78,
+      "elapsed": 1.06,
       "path": "data/daily/disclosure_violation_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -85,7 +85,7 @@
       "status": 200,
       "count": 15,
       "bytes": 5560,
-      "elapsed": 0.63,
+      "elapsed": 0.56,
       "path": "data/daily/control_change_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -103,7 +103,7 @@
       "status": 200,
       "count": 12,
       "bytes": 7430,
-      "elapsed": 0.6,
+      "elapsed": 0.58,
       "path": "data/daily/shortfall_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -131,7 +131,7 @@
       "status": 200,
       "count": 1073,
       "bytes": 132547,
-      "elapsed": 1.45,
+      "elapsed": 0.97,
       "path": "data/daily/major_holder_listed/2026-11-17.json",
       "keys": [
         "出表日期",
@@ -148,7 +148,7 @@
       "status": 200,
       "count": 1006,
       "bytes": 366993,
-      "elapsed": 1.13,
+      "elapsed": 1.03,
       "path": "data/quarterly/profitability_listed/115Q3.json",
       "keys": [
         "出表日期",
@@ -171,7 +171,7 @@
       "status": 200,
       "count": 1001,
       "bytes": 1355835,
-      "elapsed": 1.41,
+      "elapsed": 1.43,
       "path": "data/quarterly/income_listed_ci/115Q3.json",
       "keys": [
         "出表日期",
@@ -217,7 +217,7 @@
       "status": 200,
       "count": 1001,
       "bytes": 853028,
-      "elapsed": 1.3,
+      "elapsed": 1.38,
       "path": "data/quarterly/balance_listed_ci/115Q3.json",
       "keys": [
         "出表日期",
@@ -249,5 +249,5 @@
       ]
     }
   },
-  "total_elapsed": 9.7
+  "total_elapsed": 8.8
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-11-17T02:35:48.445562+08:00",
+  "generated_at_taipei": "2026-11-17T04:45:26.084572+08:00",
   "date": "2026-11-17",
   "expected_period": "11510",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
@@ -36,7 +36,7 @@
       "source": "twse_rwd_MI_INDEX",
       "quote_date": "1151116",
       "openapi_date": "1151113",
-      "refreshed_at_taipei": "2026-11-17T02:36:54.843464+08:00"
+      "refreshed_at_taipei": "2026-11-17T04:46:11.312241+08:00"
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
@@ -70,15 +70,15 @@
     },
     "pledge_listed": {
       "path": "data/monthly/pledge_listed/11510.json",
-      "count": 27519,
       "desc": "上市公司董監事持股餘額明細(含設質)",
-      "mode": "monthly"
+      "mode": "monthly",
+      "count": null
     },
     "pledge_otc": {
       "path": "data/monthly/pledge_otc/11510.json",
-      "count": 17658,
       "desc": "上櫃公司董監事持股餘額明細(含設質)",
-      "mode": "monthly"
+      "mode": "monthly",
+      "count": null
     },
     "control_suspend_listed": {
       "path": "data/daily/control_suspend_listed/2026-11-17.json",
@@ -145,6 +145,8 @@
   "skipped": [
     "revenue_listed",
     "revenue_otc",
-    "revenue_emerging"
+    "revenue_emerging",
+    "pledge_listed",
+    "pledge_otc"
   ]
 }
