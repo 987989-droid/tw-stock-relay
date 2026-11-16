@@ -5,6 +5,9 @@ on:
   schedule:
     # 21:20 UTC（週一至五）＝台北週二至週六 05:20；美股冬令 21:00 UTC、夏令 20:00 UTC 收盤
     - cron: '20 21 * * 1-5'
+    # 2026/11/16 加兩班：GitHub 排程常延遲 2～6 小時，多班提高 06:40 前到位機率；後到者覆蓋先到者
+    - cron: '47 21 * * 1-5'
+    - cron: '13 22 * * 1-5'
   push:
     branches: [main]
     paths: ['.github/workflows/us_overnight.yml', 'scripts/fetch_us_overnight.py']
@@ -13,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: relay-commit
+  group: us-overnight   # 2026/11/16 自 relay-commit 拆出：避免多班排隊時取消 daily／news 的 pending
   cancel-in-progress: false
 
 jobs:
