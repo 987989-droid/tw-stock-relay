@@ -1,5 +1,5 @@
 {
- "fetched_at_utc": "2026-11-15T23:29:50.827117+00:00",
+ "fetched_at_utc": "2026-11-16T01:43:56.066580+00:00",
  "requested_stocks": [
   "1513",
   "1519",
@@ -15,7 +15,8 @@
   "6239",
   "6451",
   "6643",
-  "8227"
+  "8227",
+  "3583"
  ],
  "tables": [
   "t164sb03",
@@ -158,7 +159,7 @@
    "co_id": "2474",
    "table": "t164sb04",
    "ok": false,
-   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "err": "URLError: <urlopen error timed out>",
    "http": null,
    "bytes": 0,
    "detected_co_id": null,
@@ -177,32 +178,32 @@
   {
    "co_id": "2474",
    "table": "t164sb06",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 49745,
-   "detected_co_id": "2474",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error timed out>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "3035",
    "table": "t164sb03",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 42753,
-   "detected_co_id": "3035",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "3035",
    "table": "t164sb04",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 30118,
-   "detected_co_id": "3035",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error timed out>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "3035",
@@ -307,12 +308,12 @@
   {
    "co_id": "3363",
    "table": "t164sb03",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 45439,
-   "detected_co_id": "3363",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "3363",
@@ -387,22 +388,22 @@
   {
    "co_id": "6147",
    "table": "t164sb03",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 43445,
-   "detected_co_id": "6147",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "6147",
    "table": "t164sb04",
-   "ok": true,
-   "err": null,
-   "http": 200,
-   "bytes": 30658,
-   "detected_co_id": "6147",
-   "period": "115Q3"
+   "ok": false,
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "http": null,
+   "bytes": 0,
+   "detected_co_id": null,
+   "period": null
   },
   {
    "co_id": "6147",
@@ -623,11 +624,52 @@
    "bytes": 21934,
    "detected_co_id": "8227",
    "period": "115Q3"
+  },
+  {
+   "co_id": "3583",
+   "table": "t164sb03",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 38823,
+   "detected_co_id": "3583",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3583",
+   "table": "t164sb04",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 34878,
+   "detected_co_id": "3583",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3583",
+   "table": "t164sb05",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 17334,
+   "detected_co_id": "3583",
+   "period": "115Q2"
+  },
+  {
+   "co_id": "3583",
+   "table": "t164sb06",
+   "ok": true,
+   "err": null,
+   "http": 200,
+   "bytes": 32123,
+   "detected_co_id": "3583",
+   "period": "115Q2"
   }
  ],
- "ok_count": 59,
- "fail_count": 1,
+ "ok_count": 57,
+ "fail_count": 7,
  "periods_seen": {
-  "115Q3": 59
+  "115Q3": 53,
+  "115Q2": 4
  }
 }
