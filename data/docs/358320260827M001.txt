@@ -1,0 +1,862 @@
+  辛耘
+
+許明棋 2026/08/27
+
+                 SCIENTECH Confidential
+免責聲明
+
+⚫   本簡報可能包含對於未來展望的表述。該類表述是基於對現況
+    的預期，但同時又受限於已知或未知的風險與不確定性的影響。
+    因此實際結果將可能不同於表述內容。
+
+⚫   除法令要求外，公司並無義務因應新資訊的產生或未來事件的
+    發生，主動更新對未來展望的表述。
+
+
+
+
+                           SCIENTECH Confidential | 2
+簡報大綱
+
+
+
+
+公司簡介 產品與服務   公司治理   營運概況   未來展望
+
+
+
+
+                            SCIENTECH Confidential | 3
+      公司簡介
+基本資料| 公司歷程 | 全球據點 |組織架構
+
+
+
+
+                          SCIENTECH Confidential | 4
+ 基本資料
+IC封裝基板
+                                                              ABOUT US    PRODUCTS   CONTACT US
+
+
+
+
+         產品與服務
+  ◼   設備研發製造-Equipment Design and Manufacturing
+  ◼   晶圓再生-Wafer Reclaim
+  ◼   代理事業-Representative
+
+
+         我們服務的產業
+  ◼   半導體 (前段/先進封裝)-Semiconductor (Front-End
+      and Advanced Packaging)
+  ◼   化合物半導體-Compound Semiconductor
+                                                   設立年度:                 實收股本:                員工人數:
+  ◼   LED / Mini LED / Micro LED
+  ◼   平面顯示器-Flat Panel Display (TFT-LCD, AMOLED,
+                                                   1979 年成立
+                                                   1979                  US$ 27 Million           >1,150 (全球)
+      Touch Panel)                                 於台灣台北
+                                                   Taipei, Taiwan        TWSE:3583
+  ◼   IC封裝基板(IC Package Substrate)
+                                                                                                  SCIENTECH Confidential | 5
+員工人數                       ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+超過 1,150 員工
+     代理事業              設備研發與製造
+ ◼ 台灣:135          ◼   450 員工
+ ◼ 大陸:130          ◼   130以上同仁具有研發設計與製程與工程經
+ ◼ 70%具設備製程與工程經驗
+                       驗
+
+
+
+
+  再生晶圓                 管理部
+ ◼   335 員工        ◼   105 員工
+
+
+
+
+                                                              SCIENTECH Confidential | 6
+公司歷程                                             ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+          1985            1995        2001              2002                  2003
+          新竹辦公室, Taiwan   美國子公司(加州)   大陸子公司(上海)         新加坡代理商                自製機台研發與製造
+
+
+
+
+1979
+設立於台北
+
+
+
+
+   2021          2019         2013        2007              2006               2004
+   歐洲子公司(奧地利)    自製設備500台出貨   辛耘在台灣交易所上   湖口廠辦大樓落成          晶圓再生事業             新竹辦公大樓
+                              市掛牌
+
+
+
+
+                                                                                    SCIENTECH Confidential | 7
+台灣據點                            ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+              台北總公司                            新竹辦公大樓
+
+             湖口廠辦大樓
+◼   設備研發製造
+    ◆   配備10級/1000級/10000級無塵室
+◼   再生晶圓
+
+
+
+
+                                                 台中辦公室
+
+
+
+             高雄辦公室                                台南辦公室
+
+
+                                                                   SCIENTECH Confidential | 8
+國外據點                       ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+ 歐洲子公司
+ Villach, Austria (2020)
+ ◼ 負責提供歐洲客戶一條龍銷
+    售與客服
+ ◼ 本公司及歐洲客戶對接窗口
+ ◼ 新產品/產品開發
+                                                    大陸子公司
+                                                    ◼ 北京辦事處 ( 2004年 )
+                                                    ◼ 大連辦事處 ( 2012年）
+                                                    ◼ 西安辦事處 ( 2013年 )
+                                                    ◼ 重慶辦事處（2010年）
+                                                    ◼ 常州辦事處（2012年）
+                                                    ◼ 無錫辦事處（2003年）
+                                                    ◼ 上海辦事處 ( 2001年 )
+                                                    ◼ 蕪湖辦事處（2013年）
+                                                    ◼ 廈門辦事處（2011年）
+                                                    ◼ 惠州辦事處（2013年）
+                                                    ◼ 昆明辦事處（2002年）
+
+
+
+美國子公司
+Santa Clara, CA (1994 )
+◼ 負責銷售與客服服務
+◼ 負責原廠與美國客戶對接服務
+◼ 新產品/產品開發
+
+
+
+
+                                                              SCIENTECH Confidential | 9
+辛耘公司組織架構
+
+                          辛耘
+
+                總管理處               自製設備
+
+                                   晶圓再生
+
+                新專案開發            半導體 / 光電 代理
+
+
+
+
+台灣辦公室   大陸辦公室    美國辦公室   歐洲辦公室   日本代理商    韓國代理商      新加坡代理商
+
+
+
+                                                  SCIENTECH Confidential | 10
+    產品與服務
+設備研發與製造 |晶圓再生 | 代理事業
+
+
+
+
+                       SCIENTECH Confidential | 11
+研發費用
+單位：百萬       2020    2021    2022          2023     2024    2025       2026/Q2
+ 研發費用        248     280     320           341      378     463            314
+研發費用佔
+            6.9%    6.0%    5.7%          4.9%     3.9%     4.0%          5.1%
+營業收入比重
+研發費用佔
+            16.5%   14.9%   15.3%         15.7%   11.3%     9.8%         10.0%
+ 製造比重
+
+
+                                   研發費用
+
+                                                            463
+    500                                             378
+                              320           320
+    400              280
+              248
+    300
+    200
+    100
+        0
+            2020    2021    2022      2023        2024    2025
+
+                                                                   SCIENTECH Confidential | 12
+ 研發專利累積數
+      ⚫    在案專利累積數212件；申請中50件
+                                                專利
+250
+
+
+
+                                                                                                212
+                                                                                  204
+200
+                                                                          182
+                                                                   170
+                                                            154
+150
+                                                     136
+
+                                             109
+100
+
+                                      74
+
+50                             44
+                 28     33
+          25
+
+ 0
+
+          2015   2016   2017   2018   2019   2020    2021   2022   2023   2024   Dec-25        Jun-26
+
+                                                                                 SCIENTECH Confidential | 13
+產品與服務                               ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+   設備研發與製造                再生晶圓                            代理事業
+
+ • 新進封裝-Advanced   • 12” Si Wafer              •   設備/量測設備
+   Package                                     •   子系統-Sub-System
+ • 半導體前段製程-FEOL                                •   材料-Material
+ • 光罩-Mask                                     •   維修和翻新-Repair
+ • 化合物-Compound
+                                                   and Refurbish
+ • 其他
+
+
+
+                                                                       SCIENTECH Confidential | 14
+晶圓再生服務                                                 ABOUT US   PRODUCTS   CONTACT US
+
+
+
+          先進的清潔技術                                      進階缺陷檢測
+          ⚫ 19nm Particle                              ⚫ Inspection (SP1/SP2/SP5/SP7)
+          ⚫ Low Trace Metal (<1E9)
+
+
+
+                             Cleaning              Etching
+
+
+
+      12”矽晶圓                                                                  產能擴充計畫
+◼   產能: 210K / 月                        Full Process                    ◼    2026年底再增加月產能 40K
+◼   銅與非銅製程                              Optimization
+
+
+                             Polishing            Grinding
+
+
+          完整的拋光製程                                         超級平整度
+          ⚫ Single/Double Side Polish
+                                                          (GBIR < 0.5mm)
+          • Final Haze Polish
+                                                                                          SCIENTECH Confidential | 15
+設備研發及生產                 ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+ 批次式濕式製程   單晶圓濕式製程   暫時性貼合及剝                         烘烤設備
+                        離
+
+
+
+
+                                                           SCIENTECH Confidential | 16
+設備研發及生產                                              ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+批次式濕式製程設備
+     應用產業                                      功能特色
+ ◼   Semiconductor: FEOL, BEOL, Compound   ◼   Cassette type or Cassette-less type
+ ◼   Advanced Packaging/Bumping…           ◼   Adopted by big international companies
+                                           ◼   Leading-edge technologies
+
+
+
+
+ 製程應用
+ ◼ Etch: Metal/Oxide/Nitride remove
+ ◼ Stripper: PR/PI strip, Polymer remove
+
+ ◼ Clean: Pre/Post/Flux clean
+
+ ◼ Electro-less Plating: Zn/Ni/Pd/Au
+
+
+
+
+                                                                                        SCIENTECH Confidential | 17
+設備研發及生產                                              ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+單晶圓濕式製程設備
+     應用產業                                      功能特色
+ ◼   Semiconductor: BEOL, FEOL, Compound   ◼   Soak/Immersion + Single
+ ◼   Advanced Packaging/Bumping            ◼   Adopted by big international companies
+                                           ◼   Leading-edge technologies
+
+
+
+
+ 製程應用
+ ◼ UBM / Metal Etch
+ ◼ Flux Clean (Hot DIW)
+
+ ◼ PR Strip
+
+ ◼ Wafer Clean (APC, Soft spray)
+
+ ◼ Final Clean/Mask Clean/Frame Clean
+
+                                                                                        SCIENTECH Confidential | 18
+設備研發及生產                                               ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+暫時性貼合及剝離設備(TBDB)
+     應用產業                                       功能特色
+ ◼   IGBT & SiC Power Device                ◼   User-friendly graphical user interface
+ ◼   Advanced Packaging for Semiconductor   ◼   Adopted by big international companies
+                                            ◼   Leading-edge technologies
+
+
+
+
+ 製程應用
+ ◼ Temporary Bonding
+ ◼ Temporary De-bonding
+
+ ◼ Release Layer Coating
+
+ ◼ Carrier (Glass) Recycling
+
+
+
+
+                                                                                         SCIENTECH Confidential | 19
+設備研發及生產                                               ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+水氣烘烤設備
+     應用產業                                       功能特色
+ ◼   Semiconductor: BEOL                    ◼   Availability for horizontal or vertical process
+ ◼   Advanced Packaging for Semiconductor   ◼   High precision temperature control
+                                            ◼   Weight handling capacity up to 23kg per lot
+
+
+
+
+ 製程應用
+ ◼ Pre-underfill baking
+ ◼ Pre-mold baking
+
+ ◼ DFR Hard Bake
+
+
+
+
+                                                                                         SCIENTECH Confidential | 20
+代理事業
+
+
+
+       Multiple
+                  Exclusivity
+        Apps
+
+
+
+           Long Term
+           Partnership
+
+
+
+
+                                SCIENTECH Confidential | 21
+代理產品                      ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+ Lithography   Etch   Thin Film                        Diffusion
+
+
+
+
+                                                             SCIENTECH Confidential | 22
+代理產品                           ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+                           Package                       Robot Repair
+ Metrology   Sub-Systems
+                           & Material                    and Refurbish
+
+
+
+
+                                                                  SCIENTECH Confidential | 23
+公司治理
+
+
+
+
+       SCIENTECH Confidential | 24
+國際標準認證                                                                          ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+    ISO 9001                     ISO 45001                      ISO 22301                     ISO 50001
+                              Occupational Health and        Business Continuity
+Quality Management                                                                         Energy Management
+                              Safety Management              Management
+
+
+
+       9001                          45001                          22301                         50001
+
+
+
+
+2007          2010           2016            2019            2021           2022           2024           2025
+
+
+
+                     14001                           27001                                                         56005
+
+
+
+              Environmental                  Information Security           Responsible Business
+                                                                                                          Innovation Management
+              Management                     Management                     Alliance Online Member
+
+                 ISO 14001                      ISO 27001                          RBA                       ISO56005
+
+
+
+                                                                                                                   SCIENTECH Confidential | 25
+ESG永續發展
+  發行永續報告書
+
+                   E    環境友善
+
+  永續發展                 溫馨職場
+  Environmental
+  Social          S    回饋社會
+  Governance
+
+                   G    誠信經營
+                          SCIENTECH Confidential | 26
+國際參展                                        ABOUT US    PRODUCTS   CONTACT US
+
+
+
+
+ Semicon China      Semicon TW       Semicon West                      Semicon Europa
+
+ Mar. 25-27, 2026   Sep. 2-4, 2026   Oct. 13-15, 2026                    Nov. 10-13, 2026
+    Shanghai            Taipei        San Francisco                           Munich
+
+
+
+
+                                                                                SCIENTECH Confidential | 27
+國際參展                                  ABOUT US   PRODUCTS   CONTACT US
+
+
+
+
+     ISES              ECTC
+
+ May 12-15, 2026   May 26-29, 2026
+     Taipei        Orlando, Florida
+
+
+
+
+                                                                         SCIENTECH Confidential | 28
+營運概況
+
+
+
+
+       SCIENTECH Confidential | 29
+簡明損益表
+單位：新台幣百萬      2020    2021    2022    2023    2024    2025            2026/Q2
+
+  營業收入        3,580   4,684   5,650   6,911   9,688   11,371            6,115
+
+  營業毛利        1,456   1,667   2,084   2,201   2,906   3,814             2,256
+
+  營業費用        991     1,112   1,374   1,483   1,790   2,238             1,349
+
+  營業淨利        465     555     710     718     1,116   1,576              908
+
+  稅前淨利        389     524     736     860     1,277   1,540              958
+
+歸屬母公司淨利       305     420     568     650     927     1,110              739
+
+EPS(新台幣元/股)   3.80    5.23    7.08    8.10    11.54   13.82             9.16
+
+   毛利率        41%     36%     37%     32%     30%     34%                37%
+
+ 營業淨利率        13%     12%     13%     10%     12%     14%                15%
+
+ 稅前淨利率        11%     11%     13%     12%     13%     14%                16%
+
+                                                               SCIENTECH Confidential | 30
+歷年營收
+ 單位:
+        2020    2021    2022    2023    2024    2025       2025/Q2        2026/Q2
+新台幣百萬
+營業收入    3,580   4,684   5,650   6,911   9,688   11,371       5,726          6,115
+
+                                                         ~ US$ 360M
+
+
+
+
+                                                                  SCIENTECH Confidential | 31
+歷年 EPS
+單位：NTD       2020   2021      2022          2023      2024        2025          2026/Q2
+ EPS         3.80   5.23      7.08          8.10      11.54       13.82              9.16
+                                      EPS
+    16
+
+
+
+    14
+                                                                     13.82
+    12
+                                                          11.54
+    10
+
+
+
+       8                                        8.1
+                                  7.08
+       6
+
+                       5.23
+       4
+              3.8
+       2
+
+
+
+       0
+
+           2020     2021       2022          2023      2024       2025       SCIENTECH Confidential | 32
+自製設備營業收入
+營業收入          2020         2021            2022            2023          2024            2025      2026/Q2              2026
+
+
+自製設備         931,518     1,134,379       1,207,789    1,325,760       2,590,217     3,715,167     2,562,617
+
+                                                      自製設備
+                                                                                                ~ US$ 118M
+
+ 4,000,000
+                                                                                                 3,715,167
+
+ 3,500,000
+
+
+ 3,000,000                                                                        2,590,217
+ 2,500,000
+
+
+ 2,000,000
+
+                                               1,207,789          1,325,760
+ 1,500,000                   1,134,379
+               931,518
+ 1,000,000
+
+
+  500,000
+
+
+        -
+
+              2020           2021              2022               2023            2024           2025
+                                                                                                             SCIENTECH Confidential | 33
+晶圓再生營業收入
+營業收入           2020          2021           2022            2023      2024      2025        2026/Q2              2026
+
+
+晶圓再生          575,527    716,779           864,409      855,320     762,958   1,008,562      594,674
+
+
+                                                            晶圓再生
+
+                                                                                          ~ US$ 32M
+  1,200,000
+                                                                                            1,008,562
+  1,000,000
+                                                     864,409       855,320
+                                                                              762,958
+   800,000
+                                    716,779
+                   575,527
+   600,000
+
+
+
+   400,000
+
+
+
+   200,000
+
+
+
+         -
+
+                  2020              2021             2022          2023       2024           2025
+                                                                                                        SCIENTECH Confidential | 34
+製造業營業收入
+營業收入           2020       2021         2022          2023               2024          2025        2026/Q2             2026
+
+
+製造業         1,507,045   1,851,158    2,072,198   2,181,080         3,353,175       4,723,729     3,157,291
+
+
+                                                 製造業
+                                                                                             ~ US$ 150M
+
+                                                                                                4,723,729
+5,000,000
+
+4,500,000
+
+4,000,000
+                                                                               3,353,175
+3,500,000
+
+3,000,000
+
+2,500,000                                2,072,198          2,181,080
+                         1,851,158
+2,000,000   1,507,045
+1,500,000
+
+1,000,000
+
+ 500,000
+
+       -
+
+            2020          2021           2022               2023               2024             2025
+                                                                                                            SCIENTECH Confidential | 35
+代理營業收入
+營業收入        2020          2021      2022       2023        2024         2025         2026/Q2                 2026
+
+ 代理    2,072,958     2,832,629   3,577,788   4,730,901   6,335,105    6,647,828     2,958,074
+
+                                                    代理
+                                                                                    ~ US$ 210M
+                                                                                       6,647,828
+       7,000,000                                                        6,335,105
+
+       6,000,000
+
+                                                          4,730,901
+       5,000,000
+
+
+       4,000,000
+                                             3,577,788
+                                 2,832,629
+       3,000,000
+                   2,072,958
+       2,000,000
+
+
+       1,000,000
+
+
+              -
+
+                   2020          2021        2022         2023           2024          2025
+                                                                                                   SCIENTECH Confidential | 36
+  產品組合– 營業收入
+                                                                                                           Gross
+單位：%          2020   2021   2022          2023         2024   2025         2026/Q2          2026
+                                                                                                           Margin
+
+  代理           58     60     63            68            65    58            48             <50%     Below Average
+
+                                                                                                           Above
+製造業            42     40     37            32            35    42            52             >50%          Average
+
+                                                 營業收入
+120%
+
+
+100%
+
+
+80%
+
+
+60%
+
+
+40%
+
+
+20%
+
+
+ 0%
+
+       2020          2021          2022               2023          2024             2025          2026/Q2
+                                                 代理     製造
+
+                                                                                                   SCIENTECH Confidential | 37
+未來展望
+
+
+
+
+       SCIENTECH Confidential | 38
+擴產藍圖
+⚫   2023:湖口新建裝備生產基地(異地)。
+⚫   2024:湖口工廠現有設備生產擴建。
+⚫   2025 Q4:湖口工廠再生晶圓產能再增加5萬片/月。
+⚫   2026 Q1: 上海新辦公室開幕
+⚫   2026 Q4:湖口工廠晶圓再生產能再增加4萬片/月。
+⚫   併購: YAYATECH (亞亞) in 2025, Nutrim (新群) in 2026
+⚫   2027:湖口工廠再生晶圓產能再增加5萬片/月。
+
+
+
+                                                     SCIENTECH Confidential | 39
+擴廠藍圖
+⚫   2026 Q4: 9,000M2(2,700坪) ⚫ 2028 Q1:台南新建22,000 M2
+    新廠房（二廠）用於設備製造 (6,600坪)的設備製造和倉儲
+    與倉庫，毗鄰湖口廠（一廠） 大樓(南臺灣)
+
+
+
+
+                                             SCIENTECH Confidential | 40
+資本支出與投資
+               Capex                         NTD K           USD K
+    Wafer Reclaim 50K Expansion             1,450,000         48,000
+    Wafer Reclaim 40K Expansion             300,000           10,000
+          Shanghai Office                   180,000            6,000
+          Hukou Factory II                  550,000           18,000
+          Tainan Factorry                   850,000           31,000
+                Sum                         3,305,000        113,000
+
+           Capex                   2024              2025      2026
+
+           NTD K                  546,000        1,250,000   1,750,000
+           USD K                  18,000           41,000     58,000
+
+
+        Other Invest.              2024              2025      2026
+
+           NTD K                  215,000         109,000     43,000
+           USD K                   7,000             3,600    1,400
+
+                                                                         SCIENTECH Confidential | 41
+重要亮點
+⚫   半導體複合年增長率將支持我們積極的投資計劃.
+⚫   半導體市場規模
+    ◼ 2024: 640B
+    ◼ 2025: 750B
+
+    ◼ 2026: 900B – 1Trillion
+
+
+⚫   TSMC's 法人電話會議:
+    ◼ 2024-2029年間，人工智慧加速晶片的複合年成長率預計從mid-40%
+      上調至mid-to-high 50%
+    ◼ 2024年至2029年總收入複合年成長率從20%提高到25%
+
+
+
+
+                                      SCIENTECH Confidential | 42
+卓越供應商
+TSMC 2024 Outstanding Suppliers Award
+
+
+
+
+         https://pr.tsmc.com/english/news/3192   SCIENTECH Confidential | 43
+重要亮點
+2️⃣混合營收模式－兼顧穩定性與成長槓桿:
+ ⚫ 代理商/代理商業務－資產輕、利潤率高、穩定
+ ⚫ 晶圓再生–循環經常性收入，穩定性
+
+ ⚫   自製設備–營收成長火車頭，人工智慧強勁需求成長
+三大產品結構提供:
+ ⚫   基本經常性收入
+ ⚫ 人工智慧需求帶來的成長潛力
+ ⚫ 波動性低 vs.純設備型同業波動性較高
+
+市場定位：我們的混合營運模式結合了結構穩定性和人工智慧
+驅動的成長槓桿。
+                               SCIENTECH Confidential | 44
+     Thank You!
+https://www.scientech.com.tw
+
+
+
+
+                               SCIENTECH Confidential
+
