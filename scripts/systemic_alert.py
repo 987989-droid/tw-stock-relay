@@ -14,7 +14,8 @@
 import json, os, re, sys, glob, statistics, datetime as dt
 
 args = sys.argv[1:]
-R, HF = args[0], args[1]
+NEWS_ONLY = "--news-only" in args          # 只跑新聞量判定，不需持股檔（供新聞判讀排程用）
+R, HF = args[0], (None if NEWS_ONLY else args[1])
 AI = set()
 ASOF = None
 if "--ai" in args: AI = {c.strip() for c in args[args.index("--ai") + 1].split(",") if c.strip()}
@@ -39,17 +40,17 @@ def bump(lv, why):
 
 # ---- 持股基準（與 mine_check.py 同格式、同核對碼）----
 H, chk = [], None
-for l in open(HF, encoding="utf-8").read().splitlines():
+for l in ([] if NEWS_ONLY else open(HF, encoding="utf-8").read().splitlines()):
     l = l.strip()
     if not l or l.startswith(("```", "格式", "核對碼格式", "asof")): continue
     if l.startswith("chk:"): chk = l[4:].strip(); continue
     c, name, mk, sh, cost, avg, gate = l.split("|")
     H.append((c, name, mk, int(sh), round(float(cost)), float(avg), float(gate)))
 got = "%d|%d|%d|%.2f" % (len(H), sum(h[3] for h in H), sum(h[4] for h in H), sum(h[6] for h in H))
-if got != chk: print("ABORT 持股基準核對碼不符：實得", got, "應為", chk); sys.exit(4)
+if not NEWS_ONLY and got != chk: print("ABORT 持股基準核對碼不符：實得", got, "應為", chk); sys.exit(4)
 
 # ---- 一、美股隔夜 ----
-print("=====US=====")
+if not NEWS_ONLY: print("=====US=====")
 def last_us_session(d):
     x = d - dt.timedelta(days=1)          # 台北日期的前一天＝美國最近一個交易日（週一→上週五）
     while x.weekday() >= 5: x -= dt.timedelta(days=1)
@@ -57,11 +58,11 @@ def last_us_session(d):
 exp = last_us_session(TODAY)
 us_stale = 0
 try:
-    U = J("data/derived/us_overnight.json"); L = U.get("latest", {})
+    U = J("data/derived/us_overnight.json"); L = {} if NEWS_ONLY else U.get("latest", {})
 except Exception as e:
     print(f"美股隔夜檔讀取失敗：{str(e)[:80]}"); L = {}; us_stale = 1
 TH = {"^SOX": ("費半", -3.0, -2.0), "NVDA": ("NVDA", -5.0, -3.0), "TSM": ("台積電ADR", -4.0, -2.5)}
-for t, (nm, red, yel) in TH.items():
+for t, (nm, red, yel) in ({} if NEWS_ONLY else TH).items():
     x = L.get(t)
     if not x: print(f"{nm}：無資料"); us_stale = 1; continue
     d, chg = dt.date.fromisoformat(x["date"]), x["chg_1d_pct"]
@@ -122,6 +123,10 @@ if samples:
         if x["t"] in seen: continue
         seen.add(x["t"]); print(f"  [{k}] {x['t']} {x.get('u', '')}")
 
+if NEWS_ONLY:
+    print("=====LEVEL=====")
+    print(level + " " + ("；".join(reasons) if reasons else "無系統性訊號"))
+    sys.exit({"🟢": 0, "🟡": 10, "🔴": 11}[level])
 # ---- 三、組合曝險 ----
 print("=====PORT=====")
 q = {}
