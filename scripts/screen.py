@@ -4,7 +4,7 @@
 營收加速 × 股價落後 篩選＋地雷關（2026/10/28 建；排程與對話共用）。
 - 名單不放 repo：由呼叫端以檔案傳入（任意文字，抓 4 碼代號）。本檔只含方法，不含任何名單。
 - 用法：python3 scripts/screen.py <repo 根目錄> <名單檔> [--json] [--quarterly]
-- 新鮮度檢查（排程用）：營收最新完整月須為上個月、beta 與 revhist 須於 3 日內產生；
+- 新鮮度檢查（排程用）：營收最新完整月須為上個月（每月 10 日前可為上上月）、beta 須於 3 日內產生、revhist 須在最近一次月營收期限（每月 10 日 18:00 UTC）後跑過；
   --quarterly 另要求損益最新完整期為應公告季（4月→去年Q4、5月→Q1、8月→Q2、11月→Q3）且 t163 於 3 日內產生。
   不新鮮 → 首行印「⚠️ 資料未更新」與原因，結束碼 2（呼叫端據此停住）。
 - 讀：data/derived/revenue_hist.json、beta_alpha.json、is_<期>.json；data/monthly/pledge_*；
@@ -200,9 +200,19 @@ if ATT is not None:
     if not news_last or (today - datetime.date.fromisoformat(news_last)).days > 2: stale.append(f"新聞最新檔 {news_last}")
     if news_days < 30: stale.append(f"新聞檔僅 {news_days} 天，不足 30 天")
 else:
-    if not q3 or q3[-1] != f"{py}{pm:02d}": stale.append(f"營收最新完整月 {q3[-1] if q3 else '無'}，應為 {py}{pm:02d}")
-    for nm, iso in (("beta", beta_gen), ("revhist", J("data/derived/_revhist_status.json").get("run_at_utc"))):
-        if age_days(iso) > 3: stale.append(f"{nm} 產生於 {iso}")
+    # 2026/11/16 修：revhist 只在每月 10 日（申報期限）後跑一次，舊的「3 日內」會讓每月 14 日起到下月 10 日的每日買進名單與季報後篩選全部被判過期。
+    # 改為：revhist 須在「最近一次期限（每月 10 日 18:00 UTC）」之後跑過；每月 10 日（含）以前，最新完整月可為上上月（上月尚未到申報期限）。
+    py2, pm2 = (py, pm - 1) if pm > 1 else (py - 1, 12)
+    ok = {f"{py}{pm:02d}"} | ({f"{py2}{pm2:02d}"} if today.day <= 10 else set())
+    if not q3 or q3[-1] not in ok: stale.append(f"營收最新完整月 {q3[-1] if q3 else '無'}，應為 {' 或 '.join(sorted(ok))}")
+    if age_days(beta_gen) > 3: stale.append(f"beta 產生於 {beta_gen}")
+    _nowu = datetime.datetime.now(datetime.timezone.utc)
+    _dl = _nowu.replace(day=10, hour=18, minute=0, second=0, microsecond=0)
+    if _dl > _nowu: _dl = (_dl.replace(day=1) - datetime.timedelta(days=1)).replace(day=10)
+    _rv = J("data/derived/_revhist_status.json").get("run_at_utc")
+    try: _rv_ok = datetime.datetime.fromisoformat(_rv) >= _dl
+    except Exception: _rv_ok = False
+    if not _rv_ok: stale.append(f"revhist 產生於 {_rv}，早於最近一次月營收期限 {_dl:%Y-%m-%d %H:%M}Z")
 if QUARTERLY:
     Y = today.year - 1911
     want = {4: f"{Y-1}Q4", 5: f"{Y}Q1", 8: f"{Y}Q2", 11: f"{Y}Q3"}.get(today.month)

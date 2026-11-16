@@ -56,8 +56,9 @@ for c, h in hold.items():
     if c not in q: miss.append(c); continue
     px, d, nm = q[c]; gate = h["gate"]; gap = (px / gate - 1) * 100; pnl = (px * h["sh"] / h["cost"] - 1) * 100
     base = f"{c} {nm}｜收 {px:g}（{d}）｜閘門 {gate:g}｜損益 {pnl:+.1f}%"
-    if c in void: sell.append((c, f"⚫ 賣 {base}｜出場理由①作廢條件成立：{void[c]}"))
-    elif px < gate: sell.append((c, f"⚫ 賣 {base}｜低於閘門 {gap:.1f}%｜出場理由②價格閘門"))
+    sbase = base.replace(f"{c} {nm}｜", f"{c} {nm} {h['sh']} 股｜", 1)  # 2026/11/16：賣出行附股數（使用者只負責下單）
+    if c in void: sell.append((c, f"⚫ 賣 {sbase}｜出場理由①作廢條件成立：{void[c]}"))
+    elif px < gate: sell.append((c, f"⚫ 賣 {sbase}｜低於閘門 {gap:.1f}%｜出場理由②價格閘門"))
     else:
         why = []
         j = judge.get(c) or {}
@@ -118,6 +119,6 @@ L += ["", FOOT, "依你的規則與中繼資料機械判定；作廢條件逐條
 print("\n".join(L))
 print("=====SMS=====")
 print(one)
-print("賣：" + ("、".join(c for c, _ in sell) or "無"))
+print("賣：" + ("、".join(f"{c}×{hold[c]['sh']}股" for c, _ in sell) or "無"))
 print(("買進候選：" if can_buy else "觀察（暫不買）：") + ("、".join(c for c, _ in buy) or "無"))
 print(bond.split("｜")[0])
