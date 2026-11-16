@@ -1,4 +1,4 @@
-"""買賣評級測試期（2026/11/12–12/12）每日判定。唯讀；不含任何持股或追蹤清單，兩者由呼叫端以檔案傳入。
+"""買賣判定每日機械判定（2026/11/12 起測試、2026/11/16 使用者裁定轉常設）。唯讀；不含任何持股或追蹤清單，兩者由呼叫端以檔案傳入。
 用法：python3 scripts/rating_test.py <repo 根目錄> <名單檔> <持股基準區原文 hold.txt> [附加 json：void、wl_chk]（舊格式持股 json 仍可用）
 結束碼：0 正常；3 中繼批次過舊；4 持股或名單核對不符。"""
 import json, os, sys, subprocess, datetime as dt
@@ -102,7 +102,7 @@ else:
                 buy.append((c, f"🟢 {tag} {s}｜參考閘門（收盤×0.85）{r['close'] * 0.85:.2f}"))
 can_buy = water != "🔴"
 one = f"賣 {len(sell)} 檔｜續抱 {len(near) + len(keep)} 檔｜" + (f"買進候選 {len(buy)} 檔" if can_buy else f"水位🔴 今日不買（候選 {len(buy)} 檔列觀察）")
-L += [f"買賣判定（測試期至 12/12）{now:%Y-%m-%d}", one, "報價非即時、可能延遲；各行括號內為收盤日", "", "── 賣 ──"]
+L += [f"買賣判定 {now:%Y-%m-%d}", one, "報價非即時、可能延遲；各行括號內為收盤日", "", "── 賣 ──"]
 L += [s for _, s in sell] or ["無"]
 L += ["", "── 續抱 ──"] + [s for _, s in near + keep]
 if miss: L.append("⚠️ 查無報價：" + "、".join(miss))
