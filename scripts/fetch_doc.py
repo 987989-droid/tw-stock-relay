@@ -6,6 +6,9 @@
       期別＝西元年＋兩位季別（202603＝115Q3；202504＝114 年報）。抓合併財報（AI1）。
   python scripts/fetch_doc.py strlist <代號> [份數]            查 MOPS 法說會一覽，下載最新 N 份簡報（2026/11/15）
   python scripts/fetch_doc.py sec <美股代號> [份數]            EDGAR 最新 N 份 10-Q/10-K/20-F/6-K/40-F（2026/11/15）
+  python scripts/fetch_doc.py web <網址> <公鑰檔路徑>           JS 動態網頁（2026/11/17）：headless Chromium 渲染後取正文，
+      以呼叫端提供的 RSA 公鑰加密（隨機 AES 金鑰＋AES-256-CBC），只存密文 data/docs/web/<id>.enc 與 .key，
+      公開 repo 不留可讀全文（新聞屬著作權內容）；解密私鑰只在呼叫端。
 
 輸出：data/docs/<名稱>.txt（pdftotext -layout）。法說簡報另留 PDF（圖片頁要轉圖看）；
       財報只在文字層過少（疑為掃描檔）時才留 PDF。
@@ -185,6 +188,39 @@ def do_sec(ticker, n_text):
     return ok
 
 
+def do_web(url, pub):
+    import hashlib, secrets
+    from playwright.sync_api import sync_playwright
+    wid = hashlib.sha1(url.encode()).hexdigest()[:10]
+    os.makedirs(f"{OUT}/web", exist_ok=True)
+    try:
+        with sync_playwright() as pw:
+            b = pw.chromium.launch()
+            pg = b.new_page(user_agent=UA, locale="zh-TW")
+            pg.goto(url, wait_until="networkidle", timeout=90000)
+            pg.wait_for_timeout(4000)
+            title = pg.title()
+            final = pg.url
+            body = pg.evaluate("""() => { const a = document.querySelector('article') || document.querySelector('[class*=content]') || document.body; return a.innerText; }""")
+            full = pg.evaluate("() => document.body.innerText")
+            b.close()
+    except Exception as e:
+        print("web ERR", repr(e)[:200]); return False
+    txt = f"url: {url}\nfinal: {final}\ntitle: {title}\n\n=== main ===\n{body}\n\n=== body ===\n{full}\n"
+    print("web", wid, "title", title[:60], "main", len(body), "body", len(full))
+    if len(full) < 200: print("web 內容過短，疑未渲染"); 
+    key = secrets.token_hex(32)
+    open("/tmp/k.txt", "w").write(key)
+    open("/tmp/p.txt", "w", encoding="utf-8").write(txt)
+    r1 = subprocess.run(["openssl", "enc", "-aes-256-cbc", "-pbkdf2", "-salt", "-pass", "file:/tmp/k.txt",
+                         "-in", "/tmp/p.txt", "-out", f"{OUT}/web/{wid}.enc"])
+    r2 = subprocess.run(["openssl", "pkeyutl", "-encrypt", "-pubin", "-inkey", pub,
+                         "-in", "/tmp/k.txt", "-out", f"{OUT}/web/{wid}.key"])
+    os.remove("/tmp/k.txt"); os.remove("/tmp/p.txt")
+    print("web ->", f"{OUT}/web/{wid}.enc", "rc", r1.returncode, r2.returncode)
+    return r1.returncode == 0 and r2.returncode == 0 and len(full) >= 200
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     kind = sys.argv[1]
@@ -197,6 +233,8 @@ if __name__ == "__main__":
         r = do_strlist(sys.argv[2], arg3)
     elif kind == "sec":
         r = do_sec(sys.argv[2], arg3)
+    elif kind == "web":
+        r = do_web(sys.argv[2], arg3)
     else:
         print("未知類型", kind); r = False
     sys.exit(0 if r else 1)

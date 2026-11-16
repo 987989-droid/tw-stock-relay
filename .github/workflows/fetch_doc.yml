@@ -5,6 +5,7 @@ name: fetch_doc
 #   kind=str：MOPS 法說簡報（name＝檔名不含副檔名）
 #   kind=fin：合併財報 PDF（name＝公司代號；periods＝西元年＋季別，逗號分隔，例 202603,202601）
 #   kind=strlist：代號→查 MOPS 法說會一覽→下載最新 N 份簡報（periods＝N，預設 1）；清單寫 strlist_<代號>.txt
+#   kind=web：JS 動態網頁（name＝網址、periods＝repo 內 RSA 公鑰路徑）→ 只存密文 data/docs/web/（2026/11/17）
 #   kind=sec：美股代號→EDGAR 最新 N 份 10-Q/10-K/20-F/6-K/40-F 主文件（periods＝N，預設 1）
 # 觸發：①手動 workflow_dispatch；②推送 requests/fetch_doc.txt（每行「kind name periods」，可多行）。
 #   本環境無法以 API 手動觸發，故②為 Claude 端的正式觸發方式。
@@ -44,6 +45,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: 安裝 pdftotext
         run: sudo apt-get install -y -qq poppler-utils >/dev/null
+      - name: 安裝 headless Chromium（僅 web 請求時）
+        if: ${{ inputs.kind == 'web' || github.event_name == 'push' }}
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && ! grep -qE '^\s*web\s' requests/fetch_doc.txt; then echo "無 web 請求"; exit 0; fi
+          python3 -m pip install -q playwright && python3 -m playwright install --with-deps chromium >/dev/null
       - name: 下載
         id: dl
         continue-on-error: true
