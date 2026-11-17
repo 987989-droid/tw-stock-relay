@@ -37,5 +37,6 @@ for k, u in C.items():
     except ET.ParseError:
         items = [["(非 XML)", len(b)]]
     out[k] = {"status": st, "bytes": len(b), "n": len(items), "top3": items[:3]}
+import os; os.makedirs("data/probe", exist_ok=True)
 json.dump({"at": dt.datetime.utcnow().isoformat() + "Z", "r": out}, open("data/probe/us_media.json", "w"), ensure_ascii=False, indent=1)
 print(json.dumps(out, ensure_ascii=False)[:3000])
