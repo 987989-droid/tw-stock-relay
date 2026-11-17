@@ -1,0 +1,201 @@
+{
+ "at": "2026-11-17T11:22:24.537251Z",
+ "r": {
+  "wsj_markets": {
+   "status": 200,
+   "bytes": 12752,
+   "n": 20,
+   "top3": [
+    [
+     "Stocks Sink in Broad AI Rout Sparked by China's DeepSeek",
+     "Mon, 27 Jan 2025 14:26:00 -0500"
+    ],
+    [
+     "Comex Gold, Silver Settle Lower",
+     "Mon, 27 Jan 2025 14:01:00 -0500"
+    ],
+    [
+     "DeepSeek Won't Sink U.S. AI Titans",
+     "Mon, 27 Jan 2025 13:12:00 -0500"
+    ]
+   ]
+  },
+  "wsj_business": {
+   "status": 200,
+   "bytes": 18269,
+   "n": 20,
+   "top3": [
+    [
+     "Wall Street Banks Prepare to Sell Billions of Dollars of X Loans",
+     "Fri, 24 Jan 2025 15:37:00 -0500"
+    ],
+    [
+     "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+     "Fri, 24 Jan 2025 15:13:00 -0500"
+    ],
+    [
+     "Amazon Willing to Discuss Quebec Shutdown With Canadian Officials",
+     "Fri, 24 Jan 2025 14:15:00 -0500"
+    ]
+   ]
+  },
+  "wsj_tech": {
+   "status": 200,
+   "bytes": 12604,
+   "n": 20,
+   "top3": [
+    [
+     "What to Know About China's DeepSeek AI",
+     "Mon, 27 Jan 2025 13:17:00 -0500"
+    ],
+    [
+     "Tech, Media & Telecom Roundup: Market Talk",
+     "Mon, 27 Jan 2025 12:28:00 -0500"
+    ],
+    [
+     "Silicon Valley Is Raving About a Made-in-China AI Model",
+     "Mon, 27 Jan 2025 09:36:00 -0500"
+    ]
+   ]
+  },
+  "wsj_gn": {
+   "status": 200,
+   "bytes": 119280,
+   "n": 100,
+   "top3": [
+    [
+     "Roche Secures First U.S. Approval for New Breast-Cancer Pill - WSJ",
+     "Tue, 17 Nov 2026 08:15:00 GMT"
+    ],
+    [
+     "China Flexes Muscle in Iron Ore, Squeezing Australia and Its Miners - WSJ",
+     "Tue, 17 Nov 2026 05:55:00 GMT"
+    ],
+    [
+     "Deutsche Bank Shares Drop After Wide-Ranging Whistleblower Leaks - WSJ",
+     "Tue, 17 Nov 2026 09:22:00 GMT"
+    ]
+   ]
+  },
+  "bbg_markets": {
+   "status": 200,
+   "bytes": 15286,
+   "n": 20,
+   "top3": [
+    [
+     "Oil Swings as Traders Weigh Mideast Flareups and Ample Supply",
+     "Mon, 16 Nov 2026 23:02:55 GMT"
+    ],
+    [
+     "US Gas Pump Price Hits 8-Month Low to Ease Inflation Concern",
+     "Tue, 17 Nov 2026 10:07:34 GMT"
+    ],
+    [
+     "Cash-Strapped Indian States Risk Infrastructure Push, Study Says",
+     "Tue, 17 Nov 2026 11:05:44 GMT"
+    ]
+   ]
+  },
+  "bbg_tech": {
+   "status": 200,
+   "bytes": 16582,
+   "n": 20,
+   "top3": [
+    [
+     "How China and US Clash Over AI Risks, Robots and Chip Smuggling",
+     "Tue, 17 Nov 2026 11:08:58 GMT"
+    ],
+    [
+     "SAP Executive Saueressig Quits to Become Ionos CEO",
+     "Tue, 17 Nov 2026 08:21:55 GMT"
+    ],
+    [
+     "AI Startup for Bankers Raises Funds at $1.5 Billion Value",
+     "Tue, 17 Nov 2026 11:00:05 GMT"
+    ]
+   ]
+  },
+  "bbg_economics": {
+   "status": 200,
+   "bytes": 15379,
+   "n": 20,
+   "top3": [
+    [
+     "German Investor Outlook Jumps to Highest Since Iran War Began",
+     "Tue, 17 Nov 2026 10:08:43 GMT"
+    ],
+    [
+     "De Cos Set for Top ECB Job as Germany Picks Chief Economist",
+     "Tue, 17 Nov 2026 09:22:02 GMT"
+    ],
+    [
+     "Euro Zone to Grow Robustly as It Shrugs Off Inflation, EU Says",
+     "Tue, 17 Nov 2026 10:03:22 GMT"
+    ]
+   ]
+  },
+  "bbg_gn": {
+   "status": 200,
+   "bytes": 129704,
+   "n": 100,
+   "top3": [
+    [
+     "US Chip Curbs Force Xi to Weigh Response Before Trump Summit - Bloomberg.com",
+     "Tue, 17 Nov 2026 07:30:47 GMT"
+    ],
+    [
+     "Turkish Households Buckle Under Gold-Price Slide, Funds Crisis - Bloomberg.com",
+     "Tue, 17 Nov 2026 09:25:23 GMT"
+    ],
+    [
+     "Nvidia Forms Export Control Board Committee After Chip Curbs - Bloomberg.com",
+     "Tue, 17 Nov 2026 10:51:32 GMT"
+    ]
+   ]
+  },
+  "rtr_sitemap": {
+   "status": 401
+  },
+  "rtr_business_html": {
+   "status": 401
+  },
+  "rtr_gn": {
+   "status": 200,
+   "bytes": 131286,
+   "n": 100,
+   "top3": [
+    [
+     "LPG tanker reported to have sunk off Bulgaria's Black Sea coast - Reuters",
+     "Tue, 17 Nov 2026 10:53:44 GMT"
+    ],
+    [
+     "Mongolian president announces resignation over alleged corruption - Reuters",
+     "Tue, 17 Nov 2026 08:26:09 GMT"
+    ],
+    [
+     "Russia says Ukraine struck its bridge to Crimea for second day in biggest drone attack of war - Reuters",
+     "Tue, 17 Nov 2026 06:52:00 GMT"
+    ]
+   ]
+  },
+  "rtr_gn_markets": {
+   "status": 200,
+   "bytes": 28014,
+   "n": 24,
+   "top3": [
+    [
+     "CVC abandons $3.3 billion acquisition of Italian ingredients maker IRCA - Reuters",
+     "Mon, 16 Nov 2026 23:28:00 GMT"
+    ],
+    [
+     "Indonesia on a 'slippery slope' as political tumult adds to MSCI-led market angst - Reuters",
+     "Tue, 17 Nov 2026 04:44:00 GMT"
+    ],
+    [
+     "Gold sinks to 1-year low as Treasury yields and dollar bite, set for worst year since 2015 - Reuters",
+     "Mon, 16 Nov 2026 18:03:06 GMT"
+    ]
+   ]
+  }
+ }
+}
