@@ -1,0 +1,35 @@
+name: us_media
+# 三大美媒產經頭條（2026/11/17）：WSJ／Bloomberg／Reuters 各 10 則標題＋連結，不存內文。
+# 台北 04:41、05:23（美股收盤後）＋手動。獨立 concurrency，避免排隊取消 daily／news。失敗即停、不重試。
+on:
+  schedule:
+    - cron: '41 20 * * *'
+    - cron: '23 21 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/fetch_us_media.py', '.github/workflows/us_media.yml']
+permissions:
+  contents: write
+concurrency:
+  group: us-media
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: 抓取
+        id: f
+        continue-on-error: true
+        run: python3 scripts/fetch_us_media.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add data/daily/us_media data/latest/us_media.json; git diff --staged --quiet && exit 0
+          git commit -m "us_media $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin main && exit 0; sleep 5; done; exit 1
+      - name: 結果
+        if: steps.f.outcome != 'success'
+        run: exit 1
