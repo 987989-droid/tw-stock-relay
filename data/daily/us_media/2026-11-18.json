@@ -1,8 +1,38 @@
 {
- "generated_at_taipei": "2026-11-18 10:36",
+ "generated_at_taipei": "2026-11-18 10:58",
  "definition": "各家財經版過去36小時內去重後最新10則（非編輯台排名）",
  "media": {
   "WSJ": [
+   {
+    "t": "SpaceX Plans More Than $74 Billion in Texas, Arizona Data-Center Investments",
+    "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRHBDbl83ZEF3NVVUcjdrMG9mczZ2UGdtRWNpbWxiOVo3aHNodU03Z0RsRU8wSFZZZlBNQV83V09DOWVlendGdjliM0xvT0twMjhqbkIyZEZva21DZDhLOEtFQ3lha1NLM2J6Q01EWTNET3ZxNFlieWRHX29CRl9HVDByY05qLWNyU2NQcDhPcGxEeFlEUzFWM3hYVEtzRk9LbklfQ3JLaF9lYkZhenB3R3dB?oc=5",
+    "ts": "11/18 10:51",
+    "sec": "商業"
+   },
+   {
+    "t": "Singapore Dollar Weakens Slightly Amid Risk-Off Sentiment",
+    "u": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOaFdhT1d3bDMxb1RVWFl0MGkwNkRiOEUzNHJSdjIwZGVyMjFzSjhjWUhUOEpzOTZsQXJIakRKeUxhQTB1eEx6bEhmRGtaSGxPTmpxV2VfM0VVTWh3NGZEVUluUENWZTc5M2kwVkhBdWJGSUo3cWt6ZllIYVI4MzlNTHNCOWNtQm52MmhmLTlWNTd5QVNUS3V2bkgxSXBCQVpEX0d5M3paZW9lTWxMbnZDc1dFQWFaLW42?oc=5",
+    "ts": "11/18 10:50",
+    "sec": "市場"
+   },
+   {
+    "t": "Uber Says Personal Data Was Exposed in Third-Party Data Breach",
+    "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxORWhDcExobzZzQjdnNVdQVHdDeklvbFlaY3Y1d1EzLVFvX3FaVVlaQXk0ZmhNYXVUYUtGNTB6ZXRiVnAzcnpTUDdDckhCOTduZ2xKZm04cVhHOHRXNTFqTzZvMW5jUllIbU5uM2hSN0hscHh6QnowN1NGX1J0d2M2ZTZkT3ZiVjdiTV9lLWV5YVk0TGtxdHM0bEc1WEI?oc=5",
+    "ts": "11/18 10:46",
+    "sec": "科技"
+   },
+   {
+    "t": "They’re Lucky Enough to Have a 3% Mortgage—and Feel Like They Can Never Move",
+    "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNcTJRSzV3Y1FHY2k0UHFDdDM4UTUxM3VhdWFZMDVrSm4zTDVyVG1FcUVnY2lvSHJuMnVFRWF6OWlxR3Rkc05Kbm9Udm45ZHpjMUY2am53Rmc4RExnc0RMRHlZbnY5LU5NVjV6SS1GbkZvMkN5dGdPS1JTSWpWZFdaMzJVQy1Wa0k5WWhBQnRwOFBjeGJFbGpsc0ppUGFyR25ocFg3MmNHSlRnMVdva0JLLVVaYm5pS2FMRnc?oc=5",
+    "ts": "11/18 10:40",
+    "sec": "經濟"
+   },
+   {
+    "t": "Exclusive | Trump Administration to Name Nvidia Among AI ‘National Champions’",
+    "u": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbVZuRkZvWWp2cTVZRkh3Tm96YThHTGFtSmk4TjhOMWZqT0xsSXZkbEFQRzRZcWFaMHlzNGYxZHBzTF9YYUZJa0ktNFNua1ZiLTVvNDRNZGViZlFxMVVsQlZXM09faWZOSDZkNDRiaTJjYXFfMUgxN3p1UWZkZXVuOEQxUFJRSHI4TG9yRU1kT0Rlb2ZoUGQtQUNndkdnajdTZmc?oc=5",
+    "ts": "11/18 10:36",
+    "sec": "科技"
+   },
    {
     "t": "Nebius Lowers Outlook, Addresses Worries Over Financing AI Buildout",
     "u": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbHFWV0xZLWlDZVlxN0xkY2QwYnFzQjBNQzFUb0UtMWQ2S2FKd1BSSVpLYnN2RGlFaHQ3eHd5cFh2R21ReTBXbGVuWjZHYWVOUHpEd2hfZER4NWM1c1lrTDlVb2dndk50c1hMU3Fka0VxVXBqSFJxOG1ZbDJsLVVCVzZGdlEwMHpFQWRwMDgyNDRNdERNbnRnZ2luY1JQSEJ2SUdWS1JEZFFoVVFldmVXWFRHMA?oc=5",
@@ -32,39 +62,27 @@
     "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPLTF4cWpQVGQ2cnNWWktHaVczUUxFR0hnTE9lOF9nU0wtc3ZRZTluOVZFeDhKck9EV2t4VHh4UXBZdlVUY2VOT3FkZHZLSTNwXzcxaFowdUpsTnRsYVV1YUlMaDFGWTFvVUlfS0N2Tlh4cEpMbnpFajNjZ09SUjdHemhoMUVDcXFmbjF4ZFVfOFZoSGo1V04wTndIX1I1ZTRxaWF3YmJqZ2JJTnYtakVodTJB?oc=5",
     "ts": "11/18 10:04",
     "sec": "科技"
-   },
-   {
-    "t": "Mary Barra Transformed GM. Her Successor May Have to Do It Again.",
-    "u": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQODlFRWxVZjBvRHZ0TWtOOXRaQXRjR0ZDQ2dIOGR6MjkxWFVXM0I0QlZDUF9hTHppa0pIOUpRZXpzdDQ2bGhNMmI0bm1GaUJCQ0NyczBENWUyY0Z1UWd2a0NOR3pSQnZIN3hwUWh4STNNNVE4S05WVkpJaWlfREFpVlRTRXVxaTBJcFBWZ2Vmakh2RVJva1E1WHZ6NkNOaEpIc3c1RFRxTWx0X2c?oc=5",
-    "ts": "11/18 10:00",
-    "sec": "商業"
-   },
-   {
-    "t": "Baidu Profit Misses as It Searches for New Growth Driver",
-    "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOV25NdE1RM1RKZHRnRTA3VEMteWhiVVRtTEN2NUxxZHJFbFBhNUJ2d2hXMjZEdGViT29tUmVBTHpmcXhhd2ZCbll3aHZDZF8yZklxNE8xOEhZQ3FuLS1sR0V6Ums3a1dBcHFndnd3ZnpvcmVaVkJfTjRyZUpxQkJLYmYwbks1cEVYSEs0eW5sZkZmTGVFYXFHYW5hclBkajBmUWtWd3Vn?oc=5",
-    "ts": "11/18 09:55",
-    "sec": "商業"
-   },
-   {
-    "t": "Asian Equities Mixed as Investors Parse Nvidia’s Results, Guidance",
-    "u": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTUlkaFB0Z3RKN245bXlDcG5YY0NRTURYQU5LWUcxeFhWdk9QUWJhWEdLY3NtbFV0VlNUWW92S2YzSzVjaGwzdUZxMVE5WmxYQ2JQWE9wa0Z6UlZ6dXJmTVFHLUZjTWVZaEIwLWVjbk1VUVh1UzRQZlNiS3ZoRndPZDlyQmVhYW5JYUtCbkF0bTBrS1hkY1pLNTNDSGg5UnNRSHM0?oc=5",
-    "ts": "11/18 09:51",
-    "sec": "市場"
-   },
-   {
-    "t": "Oil Prices Extend Decline After Trump Signals Restraint on Iran",
-    "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeWY0eGlzV2FfSkxTRE1BTWZaTjNtWmIxSjJocnF1a2YzbzczUWlWUFBLMDhlWFdkN0s2MFJDNThNTUQyQlRkT0s5bTRfZUpWbnE0QWlmV0lDbXQxQlVXUk41M3M3UF9lWVZ2ekM4QnQ5WXE2N0d0RWNRY3NRNHc2YnBQblFkZTFhQ0ZWWURxa3ljN2FBSU5TWERiMlZqektRZl85YTBqb09zNDNZNjNQVVJn?oc=5",
-    "ts": "11/18 09:48",
-    "sec": "商業"
-   },
-   {
-    "t": "L3Harris: The Defense Contractor at the Center of the Ground Stop",
-    "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTVZIOXJRWG1YVjZCY0lzS3NOMElCV3I0bmIyOWZqYmNDWFUxMUpDUHBjMGZ0Mkd0TDJyTGVyb2VsazM0WTY3ODA0dFZ4aE9wQUpOUWpxZ3M5VW0xak5Tb1cwVXM1RGRucW15dFJxUFExOXdQYkxkLXdPTGhkZkNmLW9ZdzlTTjA1ZVB1bWJZbTUwN05ZT2E1bEtBM3pyR0p4M0h4Ng?oc=5",
-    "ts": "11/18 09:46",
-    "sec": "商業"
    }
   ],
   "Bloomberg": [
+   {
+    "t": "Asics COO Business & Growth Outlook",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-18/asics-coo-business-growth-outlook-video",
+    "ts": "11/18 10:51",
+    "sec": "科技"
+   },
+   {
+    "t": "Xi Calls for Deeper Cooperation and Free Trade",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-18/xi-calls-for-deeper-cooperation-and-free-trade-video",
+    "ts": "11/18 10:44",
+    "sec": "市場"
+   },
+   {
+    "t": "Singapore to Deploy AI to Fight Scams, Boost Business Lending",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/singapore-to-deploy-ai-to-fight-scams-boost-business-lending",
+    "ts": "11/18 10:36",
+    "sec": "科技"
+   },
    {
     "t": "Rupee Forwards Turn More Bullish Than Currency Forecasters",
     "u": "https://www.bloomberg.com/news/newsletters/2026-11-18/rupee-forwards-turn-more-bullish-than-currency-forecasters",
@@ -106,27 +124,21 @@
     "u": "https://www.bloomberg.com/news/articles/2026-11-18/infratil-ceo-optimistic-on-long-term-demand-for-data-centers",
     "ts": "11/18 10:12",
     "sec": "科技"
-   },
-   {
-    "t": "Japan Panel Said to Warn Takaichi That Market Trust Is Paramount",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-18/japan-panel-said-to-warn-takaichi-that-market-trust-is-paramount",
-    "ts": "11/18 09:55",
-    "sec": "經濟"
-   },
-   {
-    "t": "Rubio Says Recent US Tech Outages Unrelated, Not Hostile Acts",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-18/rubio-says-recent-us-tech-outages-unrelated-not-hostile-acts",
-    "ts": "11/18 09:41",
-    "sec": "科技"
-   },
-   {
-    "t": "The Bank of Nvidia Is Becoming More ‘Disciplined’ and Selective",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-18/the-bank-of-nvidia-is-becoming-more-disciplined-and-selective",
-    "ts": "11/18 09:41",
-    "sec": "科技"
    }
   ],
   "Reuters": [
+   {
+    "t": "Bank of Japan governor says central bank should keep raising rates",
+    "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNLXVIT0VoOTAtWnNpWjBvTlRGS0o1aEp1RklzQjZLTVFOb1pha3FPSUJJaFJrMjIzQzZ5WGtOUG5OUl9VM2paLTZ3aEY4d3ZLMFN5NUdkSU5aT09EOWs1MFp1eUVSbzh6VVkyaEFuTWo0cS1Tb1RGVlJKdWdoSXlsbkZJRFJnT2tDMHNINXhGSDlDVzZnWTVkV2pYWGcwZnhjMEk1RHZQSWlsQkJCNW5KbGJR?oc=5",
+    "ts": "11/18 10:39",
+    "sec": "市場"
+   },
+   {
+    "t": "Scandal-hit KPMG Australia cuts an additional 230 jobs",
+    "u": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMzN3b0EtbWRDaXdIWDZFWDgyUG4zNzBRNllPSFhCcFRiNS13d0EtUjBTNzRWY1pFZmo3Tnd3azlfSHp0X1lBSlFBMlVpUDAxWHlzX2dmOENGUUYwNjdza1JqLXZwWWtNTEpURF94Rzh5d1pRT0FzMlRzb0N4QmxWNEVwb2Y0bEhqU19UeDR0RFdmSUY1R2ZjYy1xWm82am1MOG9udzJIVkxBZ0Y1eFVRWWl0VQ?oc=5",
+    "ts": "11/18 10:34",
+    "sec": "商業"
+   },
    {
     "t": "Oil prices fall as higher US crude stocks temper supply risks",
     "u": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbmp3REJQam1xdjkyMkpCN1JlSkotTnJNM0JEWDVFNmJqZ2FHbmNIN2E0V2twa2N3djBLTXlNNVJvcDJmZVNXMlBlQnk2VG1FTThnX0hQbVRqS2dKbVVBdXl6MWR5ZHo0S2VneWt2bUdwVjE4TnNxaHFLN0hHNU9IUVljVnNXLWJTeHdORFFJX3BfQXhPTThEbGFYQXhYaGNneHRHcVRGS2NyOFhxTzVN?oc=5",
@@ -174,25 +186,13 @@
     "u": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaWVjeHRTNkRreHFmNVBsYkdQeFJjc1htLXA4enJfTEV5clpxOHZRRGdGZXNkZGFzY2FPWUtTMkdCSGZYZXFHMmE5OVFzUDJuc2ZjRGJybkF2MG1pTkxhMFBRam5wdjFNdG5sRGJaaEN5bE1keENqTkJGb2lPeFJQM2Y2NDAtQ3JvSG9pRXExTFpwSE9iandZTFMtcEEtX21xUXM0?oc=5",
     "ts": "11/18 07:34",
     "sec": "商業"
-   },
-   {
-    "t": "Thailand passenger traffic set to rise in 2026, helped by increased fleets",
-    "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdE56NHdyVFNVOEhlMlZmYk8wTVNPTFlQemJJanBlMkhoSzJKVEVfMUZnblZ1UTJzMm50ZzNzNFRrbFZSMHlzRWh6UmF4aHoxYmE0Z2thYTFfVHBFT0tLU0pReGluRkdlQ2xaQ1M1SDh5bFdvb0JWOGx2dG52a1ExRXhLSUhlMVBLaGJNZ3U4ZlhzLWo2R1FqWHdKRTlVRm05bVBLcWVwTTVvMzdOdm45czg0VEVSOUMxVHI4MXRSQlo?oc=5",
-    "ts": "11/18 07:33",
-    "sec": "市場"
-   },
-   {
-    "t": "Pentagon's Colby warns NATO allies against shutting US firms out of arms deals",
-    "u": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbVpJX0xhTmkyLW5Ga2FRT3p5R0tWeC02bWtmVUg0M1U3Q1hoU2Vfb2l2UEVGMm0yYWF1blktd1pVUjg2WkxBREozQTc1YS1ud3l3QzFpd3NCT01IU285Ui1ONHpLc2Qxck15WEpUQkU4ZS1JNmVORWdCdTVOM0NySmd5MS0tY1hNUUxPZk9EQTdWajZYbDMySmpUTE8wUV9TZ2p3a3NBdUlka1o5TGJqNVBLYmlwbWtDSUZxWDJsbVVtM01hU2I3UWlST1BEdUN0NDk4?oc=5",
-    "ts": "11/18 07:26",
-    "sec": "商業"
    }
   ]
  },
  "status": {
   "WSJ/市場": {
    "status": 200,
-   "kept": 36
+   "kept": 35
   },
   "WSJ/商業": {
    "status": 200,
@@ -200,7 +200,7 @@
   },
   "WSJ/科技": {
    "status": 200,
-   "kept": 13
+   "kept": 14
   },
   "WSJ/經濟": {
    "status": 200,
@@ -220,11 +220,11 @@
   },
   "Reuters/市場": {
    "status": 200,
-   "kept": 29
+   "kept": 30
   },
   "Reuters/商業": {
    "status": 200,
-   "kept": 99
+   "kept": 100
   },
   "Reuters/科技": {
    "status": 200,
