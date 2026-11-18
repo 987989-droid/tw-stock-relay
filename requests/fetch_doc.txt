@@ -1,2 +1,2 @@
-# 每行：kind name periods（推送本檔即觸發 fetch_doc）｜2026/11/17 富途 JS 頁實測
-web https://news.futunn.com/t/hk/post/1004656654/eURYReqUva requests/keys/web_20261117.pub
+# 每行：kind name periods（推送本檔即觸發 fetch_doc）｜3583 Q3 補抓回呼
+fin 3583 202603
