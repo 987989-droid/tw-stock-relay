@@ -1,3 +1,2 @@
-=== web https://news.futunn.com/t/hk/post/1004656654/eURYReqUva requests/keys/web_20261117.pub ===
-web 1b0e23597d title 美國加州正式起訴OpenAI，指控其模型測試疏於管控、危害公共安全 main 4 body 4464
-web -> data/docs/web/1b0e23597d.enc rc 0 0
+=== fin 3583 202603 ===
+202603_3583_AI1.pdf pdf bytes 1543875 pages 58 txt bytes 171005
