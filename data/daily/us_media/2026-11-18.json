@@ -1,0 +1,235 @@
+{
+ "generated_at_taipei": "2026-11-18 10:36",
+ "definition": "各家財經版過去36小時內去重後最新10則（非編輯台排名）",
+ "media": {
+  "WSJ": [
+   {
+    "t": "Nebius Lowers Outlook, Addresses Worries Over Financing AI Buildout",
+    "u": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbHFWV0xZLWlDZVlxN0xkY2QwYnFzQjBNQzFUb0UtMWQ2S2FKd1BSSVpLYnN2RGlFaHQ3eHd5cFh2R21ReTBXbGVuWjZHYWVOUHpEd2hfZER4NWM1c1lrTDlVb2dndk50c1hMU3Fka0VxVXBqSFJxOG1ZbDJsLVVCVzZGdlEwMHpFQWRwMDgyNDRNdERNbnRnZ2luY1JQSEJ2SUdWS1JEZFFoVVFldmVXWFRHMA?oc=5",
+    "ts": "11/18 10:12",
+    "sec": "商業"
+   },
+   {
+    "t": "Vodafone Dials Up Guidance But Says German Unit Needs Improvement",
+    "u": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQM0g5Rnp3X0hLNDVtWmFZYTd6UnprTk9tMEFUVF80X2ZlQURkSVhtNUtJT09vMTM4OEVIMEhnalMzeTBFZGpmQS1QM2pvazVNejdpem13ZFEwbHdSQ3Fta1BIdlFDakU5bG13UElpMzl0WVNHZVhEZ3FSNTl0R2pjX1lXYTZFYzk0aGUxY1JyODVHTGRZLWlQZEI3Z1lQaE5qbFVOU3ZIZjBhN3pXeWlqYw?oc=5",
+    "ts": "11/18 10:10",
+    "sec": "商業"
+   },
+   {
+    "t": "China’s Central Bank Signals Easing Restraint as Growth Holds Up",
+    "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQa0Zqa3ZJTXIwVExheGlDTktPOFJYT0FzY3NNNWllbjNsMXd2OW9uNGlpMU55RzN0S1F1V1ZuVWFDUDdrOFdsZE5HWkphZ3E3Q3R4THpFeXg1Y0gyRGhNSWxFakE3R1ROUFJTX1Q2eG94clAzMm5ER0FHTFFvNUZsN2k3V2gycjlPU2dlbHZsaW8tMjA0WWt3WG5fY1EtR29ob2d6MUZjVnl4ZmwxZ1NNNURoVGRJejg?oc=5",
+    "ts": "11/18 10:08",
+    "sec": "經濟"
+   },
+   {
+    "t": "Nvidia Stock Slides After Chip Maker Opens Probe",
+    "u": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObmFxVTlOckJLV2RONUpFZEdQSHphRDFDRlgyZlhtZ2R5UUNOUm1lb1pMTlF6S0p3Y1h1OERrOWV2TjAxbUVKRUlFUU9zcXQwNENhNFVsSGJic0MtRU94bVJlSHBoemptN1hyRjJWLVNLQTgyYUZpdDR6SGVTVEhOcnhVc2JtUUlCczRWQ3I0VEJXZGFDN0pZ?oc=5",
+    "ts": "11/18 10:06",
+    "sec": "市場"
+   },
+   {
+    "t": "Nvidia’s Interim CEO Has a Tough Challenge: Keep the Growth, Leave the Baggage",
+    "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPLTF4cWpQVGQ2cnNWWktHaVczUUxFR0hnTE9lOF9nU0wtc3ZRZTluOVZFeDhKck9EV2t4VHh4UXBZdlVUY2VOT3FkZHZLSTNwXzcxaFowdUpsTnRsYVV1YUlMaDFGWTFvVUlfS0N2Tlh4cEpMbnpFajNjZ09SUjdHemhoMUVDcXFmbjF4ZFVfOFZoSGo1V04wTndIX1I1ZTRxaWF3YmJqZ2JJTnYtakVodTJB?oc=5",
+    "ts": "11/18 10:04",
+    "sec": "科技"
+   },
+   {
+    "t": "Mary Barra Transformed GM. Her Successor May Have to Do It Again.",
+    "u": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQODlFRWxVZjBvRHZ0TWtOOXRaQXRjR0ZDQ2dIOGR6MjkxWFVXM0I0QlZDUF9hTHppa0pIOUpRZXpzdDQ2bGhNMmI0bm1GaUJCQ0NyczBENWUyY0Z1UWd2a0NOR3pSQnZIN3hwUWh4STNNNVE4S05WVkpJaWlfREFpVlRTRXVxaTBJcFBWZ2Vmakh2RVJva1E1WHZ6NkNOaEpIc3c1RFRxTWx0X2c?oc=5",
+    "ts": "11/18 10:00",
+    "sec": "商業"
+   },
+   {
+    "t": "Baidu Profit Misses as It Searches for New Growth Driver",
+    "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOV25NdE1RM1RKZHRnRTA3VEMteWhiVVRtTEN2NUxxZHJFbFBhNUJ2d2hXMjZEdGViT29tUmVBTHpmcXhhd2ZCbll3aHZDZF8yZklxNE8xOEhZQ3FuLS1sR0V6Ums3a1dBcHFndnd3ZnpvcmVaVkJfTjRyZUpxQkJLYmYwbks1cEVYSEs0eW5sZkZmTGVFYXFHYW5hclBkajBmUWtWd3Vn?oc=5",
+    "ts": "11/18 09:55",
+    "sec": "商業"
+   },
+   {
+    "t": "Asian Equities Mixed as Investors Parse Nvidia’s Results, Guidance",
+    "u": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTUlkaFB0Z3RKN245bXlDcG5YY0NRTURYQU5LWUcxeFhWdk9QUWJhWEdLY3NtbFV0VlNUWW92S2YzSzVjaGwzdUZxMVE5WmxYQ2JQWE9wa0Z6UlZ6dXJmTVFHLUZjTWVZaEIwLWVjbk1VUVh1UzRQZlNiS3ZoRndPZDlyQmVhYW5JYUtCbkF0bTBrS1hkY1pLNTNDSGg5UnNRSHM0?oc=5",
+    "ts": "11/18 09:51",
+    "sec": "市場"
+   },
+   {
+    "t": "Oil Prices Extend Decline After Trump Signals Restraint on Iran",
+    "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeWY0eGlzV2FfSkxTRE1BTWZaTjNtWmIxSjJocnF1a2YzbzczUWlWUFBLMDhlWFdkN0s2MFJDNThNTUQyQlRkT0s5bTRfZUpWbnE0QWlmV0lDbXQxQlVXUk41M3M3UF9lWVZ2ekM4QnQ5WXE2N0d0RWNRY3NRNHc2YnBQblFkZTFhQ0ZWWURxa3ljN2FBSU5TWERiMlZqektRZl85YTBqb09zNDNZNjNQVVJn?oc=5",
+    "ts": "11/18 09:48",
+    "sec": "商業"
+   },
+   {
+    "t": "L3Harris: The Defense Contractor at the Center of the Ground Stop",
+    "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTVZIOXJRWG1YVjZCY0lzS3NOMElCV3I0bmIyOWZqYmNDWFUxMUpDUHBjMGZ0Mkd0TDJyTGVyb2VsazM0WTY3ODA0dFZ4aE9wQUpOUWpxZ3M5VW0xak5Tb1cwVXM1RGRucW15dFJxUFExOXdQYkxkLXdPTGhkZkNmLW9ZdzlTTjA1ZVB1bWJZbTUwN05ZT2E1bEtBM3pyR0p4M0h4Ng?oc=5",
+    "ts": "11/18 09:46",
+    "sec": "商業"
+   }
+  ],
+  "Bloomberg": [
+   {
+    "t": "Rupee Forwards Turn More Bullish Than Currency Forecasters",
+    "u": "https://www.bloomberg.com/news/newsletters/2026-11-18/rupee-forwards-turn-more-bullish-than-currency-forecasters",
+    "ts": "11/18 10:30",
+    "sec": "市場"
+   },
+   {
+    "t": "Iron Ore Likely to Find a Floor Near $80, Chinese Analysts Say",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/iron-ore-likely-to-find-a-floor-near-80-chinese-analysts-say",
+    "ts": "11/18 10:30",
+    "sec": "市場"
+   },
+   {
+    "t": "BOJ’s Ueda Says Food Sales Tax Cut Likely to Help Spur Growth",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/boj-s-ueda-says-food-sales-tax-cut-likely-to-help-spur-growth",
+    "ts": "11/18 10:26",
+    "sec": "經濟"
+   },
+   {
+    "t": "Xi Warns Against ‘Rampant’ Protectionism Ahead of Trump Talks",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/xi-warns-against-rampant-protectionism-ahead-of-trump-talks",
+    "ts": "11/18 10:25",
+    "sec": "市場"
+   },
+   {
+    "t": "Stats NZ Corrects Producer Price Data Back to March 2021",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/stats-nz-corrects-producer-price-data-back-to-march-2021",
+    "ts": "11/18 10:20",
+    "sec": "經濟"
+   },
+   {
+    "t": "Japanese Restaurant Skylark Eyes More M&A After Ramen Chain Deal",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/japanese-restaurant-skylark-eyes-more-m-a-after-ramen-chain-deal",
+    "ts": "11/18 10:15",
+    "sec": "市場"
+   },
+   {
+    "t": "Infratil CEO Optimistic on Long-Term Demand for Data Centers",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/infratil-ceo-optimistic-on-long-term-demand-for-data-centers",
+    "ts": "11/18 10:12",
+    "sec": "科技"
+   },
+   {
+    "t": "Japan Panel Said to Warn Takaichi That Market Trust Is Paramount",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/japan-panel-said-to-warn-takaichi-that-market-trust-is-paramount",
+    "ts": "11/18 09:55",
+    "sec": "經濟"
+   },
+   {
+    "t": "Rubio Says Recent US Tech Outages Unrelated, Not Hostile Acts",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/rubio-says-recent-us-tech-outages-unrelated-not-hostile-acts",
+    "ts": "11/18 09:41",
+    "sec": "科技"
+   },
+   {
+    "t": "The Bank of Nvidia Is Becoming More ‘Disciplined’ and Selective",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-18/the-bank-of-nvidia-is-becoming-more-disciplined-and-selective",
+    "ts": "11/18 09:41",
+    "sec": "科技"
+   }
+  ],
+  "Reuters": [
+   {
+    "t": "Oil prices fall as higher US crude stocks temper supply risks",
+    "u": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbmp3REJQam1xdjkyMkpCN1JlSkotTnJNM0JEWDVFNmJqZ2FHbmNIN2E0V2twa2N3djBLTXlNNVJvcDJmZVNXMlBlQnk2VG1FTThnX0hQbVRqS2dKbVVBdXl6MWR5ZHo0S2VneWt2bUdwVjE4TnNxaHFLN0hHNU9IUVljVnNXLWJTeHdORFFJX3BfQXhPTThEbGFYQXhYaGNneHRHcVRGS2NyOFhxTzVN?oc=5",
+    "ts": "11/18 10:16",
+    "sec": "商業"
+   },
+   {
+    "t": "EU reaches provisional deal to speed permits for renewable energy projects",
+    "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQc1VzUmE4VkZSMHJ3WkZFUlFQaWxBM0lnSUtDSm9JVTJsbGFscVBybUJuQXFlbmpQSTRCbnhlbnNIS2VHN0ozdWMydGMxUWF5SldZcUxnT0pfZGctbUFRLXNISnY2M3NhNGZ1RnVxV3ltMkhkNzVhTGJoSEZTd01DX1Q4ck5LMkFOaGlnQzdYSUJBbnlYX2ZGb3JCR3V2RkNLOGRPb1JnYzM5MzJGNGdvaE9CS2FXRmNCLUN3?oc=5",
+    "ts": "11/18 10:00",
+    "sec": "商業"
+   },
+   {
+    "t": "MDA Space Ltd. (MDA.TO) | Stock Price & Latest News",
+    "u": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sMlVxQ0E2NVZDVWV3Z3d6WG9iZnlQZjh3aXNIS0ZydmhVRDJKZi1fS0ZOUUEwb1dGVlJnclFiS2lOXzd3OG9HRmhMc0NfLS1WaHY2dVg3SmZuWW5DX0E?oc=5",
+    "ts": "11/18 08:41",
+    "sec": "市場"
+   },
+   {
+    "t": "Japan exports set record in October on strong chip-related demand",
+    "u": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZlhvQnNySnJ2WXBNLXQxVHlpN181RVZpRk1JamR3N2pCNmpoRDBTeTFHUjlvSjhVV05WMm1KMVk4c3B0LUxhUkdKeE9tczI3dzF6QmtGNmtXTGhYNVktZjh2cEtQb09uR1VQdzktMXlkanNtTVFRdGd5MzFBdVNzR3FaVUsxbTI3UVpRemFPd2VDdFZsNl96Z1p4Ym5mUHl1RHhNUFJ3Mlh2STFs?oc=5",
+    "ts": "11/18 08:28",
+    "sec": "市場"
+   },
+   {
+    "t": "Waymo pauses robotaxi rides on US freeways after California ban",
+    "u": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQTkw0bE5kQUlYTVp4amxvbkwtbnc3ZmZTc0FUaWtiUmtmbkF6SldmOXpGOUt0T3BHRk0zOVN3QXpLQ0d3UDRwakVSblEwT3h1NHV5ekdyVHhCMDJBOGtsZEdaZDJzUGlYTlMxRGxXWjZmRDU5dnh1Y1NyY0duUlFmNEF5YjVxQV85aVBhTUw3UGptQ1hBSFJQSXpVRkg4VXd4VEdlak9MTDdjM1FOTVdzaHB4djl1Y21VSGtLU1hLcS1OTTdl?oc=5",
+    "ts": "11/18 08:18",
+    "sec": "商業"
+   },
+   {
+    "t": "Haiti's gang violence blocks aid as child malnutrition worsens",
+    "u": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRmRaVFFSMEhfem1Vcm1DUW9scHY4aGFJdWxvUWJyeGdLOWg4b1NhNm9BelNlMW1XS2JmRDNFU24wV1pBTjdGNEU3RHVySjNXaWkyQ3FfbGI1dS1hX2JTbTdJdUcxMDRPVEIzMTF2eTdobDlvcFN0OGN0aVVTS2p1TFVtVTVqNUxBSE4wc0diemwwWTczcXNOVDIwZENSWExGUzc4QjN1S3I2NGNRS1p5ZGNISWNnc19nWUtCeUVldXdraU44Z2pyOFdn?oc=5",
+    "ts": "11/18 07:57",
+    "sec": "商業"
+   },
+   {
+    "t": "Multiple tech systems have been crashing. Here is how to protect yourself",
+    "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNSWVUT0djTW55S2JCaEt4aWVaWjlNR2JwUkFJVzAzYk1ZRUNudmR4NU1SNVBpV3FnNVhFc1BQZW02UWpEX3Y2ZGhNUWR6RnExV3NkTDJyTjBmNzkxT0hpb1BOd3FvbldURWduYWVNN0o4NGxGVV8xdEpqWVZGbGhQSGpqWVlqeXpaMHg2dHVfZGhjRmhwWkJIcFFkWl93cUU0OGZjcEJwY3BlcEZFRzExREhSVkFkU2ZObmduTXUtSQ?oc=5",
+    "ts": "11/18 07:50",
+    "sec": "商業"
+   },
+   {
+    "t": "Instant view: Nvidia earnings beat estimates; attention turns to call",
+    "u": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaWVjeHRTNkRreHFmNVBsYkdQeFJjc1htLXA4enJfTEV5clpxOHZRRGdGZXNkZGFzY2FPWUtTMkdCSGZYZXFHMmE5OVFzUDJuc2ZjRGJybkF2MG1pTkxhMFBRam5wdjFNdG5sRGJaaEN5bE1keENqTkJGb2lPeFJQM2Y2NDAtQ3JvSG9pRXExTFpwSE9iandZTFMtcEEtX21xUXM0?oc=5",
+    "ts": "11/18 07:34",
+    "sec": "商業"
+   },
+   {
+    "t": "Thailand passenger traffic set to rise in 2026, helped by increased fleets",
+    "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdE56NHdyVFNVOEhlMlZmYk8wTVNPTFlQemJJanBlMkhoSzJKVEVfMUZnblZ1UTJzMm50ZzNzNFRrbFZSMHlzRWh6UmF4aHoxYmE0Z2thYTFfVHBFT0tLU0pReGluRkdlQ2xaQ1M1SDh5bFdvb0JWOGx2dG52a1ExRXhLSUhlMVBLaGJNZ3U4ZlhzLWo2R1FqWHdKRTlVRm05bVBLcWVwTTVvMzdOdm45czg0VEVSOUMxVHI4MXRSQlo?oc=5",
+    "ts": "11/18 07:33",
+    "sec": "市場"
+   },
+   {
+    "t": "Pentagon's Colby warns NATO allies against shutting US firms out of arms deals",
+    "u": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbVpJX0xhTmkyLW5Ga2FRT3p5R0tWeC02bWtmVUg0M1U3Q1hoU2Vfb2l2UEVGMm0yYWF1blktd1pVUjg2WkxBREozQTc1YS1ud3l3QzFpd3NCT01IU285Ui1ONHpLc2Qxck15WEpUQkU4ZS1JNmVORWdCdTVOM0NySmd5MS0tY1hNUUxPZk9EQTdWajZYbDMySmpUTE8wUV9TZ2p3a3NBdUlka1o5TGJqNVBLYmlwbWtDSUZxWDJsbVVtM01hU2I3UWlST1BEdUN0NDk4?oc=5",
+    "ts": "11/18 07:26",
+    "sec": "商業"
+   }
+  ]
+ },
+ "status": {
+  "WSJ/市場": {
+   "status": 200,
+   "kept": 36
+  },
+  "WSJ/商業": {
+   "status": 200,
+   "kept": 37
+  },
+  "WSJ/科技": {
+   "status": 200,
+   "kept": 13
+  },
+  "WSJ/經濟": {
+   "status": 200,
+   "kept": 12
+  },
+  "Bloomberg/市場": {
+   "status": 200,
+   "kept": 20
+  },
+  "Bloomberg/科技": {
+   "status": 200,
+   "kept": 20
+  },
+  "Bloomberg/經濟": {
+   "status": 200,
+   "kept": 20
+  },
+  "Reuters/市場": {
+   "status": 200,
+   "kept": 29
+  },
+  "Reuters/商業": {
+   "status": 200,
+   "kept": 99
+  },
+  "Reuters/科技": {
+   "status": 200,
+   "kept": 8
+  }
+ },
+ "complete": true
+}
