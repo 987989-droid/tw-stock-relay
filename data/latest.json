@@ -1,5 +1,5 @@
 {
-  "generated_at_taipei": "2026-11-20T01:24:24.444376+08:00",
+  "generated_at_taipei": "2026-11-20T03:17:11.856882+08:00",
   "date": "2026-11-20",
   "expected_period": "11510",
   "note": "資料原樣保存，未經正規化。上市與上櫃欄位命名不一致，判讀層需自行對應。民國年月格式。",
@@ -36,7 +36,7 @@
       "source": "twse_rwd_MI_INDEX",
       "quote_date": "1151119",
       "openapi_date": "1151118",
-      "refreshed_at_taipei": "2026-11-20T01:24:58.950022+08:00"
+      "refreshed_at_taipei": "2026-11-20T03:17:51.229861+08:00"
     },
     "quotes_otc": {
       "path": "data/latest/quotes_otc.json",
