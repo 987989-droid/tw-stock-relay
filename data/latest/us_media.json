@@ -1,12 +1,24 @@
 {
- "generated_at_taipei": "2026-11-20 09:54",
+ "generated_at_taipei": "2026-11-20 10:26",
  "definition": "各家財經版過去36小時內去重後最新10則（非編輯台排名）",
  "media": {
   "WSJ": [
    {
+    "t": "Mary Barra Transformed GM. Her Successor May Have to Do It Again.",
+    "u": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQODlFRWxVZjBvRHZ0TWtOOXRaQXRjR0ZDQ2dIOGR6MjkxWFVXM0I0QlZDUF9hTHppa0pIOUpRZXpzdDQ2bGhNMmI0bm1GaUJCQ0NyczBENWUyY0Z1UWd2a0NOR3pSQnZIN3hwUWh4STNNNVE4S05WVkpJaWlfREFpVlRTRXVxaTBJcFBWZ2Vmakh2RVJva1E1WHZ6NkNOaEpIc3c1RFRxTWx0X2c?oc=5",
+    "ts": "11/20 10:01",
+    "sec": "商業"
+   },
+   {
+    "t": "When Nvidia Stumbled, Equal-Weight Funds Delivered",
+    "u": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcmIxR2lFcngwT0FxUmlneVJ6Q2g2ZGZibEM2eE1lbXdqYUVFazRyM3hERGdOT25INWVFWlJGMTlkZ0hSUjZZNXNJRGxfRllDUC1scUhfWTBWMHg1MHlnUVVBNW9RdTZCRGdyVU5GTzNUX1lPQW53emtrRXc1dW1Rd2R4T1d6YUJlUkZBNzlqWWdXbmg4OHRNUg?oc=5",
+    "ts": "11/20 09:57",
+    "sec": "市場"
+   },
+   {
     "t": "This Ex-Sheriff Was on the Beat When Mark Walter Loaded Insurers With Insider Deals",
     "u": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbnpaTEJyRE5DVVV1b3kxbVpGUkRVY3JpaGNlZDdwQk1xSGZlTHpUTEI5dzczeGE3SkhieVhyMXJXZ0VyZEsyTDNVbHpuUkg3Mll5akZBc0EtN0h4aVNkOGZxUFhaeEIxaEszSE9MMGYwU2QwOTU4R3UzTG85UjMta0NpMjNXZS1GQ0J1a1hJdmZORWVhSW1OeXdZaFl3UlBNUDhldlNoblRld1hhVEdQbzhqci1DNnNscnVYSkwtLWhRQ3ludG5SMnliZw?oc=5",
-    "ts": "11/20 09:46",
+    "ts": "11/20 09:45",
     "sec": "市場"
    },
    {
@@ -16,15 +28,15 @@
     "sec": "商業"
    },
    {
-    "t": "Oil Prices Rebound as Trump Questions Need for Iran Deal",
-    "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGlJbWtWZHpSYmlFQjIzNDZLb1hkZXV2dVlNazZ2aXpPSFU2QzBZb1VxeC1mZlVsVTNTTEh0eVRCZS1UZnR6ZFUwNF9YdFkydnNxZVdpTHMyYUtTQWE0TFVoQ3pLNDRvM1JWSWRDY2hmenNNR3JfT0hSWFlibnRPOVVMT0JHcUtPcHQ1TjJjWnFGV1FoRkEtS1NsVzhtSWZPeGt6bw?oc=5",
-    "ts": "11/20 09:20",
-    "sec": "商業"
-   },
-   {
     "t": "Tesla Will Invest $3.31 Billion to Expand German Factory for Cybercab Production",
     "u": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdktrVUd5d0c1dVV0VG5ZSnJEZmstVjQzZFNFdzd6MEFrRmM2YnRSaF95cEljZ0FOR1VIenBEV0VCRzRWTUVxYXZQYVdEb0E1UDBucGZWQ2VjR2t1UlcxLXJNVGdwYnJKdmRPQWR4U1BNSGR0VXpEQUZRRXhVd0RVYnQ0aTRBYk56bjhpUGMxLWU4QldpRUV2RzNtWVlYc2tzOGMwdzNaOFRhYm9fLTZRTDFLdlh3QQ?oc=5",
     "ts": "11/20 09:16",
+    "sec": "商業"
+   },
+   {
+    "t": "Health Care Roundup: Market Talk",
+    "u": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1QVlhGOW0zVHRDSE5mTlZycVJyaTJ2Z25XWDZlcmFZdEJBVkI1MG9hUmp0LUk2SERuRGdWYW1LNEg3YzdKNE5Vb1pWYnl3Nmx1Z3EzNEFzaVlycURyaEtFYWlTYkVWbGw4Skd6SUMyUVR5RnltVWhOZQ?oc=5",
+    "ts": "11/20 09:04",
     "sec": "商業"
    },
    {
@@ -34,37 +46,55 @@
     "sec": "市場"
    },
    {
-    "t": "TPG, Corpay to Buy Finance Platform Bill for About $6 Billion",
-    "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNWXJCQzRCQ1FLaXI2THdlRktBd2owbk9uZFNEc3RRWXdzQURnbTNqTjZfd2l5bExBT1FsWURWS2pSYS11ZS1EUm5hNXhnSkFEeEh2cHFBSTZPWnNSTzJDX1Z3aE5LTVFtUzFjZ2Q2QV9PanE1VVQtcjlxbHVQQjdQNzczRENYUlRGaVVvTXpELXp2TWhaVXVSajVSamtCZGJsUnA0TjVB?oc=5",
-    "ts": "11/20 08:45",
+    "t": "The Audacious Plan to Electrify the Global Economy—Again ? Climate & Energy for Nov. 12",
+    "u": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRGxnRVRSTEdJbzRlQktsZlNSMndzaWdrdGVOX0V5N0Y3OE5qYk5aZlFldnFLd2czVTFNV25HbzI2VkttT2ozWGV0RTJVOG9GSWYtWEdBeUhBVVdkdXN4R08xRHp1VGhWRUZILVFiMFRWUmVwUXZtSmlLUzRpQkoxbm45c2U3WjBGM0Q5Qm1FT2pRZ3RtQTNPTlptQk03RHRESGVkRW90WQ?oc=5",
+    "ts": "11/20 08:49",
     "sec": "商業"
    },
    {
-    "t": "Exclusive | EQT Ventures Invests $10 Million in Enterprise AI Company Edra",
-    "u": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNd3VoTTBrT0l0VWowSm42OUJ2MWRQMjJNOTJUbVNhVXBpN2dwR2lHZEU4bGx0NF94UnZjNWgxczEwYzFQZmwzNFV6SHFGaFRuS1FLZUpCc3dBa01ERjR2RkdOU1puYXBhMzBHOGRiWF9Renl4cWJTRjlXZEMtUG9lblBUbU11WnBOb2V1WlplVFc4dXhvMDVkQUtTZDVSSEk?oc=5",
-    "ts": "11/20 08:38",
-    "sec": "科技"
+    "t": "Nebius Lowers Outlook, Addresses Worries Over Financing AI Buildout",
+    "u": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbHFWV0xZLWlDZVlxN0xkY2QwYnFzQjBNQzFUb0UtMWQ2S2FKd1BSSVpLYnN2RGlFaHQ3eHd5cFh2R21ReTBXbGVuWjZHYWVOUHpEd2hfZER4NWM1c1lrTDlVb2dndk50c1hMU3Fka0VxVXBqSFJxOG1ZbDJsLVVCVzZGdlEwMHpFQWRwMDgyNDRNdERNbnRnZ2luY1JQSEJ2SUdWS1JEZFFoVVFldmVXWFRHMA?oc=5",
+    "ts": "11/20 08:47",
+    "sec": "商業"
    },
    {
-    "t": "Nikkei Falls 2.9%, Dragged by Chip, Metals Stocks",
-    "u": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPc2hHRHF5eU4zSVdBWTc3TUtKdTlfRlNUNkxGWXRiLUFLeWdOWGpqOFZDdm5kTllHUGQwR2F0VnNzOXJGM1ZZNjNuOEhRVUFmM3ZjeWdNZHQtSU5xaWVaRFlHXy00bVhINmhHMVRibDJMNmoyeWtXS1FRUDdudVFTdmJwbEtMVnNSclgzMkNoZFdELThm?oc=5",
-    "ts": "11/20 08:38",
+    "t": "Oil Rises Amid Middle East Tensions",
+    "u": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPcVBOSVRMajQ2dG1xZGpJSFdUY21QeURFN3NpV21KeTBZRmFaaXU1ZEFZWVJjc2lqWk1yUkp1TGlZQ0JNX2dmdi15Nlc5aHZFSzhRdVpxOWVHYk90bjdkekxxU1lLa2h2eEFOaTA3SmJUbERUM1BudzhGYWRxeUsyLURFM1ZKMUdtTWxpSmF5TklJVnkzOXZz?oc=5",
+    "ts": "11/20 08:42",
     "sec": "市場"
-   },
-   {
-    "t": "JGBs Edge Higher, Tracking Gains in U.S. Treasurys",
-    "u": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPN202RFVKUXpJMEl0aDZhdmV6TnZ5QjR4eDEtWVdrM0lBOV8zcEtQdW4yd3lWenJFX3IzZTB0VXYzOTZNZjJxdlJOUWE5YjFYNlc3cnAxMFdPRWNYZUtmUF9hQ1dTV0ZuOWY0Q1ZNeGRsbVJqYzdKZmhodnFFMXdWSEpGaU42a0doNHg3aEJn?oc=5",
-    "ts": "11/20 08:28",
-    "sec": "市場"
-   },
-   {
-    "t": "Fed Cuts Pay Raises for Regional-Bank Staff",
-    "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSE9oYmJPLTJKZ3p5QzM1RWZ6WHZTc0g0M1dsdkl4czJFenpyWnRFdWJwX2dIR2F1a00xTFNIRUFFcFlYSUZRUlBENGVGV1VvYUtOWmVJNWlzcjBCVDd0aGRwR0x3WVdvQVVqU2xHTnFtU3hqZ21sV01ZcVlUdGtJUzg2VmlEc2d3c1pqdGRzTjJBaVhFRGdWWi1zVzM?oc=5",
-    "ts": "11/20 08:26",
-    "sec": "經濟"
    }
   ],
   "Bloomberg": [
+   {
+    "t": "Anthropic (ANT) IPO on Nasdaq Overcame AI Fears and Warnings",
+    "u": "https://www.bloomberg.com/news/features/2026-11-20/anthropic-ant-ipo-on-nasdaq-overcame-ai-fears-and-warnings",
+    "ts": "11/20 10:16",
+    "sec": "市場"
+   },
+   {
+    "t": "Sri Lanka Raises Policy Rate to Ensure Inflation Reaches Target",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-20/sri-lanka-raises-policy-rate-to-ensure-inflation-reaches-target",
+    "ts": "11/20 10:04",
+    "sec": "經濟"
+   },
+   {
+    "t": "Frasers CFO Unleashes on Accent as Australian Bid Turns Personal",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-20/frasers-cfo-unleashes-on-accent-as-australian-bid-turns-personal",
+    "ts": "11/20 10:02",
+    "sec": "市場"
+   },
+   {
+    "t": "Asian Chip Stocks Slide as Anthropic IPO Fails to Dispel AI Woes",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-20/asian-chip-stocks-slide-as-anthropic-ipo-fails-to-dispel-ai-woes",
+    "ts": "11/20 09:49",
+    "sec": "科技"
+   },
+   {
+    "t": "Court Upholds Kakao Founder’s Acquittal of Stock Rigging Charges",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-20/court-upholds-kakao-founder-s-acquittal-of-stock-rigging-charges",
+    "ts": "11/20 09:47",
+    "sec": "科技"
+   },
    {
     "t": "Australian Pension Funds Confront Their Latest Rival: AI Agents",
     "u": "https://www.bloomberg.com/news/articles/2026-11-20/australian-pension-funds-confront-their-latest-rival-ai-agents",
@@ -94,44 +124,38 @@
     "u": "https://www.bloomberg.com/news/articles/2026-11-20/emerging-market-stocks-set-for-bear-market-on-ai-led-tech-slide",
     "ts": "11/20 09:05",
     "sec": "科技"
-   },
-   {
-    "t": "Japanese Shares Slide Amid Uncertainty Around the AI Trade",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-20/japanese-shares-slide-amid-uncertainty-around-the-ai-trade-mwo9cqcj",
-    "ts": "11/20 08:45",
-    "sec": "科技"
-   },
-   {
-    "t": "Anthropic Shares Drop Post-Market on Apple’s AI Agent Plans",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-shares-drop-post-market-on-apple-s-ai-agent-plans",
-    "ts": "11/20 08:40",
-    "sec": "科技"
-   },
-   {
-    "t": "Could a Jensen Huang-Style Scandal Happen at Apple?",
-    "u": "https://www.bloomberg.com/news/videos/2026-11-20/could-a-jensen-huang-style-scandal-happen-at-apple-video",
-    "ts": "11/20 08:31",
-    "sec": "科技"
-   },
-   {
-    "t": "Dollar Heads for Fourth Week of Gains Following Anthropic IPO",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-20/dollar-heads-for-fourth-week-of-gains-following-anthropic-ipo",
-    "ts": "11/20 08:20",
-    "sec": "市場"
-   },
-   {
-    "t": "Japan Tobacco Shares Fall After Russia-Related Charges",
-    "u": "https://www.bloomberg.com/news/articles/2026-11-20/japan-tobacco-shares-set-to-fall-after-russia-related-charges",
-    "ts": "11/20 08:10",
-    "sec": "市場"
    }
   ],
   "Reuters": [
+   {
+    "t": "Oil prices edge higher as Houthi attacks on Riyadh raise supply concerns",
+    "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb3pQREZDSHE2RmNHdDdGdExDUXhYeWljc2VualVoQ09oQV90WnFQQlZkYW1rWnl5ODJ6N2haaVBDVUY4VmFvRmtLSlZKbU5kR1lHNklrUUR3X3JGc181OHZCUHpXalZFUllBZXVEczJPUUdZZUt1MmpsTEN0MkJGSDNCVHhoa25pZFBSb1lldS1US0VJNVNBWWN1U2VwQmd0WmlQR1RKWmgyS2lyUDVfNHdWeWhzaFhmZ1E?oc=5",
+    "ts": "11/20 10:00",
+    "sec": "商業"
+   },
+   {
+    "t": "Dollar near 19-month peak as AI jitters sap risk appetite",
+    "u": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSWwtcmZqemtkQmd4OWJQUHN1OXZLZTgxM1FtVk5JTlAtNndPYzRndHkxbEZ2MEdNZGtRdWUwMUxlblhtLThfQ0NoRHYtZ1lzd2VkSHc4N0U3UlFjUGFubjBkOFc4bDhpR3lELUoxalJBN1lkUUtUYk1NSk9sanNaeUZrZVVXTWlDV2Zja1FFQ3lPaXNUN2FXb3BST0dmZHd3?oc=5",
+    "ts": "11/20 09:47",
+    "sec": "商業"
+   },
+   {
+    "t": "Thai Nondestructive Testing PCL (TNDTm.BK) | Stock Price & Latest News",
+    "u": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5iUzF6OWhhTkZYcnZJNzZYWlBCUTl0WUhzSHUwRkx4YkFORGxVUmFYOGowcUc5aDlqeENRVWJHRmFNTFBLdXpMTzBGTTRtZVNrX3hpd1kxeVJtY3ZJbHZyZjFvQmZ1MzVmWWZRM3dR?oc=5",
+    "ts": "11/20 09:01",
+    "sec": "市場"
+   },
    {
     "t": "BOJ's ambiguity on rate hike path could tempt yen bears",
     "u": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNY0J6NDQ5LVFYcXhIRWVSVmstMzNMUldQS2JUai1YNlVKWHVnd09WVzBKVXhNX21jc3pLNGw3R01lT21paGZKWUNiZ1gzUmsxb1h2b3BCX2FjaC1NTzZNYlRiTUxjUUR5TmhlVFIybE1SZm1ZamdwRVhIT3BBV2E4RFpUdGRIOGNuOVpENWcxZFpsTWtUT0NjaWctY2p6aWdReENwNUdfNA?oc=5",
     "ts": "11/20 08:45",
     "sec": "商業"
+   },
+   {
+    "t": "Republic Digital Acquisition Equity Warrants Exp 31st Oct 2031 (RDAGW.O) | Stock Price & Latest News",
+    "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHNlBrZVQ3RHE2RjlTWmZrM3ZLWHJWM3J6ajVlM0NfM1djNFlYdndnUWFFdTJWR1NWaWZobHZNMnJuS0FPNzFhTXhmeWJ3bmtjd3lXajd6cU5rUQ?oc=5",
+    "ts": "11/20 08:28",
+    "sec": "市場"
    },
    {
     "t": "Anthropic, PBC (ANT.O) | Stock Price & Latest News",
@@ -146,6 +170,12 @@
     "sec": "科技"
    },
    {
+    "t": "Anthropic's meteoric rise from AI startup to $2 trillion market debut",
+    "u": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYWNjcDRJVTN5eWFvblRPYjBMYnoya3diRGpCWkoxbXJKVEt6dWdNN3I2VThZTllPTGRTaWxvUkxmUjZlVzZMVUI3OTVHeWN4MGpRUGY2M0gtdDJNWnpOclktZkhzcWpkUW5pVmR4aDhwRFhPYVNEWV9FVzd4bUxSTTFJLVRZNG1UQ1dKSnltd2ZELTV1LXdqdzF2aw?oc=5",
+    "ts": "11/20 07:56",
+    "sec": "科技"
+   },
+   {
     "t": "Japan's core inflation accelerates in October, cementing rate hike expectations",
     "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWFVlZ2VrLUVHQkxQZUFqNjM2LXUwZXVvLWM0bTJYbkdILVhXZUduWlo2SXF5dExsVkl5Z0Y0SFlud3ExT0JiN0Vrb0FYLWVMRnNoR2Z1a25tdmNIQ1diVU10cTYwNXZRaVFXblN5cHpXazNtVkdXbW5QdTljdDZDVzBoNWh0Q2p3QkRwMjI1cC1pcXN0QkhCXzY5N0VkV2xGWkNodTR3eTA3LTlCWXBnNFdibk9xRTVWa280?oc=5",
     "ts": "11/20 07:43",
@@ -155,36 +185,6 @@
     "t": "Fed's Paulson says understanding, not guidance, drives effective communication",
     "u": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaTBVRUlUTV9PeXd4LVVTV0s1WXhjN2NwOERhbDFORGsxOHUtUGdJRjNwSUFLbG5LRzgxUy1RRUJ2MWZKVnZqV096cWdqZUwtSDd3R0tRdXctWWk5X3hNV1FQdlJUY3ZzUWVjZF9Yc1BFUm5DU3pYQnl2TEhtVkdoRTNuY2dDcUZzSERnT3hwN1FPdjY1ZFFULVoxa2VxRmxWM0VXSUFnOU5IM09XTDZWUTJNT2ZuYWl0TU5tbw?oc=5",
     "ts": "11/20 07:41",
-    "sec": "商業"
-   },
-   {
-    "t": "Germany and UniCredit reach broad agreement in Commerzbank takeover battle",
-    "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTHdSVEt1Z1plekU1SWRUOVA3TWNZbDdEUXhPMzZYUDRRWGNwQmlRSkdJTnloUWNVZ016NUozb1VaYk5ETVNZV2prckowTF9sU2tWWGFWdl9CTlFURDBTRHJnbW5iaVdXZXFaLUh6LWhQTXRKLS1jem04OTQ4YUZlRFRGOWVOa25wVkZPeGtEZzBPekJsWWZ2M05VV2RlWksxOHBKQUhB?oc=5",
-    "ts": "11/20 07:38",
-    "sec": "商業"
-   },
-   {
-    "t": "Anthropic listing extends Nasdaq's dominant run against arch-rival NYSE",
-    "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUWhjY1NUcTVVRHVTNFhsWVhDN3dsbEFZbmJ6Y3dGcTZXV1RwUndiSnl1cGFKek9jc04xczFjOE5JMkVQZ0E1VG4zOHJ6czlkSjI1am9FUUZELS10SlMxUmRaRmpJLU9RbGlGZ0tuRkFPeDlRZnpyNEtWTU9aY1BoeHhiZ0c3ampXNXMzTHlyREpydWxqVFBZOTVVb1V1TmxuN3d0OTJ0WXdvZnVURGlSRWZ6ZUtkTWhVbUpvZWdYcHY?oc=5",
-    "ts": "11/20 07:38",
-    "sec": "商業"
-   },
-   {
-    "t": "EXCLUSIVE: Citi incorrectly booked trades, underestimated risky assets by $35 billion, sources say",
-    "u": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdVloeGlhUlExUC1jX2NqaXZkd0owdTFnbnNHSFpDN0lEcjhkeXdSZ0M1ZFg3MkIzMHVaUHE4dko2cFJSWDNXRXlDMElNRTcyVUxMNnZBRFY4cTVYaTVWblZWRWIxWEFlWFF1T1hsNWJPVU4tT0J3LXNtR0VIUmZMYXhCc1ZtWEhVRHdHUERnNkZZX1RVS0pPZ1JfX3ByZURXd2IxcGhucDNBNjZWaTZPcHdCZV83Nmg2bWRybE16QlA2c1k?oc=5",
-    "ts": "11/20 07:38",
-    "sec": "商業"
-   },
-   {
-    "t": "NEWSLETTER: Holidays loading: How to escape credit card debt",
-    "u": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcmJaaHhsbFpZR1Vick1WdklaZ3RVTmxTUUtuSG1idmdqcnBQaWlBQ1o5Y2JwWmw2YXhqT0dja3RfTlYtUFM4cEJlRk82d0w2YkJzN0VycVNNdG9zdmRSazEwSWZYYVAybDFfWnJobjdVczVmUjRIRXFtaURFZTFGTzNEY1A0ZXp4c3NtdkNwRVRUSF9VdXFpZVZIb0xWN193cGZR?oc=5",
-    "ts": "11/20 07:36",
-    "sec": "市場"
-   },
-   {
-    "t": "Alibaba defrauded shareholders by concealing ties to suspected spy in Nvidia scandal, lawsuit says",
-    "u": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNU2NLaWxYa3VzZlBrX09yMHM0MjctV3RIZzNUVVNWbjhHODZZQlZtTkNJaWJJbkJLUTNsckRSRURrWTdzYUVNa2JwNnNmenJYb3FVTS16U1B4R3Ezc1ZHcWZ5ZTl2aTh5V2VCdkZUQzRQMXpUbEJaQnRRZ1AybGYxaFk5Yjh2c256cVJJaFAzaG03eGtiRUIydWctNHNRSUFiWmV5aTlGVzlYUVRUQ0RiUGpOMUw5LW5UbXRCMFNhMTY3UnYzSjlkNmNwQnN5azFEZGxNUjBn?oc=5",
-    "ts": "11/20 07:32",
     "sec": "商業"
    }
   ]
@@ -196,15 +196,15 @@
   },
   "WSJ/商業": {
    "status": 200,
-   "kept": 42
+   "kept": 44
   },
   "WSJ/科技": {
    "status": 200,
-   "kept": 9
+   "kept": 8
   },
   "WSJ/經濟": {
    "status": 200,
-   "kept": 11
+   "kept": 9
   },
   "Bloomberg/市場": {
    "status": 200,
@@ -220,15 +220,15 @@
   },
   "Reuters/市場": {
    "status": 200,
-   "kept": 28
+   "kept": 91
   },
   "Reuters/商業": {
    "status": 200,
-   "kept": 95
+   "kept": 97
   },
   "Reuters/科技": {
    "status": 200,
-   "kept": 4
+   "kept": 5
   }
  },
  "complete": true
