@@ -1,0 +1,235 @@
+{
+ "generated_at_taipei": "2026-11-21 09:44",
+ "definition": "各家財經版過去36小時內去重後最新10則（非編輯台排名）",
+ "media": {
+  "WSJ": [
+   {
+    "t": "Is Anthropic Worth $2 Trillion, or $1.5 Trillion? How to Make Sense of the Valuations",
+    "u": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMzhvTFYxa3AyUGJGVFJNcFJycUxBRXdoWjdnQV8xRkt0aFVOcmxTcnRPNndXNDhZOVdnS3E5QzdPTDlpS2dIVG44U3ZiSk1VZ0FOamV2T0JfOXdTOWVhbjl4aEdqdEEzeThWa01LNlJHM2Y1ZHlDUEg0OTNPeUNNS2lnNDkyS1hKdXZFM2pPcjhmRGRBMmdpUVkwSWhqdldrd3o1NmRGMnFqMzlXbG1ydDM4SHJoel9zS19MM28tMXpkY0NJVGQ5WUNB?oc=5",
+    "ts": "11/21 09:31",
+    "sec": "市場"
+   },
+   {
+    "t": "New Zealand Dollar Slumps to a Six-Year Low",
+    "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVE51QjM4enJIRTVfVlg0cGtQd3hNVkpZc0lCaGxrMV9VN0p2SDByNzZrbVFmVV9XSlpkYmpDb0FRbTN1Wnllbng0VE1NNWcwaFpWV1U4RDAzUG5KcklPblVXNlZIVFB4bzRMTDBtb1hpUHprRVpDUzB6bkhqejFrT1NJdnltcE9IY3AxcnVZQnpCZ1p1M2VvcWQyVVE?oc=5",
+    "ts": "11/21 09:19",
+    "sec": "經濟"
+   },
+   {
+    "t": "Tesla Will Invest $3.31 Billion to Expand German Factory for Cybercab Production",
+    "u": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdktrVUd5d0c1dVV0VG5ZSnJEZmstVjQzZFNFdzd6MEFrRmM2YnRSaF95cEljZ0FOR1VIenBEV0VCRzRWTUVxYXZQYVdEb0E1UDBucGZWQ2VjR2t1UlcxLXJNVGdwYnJKdmRPQWR4U1BNSGR0VXpEQUZRRXhVd0RVYnQ0aTRBYk56bjhpUGMxLWU4QldpRUV2RzNtWVlYc2tzOGMwdzNaOFRhYm9fLTZRTDFLdlh3QQ?oc=5",
+    "ts": "11/21 09:16",
+    "sec": "商業"
+   },
+   {
+    "t": "HPE Adds Former JPMorgan Exec to Board, Amends Agreement With Elliott Investment",
+    "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOTjU3dy1YV2hwanVRMktKbkNvMnNURVRRMFlEQWQ4Yk1adTZNaTlMcFZ0TlktZXZyZkgybE9NSTVXQXFIVUM0RG5KeXZNUkhiZzVNQWNTeTNNdGx5MS1QandzWGJWeVV5VUY1Qk5pemdhcGxIQmJzSXh5bmxaT0ktbWdGT1YxS0lvWkZTTUF1cG1QbTNRSEtwQ29Jdm45QWNWdTk0dmpLUGFjQlZJbEtSQW1BLWVCbFBZdmxVVzlZXzg?oc=5",
+    "ts": "11/21 09:03",
+    "sec": "商業"
+   },
+   {
+    "t": "Activist Nelson Peltz Walked Away From the Investment He Loved Most. Now He’s Back.",
+    "u": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB5RUpNUlMwdWdsdTdEWnpwaUVEeU9qMGxNalFXV2lQbzJPOHhaSHp0dmpTRVJMdDBFTTZiclJ4eUE5NDl3VGU4Q0lQRDgybUx4WjRWUXgwVjdCUDlDbVFEVDl0SUpwc2xScl9aTlpYdUJQVFNvRURFck9B?oc=5",
+    "ts": "11/21 09:00",
+    "sec": "商業"
+   },
+   {
+    "t": "Cleveland-Cliffs to Recall Laid-Off Workers at Canadian Steel Operation",
+    "u": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeUFsRkZQaDJvNDF0bE5nQ2U3Uk13UGx3aTcxOWoySE42cWdDOTlIenFfM3JRSTc5cjFlUDhpNWNsZUJrblRxQXQyLWhJdVI4emxJcFJ3Ymk4cldyQU9JQ1dabWNSV0IwcVhFV0NZc0M2anRoNmdxOFFfQl9DRHowQjVIU1hrejFIT1Foc0hXQWZKWmRpQ2xhRXNRa0RiQmhrZTBlR3Q0SnhNWks2R0E?oc=5",
+    "ts": "11/21 08:50",
+    "sec": "商業"
+   },
+   {
+    "t": "Jensen Huang Breaks Silence, Signals Willingness to Return as Nvidia CEO",
+    "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QczVTbUQzdjZ0WHN0QjYwRXJidGl2YmJzeFVVOGhEV0FoZHp3QkJ1dng1REtUS21Qa2lYSGdUejlhbGtfNzlQT1V6Zm45NDltc2hKeEowZ3NtcHdsaUNvN2ttTTJXWUgzNkF3SGZUUjdFX1FiRHc?oc=5",
+    "ts": "11/21 08:49",
+    "sec": "科技"
+   },
+   {
+    "t": "How Mercedes-Benz Nearly Became Collateral Damage in a Chinese Car Ban",
+    "u": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORFJ0blBLaDJmWHRCd3R5T2ZsVkNHTUM3aGRuVy1fTUR0bXNwV3hXU3pjdWFMZjdLNno4ZTZ0dEx3RHJaLWlzTTFyQXRpLUdSMXdvQVN2TW9wMm1EQUxuR0R0eklUS1lHWXk1bUUzdmRqWHpIWldBazBLLWd5YmJDaDNnRlhBZ1o2aEtIRmdGZ09nOFhzZlBGcDBHUnRMd2VXLXBLWHlPTklzLWRXQTVSc2VZTUg?oc=5",
+    "ts": "11/21 08:38",
+    "sec": "商業"
+   },
+   {
+    "t": "Global Oil Market Set to Return to Surplus as Gulf Exports Recover, IEA Says",
+    "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQVljaDkwUzhILVlYVTR6aFdubUJxUV9xMURUOWpaVkpmejFYcXZCOGUyYUlKZDhMVzJkNF9idTIyOVI4OGtMdWJiMlhVN1VKUV9qX181SUs0azJ6S2wyR2hBY3Q0cU5NaXlXaUZodFJBTFlXRjdtRkVmVGFBWFBhTTlFNWRWaUxtSF9RREF2YUluNkZyVFlybW14RlBPRFFJcFFiN3R6em84MXdKT0w0amJpSDlRbnEyYmExQ3VDVGljdw?oc=5",
+    "ts": "11/21 08:36",
+    "sec": "商業"
+   },
+   {
+    "t": "How AI Helps Me Find the Right TV Shows at the Right Times",
+    "u": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0yRXBVZ0loRkZnUzNfTjNXUlpydDc5VnZ0bGg2VHZ5SzFZQzdUUWpTVWE1aHVHdlZRU2hxRXNJZlNuQksyYnVGYWxuYnY3b3hubUNTb1NHelpRVlRiVjlXbnRZSHNMM0xfcWtDUkh3?oc=5",
+    "ts": "11/21 08:10",
+    "sec": "科技"
+   }
+  ],
+  "Bloomberg": [
+   {
+    "t": "Anthropic Researcher Claims to Solve Riemann Problem With Claude",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-21/anthropic-researcher-claims-to-solve-riemann-problem-with-claude",
+    "ts": "11/21 08:17",
+    "sec": "科技"
+   },
+   {
+    "t": "Wall Street Week | Gaming Blockbuster, Healthcare Costs, Cybersecurity Meets AI",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-21/wall-street-week-gaming-blockbuster-cybersecurity-video",
+    "ts": "11/21 08:13",
+    "sec": "科技"
+   },
+   {
+    "t": "Tony Wang on CrowdStrike-Zscaler Deal, AI Trade",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-20/tony-wang-on-crowdstrike-zscaler-deal-ai-trade-video",
+    "ts": "11/21 07:27",
+    "sec": "科技"
+   },
+   {
+    "t": "J&J Snack Foods CEO on 4Q Results and Consumer Sentiment",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-20/j-j-snack-foods-ceo-on-4q-results-and-consumer-sentiment-video",
+    "ts": "11/21 07:22",
+    "sec": "市場"
+   },
+   {
+    "t": "Wonder Explores Sale of Delivery Service Grubhub, WSJ Reports",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-20/wonder-explores-sale-of-delivery-service-grubhub-wsj-reports",
+    "ts": "11/21 07:10",
+    "sec": "科技"
+   },
+   {
+    "t": "El Salvador Troops Killed in Haiti Blast After Rescue Deployment",
+    "u": "https://www.bloomberg.com/news/articles/2026-11-20/el-salvador-troops-killed-in-haiti-blast-after-rescue-deployment",
+    "ts": "11/21 07:08",
+    "sec": "市場"
+   },
+   {
+    "t": "Hindlian Advisory CEO on AI & Anthropic Market Sell-off",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-20/hindlian-advisory-ceo-on-ai-anthropic-market-sell-off-video",
+    "ts": "11/21 06:58",
+    "sec": "科技"
+   },
+   {
+    "t": "Scribe CEO Jennifer Smith on AI Usage in the Workplace",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-20/scribe-ceo-jennifer-smith-on-ai-usage-in-the-workplace-video",
+    "ts": "11/21 06:38",
+    "sec": "科技"
+   },
+   {
+    "t": "Trump Says Huang Should Return to Nvidia After ‘Big Apology’",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-20/trump-huang-should-return-to-nvidia-after-big-apology-video",
+    "ts": "11/21 06:31",
+    "sec": "市場"
+   },
+   {
+    "t": "‘Always Remain Liquid’: Richards",
+    "u": "https://www.bloomberg.com/news/videos/2026-11-20/-always-remain-liquid-richards-video",
+    "ts": "11/21 06:30",
+    "sec": "市場"
+   }
+  ],
+  "Reuters": [
+   {
+    "t": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
+    "u": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxON0haQkQteXQ4cWlzdGJTQmROQVpnT21rVUI1UkNpenozVEplWmNtUTRpLWpvTlo4Z2tvUHhHSnR1RWtYMS1UV1JpVXplWGkzT1gwMkFfdmYwdWZnRVRjLUhBZjVQWTZDOTNucWdZb0NTVHVyYk5mVnI2cFR1WUhFOXhDTGZuY2VoeXZySmc4RjRuOWFULTFEb2NnYjN6MnFJZ1d1c3pFaVRqSUJsRlg4aTdENEt1MFFR?oc=5",
+    "ts": "11/21 08:31",
+    "sec": "商業"
+   },
+   {
+    "t": "Wonder explores sale of Grubhub, Wall Street Journal reports",
+    "u": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNejRTcDdWR01jUS1jVGNTOGNEUXlKRjFOVXBOdFc3a3pMNmZVOWlzbGd2aW5VVDNXWThON2plYmZTYzZxcFJXNHJOclhTdERJM25nRnZUN3RBSHptVTZ4dHhicVRETFJDbVR2bjBzNGs1QzRlOTItUVVjVzNjRFVpQ19vM0pVSlJhVHduSENRUWdRUXZVR2hEdG1CUi10a0pRaTF3ZGZGWFpZbTlHUjFsMkV6RVpXTWQz?oc=5",
+    "ts": "11/21 07:57",
+    "sec": "商業"
+   },
+   {
+    "t": "Virginia child dies in state's first measles-associated death of 2026",
+    "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVkVFT2p0Zi1tU2ZUVldoVDBldEdHSzFyRlBZQ2JZQ09QSC10dnFFT19YY195bVJBeUg1UkxlVFhLc00xbGVyeGF5ajk2S3JQVDFCdDMwMkJKLU9QY2ZaTno1QW9BMk9WWDBaa3VQUG8xZ0xQQmtyMEJQYTFhQlhDQjlRMDhLRm43aWZFbVNicnFocEdnSUhWXzh6VWNSYVJEOWM5QnFJYmFoSlhURDJPc1Zwb1BpYmhBQlJVSTYtVjlTNk1ydWhkcXctWllCeXc?oc=5",
+    "ts": "11/21 07:09",
+    "sec": "商業"
+   },
+   {
+    "t": "Union Pacific engineers' union wins nearly $100 million for schedule rule violation",
+    "u": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbUtFNm9wR0RVNDFIaDVwZVpJVHZ2dlhKSFYyeXZFZGk2a1R6b1lRZFk1VG5rSWRxcUNTTmw2bmZjVmY3VHNJQjVXSDRtSEppUGNIQUowT185bjRoZGsyMnJQY2oxak9IaDNGaU03dlZaNm9FMjJxeFNGdDJUazF6a2hnQmFWa09MeFBEVjZnYVVmWFF0TEZzSGFKWk1QeGxRRWtkZUN6dzhnaERwc2xOOF82UENnNEszNFNUMEprUV92MTEyWjhHSWl5YU12UkNzNkE?oc=5",
+    "ts": "11/21 07:08",
+    "sec": "商業"
+   },
+   {
+    "t": "Wall Street regulator proposes to take control of market surveillance tool",
+    "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOc3l1VEx5NmltZXJvc3o2Y1NROE95b09yOTJfOWpZaTFlQnh1Wjl3Slh3RHltX3l6Y3lfLVVHSEJRcjI4Nl9ieHRMdE5PYTFqNVRBN2RwcElIMEpNMGVSZ0NialFOcjRLajRsdWlEUzRkWlRxaC1Hc0xLemEtdklLeUU4eGM0Ums2MzFvSUhTWjNjY25wbDFSUFI4dlhONnduRGI5OUdzd3dvZUhEODV3VW5ReGJXcnRycm1n?oc=5",
+    "ts": "11/21 06:43",
+    "sec": "商業"
+   },
+   {
+    "t": "US Transportation Dept watchdog to audit FAA oversight of Boeing",
+    "u": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMUl6Q2Z0SjRfajM3dVJoOHgtUVcxTG5CbDRnYkxZS3kxVm5SNFF3MmlMUnE4WnRFczVhT2Y5QzExLXFVWDRPRFFQT082Q0RHSGwxRHhGZE9aX0hCaWtNSEw1RFN1cFVTdTVKdjV6ZmFjaVQ4QW95VjdFcFdNd1duR1Q4VWo3Sld2RHlaM0tyRS1UVTU4UFdKTU5iVDdLQXVsekJTd1JnTHZjeU5iZC0tUzE5S0M5Q2ZWNzVYdE53?oc=5",
+    "ts": "11/21 06:26",
+    "sec": "商業"
+   },
+   {
+    "t": "Ohio teen dies in state's first pediatric flu death this season",
+    "u": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcUFpcFh2YVIzQWlnXzdnRXlZZnFEYlpsUmdxT1hIY2laYUdrRTNIelRqZVZicDJ3M0VyLVM1YWpvbG40eHN4azFmX3pmU3p0aU9OZlVyWUVuSWl6OVpHSkVHTVdrTTRaOWZENm81LV9uMWtMZXlheXQzX3JHYU13bzhVRV84aFc3ZVZsOXRlZWxOY3FlWHl3SlRhcEhBXzlHQUZsMDU0b1lsLTQ3Vm5ETHhIWHFuT2ROY2pQaTNzWDhjX3M?oc=5",
+    "ts": "11/21 06:18",
+    "sec": "商業"
+   },
+   {
+    "t": "AI tech rout prompts US investors to rush into value stocks",
+    "u": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdDhJbUROT2pNZjBobFFBeFlGWU5HRS1PZFNydV9OdHpJbEttV2ZDVElPaGNhNnE3cGlnYUlZOTR3ZC1KZGNIX0pJbExiMzBWa3lxTHpZeUtBYjFtSXJwN3FpZWhjNnUwSklvVmZlRGdEQmNFSlFVcldhXzJsbk1hUlNUMXY0Q0Fjajc0c1ZlQTY0a0FFdUlyRzg4UWQ3M1d5WjFMTjhzRWtlS2VxMnc?oc=5",
+    "ts": "11/21 06:16",
+    "sec": "商業"
+   },
+   {
+    "t": "Oracle says OpenAI infrastructure deal is fully funded after final capital raise",
+    "u": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSmpQQVdqRTFyNlZSVVFsZG8yNGJ5WWRaOU1ZRXJXQkJJM05GaXY5ZUpQTndMVVljNXNpYUJDUmF1T3hQcWkzNi1udWc4c3pMV3F6RFk1dUctcG5jOFlRcUJDMV9IM2hBdV9KbUJqSmJVa1lXS19LTUVJcUg3alFNWl9RREgwRUVrRU9LSkFoRGZJUWpxLVB1bzlldWE4VDRHRmczZVBMbXFiYlRVSHQ2S293M1JnZUNMSTdZdEVKTVpMXzA?oc=5",
+    "ts": "11/21 06:11",
+    "sec": "商業"
+   },
+   {
+    "t": "Anthropic's post-debut stumble delivers reality check for AI trade",
+    "u": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNWtIWXhnWHpsWWZSZ2dFVFRFSXBHaUxOWlp1VnFSZEoycGRtMDE1NVhuM2NEa2ZUTHlLN0lFbG5aX295SThLcFVXMEV3VmJidHF2amdDelVYWWprLXRsNWpodU9LcERma2xnc2pWaTZGbmNHZnYwREdjQnBOcGR0S0JSdnZTaC1aYmtBWXdRXzJiVDhHbFBEZ3lDdWhzS3Q3dnFMY3d3cjZIdw?oc=5",
+    "ts": "11/21 06:06",
+    "sec": "商業"
+   }
+  ]
+ },
+ "status": {
+  "WSJ/市場": {
+   "status": 200,
+   "kept": 32
+  },
+  "WSJ/商業": {
+   "status": 200,
+   "kept": 28
+  },
+  "WSJ/科技": {
+   "status": 200,
+   "kept": 14
+  },
+  "WSJ/經濟": {
+   "status": 200,
+   "kept": 17
+  },
+  "Bloomberg/市場": {
+   "status": 200,
+   "kept": 19
+  },
+  "Bloomberg/科技": {
+   "status": 200,
+   "kept": 20
+  },
+  "Bloomberg/經濟": {
+   "status": 200,
+   "kept": 20
+  },
+  "Reuters/市場": {
+   "status": 200,
+   "kept": 89
+  },
+  "Reuters/商業": {
+   "status": 200,
+   "kept": 75
+  },
+  "Reuters/科技": {
+   "status": 200,
+   "kept": 6
+  }
+ },
+ "complete": true
+}
